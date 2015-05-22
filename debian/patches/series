@@ -15,9 +15,18 @@ Correct-typo-in-the-Gujarati-openType-identififer.patch
 load_testability_from_env_var.patch
 
 # Debian specific.
-revert_upstream_bsymbolic_change.patch
+#revert_upstream_bsymbolic_change.patch # https://launchpad.net/bugs/1403758
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
+
+# Ubuntu specific.
+enable_pie.patch # drop if switching to -reduce-relocations
+disable_overlay_scrollbars.diff
+qt5-qmake-arm-linux-gnueabihf
+Add-workaround-for-GL-on-Android-emulator.patch
+enable-tests.patch
+qopenglframebufferobject_powervrworkaround.patch
+disable-generic-plugin-when-others-available.patch
 
 # Cherrypicked - will be in 5.4.2
 make-sure-there-s-a-scene.patch
