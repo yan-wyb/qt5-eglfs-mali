@@ -20,7 +20,7 @@ Index: qtbase-opensource-src-5.4.0+dfsg/src/corelib/Qt5CoreConfigExtras.cmake.in
 ===================================================================
 --- qtbase-opensource-src-5.4.0+dfsg.orig/src/corelib/Qt5CoreConfigExtras.cmake.in
 +++ qtbase-opensource-src-5.4.0+dfsg/src/corelib/Qt5CoreConfigExtras.cmake.in
-@@ -66,15 +66,13 @@ list(APPEND Qt5Core_INCLUDE_DIRS ${_qt5_
+@@ -66,14 +66,12 @@ list(APPEND Qt5Core_INCLUDE_DIRS ${_qt5_
  set_property(TARGET Qt5::Core APPEND PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${_qt5_corelib_extra_includes})
  set(_qt5_corelib_extra_includes)
  
@@ -29,10 +29,8 @@ Index: qtbase-opensource-src-5.4.0+dfsg/src/corelib/Qt5CoreConfigExtras.cmake.in
  # Qt5_POSITION_INDEPENDENT_CODE variable is used in the # qt5_use_module
  # macro to add it.
  set(Qt5_POSITION_INDEPENDENT_CODE True)
--set(Qt5Core_EXECUTABLE_COMPILE_FLAGS \"-fPIC\")
-+set(Qt5Core_EXECUTABLE_COMPILE_FLAGS \"-fPIE\")
  set_property(TARGET Qt5::Core PROPERTY INTERFACE_POSITION_INDEPENDENT_CODE \"ON\")
- set_property(TARGET Qt5::Core APPEND PROPERTY INTERFACE_COMPILE_OPTIONS ${Qt5Core_EXECUTABLE_COMPILE_FLAGS})
+ set(Qt5Core_EXECUTABLE_COMPILE_FLAGS \"-fPIE\")
 -!!ENDIF
  
  !!IF !isEmpty(QT_NAMESPACE)
