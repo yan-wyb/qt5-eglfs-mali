@@ -1,3 +1,41 @@
+qtbase-opensource-src (5.4.1+dfsg-4ubuntu1) wily; urgency=medium
+
+  * Sync with Debian 5.4.1+dfsg-4, drop more delta:
+    - Enable fpic/fpie patches, although see below
+    - Re-enable requiring gdb on ppc64el
+    - Remove debian/mark_private_symbols.sh as new pkg-kde-tools is in Ubuntu
+  * Remaining changes from Debian:
+    - Remove firebird dependencies and ibase recommendation
+    - Depend on OpenGL ES on all arches from qtbase5-dev
+    - Support OpenGL ES twin packages for x86
+    - qt5-qmake-arm-linux-gnueabihf alternative qmake
+    - Don't set -reduce-relocations and don't revert the upstream bsymbolic
+      disabling on non-x86 because of a problem with with Unity 8 on arm - 
+      https://launchpad.net/bugs/1403758
+    - Use enable_pie.patch to fix QObject::connect failing on ARM
+    - Provides: qt-default in qt5-default
+    - Use our symbols files, including supporting gles x86 Qt
+    - Tests enabled (xvfb dep, debian/rules, enable-tests.patch)
+    - Additional patches, cherry-picked/upstreamed:
+      | Correct-typo-in-the-Gujarati-openType-identififer.patch
+      | load_testability_from_env_var.patch
+      | make-sure-there-s-a-scene.patch
+      | upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
+      | upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
+      | upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
+      | upstream_xcb_use_themed_cursor.patch
+    - Additional patches, Ubuntu specific:
+      | enable_pie.patch
+      | disable_overlay_scrollbars.diff
+      | qt5-qmake-arm-linux-gnueabihf
+      | Add-workaround-for-GL-on-Android-emulator.patch
+      | enable-tests.patch
+      | qopenglframebufferobject_powervrworkaround.patch
+      | disable-generic-plugin-when-others-available.patch
+  * Switch qtbase over to Debian git
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 22 May 2015 05:14:09 +0000
+
 qtbase-opensource-src (5.4.1+dfsg-5) UNRELEASED; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
@@ -11,6 +49,16 @@ qtbase-opensource-src (5.4.1+dfsg-4) experimental; urgency=medium
     that apps using CMake files as provided by Qt5 are FTBFS.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 15 May 2015 11:30:41 -0300
+
+qtbase-opensource-src (5.4.1+dfsg-3ubuntu1) wily; urgency=medium
+
+  * Update symbols to fix ppc64el FTBFS. 
+  * Sync with Debian packaging
+    - Do not enable require_fpic_instead_of_fpie.patch or 
+      make_qglobal_h_complain_if_you_use_fpie.patch before GCC5 is in use.
+  * Skip a newly failing test on wily.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Sun, 19 Apr 2015 11:30:43 +0000
 
 qtbase-opensource-src (5.4.1+dfsg-3) experimental; urgency=medium
 
@@ -48,6 +96,43 @@ qtbase-opensource-src (5.4.1+dfsg-3) experimental; urgency=medium
     tests wanting to access network services (Closes: #785207).
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 13 May 2015 14:14:35 -0300
+
+qtbase-opensource-src (5.4.1+dfsg-2ubuntu5) vivid; urgency=medium
+
+  * debian/patches/qopenglframebufferobject_powervrworkaround.patch
+    - Workaround for a chipset specific driver bug (LP: #1436074)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 16 Apr 2015 08:31:27 +0300
+
+qtbase-opensource-src (5.4.1+dfsg-2ubuntu4) vivid; urgency=medium
+
+  * debian/patches/upstream_xcb_use_themed_cursor.patch:
+    - backport upstream fix to use properly themed cursors under x11
+      (lp: #1277020)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 31 Mar 2015 11:19:32 +0200
+
+qtbase-opensource-src (5.4.1+dfsg-2ubuntu3) vivid; urgency=medium
+
+  * New upstream release. (LP: #1427560)
+  * Remove patches that are included in upstream:
+    - debian/patches/Add-C++11-if-available-for-QVariant-autotest.patch
+    - debian/patches/Break-after-handling-the-read-write.patch
+    - debian/patches/Qt-should-not-print-warning-unless-we-have-an-API-mi.patch
+    - debian/patches/QtBearer-networkmanager-make-sure-to-set-flag-Active.patch
+    - debian/patches/Refactor-networkmanager-QtBearer-backend-to-use-QDBu.patch
+    - debian/patches/Resolve-GLES3-functions-from-the-shared-lib.patch
+    - debian/patches/qimage_conversions.cpp-Fix-build-on-big-endian-syste.patch
+    - debian/patches/upstream_Handle-SelectionClientClose-in-QXcbClipboard.patch
+  * Refresh patches:
+    - load_testability_from_env_var.patch
+    - enable_tests.patch
+  * Merge with Debian 5.4.1+dfsg-2
+  * Update symbols and mark private ones private using the improved script.
+  * debian/patches/Correct-typo-in-the-Gujarati-openType-identififer.patch:
+    - Fix Gujarati text (LP: #1426942)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 10 Mar 2015 05:51:18 +0000
 
 qtbase-opensource-src (5.4.1+dfsg-2) experimental; urgency=medium
 
@@ -146,6 +231,77 @@ qtbase-opensource-src (5.4.0+dfsg-5) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 19 Feb 2015 00:12:25 -0300
 
+qtbase-opensource-src (5.4.0+dfsg-4ubuntu4) vivid; urgency=medium
+
+  * Add upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
+    To prevent connection states from getting lost resulting in QNCM thinking
+    the system is offline when in fact it isn't (LP: #1424960)
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 24 Feb 2015 09:22:42 +0100
+
+qtbase-opensource-src (5.4.0+dfsg-4ubuntu3) vivid; urgency=medium
+
+  [ Scott Kitterman ]
+  * Add debian/patches/make-sure-there-s-a-scene.patch cherry picked from
+    upstream to fix Quassel crashed on link hover (LP: #1424256)
+
+  [ Harald Sitter ]
+  * Add upstream patches from 5.4 branch:
+    + upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
+      To prevent mouse clicks from getting lost with the XCB plugin.
+    + upstream_Handle-SelectionClientClose-in-QXcbClipboard.patch
+      To handle clipboard events correctly with the XCB plugin.
+  * Add upstream patches from gerrit:
+    + upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
+      To handlemore events with the XCB plugin and Qt4 applications which
+      would terminate before sending the correct events thus loosing
+      clipboard content.
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 23 Feb 2015 09:46:52 +0000
+
+qtbase-opensource-src (5.4.0+dfsg-4ubuntu2) vivid; urgency=medium
+
+  [ Timo Jyrinki ]
+  * New upstream release.
+  * debian/patches/qimage_conversions.cpp-Fix-little-endian-build.patch:
+    - Fix PowerPC build (LP: #1400244)
+  * Remove patches:
+    - debian/patches/Always-lock-the-DBus-dispatcher-before-dbus_connecti.patch
+    - debian/patches/Don-t-always-chmod-the-XDG_RUNTIME_DIR.patch
+    - debian/patches/Fix-crash-in-QNetworkAccessCacheBackend-closeDownstr.patch
+    - debian/patches/Partially-revert-Fix-a-deadlock-introduced-by-the-ra.patch
+    - debian/patches/QDBusConnection-Merge-the-dispatch-and-the-watch-and.patch
+    - debian/patches/Report-the-system-error-on-why-chmod-2-failed-in-XDG.patch
+    - debian/patches/Reset-QNAM-s-NetworkConfiguration-when-state-changes.patch
+    - debian/patches/Support-dual-sim-in-QtBearer-s-networkmanager-backen.patch
+    - debian/patches/Use-a-property-cache-to-cut-down-on-blocking-calls.patch
+    - debian/patches/dbus_correct_signal_name_disconnect.patch
+    - debian/patches/fix_bug_in_internal_comparison_operator.patch
+    - debian/patches/fix_sparc_atomics.patch
+    - debian/patches/prefer_qpa_for_systemtrayicon.patch
+    - debian/patches/update-QtBearer-NetworkManager-backend-API.patch
+  * Include the networkmanager backend changes from 5.4.1
+  * Bump ABI version to 5.4.0
+  * debian/patches/Resolve-GLES3-functions-from-the-shared-lib.patch
+    - Fix usage on OpenGL ES2 platforms (LP: #1403511)
+  * Sync with Debian 5.4.0+dfsg-4
+  * debian/patches/enable-tests.patch:
+    - Refresh and enable for 5.4.0 (LP: #1403582)
+    - Disable the tests for new QStorageInfo class which partially fail
+    - Disable some widgets tests that fail (desktop only)
+    - Disable one qlogging test
+  * Drop reduce-relocations option from configure, since it causes black screen 
+    for Unity8 on armhf because of linking problems. Comment out the related 
+    revert of earlier upstream commit. (LP: #1403758)
+  * debian/patches/Add-C++11-if-available-for-QVariant-autotest.patch
+    - Fix tst_qvariant (LP: #1408273)
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * debian/patches/enable_pie.patch:
+    - Add fix for QObject::connect failing on ARM
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 13 Feb 2015 11:38:11 +0000
+
 qtbase-opensource-src (5.4.0+dfsg-4) experimental; urgency=medium
 
   * debian/patches/bsd_statfs.diff: Third attempt to fix the build
@@ -191,6 +347,120 @@ qtbase-opensource-src (5.4.0+dfsg-1) experimental; urgency=medium
   * Bump ABI also in the lintian overrides.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Mon, 15 Dec 2014 16:45:50 +0300
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu10) vivid; urgency=medium
+
+  * control: Drop build-dependency on libopenvg1-mesa-dev which is gone.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 13 Feb 2015 13:20:59 +0200
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu9) vivid; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Add a patch to prefer QPA implementation for systemtrayicon, when it
+    is available. This makes tray icons work on Plasma 5.
+  * Refresh debian/patches/enable-tests.patch to not patch the same file
+    twice.
+
+  [ Timo Jyrinki ]
+  * Update Use-a-property-cache-to-cut-down-on-blocking-calls.patch to
+    not print warnings about using blocking call.
+  * Add a patch Refactor-networkmanager-QtBearer-backend-to-use-QDBu.patch
+    (LP: #1404188)
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Jan 2015 16:25:13 +0300
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu8) vivid; urgency=medium
+
+  * Pick up one more DBus fix (LP: #1384776):
+    - debian/patches/Break-after-handling-the-read-write.patch
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 27 Nov 2014 13:11:36 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu7) vivid; urgency=medium
+
+  * Pick up upstream 5.3 branch DBus fixes (LP: #1384776)
+    - debian/patches/Always-lock-the-DBus-dispatcher-before-dbus_connecti.patch
+    - debian/patches/Partially-revert-Fix-a-deadlock-introduced-by-the-ra.patch
+    - debian/patches/QDBusConnection-Merge-the-dispatch-and-the-watch-and.patch
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 24 Nov 2014 09:11:55 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu6) vivid; urgency=medium
+
+  * Fix qmake-cross configuration path.
+
+ -- Zoltán Balogh <zoltan@bakter.hu>  Mon, 24 Nov 2014 13:46:28 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu5) vivid; urgency=medium
+
+  * Rename qt5-qmake-cross-armhf to qt5-qmake-arm-linux-gnueabihf 
+
+ -- Zoltán Balogh <zoltan@bakter.hu>  Thu, 20 Nov 2014 10:33:16 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu4) vivid; urgency=medium
+
+  * Pick up the Qt 5.4 network-manager bearer fixes (LP: #1357321)
+    - debian/patches/disable-generic-plugin-when-others-available.patch
+      + not merged upstream, would need better runtime detection mechanism
+    - debian/patches/update-QtBearer-NetworkManager-backend-API.patch
+    - debian/patches/Reset-QNAM-s-NetworkConfiguration-when-state-changes.patch
+    - debian/patches/Use-a-property-cache-to-cut-down-on-blocking-calls.patch
+      + refreshed to match the Qt 5.4 networkmanger bearer directory code
+        exactly. earlier patches made simpler via this.
+    - debian/patches/Support-dual-sim-in-QtBearer-s-networkmanager-backen.patch
+    - debian/patches/QtBearer-networkmanager-make-sure-to-set-flag-Active.patch
+      + upstream patch set 7
+  * debian/patches/enable-tests: Disable tests that assume generic plugin 
+    instead of the network-manager plugin
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 19 Nov 2014 07:30:27 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu3) vivid; urgency=medium
+
+  * Add qmake cross-compilation package qt5-qmake-cross-armhf
+  * debian/patches/qt5-qmake-cross-armhf:
+    - Add mkspec needed for the cross-qmake
+  * debian/rules: on amd64+i386, build the second qmake first
+
+ -- Zoltán Balogh <zoltan@bakter.hu>  Mon, 17 Nov 2014 11:57:56 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu2) vivid; urgency=medium
+
+  * Fix gles symbols (LP: #1391556)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 11 Nov 2014 15:46:27 +0000
+
+qtbase-opensource-src (5.3.2+dfsg-4ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Sync with Debian, higlights:
+    - Clear the list of archs that should not use pre compiled headers. 
+      We've been told that with GCC 4.9 this should not be necessary anymore.
+      (LP: #1318635)
+    - Add multitouch protocol translation support.
+    - Bump qtbase-abi to 5-3-2 because of runtime checks
+  * Remaining changes from Debian:
+    - Remove firebird and ibase dependencies
+    - Maintainer fields and Vcs-Bzr
+    - No gdb required on ppc64el
+    - Provides: qt-default to qt5-default
+    - Additional patches
+    - Use our symbols files, including supporting gles variant of Qt on x86
+    - Require OpenGL ES support on all archs
+    - Differences in debian/rules for keeping tests enabled
+  * Drop Ubuntu patches:
+    - debian/patches/xi2-use-master-device.patch
+      Replaced by a reworked upstream solution
+      https://codereview.qt-project.org/#/c/88361/
+  * Rebase patches:
+    - debian/patches/enable-tests.patch
+    - debian/patches/load_testability_from_env_var.patch
+  * Update symbols
+  * Fix FTBFS on arm64 with -no-pch again (thanks towards Debian)
+  * Restore gles compatibility to symbols
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 24 Oct 2014 12:49:31 +0000
 
 qtbase-opensource-src (5.3.2+dfsg-4) unstable; urgency=medium
 
@@ -349,6 +619,112 @@ qtbase-opensource-src (5.3.0+dfsg-3) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 02 Jun 2014 14:21:16 -0300
 
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu9) utopic; urgency=medium
+
+  * Don-t-always-chmod-the-XDG_RUNTIME_DIR.patch
+    Report-the-system-error-on-why-chmod-2-failed-in-XDG.patch:
+    - Cherry-pick two fixes so that apps don't incorrectly chmod
+      (LP: #1359831)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 03 Oct 2014 08:02:30 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu8) utopic; urgency=medium
+
+  * Update arm64, powerpc and ppc64el symbols
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 29 Sep 2014 04:07:58 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu7) utopic; urgency=medium
+
+  * Fix-crash-in-QNetworkAccessCacheBackend-closeDownstr.patch:
+    - Cherry-pick a fix from upstream (LP: #1371472)
+  * enable-tests.patch: skip an additional test that has started failing 
+    even on no-change rebuild 
+  * Update symbols (gcc 4.9)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 24 Sep 2014 13:22:20 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu6) utopic; urgency=medium
+
+  * Fix crash on dbus shutdown
+
+ -- Albert Astals Cid <albert.astals@canonical.com>  Tue, 01 Jul 2014 13:00:56 +0200
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu5) utopic; urgency=medium
+
+  * libqt5gui5.symbols: updating symbols when building for armhf (when
+    OpenGLES is used by default)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Thu, 19 Jun 2014 19:10:38 -0300
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu4) utopic; urgency=medium
+
+  * Update symbols
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 19 Jun 2014 05:24:51 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu3) utopic; urgency=medium
+
+  * Modify makeshlibs again, just use default behavior.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 18 Jun 2014 06:16:06 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu2) utopic; urgency=medium
+
+  * Modify override_dh_makeshlibs back to what is needed for -gles packages
+  * Make libqt5gui5.symbols more compatible with -gles packages
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 18 Jun 2014 05:16:59 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-2ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+  * Remove patches merged upstream:
+    - debian/patches/0001-Do-not-overwrite-basePixmap-of-QIconLoader-PixmapEnt.patch
+    - debian/patches/Add_better_support_for_keymap_update_handling.patch
+    - debian/patches/Fix-access-after-delete-with-Harfbuzz-NG-code-path.patch
+    - debian/patches/Fix-log_clusters-calculation-in-HarfBuzz-NG-code-pat.patch
+    - debian/patches/HarfBuzz-NG-Hide-characters-that-should-normally-be-.patch
+    - debian/patches/Minor-optimization-for-QTextEngine-shapeText.patch
+    - debian/patches/Use-None-instead-of-GLX_NONE.patch
+    - debian/patches/When-looking-up-the-window-hierarchy-stop-at-foreign.patch
+    - debian/patches/change_sparc_qatomic.patch
+    - debian/patches/enable_s390_detection.patch
+    - debian/patches/fix_power_atomic_code.patch
+    - debian/patches/make_qkdetheme_constructor_public.diff
+    - debian/patches/platformtheme_env.diff
+    - debian/patches/qdoc-Fix-crash-in-Generator-generateInnerNode.patch
+  * Build with GStreamer 1.0
+  * debian/patches/revert_upstream_bsymbolic_change.patch:
+    - Revert upstream change since we have fixed binutils
+  * Move include files to multi-arch dir following Debian's lead
+  * debian/patches/enable-tests.patch:
+    - Refresh the patch to apply
+    - Skip a handful of tests that fail, will need to be re-enabled later
+  * Sync with Debian, keeping the existing delta where applicable
+  * Reverse the test enabling logic and support nocheck option
+  * debian/patches/Add-virtual-function-to-QFontEngine-report-if-outlin.patch
+    debian/patches/Fix-FT-glyph-outline-to-path-conversion.patch
+    Fix_crash_in_QOpenGLTextureallocateStorage.patch:
+    - Backport three patches from stable branch
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 05 Jun 2014 04:28:02 +0000
+
+qtbase-opensource-src (5.3.0+dfsg-3) UNRELEASED; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Search for private symbols at build time and produce a diff so as to be
+    able to get the changes from build logs.
+    - Modify mark_private_symbols.sh.
+    - Run mark_private_symbols.sh from debian/rules.
+  * Do not override dh_builddeb: xz compression is now the default method.
+  * Backport Remove-Wcast-align-from-QMAKE_CXXFLAGS.patch. This totally
+    disables -Wcast-align (Closes: #744311).
+    - Remove do_not_pass_wcast-align_on_sparc.patch, it s now not needed
+      anymore.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 22 May 2014 00:31:54 -0300
+
 qtbase-opensource-src (5.3.0+dfsg-2) experimental; urgency=medium
 
   * Add revert_upstream_bsymbolic_change.patch by Timo Jyrinki which reenables
@@ -423,23 +799,187 @@ qtbase-opensource-src (5.2.1+dfsg-2) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 24 Feb 2014 12:10:37 -0300
 
-qtbase-opensource-src (5.2.1+dfsg-1) experimental; urgency=medium
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu17) utopic; urgency=medium
 
-  * New upstream release.
-  * Remove sha3_64bit_BE.diff, uname_include.diff and
-    fix_crash_stale_pointer_dereferencing.patch, applied upstream.
+  * Disable PCH also on arm64 in addition to armel/armhf (LP: #1318635)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 13 May 2014 04:37:13 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu16) utopic; urgency=medium
+
+  * debian/patches/xi2-use-master-device.patch:
+    - Make xi2 select events on master device instead of slaves.
+      (LP: #1307701)
+
+ -- Maarten Lankhorst <maarten.lankhorst@ubuntu.com>  Tue, 06 May 2014 13:14:17 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu15) utopic; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to fix issues with keymap update handling
+    (Add_better_support_for_keymap_update_handling.patch, copied from
+    Debian and rebased).
+  * Build-depend on libxkbcommon-x11-dev, as the new patch includes
+    <xkbcommon/xkbcommon-x11.h>.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 28 Apr 2014 03:11:01 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu14) trusty; urgency=medium
+
+  * libqt5gui5.symbols, libqt5opengl5.symbols: making the gl/gles symbols
+    optional, and creating a list of generic and gl/gles specifics symbols,
+    so we can provide a set of packages built with the OpenGL ES backend on
+    i386 and amd64
+  * debian/rules: don't override makeshlibs and leave it to be automatically
+    created (so we can have proper >= version deps)
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Wed, 09 Apr 2014 18:59:26 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu13) trusty; urgency=medium
+
+  * Update remaining symbols files with buildd's logs.
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Tue, 08 Apr 2014 11:46:46 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu12) trusty; urgency=medium
+
   * Update symbols files with buildd's logs.
-  * Do not install any CMake file for any plugin.
-  * The egl/kms plugins have been built on amd64 too. Move them to the linux
-    install files and see what happens with other archs.
-  * Remove private headers no longer installed.
-  * QtCore's QNoImplicitBoolCast header is no longer installed. It only had an
-    include to qtglobal.h in it and no public symbols are missing.
-  * Update symbols files with current build log. All missing symbols where
-    private. Private symbols where [re]marked in symbols files.
-  * Bump qtbase-abi to qtbase-abi-5-2-1 due to private symbols changes.
 
- -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 08 Feb 2014 11:21:04 -0300
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 07 Apr 2014 20:29:31 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu11) trusty; urgency=medium
+
+  * debian/patches/When-looking-up-the-window-hierarchy-stop-at-foreign.patch
+    - Cherry-pick a fix to a bug affecting online accounts (LP: #1299712)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 01 Apr 2014 12:41:00 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu10) trusty; urgency=medium
+
+  * Make qt5-qmake Multi-Arch: same since it moved from shipping files in
+    /usr/share to /usr/lib/<triplet>.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Tue, 18 Mar 2014 12:41:00 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu9) trusty; urgency=medium
+
+  * debian/patches/Fix-access-after-delete-with-Harfbuzz-NG-code-path.patch
+  * debian/patches/Fix-log_clusters-calculation-in-HarfBuzz-NG-code-pat.patch
+  * debian/patches/HarfBuzz-NG-Hide-characters-that-should-normally-be-.patch
+  * debian/patches/Minor-optimization-for-QTextEngine-shapeText.patch
+    - Cherry-pick latest HarfBuzz-NG changes from upstream including the one 
+      fixing the glyph issue https://codereview.qt-project.org/#change,81150
+      (LP: #1285184)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 18 Mar 2014 06:00:49 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu8) trusty; urgency=medium
+
+  * debian/patches/Add-workaround-for-GL-on-Android-emulator.patch:
+    - Adding back the remaining piece that's not yet upstream, but needed
+      for the Ubuntu Touch emulator
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@canonical.com>  Mon, 17 Mar 2014 19:49:43 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu7) trusty; urgency=medium
+
+  [ Colin Watson ]
+  * Add arm64 to archs that don't use -m64
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 10 Mar 2014 11:01:46 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu6) trusty; urgency=medium
+
+  * Add Use-None-instead-of-GLX_NONE.patch:
+    - Cherry-pick upstream patch (LP: #1288278)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 10 Mar 2014 05:34:12 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu5) trusty; urgency=medium
+
+  * Only run tests on armhf, amd64 and i386.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 06 Mar 2014 05:24:13 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu4) trusty; urgency=medium
+
+  [ Chris Gagnon ]
+  * Enable unit tests
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 03 Mar 2014 18:50:34 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu3) trusty; urgency=medium
+
+  * Revert the transitional package change final landing.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 03 Mar 2014 13:22:42 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu2) trusty; urgency=medium
+
+  * libqt5core5 transitional package to be able to run ABI related tests
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 28 Feb 2014 13:56:19 +0000
+
+qtbase-opensource-src (5.2.1+dfsg-1ubuntu1) trusty; urgency=low
+
+  [ Dmitry Shachnev ]
+  * Update watch file (taken from Debian).
+  * Fix generating documentation by building qdoc before using it.
+  * Remove qtcreator.qdoc from qtbase5-doc.install, as it is already in
+    qtbase5-dev.install.
+  * Merge with Debian up to 5.2.0~beta1+dfsg-3.
+    - Fixes build failures on powerpc and armel.
+  * Add debian/patches/fix_cppcodemarker_crash.patch to fix qdoc
+    crash that caused ubuntu-ui-toolkit to FTBFS (LP: #1217331).
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Cherry-pick two submitted patches to support appmenu-qt: (LP: #1157213)
+    - make_qkdetheme_constructor_public.diff
+    - platformtheme_env.diff
+
+  [ Timo Jyrinki ]
+  * New upstream release 5.2.1 (LP: #1256341) (LP: #1223032) (LP: #1222988)
+    (LP: #1223042) (LP: #1253120) (LP: #1251262)
+  * Sync with Debian 5.2.0+dfsg-7, remaining changes:
+    - Remove firebird and ibase dependencies
+    - Maintainer fields and Vcs-Bzr
+    - No gdb required on ppc64el
+    - Provides: qt-default to qt5-default
+    - Define explicit list on which archs openvg required
+    - Additional patches:
+      + disable_overlay_scrollbars.diff
+      + load_testability_from_env_var.patch
+      + make_qkdetheme_constructor_public.diff
+      + platformtheme_env.diff
+      + qdoc-Fix-crash-in-Generator-generateInnerNode.patch
+      + 0001-Do-not-overwrite-basePixmap-of-QIconLoader-PixmapEnt.patch
+    - Use our symbols files
+    - Additional multi-arch packages (not correct policy-wise)
+  * Drop upstream patches:
+    - add_since_52_to_new_QColor_features.patch
+    - fix_cppcodemarker_crash.patch
+    - fix_usr-move_workaround_in_the_presence_of_multi-arch.patch
+    - make_QColor_understand_AARRGGBB.patch
+    - Add-workaround-for-GL-on-Android-emulator.patch
+    - 0001-Do-not-overwrite-basePixmap-of-QIconLoader-PixmapEnt.patch
+    - fix_destroy_qapp_segfault.diff
+  * Remove Ubuntu patches:
+    - enable_appmenu_support.diff (obsolete)
+    - 0001-Implement-XEmbed-protocol.patch (submitted and merged upstream)
+    - fix_maliit_activation.patch (not used anymore)
+    - inputmethod_fix_focusout.patch (not used anymore)
+    - fix_number_precision_qjsondocument.patch_8e8becdc.patch (upstream)
+    - bug1227629.patch (merged upstream)
+    - fix_rowinserted.patch (LP: #1242630)
+  * Update symbols and mark private ones
+  * Add armhf specific CMake files
+  * Drop aarch64 patches that are reportedly not needed anymore
+  * Cherry-pick qdoc-Fix-crash-in-Generator-generateInnerNode.patch:
+    - Fix qdoc with libhud-qt (LP: #1271036)
+  * Add 0001-Do-not-overwrite-basePixmap-of-QIconLoader-PixmapEnt.patch:
+    - Backport an upstreamed fix to blurry icons (LP: #1271158)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 27 Feb 2014 10:40:54 +0000
 
 qtbase-opensource-src (5.2.0+dfsg-7) unstable; urgency=medium
 
@@ -722,6 +1262,160 @@ qtbase-opensource-src (5.1.0+dfsg-1) experimental; urgency=low
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 09 Jul 2013 16:48:09 -0300
 
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu18) trusty; urgency=medium
+
+  [ Albert Astals ] 
+  * Add 0001-Do-not-overwrite-basePixmap-of-QIconLoader-PixmapEnt.patch:
+    - Backport an upstreamed fix to blurry icons (LP: #1271158)
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * Add fix_destroy_qapp_segfault.diff:
+    - Fix a segfault when QWidget element gets freed after the main 
+      application exits. Do not assume qApp is present. It's already 
+      fixed in upstream Qt 5.2 (LP: #1273306)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 06 Feb 2014 11:57:09 +0000
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu17) trusty; urgency=low
+
+  * Build-depends on libxcb-sync-dev instead of libxcb-sync0-dev.
+
+ -- Maarten Lankhorst <maarten.lankhorst@ubuntu.com>  Wed, 15 Jan 2014 16:52:33 +0100
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu16) trusty; urgency=medium
+
+  * No change rebuild against libxcb-sync1
+
+ -- Maarten Lankhorst <maarten.lankhorst@ubuntu.com>  Wed, 15 Jan 2014 12:09:17 +0000
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu15) trusty; urgency=medium
+
+  * No change rebuild against libicu52
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 27 Dec 2013 08:13:37 +0000
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu14) trusty; urgency=low
+
+  * Positively restrict libopenvg1-mesa-dev build-dependency to only those
+    architectures where it is built (matching the mesa source), rather than
+    trying to simulate this with negative architecture restrictions.
+  * Drop [!arm64] restriction on libpulse-dev; we have libpulse-dev/arm64
+    now.
+  * Disable gdb build-dependency on ppc64el for now, until we have a working
+    gdb there.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 17 Dec 2013 12:36:53 +0000
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu13) trusty; urgency=low
+
+  * SECURITY UPDATE: [XML Entity Expansion Denial of Service] (LP: #1259577).
+    - add limit in src/xml/sax/qxml.cpp
+    - http://lists.qt-project.org/pipermail/announce/2013-December/000036.html
+    - CVE-2013-4549
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 10 Dec 2013 15:08:17 +0000
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu12) trusty; urgency=low
+
+  [ Ricardo Salveti de Araujo ]
+  * debian/patches/Add-workaround-for-GL-on-Android-emulator.patch:
+    - Add workaround when using Qt with the Android emulator GL translator
+      driver (doesn't support the precision qualifiers)
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Tue, 19 Nov 2013 11:13:00 +0000
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu11) saucy; urgency=low
+
+  * debian/patches/aarch64_fix_atomic_set.patch:
+    Fix QBasicAtomicInt::testAndSetRelaxed and
+    QBasicAtomicPointer<T>::testAndSetRelaxed to actually set the given value,
+    rather than a pointer to that value on the local stack frame.
+
+ -- William Grant <wgrant@ubuntu.com>  Sun, 13 Oct 2013 23:38:28 +1100
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu10) saucy; urgency=low
+
+  * debian/patches/fix_rowinserted.patch:
+    - Fix a bug in QSortFilterProxyModel by picking a patch 
+      from upstream (LP: #1234603)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 03 Oct 2013 12:58:40 +0300
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu9) saucy; urgency=low
+
+  * debian/patches/bug1227629.patch:
+    - Fix a bug of WM_CLASS not being set with X11 (LP: #1227629)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 20 Sep 2013 22:41:48 -0400
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu8) saucy; urgency=low
+
+  * load_testability_from_env_var.patch:
+    - Add a patch to support testability enablement also from 
+      an environment variable (LP: #1210034)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 09 Aug 2013 07:22:18 +0300
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu7) saucy; urgency=low
+
+  * Make qtbase5-dev and libqt5opengl5-dev Multi-Arch: same.
+  * Remove perl dependency from qtbase5-dev-tools (temporarily).
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 08 Aug 2013 16:30:16 +0200
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu6) saucy; urgency=low
+
+  * Remove perl:any as well from debian/rules
+
+ -- Didier Roche <didrocks@ubuntu.com>  Thu, 08 Aug 2013 11:35:37 +0200
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu5) saucy; urgency=low
+
+  * Fix invalid <binary>:any dependency schema in debian/control.
+    It's stuck in proposed and making all dailies failing to build as
+    we can't install qt5-qmake anymore.
+
+ -- Didier Roche <didrocks@ubuntu.com>  Thu, 08 Aug 2013 08:01:25 +0200
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu4) saucy; urgency=low
+
+  * Make qtbase5-dev installable for a foreign architecture.
+    LP: #1209239.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 07 Aug 2013 15:58:43 +0200
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu3) saucy; urgency=low
+
+  * Build for Aarch64.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 04 Aug 2013 14:13:43 +0200
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu2) saucy; urgency=low
+
+  * debian/patches/fix_number_precision_qjsondocument.patch_8e8becdc.patch:
+    - Cherry-pick from upstream (LP: #1181359)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 06 Jun 2013 15:15:57 +0300
+
+qtbase-opensource-src (5.0.2+dfsg1-7ubuntu1) saucy; urgency=low
+
+  * Merge with Debian experimental, remaining changes:
+    - Remove firebird and ibase dependencies
+    - Build-depend on libxkbcommon-dev
+    - Maintainer fields and Vcs-Bzr
+    - Provides: qt-default to qt5-default
+    - Add patches:
+      + make_QColor_understand_AARRGGBB.patch
+      + add_since_52_to_new_QColor_features.patch
+      + disable_overlay_scrollbars.diff
+      + fix_maliit_activation.patch
+      + 0001-Implement-XEmbed-protocol.patch
+      + enable_appmenu_support.diff
+      + inputmethod_fix_focusout.patch
+    - Use our symbols files
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Thu, 27 Jun 2013 16:29:34 +0400
+
 qtbase-opensource-src (5.0.2+dfsg1-7) experimental; urgency=low
 
   * Mark libgbm-dev as linux-any. Other OSs do not have it.
@@ -776,6 +1470,51 @@ qtbase-opensource-src (5.0.2+dfsg1-5) experimental; urgency=low
   * Mark private symbols as private.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 30 May 2013 17:53:00 -0300
+
+qtbase-opensource-src (5.0.2+dfsg1-4ubuntu1) saucy; urgency=low
+
+  [ Ken VanDine ]
+  * debian/patches/0001-Implement-XEmbed-protocol.patch
+    - Backport patch that adds xembed support, needed for Ubuntu Online
+      Accounts in gnome-control-center
+
+  [ Michael Terry ]
+  * debian/control, debian/rules:
+    - Enable gles support even when not on arm.  We still use
+      full GL on non-arm platforms, but we still offer the EGL API.
+
+  [ Timo Jyrinki ]
+  * New upstream version
+  * Add patches contributed to upstream Gerrit:
+    - debian/patches/add_since_52_to_new_QColor_features.patch (LP: #1174589)
+    - debian/patches/inputmethod_fix_focusout.patch (LP: #1174547)
+    - debian/patches/make_QColor_understand_AARRGGBB.patch (LP: #1174589)
+  * Cherry-pick a fix from upstream to build with GCC 4.8
+    - debian/patches/rename_qabs_function_for_timeval.patch
+  * Build-depend on libxkbcommon-dev (LP: #1177496) 
+  * Update XEmbed patch from upstream Gerrit
+  * Make sqlite the first recommended SQL plugin, remove ibase
+
+  [ Dmitry Shachnev ]
+  * Re-sync with current Debian packaging Git.
+  * Add debian/patches/disable_overlay_scrollbars.diff, forward-ported
+    from qt4-x11 packaging (LP: #1170384).
+
+  [ Scott Kitterman ]
+  * Revert debian/patches/enable_appmenu_support.diff for saucy as agreed
+    since appmenu for saucy will use qpa 
+
+  [ Timo Jyrinki ]
+  * Re-syncs until Debian experimental 5.0.2+dfsg1-4, remaining changes:
+    - Remove firebird dependency and ibase
+    - Maintainer fields and Vcs-Bzr
+    - Provides: qt-default to qt5-default
+    - Build depend on libxkbcommon-dev
+    - 7 upstream and Ubuntu patches mentioned above
+  * As requested, temporarily re-add the appmenu support until qpa 
+    plugin support is ready. Easily revertable.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 03 May 2013 09:40:08 -0700
 
 qtbase-opensource-src (5.0.2+dfsg1-4) experimental; urgency=low
 
@@ -853,3 +1592,50 @@ qtbase-opensource-src (5.0.2+dfsg-1) experimental; urgency=low
   * Initial release. (Closes: #697509)
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 11 Apr 2013 10:12:03 -0300
+
+qtbase-opensource-src (5.0.1+dfsg-0ubuntu4) raring; urgency=low
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * debian/patches/enable_appmenu_support.diff:
+    - Add base-ported support for the Ubuntu global appmenu (LP: #1126205)
+  * debian/rules:
+    - Enable appmenu support when building the package
+
+  [ Timo Jyrinki ] 
+  * Add build dependency on libgtk2.0-dev (and libatk1.0-dev) for 
+    gtkstyle support (LP: #1126210)
+  * Add Vcs-Bzr for ~kubuntu-packagers
+  * Because qt5.conf was moved to qtbase5-dev, depend on it from 
+    qt5-default. This means standalone development binaries like 
+    qmlscene cannot be used from the default path without installing 
+    development headers. Use deep paths instead.
+  * Fix qmake-qt5 package description (LP: #1133196)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 19 Mar 2013 12:47:57 +0000
+
+qtbase-opensource-src (5.0.1+dfsg-0ubuntu3b1) raring; urgency=low
+
+  * No-change rebuild against libudev1
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 13 Mar 2013 07:01:45 +0000
+
+qtbase-opensource-src (5.0.1+dfsg-0ubuntu3) raring; urgency=low
+
+  * debian/control:
+    - Drop support for firebird, as it isn't in main
+
+ -- Michael Terry <mterry@ubuntu.com>  Wed, 20 Feb 2013 17:07:31 +0000
+
+qtbase-opensource-src (5.0.1+dfsg-0ubuntu2) raring; urgency=low
+
+  * Undefined B0 in qpagedpaintdevice.h too (already done in qprinter.h).
+    No comment on using two letter capital identifiers as enum values in
+    a public API.  LP: #1125949.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 18 Feb 2013 21:42:15 +0100
+
+qtbase-opensource-src (5.0.1+dfsg-0ubuntu1) raring; urgency=low
+
+  * Initial release.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 12 Feb 2013 13:01:42 +0000
