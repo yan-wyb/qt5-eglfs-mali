@@ -1,0 +1,36 @@
+From a95b2e88603ecd18d54c384869ff1281e569f556 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Martin=20Gr=C3=A4=C3=9Flin?= <mgraesslin@kde.org>
+Date: Fri, 6 Feb 2015 07:34:43 +0100
+Subject: [PATCH] Handle SelectionWindowDestroy in QXcbClipboard
+
+This change is related to 6a7ee92b3958e3a3ebc16be15f8bd34217ec7bd2
+which added handling for SelectionClientClose. Further testing showed
+that with e.g. Qt 4 applications the SelectionClientClose is not
+emitted, but the selection window seems to be destroyed before the
+client is destroyed.
+
+Fur a destroyed selection window the same applies: the clipboard
+content is no longer valid and we should emit the changed signal.
+
+Change-Id: Id3778a28b9f5601bf2c6e0106981316e0efa6e7c
+---
+ src/plugins/platforms/xcb/qxcbclipboard.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/plugins/platforms/xcb/qxcbclipboard.cpp b/src/plugins/platforms/xcb/qxcbclipboard.cpp
+index f56a29d..4b6caa9 100644
+--- a/src/plugins/platforms/xcb/qxcbclipboard.cpp
++++ b/src/plugins/platforms/xcb/qxcbclipboard.cpp
+@@ -742,7 +742,8 @@ void QXcbClipboard::handleXFixesSelectionRequest(xcb_xfixes_selection_notify_eve
+             m_xClipboard[mode]->reset();
+         }
+         emitChanged(mode);
+-    } else if (event->subtype == XCB_XFIXES_SELECTION_EVENT_SELECTION_CLIENT_CLOSE)
++    } else if (event->subtype == XCB_XFIXES_SELECTION_EVENT_SELECTION_CLIENT_CLOSE ||
++               event->subtype == XCB_XFIXES_SELECTION_EVENT_SELECTION_WINDOW_DESTROY)
+         emitChanged(mode);
+ }
+ 
+-- 
+2.1.4
+

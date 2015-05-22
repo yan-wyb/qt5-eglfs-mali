@@ -1,0 +1,30 @@
+From ef22739f47857c185f63f87966df79d377c89577 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Michael=20Br=C3=BCning?= <michael.bruning@theqtcompany.com>
+Date: Mon, 23 Feb 2015 11:05:07 +0100
+Subject: [PATCH] Correct typo in the Gujarati openType identififer.
+
+Based on testing by Paresh Adhia.
+
+Task-number: QTBUG-44568
+Change-Id: I0a84710bcda40f65b38c3b18f4d9b34f654e4c22
+Reviewed-by: Konstantin Ritt <ritt.ks@gmail.com>
+---
+ src/platformsupport/fontdatabases/fontconfig/qfontconfigdatabase.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/platformsupport/fontdatabases/fontconfig/qfontconfigdatabase.cpp b/src/platformsupport/fontdatabases/fontconfig/qfontconfigdatabase.cpp
+index 17e9d07..bd22a8f 100644
+--- a/src/platformsupport/fontdatabases/fontconfig/qfontconfigdatabase.cpp
++++ b/src/platformsupport/fontdatabases/fontconfig/qfontconfigdatabase.cpp
+@@ -279,7 +279,7 @@ static const char *openType[] = {
+     "deva",  // Devanagari
+     "beng",  // Bengali
+     "guru",  // Gurmukhi
+-    "gurj",  // Gujarati
++    "gujr",  // Gujarati
+     "orya",  // Oriya
+     "taml",  // Tamil
+     "telu",  // Telugu
+-- 
+2.1.4
+

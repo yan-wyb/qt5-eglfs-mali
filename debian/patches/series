@@ -11,8 +11,17 @@ make_qglobal_h_complain_if_you_use_fpie.patch
 fixes_crash_in_bmp_and_ico_image_decoders.patch
 fixes_crash_in_gif_image_decoder.patch
 tst_QNetworkDiskCache-Stop-using-actual-web-servers.patch
+Correct-typo-in-the-Gujarati-openType-identififer.patch
+load_testability_from_env_var.patch
 
 # Debian specific.
 revert_upstream_bsymbolic_change.patch
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
+
+# Cherrypicked - will be in 5.4.2
+make-sure-there-s-a-scene.patch
+upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
+upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
+upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
+upstream_xcb_use_themed_cursor.patch
