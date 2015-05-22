@@ -1,18 +1,18 @@
-# SymbolsHelper-Confirmed: 5.4.1 amd64
+# SymbolsHelper-Confirmed: 5.4.0 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
 | libqt5printsupport5 #MINVER#, qtbase-abi-5-4-1
  _Z19qt_printerPaperSizeN8QPrinter11OrientationEN17QPagedPaintDevice8PageSizeENS_4UnitEi@Base 5.0.2
  _Z20qt_multiplierForUnitN8QPrinter4UnitEi@Base 5.0.2
- _ZN12QCUPSSupport10setJobHoldEP8QPrinterNS_12JobHoldUntilERK5QTime@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport10setPageSetEP8QPrinterNS_7PageSetE@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport12setPageRangeEP8QPrinterii@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport13setCupsOptionER11QStringListRK7QStringS4_@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport13setJobBillingEP8QPrinterRK7QString@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport14setBannerPagesEP8QPrinterNS_10BannerPageES2_@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport14setCupsOptionsEP8QPrinterRK11QStringList@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport14setJobPriorityEP8QPrinteri@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport15cupsOptionsListEP8QPrinter@Base 5.2.0~alpha1 1
- _ZN12QCUPSSupport22setPagesPerSheetLayoutEP8QPrinterNS_13PagesPerSheetENS_19PagesPerSheetLayoutE@Base 5.2.0~alpha1 1
+ _ZN12QCUPSSupport10setJobHoldEP8QPrinterNS_12JobHoldUntilERK5QTime@Base 5.2.0 1
+ _ZN12QCUPSSupport10setPageSetEP8QPrinterNS_7PageSetE@Base 5.2.0 1
+ _ZN12QCUPSSupport12setPageRangeEP8QPrinterii@Base 5.2.0 1
+ _ZN12QCUPSSupport13setCupsOptionER11QStringListRK7QStringS4_@Base 5.2.0 1
+ _ZN12QCUPSSupport13setJobBillingEP8QPrinterRK7QString@Base 5.2.0 1
+ _ZN12QCUPSSupport14setBannerPagesEP8QPrinterNS_10BannerPageES2_@Base 5.2.0 1
+ _ZN12QCUPSSupport14setCupsOptionsEP8QPrinterRK11QStringList@Base 5.2.0 1
+ _ZN12QCUPSSupport14setJobPriorityEP8QPrinteri@Base 5.2.0 1
+ _ZN12QCUPSSupport15cupsOptionsListEP8QPrinter@Base 5.2.0 1
+ _ZN12QCUPSSupport22setPagesPerSheetLayoutEP8QPrinterNS_13PagesPerSheetENS_19PagesPerSheetLayoutE@Base 5.2.0 1
  _ZN12QPrintDeviceC1EP20QPlatformPrintDevice@Base 5.3.0 1
  _ZN12QPrintDeviceC1ERK7QString@Base 5.3.0 1
  _ZN12QPrintDeviceC1ERKS_@Base 5.3.0 1
@@ -125,7 +125,7 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZN19QPrintPreviewWidget11qt_metacastEPKc@Base 5.0.2
  _ZN19QPrintPreviewWidget11setViewModeENS_8ViewModeE@Base 5.0.2
  _ZN19QPrintPreviewWidget11setZoomModeENS_8ZoomModeE@Base 5.0.2
- _ZN19QPrintPreviewWidget13setZoomFactorEd@Base 5.2.0
+ _ZN19QPrintPreviewWidget13setZoomFactorEd@Base 5.0.2
  _ZN19QPrintPreviewWidget13updatePreviewEv@Base 5.0.2
  _ZN19QPrintPreviewWidget14paintRequestedEP8QPrinter@Base 5.0.2
  _ZN19QPrintPreviewWidget14previewChangedEv@Base 5.0.2
@@ -138,8 +138,8 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZN19QPrintPreviewWidget22setPortraitOrientationEv@Base 5.0.2
  _ZN19QPrintPreviewWidget23setLandscapeOrientationEv@Base 5.0.2
  _ZN19QPrintPreviewWidget5printEv@Base 5.0.2
- _ZN19QPrintPreviewWidget6zoomInEd@Base 5.2.0
- _ZN19QPrintPreviewWidget7zoomOutEd@Base 5.2.0
+ _ZN19QPrintPreviewWidget6zoomInEd@Base 5.0.2
+ _ZN19QPrintPreviewWidget7zoomOutEd@Base 5.0.2
  _ZN19QPrintPreviewWidget9fitInViewEv@Base 5.0.2
  _ZN19QPrintPreviewWidgetC1EP7QWidget6QFlagsIN2Qt10WindowTypeEE@Base 5.0.2
  _ZN19QPrintPreviewWidgetC1EP8QPrinterP7QWidget6QFlagsIN2Qt10WindowTypeEE@Base 5.0.2
@@ -210,14 +210,14 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZN8QPrinter12setCopyCountEi@Base 5.0.2
  _ZN8QPrinter12setNumCopiesEi@Base 5.0.2
  _ZN8QPrinter12setPageOrderENS_9PageOrderE@Base 5.0.2
- _ZN8QPrinter12setPaperNameERK7QString@Base 5.1.0
+ _ZN8QPrinter12setPaperNameERK7QString@Base 5.2.0
  _ZN8QPrinter12setPaperSizeEN17QPagedPaintDevice8PageSizeE@Base 5.0.2
  _ZN8QPrinter12setPaperSizeERK6QSizeFNS_4UnitE@Base 5.0.2
  _ZN8QPrinter13setPageSizeMMERK6QSizeF@Base 5.0.2
  _ZN8QPrinter13setPrintRangeENS_10PrintRangeE@Base 5.0.2
  _ZN8QPrinter13setResolutionEi@Base 5.0.2
  _ZN8QPrinter14setOrientationENS_11OrientationE@Base 5.0.2
- _ZN8QPrinter14setPageMarginsEddddNS_4UnitE@Base 5.2.0
+ _ZN8QPrinter14setPageMarginsEddddNS_4UnitE@Base 5.0.2
  _ZN8QPrinter14setPaperSourceENS_11PaperSourceE@Base 5.0.2
  _ZN8QPrinter14setPrinterNameERK7QString@Base 5.0.2
  _ZN8QPrinter14setWinPageSizeEi@Base 5.3.0
@@ -287,7 +287,7 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZNK12QPrinterInfo20supportedResolutionsEv@Base 5.3.0
  _ZNK12QPrinterInfo23maximumPhysicalPageSizeEv@Base 5.3.0
  _ZNK12QPrinterInfo23minimumPhysicalPageSizeEv@Base 5.3.0
- _ZNK12QPrinterInfo23supportedSizesWithNamesEv@Base 5.1.0
+ _ZNK12QPrinterInfo23supportedSizesWithNamesEv@Base 5.2.0
  _ZNK12QPrinterInfo23supportsCustomPageSizesEv@Base 5.3.0
  _ZNK12QPrinterInfo5stateEv@Base 5.3.0
  _ZNK12QPrinterInfo6isNullEv@Base 5.0.2
@@ -374,7 +374,7 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZNK8QPrinter12printProgramEv@Base 5.0.2
  _ZNK8QPrinter12printerStateEv@Base 5.0.2
  _ZNK8QPrinter13collateCopiesEv@Base 5.0.2
- _ZNK8QPrinter14getPageMarginsEPdS0_S0_S0_NS_4UnitE@Base 5.2.0
+ _ZNK8QPrinter14getPageMarginsEPdS0_S0_S0_NS_4UnitE@Base 5.0.2
  _ZNK8QPrinter14outputFileNameEv@Base 5.0.2
  _ZNK8QPrinter15actualNumCopiesEv@Base 5.0.2
  _ZNK8QPrinter19doubleSidedPrintingEv@Base 5.0.2
@@ -398,7 +398,7 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZNK8QPrinter9copyCountEv@Base 5.0.2
  _ZNK8QPrinter9numCopiesEv@Base 5.0.2
  _ZNK8QPrinter9pageOrderEv@Base 5.0.2
- _ZNK8QPrinter9paperNameEv@Base 5.1.0
+ _ZNK8QPrinter9paperNameEv@Base 5.2.0
  _ZNK8QPrinter9paperRectENS_4UnitE@Base 5.0.2
  _ZNK8QPrinter9paperRectEv@Base 5.0.2
  _ZNK8QPrinter9paperSizeENS_4UnitE@Base 5.0.2

@@ -1,11 +1,11 @@
-# SymbolsHelper-Confirmed: 5.4.1 amd64
+# SymbolsHelper-Confirmed: 5.3.0 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5DBus.so.5 libqt5dbus5 #MINVER#
 | libqt5dbus5 #MINVER#, qtbase-abi-5-4-1
  _Z14qDBusReplyFillRK12QDBusMessageR10QDBusErrorR8QVariant@Base 5.0.2
  _Z15qDBusAddSpyHookPFvRK12QDBusMessageE@Base 5.0.2
- _Z18qDBusCheckAsyncTagPKc@Base 5.1.0
+ _Z18qDBusCheckAsyncTagPKc@Base 5.2.0
  _Z22qDBusBindToApplicationv@Base 5.0.2
- _Z24qDBusParametersForMethodRK5QListI10QByteArrayER7QVectorIiER7QString@Base 5.2.0~alpha1
+ _Z24qDBusParametersForMethodRK5QListI10QByteArrayER7QVectorIiER7QString@Base 5.2.0
  _Z26qDBusGenerateMetaObjectXml7QStringPK11QMetaObjectS2_i@Base 5.0.2
  _ZN10QDBusError11errorStringENS_9ErrorTypeE@Base 5.0.2
  _ZN10QDBusErrorC1ENS_9ErrorTypeERK7QString@Base 5.0.2
@@ -255,6 +255,7 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  (optional=gccinternal)_ZN26QDBusAbstractInterfaceBaseD0Ev@Base 5.0.2
  (optional=gccinternal)_ZN26QDBusAbstractInterfaceBaseD1Ev@Base 5.0.2
  (optional=gccinternal)_ZN26QDBusAbstractInterfaceBaseD2Ev@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZN8QVariant9fromValueI14QDBusSlotCacheEES_RKT_@Base 5.0.2
  _ZN9QDBusUtil14isValidBusNameERK7QString@Base 5.0.2
  _ZN9QDBusUtil16argumentToStringERK8QVariant@Base 5.0.2
  _ZN9QDBusUtil16isValidBasicTypeEi@Base 5.0.2

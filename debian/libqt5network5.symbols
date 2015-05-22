@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.4.1 amd64
+# SymbolsHelper-Confirmed: 5.4.0 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5Network.so.5 libqt5network5 #MINVER#
 | libqt5network5 #MINVER#, qtbase-abi-5-4-1
  _Z19qt_qhostinfo_lookupRK7QStringP7QObjectPKcPbPi@Base 5.0.2
@@ -6,6 +6,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _Z5qHashRK12QHostAddressj@Base 5.0.2
  _Z5qHashRK15QSslCertificatej@Base 5.4.0
  _Z5qHashRK9QSslErrorj@Base 5.4.0
+ (arch=ia64)_ZN10QByteArray4dataEv@Base 5.0.2
  _ZN10QDnsLookup11nameChangedERK7QString@Base 5.0.2
  _ZN10QDnsLookup11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
  _ZN10QDnsLookup11qt_metacastEPKc@Base 5.0.2
@@ -88,7 +89,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN10QSslSocket24addDefaultCaCertificatesERK5QListI15QSslCertificateE@Base 5.0.2
  _ZN10QSslSocket24addDefaultCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE@Base 5.0.2
  _ZN10QSslSocket24setDefaultCaCertificatesERK5QListI15QSslCertificateE@Base 5.0.2
- _ZN10QSslSocket24setLocalCertificateChainERK5QListI15QSslCertificateE@Base 5.1.0
+ _ZN10QSslSocket24setLocalCertificateChainERK5QListI15QSslCertificateE@Base 5.2.0
  _ZN10QSslSocket28sslLibraryBuildVersionNumberEv@Base 5.4.0
  _ZN10QSslSocket28sslLibraryBuildVersionStringEv@Base 5.4.0
  _ZN10QSslSocket5abortEv@Base 5.0.2
@@ -200,8 +201,8 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN12QLocalSocket11qt_metacastEPKc@Base 5.0.2
  _ZN12QLocalSocket12disconnectedEv@Base 5.0.2
  _ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE@Base 5.0.2
- _ZN12QLocalSocket13setServerNameERK7QString@Base 5.1.0
- _ZN12QLocalSocket15connectToServerE6QFlagsIN9QIODevice12OpenModeFlagEE@Base 5.1.0
+ _ZN12QLocalSocket13setServerNameERK7QString@Base 5.2.0
+ _ZN12QLocalSocket15connectToServerE6QFlagsIN9QIODevice12OpenModeFlagEE@Base 5.2.0
  _ZN12QLocalSocket15connectToServerERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE@Base 5.0.2
  _ZN12QLocalSocket16staticMetaObjectE@Base 5.0.2
  _ZN12QLocalSocket16waitForConnectedEi@Base 5.0.2
@@ -211,7 +212,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN12QLocalSocket19waitForBytesWrittenEi@Base 5.0.2
  _ZN12QLocalSocket19waitForDisconnectedEi@Base 5.0.2
  _ZN12QLocalSocket20disconnectFromServerEv@Base 5.0.2
- _ZN12QLocalSocket4openE6QFlagsIN9QIODevice12OpenModeFlagEE@Base 5.1.0
+ _ZN12QLocalSocket4openE6QFlagsIN9QIODevice12OpenModeFlagEE@Base 5.2.0
  _ZN12QLocalSocket5abortEv@Base 5.0.2
  _ZN12QLocalSocket5closeEv@Base 5.0.2
  _ZN12QLocalSocket5errorENS_16LocalSocketErrorE@Base 5.0.2
@@ -277,7 +278,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN13QNetworkReply6setUrlERK4QUrl@Base 5.0.2
  _ZN13QNetworkReply8finishedEv@Base 5.0.2
  _ZN13QNetworkReply8setErrorENS_12NetworkErrorERK7QString@Base 5.0.2
- _ZN13QNetworkReply9encryptedEv@Base 5.1.0
+ _ZN13QNetworkReply9encryptedEv@Base 5.2.0
  _ZN13QNetworkReply9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant@Base 5.0.2
  _ZN13QNetworkReply9sslErrorsERK5QListI9QSslErrorE@Base 5.0.2
  _ZN13QNetworkReply9writeDataEPKcx@Base 5.0.2
@@ -489,7 +490,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN17QSslConfiguration11setProtocolEN4QSsl11SslProtocolE@Base 5.0.2
  _ZN17QSslConfiguration12setSslOptionEN4QSsl9SslOptionEb@Base 5.0.2
  _ZN17QSslConfiguration13setPrivateKeyERK7QSslKey@Base 5.0.2
- _ZN17QSslConfiguration16setSessionTicketERK10QByteArray@Base 5.2.0~rc1
+ _ZN17QSslConfiguration16setSessionTicketERK10QByteArray@Base 5.2.0
  _ZN17QSslConfiguration17setCaCertificatesERK5QListI15QSslCertificateE@Base 5.0.2
  _ZN17QSslConfiguration17setPeerVerifyModeEN10QSslSocket14PeerVerifyModeE@Base 5.0.2
  _ZN17QSslConfiguration18setPeerVerifyDepthEi@Base 5.0.2
@@ -499,7 +500,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN17QSslConfiguration20defaultConfigurationEv@Base 5.0.2
  _ZN17QSslConfiguration23setAllowedNextProtocolsE5QListI10QByteArrayE@Base 5.3.0
  _ZN17QSslConfiguration23setDefaultConfigurationERKS_@Base 5.0.2
- _ZN17QSslConfiguration24setLocalCertificateChainERK5QListI15QSslCertificateE@Base 5.1.0
+ _ZN17QSslConfiguration24setLocalCertificateChainERK5QListI15QSslCertificateE@Base 5.2.0
  _ZN17QSslConfigurationC1ERKS_@Base 5.0.2
  _ZN17QSslConfigurationC1Ev@Base 5.0.2
  _ZN17QSslConfigurationC2ERKS_@Base 5.0.2
@@ -588,7 +589,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN21QNetworkAccessManager11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
  _ZN21QNetworkAccessManager11qt_metacastEPKc@Base 5.0.2
  _ZN21QNetworkAccessManager12setCookieJarEP17QNetworkCookieJar@Base 5.0.2
- _ZN21QNetworkAccessManager13connectToHostERK7QStringt@Base 5.2.0~alpha1
+ _ZN21QNetworkAccessManager13connectToHostERK7QStringt@Base 5.2.0
  _ZN21QNetworkAccessManager13createRequestENS_9OperationERK15QNetworkRequestP9QIODevice@Base 5.0.2
  _ZN21QNetworkAccessManager14deleteResourceERK15QNetworkRequest@Base 5.0.2
  _ZN21QNetworkAccessManager15setProxyFactoryEP20QNetworkProxyFactory@Base 5.0.2
@@ -598,7 +599,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN21QNetworkAccessManager17sendCustomRequestERK15QNetworkRequestRK10QByteArrayP9QIODevice@Base 5.0.2
  _ZN21QNetworkAccessManager20setNetworkAccessibleENS_20NetworkAccessibilityE@Base 5.0.2
  _ZN21QNetworkAccessManager22authenticationRequiredEP13QNetworkReplyP14QAuthenticator@Base 5.0.2
- _ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration@Base 5.2.0~alpha1
+ _ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration@Base 5.2.0
  _ZN21QNetworkAccessManager23networkSessionConnectedEv@Base 5.0.2
  _ZN21QNetworkAccessManager24networkAccessibleChangedENS_20NetworkAccessibilityE@Base 5.0.2
  _ZN21QNetworkAccessManager27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator@Base 5.0.2
@@ -613,7 +614,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN21QNetworkAccessManager8finishedEP13QNetworkReply@Base 5.0.2
  _ZN21QNetworkAccessManager8setCacheEP21QAbstractNetworkCache@Base 5.0.2
  _ZN21QNetworkAccessManager8setProxyERK13QNetworkProxy@Base 5.0.2
- _ZN21QNetworkAccessManager9encryptedEP13QNetworkReply@Base 5.1.0
+ _ZN21QNetworkAccessManager9encryptedEP13QNetworkReply@Base 5.2.0
  _ZN21QNetworkAccessManager9sslErrorsEP13QNetworkReplyRK5QListI9QSslErrorE@Base 5.0.2
  _ZN21QNetworkAccessManagerC1EP7QObject@Base 5.0.2
  _ZN21QNetworkAccessManagerC2EP7QObject@Base 5.0.2
@@ -825,7 +826,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK10QSslSocket16sslConfigurationEv@Base 5.0.2
  _ZNK10QSslSocket20peerCertificateChainEv@Base 5.0.2
  _ZNK10QSslSocket21encryptedBytesToWriteEv@Base 5.0.2
- _ZNK10QSslSocket21localCertificateChainEv@Base 5.1.0
+ _ZNK10QSslSocket21localCertificateChainEv@Base 5.2.0
  _ZNK10QSslSocket23encryptedBytesAvailableEv@Base 5.0.2
  _ZNK10QSslSocket4modeEv@Base 5.0.2
  _ZNK10QSslSocket5atEndEv@Base 5.0.2
@@ -1023,7 +1024,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK17QNetworkInterface7isValidEv@Base 5.0.2
  _ZNK17QSslConfiguration10privateKeyEv@Base 5.0.2
  _ZNK17QSslConfiguration13sessionCipherEv@Base 5.0.2
- _ZNK17QSslConfiguration13sessionTicketEv@Base 5.2.0~rc1
+ _ZNK17QSslConfiguration13sessionTicketEv@Base 5.2.0
  _ZNK17QSslConfiguration13testSslOptionEN4QSsl9SslOptionE@Base 5.0.2
  _ZNK17QSslConfiguration14caCertificatesEv@Base 5.0.2
  _ZNK17QSslConfiguration14peerVerifyModeEv@Base 5.0.2
@@ -1033,9 +1034,9 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK17QSslConfiguration16localCertificateEv@Base 5.0.2
  _ZNK17QSslConfiguration20allowedNextProtocolsEv@Base 5.3.0
  _ZNK17QSslConfiguration20peerCertificateChainEv@Base 5.0.2
- _ZNK17QSslConfiguration21localCertificateChainEv@Base 5.1.0
+ _ZNK17QSslConfiguration21localCertificateChainEv@Base 5.2.0
  _ZNK17QSslConfiguration22nextNegotiatedProtocolEv@Base 5.3.0
- _ZNK17QSslConfiguration25sessionTicketLifeTimeHintEv@Base 5.2.0~alpha1
+ _ZNK17QSslConfiguration25sessionTicketLifeTimeHintEv@Base 5.2.0
  _ZNK17QSslConfiguration29nextProtocolNegotiationStatusEv@Base 5.3.0
  _ZNK17QSslConfiguration6isNullEv@Base 5.0.2
  _ZNK17QSslConfiguration7ciphersEv@Base 5.0.2
@@ -1065,10 +1066,10 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK21QNetworkAccessManager10metaObjectEv@Base 5.0.2
  _ZNK21QNetworkAccessManager12proxyFactoryEv@Base 5.0.2
  _ZNK21QNetworkAccessManager13configurationEv@Base 5.0.2
- _ZNK21QNetworkAccessManager16supportedSchemesEv@Base 5.2.0~alpha1
+ _ZNK21QNetworkAccessManager16supportedSchemesEv@Base 5.2.0
  _ZNK21QNetworkAccessManager17networkAccessibleEv@Base 5.0.2
  _ZNK21QNetworkAccessManager19activeConfigurationEv@Base 5.0.2
- _ZNK21QNetworkAccessManager30supportedSchemesImplementationEv@Base 5.2.0~alpha1
+ _ZNK21QNetworkAccessManager30supportedSchemesImplementationEv@Base 5.2.0
  _ZNK21QNetworkAccessManager5cacheEv@Base 5.0.2
  _ZNK21QNetworkAccessManager5proxyEv@Base 5.0.2
  _ZNK21QNetworkAccessManager9cookieJarEv@Base 5.0.2
@@ -1083,7 +1084,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK21QNetworkConfiguration10bearerTypeEv@Base 5.0.2
  _ZNK21QNetworkConfiguration10identifierEv@Base 5.0.2
  _ZNK21QNetworkConfiguration14bearerTypeNameEv@Base 5.0.2
- _ZNK21QNetworkConfiguration16bearerTypeFamilyEv@Base 5.2.0~alpha1
+ _ZNK21QNetworkConfiguration16bearerTypeFamilyEv@Base 5.2.0
  _ZNK21QNetworkConfiguration18isRoamingAvailableEv@Base 5.0.2
  _ZNK21QNetworkConfiguration4nameEv@Base 5.0.2
  _ZNK21QNetworkConfiguration4typeEv@Base 5.0.2
@@ -1148,6 +1149,27 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK9QSslError11errorStringEv@Base 5.0.2
  _ZNK9QSslError5errorEv@Base 5.0.2
  _ZNK9QSslErroreqERKS_@Base 5.0.2
+ (optional=templinst|arch=ia64|subst)_ZSt13__adjust_heapIN5QListI17QDnsServiceRecordE8iteratorE{qptrdiff}S1_PFbRKS1_S5_EEvT_T0_S9_T1_T2_@Base 5.0.2
+ (optional=templinst|arch=ia64|subst)_ZSt13__adjust_heapIN5QListI22QDnsMailExchangeRecordE8iteratorE{qptrdiff}S1_PFbRKS1_S5_EEvT_T0_S9_T1_T2_@Base 5.0.2
+ (optional=templinst|arch=ia64|subst)_ZSt13__adjust_heapIN5QListI7QStringE8iteratorE{qptrdiff}S1_PFbRKS1_S5_EEvT_T0_S9_T1_T2_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt16__insertion_sortIN5QListI17QDnsServiceRecordE8iteratorEPFbRKS1_S5_EEvT_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt16__insertion_sortIN5QListI22QDnsMailExchangeRecordE8iteratorEPFbRKS1_S5_EEvT_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt16__insertion_sortIN5QListI7QStringE8iteratorEPFbRKS1_S5_EEvT_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt16__introsort_loopIN5QListI17QDnsServiceRecordE8iteratorEiPFbRKS1_S5_EEvT_S8_T0_T1_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt16__introsort_loopIN5QListI22QDnsMailExchangeRecordE8iteratorEiPFbRKS1_S5_EEvT_S8_T0_T1_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt16__introsort_loopIN5QListI7QStringE8iteratorEiPFbRKS1_S5_EEvT_S8_T0_T1_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt19__move_median_firstIN5QListI17QDnsServiceRecordE8iteratorEPFbRKS1_S5_EEvT_S8_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt19__move_median_firstIN5QListI22QDnsMailExchangeRecordE8iteratorEPFbRKS1_S5_EEvT_S8_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt19__move_median_firstIN5QListI7QStringE8iteratorEPFbRKS1_S5_EEvT_S8_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt21__unguarded_partitionIN5QListI17QDnsServiceRecordE8iteratorES1_PFbRKS1_S5_EET_S8_S8_RKT0_T1_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt21__unguarded_partitionIN5QListI22QDnsMailExchangeRecordE8iteratorES1_PFbRKS1_S5_EET_S8_S8_RKT0_T1_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt21__unguarded_partitionIN5QListI7QStringE8iteratorES1_PFbRKS1_S5_EET_S8_S8_RKT0_T1_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt25__unguarded_linear_insertIN5QListI17QDnsServiceRecordE8iteratorEPFbRKS1_S5_EEvT_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt25__unguarded_linear_insertIN5QListI22QDnsMailExchangeRecordE8iteratorEPFbRKS1_S5_EEvT_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt25__unguarded_linear_insertIN5QListI7QStringE8iteratorEPFbRKS1_S5_EEvT_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt9make_heapIN5QListI17QDnsServiceRecordE8iteratorEPFbRKS1_S5_EEvT_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt9make_heapIN5QListI22QDnsMailExchangeRecordE8iteratorEPFbRKS1_S5_EEvT_S8_T0_@Base 5.0.2
+ (optional=templinst|arch=ia64)_ZSt9make_heapIN5QListI7QStringE8iteratorEPFbRKS1_S5_EEvT_S8_T0_@Base 5.0.2
  _ZTI10QDnsLookup@Base 5.0.2
  _ZTI10QSslSocket@Base 5.0.2
  _ZTI10QTcpServer@Base 5.0.2

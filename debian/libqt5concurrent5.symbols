@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.4.1 amd64
+# SymbolsHelper-Confirmed: 5.3.2 amd64 armhf i386 powerpc ppc64el
 libQt5Concurrent.so.5 libqt5concurrent5 #MINVER#
 | libqt5concurrent5 #MINVER#, qtbase-abi-5-4-1
  _ZN12QtConcurrent16BlockSizeManager13timeAfterUserEv@Base 5.0.2
