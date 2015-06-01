@@ -1,6 +1,6 @@
 qtbase-opensource-src (5.4.1+dfsg-4ubuntu3) UNRELEASED; urgency=medium
 
-  * 
+  * debian/patches/series: enable_pie.patch is actually an upstreamed patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 28 May 2015 06:33:25 +0000
 

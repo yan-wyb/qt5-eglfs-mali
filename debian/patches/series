@@ -9,6 +9,7 @@ xcb_delay_showing_tray_icon_window_until_it_is_embedded.patch
 #require_fpic_instead_of_fpie.patch
 #try_to_ensure_that_fpic_is_used_in_cmake_builds.patch
 #make_qglobal_h_complain_if_you_use_fpie.patch
+enable_pie.patch
 fixes_crash_in_bmp_and_ico_image_decoders.patch
 fixes_crash_in_gif_image_decoder.patch
 tst_QNetworkDiskCache-Stop-using-actual-web-servers.patch
@@ -21,7 +22,6 @@ no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 
 # Ubuntu specific.
-enable_pie.patch # drop if switching to -reduce-relocations
 disable_overlay_scrollbars.diff
 qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
