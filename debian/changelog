@@ -1,8 +1,11 @@
-qtbase-opensource-src (5.4.1+dfsg-4ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.4.1+dfsg-4ubuntu3) wily; urgency=medium
 
   * debian/patches/series: enable_pie.patch is actually an upstreamed patch
+  * Re-enable the other fpic patches, and do not enforce fpie anymore
+  * debian/patches/latest_fpic_commits.patch: Take even more of the 5.4.2 
+    last minute patches.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 28 May 2015 06:33:25 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 03 Jun 2015 13:06:41 +0000
 
 qtbase-opensource-src (5.4.1+dfsg-4ubuntu2) wily; urgency=medium
 
