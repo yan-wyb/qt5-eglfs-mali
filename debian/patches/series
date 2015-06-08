@@ -2,18 +2,6 @@
 upstream_small-improvements-to-the-hurd-g-mkspec.patch
 upstream_Complete-MIPS-atomic-support-on-pre-MIPS32-architect.patch
 gnukfreebsd.diff
-cve-2015-0295.diff
-qtsystemtrayicon_handle_submenus_correctly.patch
-xcb_delay_showing_tray_icon_window_until_it_is_embedded.patch
-require_fpic_instead_of_fpie.patch
-try_to_ensure_that_fpic_is_used_in_cmake_builds.patch
-make_qglobal_h_complain_if_you_use_fpie.patch
-enable_pie.patch
-latest_fpic_commits.patch
-fixes_crash_in_bmp_and_ico_image_decoders.patch
-fixes_crash_in_gif_image_decoder.patch
-tst_QNetworkDiskCache-Stop-using-actual-web-servers.patch
-Correct-typo-in-the-Gujarati-openType-identififer.patch
 load_testability_from_env_var.patch
 
 # Debian specific.
@@ -29,9 +17,3 @@ enable-tests.patch
 qopenglframebufferobject_powervrworkaround.patch
 disable-generic-plugin-when-others-available.patch
 
-# Cherrypicked - will be in 5.4.2
-make-sure-there-s-a-scene.patch
-upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
-upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
-upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
-upstream_xcb_use_themed_cursor.patch

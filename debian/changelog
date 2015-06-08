@@ -1,3 +1,45 @@
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+  * Drop additional cherry-picked patches now included:
+    - make-sure-there-s-a-scene.patch
+    - upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
+    - upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
+    - upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
+    - upstream_xcb_use_themed_cursor.patch
+    - enable_pie.patch
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 08 Jun 2015 07:12:43 +0000
+
+qtbase-opensource-src (5.4.2+dfsg-2) experimental; urgency=medium
+
+  * Update symbols files with buildds' logs.
+  * Mark private symbols as such.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 03 Jun 2015 19:56:52 -0300
+
+qtbase-opensource-src (5.4.2+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * libqt5gui5: demote libqt5libqgtk2 to a suggestion.
+  * Update symbols files with buildds' logs.
+  * Bump qtbase-abi to 5-4-2.
+  * Refresh gnukfreebsd.diff.
+  * Delete patches backported from upstream already present in this release:
+    - cve-2015-0295.diff
+    - qtsystemtrayicon_handle_submenus_correctly.patch
+    - xcb_delay_showing_tray_icon_window_until_it_is_embedded.patch
+    - require_fpic_instead_of_fpie.patch
+    - try_to_ensure_that_fpic_is_used_in_cmake_builds.patch
+    - make_qglobal_h_complain_if_you_use_fpie.patch
+    - fixes_crash_in_bmp_and_ico_image_decoders.patch
+    - fixes_crash_in_gif_image_decoder.patch
+    - tst_QNetworkDiskCache-Stop-using-actual-web-servers.patch
+  * Update install file for qtbase5-dev.
+  * Update symbols files with current build log.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 02 Jun 2015 13:27:56 -0300
+
 qtbase-opensource-src (5.4.1+dfsg-4ubuntu3) wily; urgency=medium
 
   * debian/patches/series: enable_pie.patch is actually an upstreamed patch
@@ -51,13 +93,6 @@ qtbase-opensource-src (5.4.1+dfsg-4ubuntu1) wily; urgency=medium
   * Switch qtbase over to Debian git
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 22 May 2015 05:14:09 +0000
-
-qtbase-opensource-src (5.4.1+dfsg-5) UNRELEASED; urgency=medium
-
-  [ Lisandro Damián Nicanor Pérez Meyer ]
-  * libqt5gui5: demote libqt5libqgtk2 to a suggestion.
-
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 18 May 2015 18:35:01 -0300
 
 qtbase-opensource-src (5.4.1+dfsg-4) experimental; urgency=medium
 
