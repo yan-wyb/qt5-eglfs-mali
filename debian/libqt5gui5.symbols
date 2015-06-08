@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.4.1 amd64 arm64 armhf i386 powerpc ppc64el
+# SymbolsHelper-Confirmed: 5.4.2 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
 | libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#, qtbase-abi-5-4-2
 | libqt5gui5 #MINVER#
@@ -1768,7 +1768,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZN16QConicalGradientC2ERK7QPointFd@Base 5.0.2
  _ZN16QConicalGradientC2Eddd@Base 5.0.2
  _ZN16QConicalGradientC2Ev@Base 5.0.2
- (optional=gccinternal|arch=!hurd-i386 !i386 !kfreebsd-i386)_ZN16QCoreApplication20sendSpontaneousEventEP7QObjectP6QEvent@Base 5.3.0
+ (optional=gccinternal|arch=!amd64 !hurd-i386 !i386 !kfreebsd-i386)_ZN16QCoreApplication20sendSpontaneousEventEP7QObjectP6QEvent@Base 5.3.0
  _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc@Base 5.0.2
  _ZN16QDesktopServices15unsetUrlHandlerERK7QString@Base 5.0.2
  _ZN16QDesktopServices19storageLocationImplEN14QStandardPaths16StandardLocationE@Base 5.0.2
@@ -2997,10 +2997,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZN22QGuiApplicationPrivate30reportLogicalDotsPerInchChangeEPN29QWindowSystemInterfacePrivate29ScreenLogicalDotsPerInchEventE@Base 5.0.2 1
  _ZN22QGuiApplicationPrivate31processWindowScreenChangedEventEPN29QWindowSystemInterfacePrivate24WindowScreenChangedEventE@Base 5.2.0 1
  _ZN22QGuiApplicationPrivate31updateFilteredScreenOrientationEP7QScreen@Base 5.0.2 1
- _ZN22QGuiApplicationPrivate32applyWindowGeometrySpecificationERK5QRectPK7QWindow@Base 5.2.0 1
  _ZN22QGuiApplicationPrivate32processTabletEnterProximityEventEPN29QWindowSystemInterfacePrivate25TabletEnterProximityEventE@Base 5.0.2 1
  _ZN22QGuiApplicationPrivate32processTabletLeaveProximityEventEPN29QWindowSystemInterfacePrivate25TabletLeaveProximityEventE@Base 5.0.2 1
  _ZN22QGuiApplicationPrivate33sendQWindowEventToQPlatformWindowEP7QWindowP6QEvent@Base 5.0.2 1
+ _ZN22QGuiApplicationPrivate34applyWindowGeometrySpecificationToEP7QWindow@Base 5.4.2 1
  _ZN22QGuiApplicationPrivate37synthesizeMouseFromTouchEventsEnabledEv@Base 5.2.0 1
  _ZN22QGuiApplicationPrivate4initEv@Base 5.0.2 1
  _ZN22QGuiApplicationPrivate4selfE@Base 5.0.2 1
@@ -3273,6 +3273,18 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  (optional=gccinternal)_ZN25QAbstractItemModelPrivateD0Ev@Base 5.0.2 1
  (optional=gccinternal)_ZN25QAbstractItemModelPrivateD1Ev@Base 5.0.2 1
  (optional=gccinternal)_ZN25QAbstractItemModelPrivateD2Ev@Base 5.0.2 1
+ _ZN25QFontEngineMultiBasicImpl10loadEngineEi@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImpl21createMultiFontEngineEP11QFontEnginei@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImpl23setFallbackFamiliesListERK11QStringList@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImpl29ensureFallbackFamiliesQueriedEv@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImpl4initEP11QFontEngine@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImplC1EP11QFontEnginei@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImplC1EP11QFontEngineiRK11QStringList@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImplC2EP11QFontEnginei@Base 5.4.0 1
+ _ZN25QFontEngineMultiBasicImplC2EP11QFontEngineiRK11QStringList@Base 5.4.0 1
+ (optional=gccinternal)_ZN25QFontEngineMultiBasicImplD0Ev@Base 5.4.0 1
+ (optional=gccinternal)_ZN25QFontEngineMultiBasicImplD1Ev@Base 5.4.0 1
+ (optional=gccinternal)_ZN25QFontEngineMultiBasicImplD2Ev@Base 5.4.0 1
  (optional)_ZN25QOpenGLFunctions_3_2_Core14versionProfileEv@Base 5.2.0 2
  (optional)_ZN25QOpenGLFunctions_3_2_Core19isContextCompatibleEP14QOpenGLContext@Base 5.2.0 2
  (optional)_ZN25QOpenGLFunctions_3_2_Core25initializeOpenGLFunctionsEv@Base 5.2.0 2
@@ -3321,18 +3333,6 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  (optional)_ZN25QOpenGLFunctions_4_3_CoreD0Ev@Base 5.2.0 2
  (optional)_ZN25QOpenGLFunctions_4_3_CoreD1Ev@Base 5.2.0 2
  (optional)_ZN25QOpenGLFunctions_4_3_CoreD2Ev@Base 5.2.0 2
- _ZN25QFontEngineMultiBasicImpl10loadEngineEi@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImpl21createMultiFontEngineEP11QFontEnginei@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImpl23setFallbackFamiliesListERK11QStringList@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImpl29ensureFallbackFamiliesQueriedEv@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImpl4initEP11QFontEngine@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImplC1EP11QFontEnginei@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImplC1EP11QFontEngineiRK11QStringList@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImplC2EP11QFontEnginei@Base 5.4.0 1
- _ZN25QFontEngineMultiBasicImplC2EP11QFontEngineiRK11QStringList@Base 5.4.0 1
- (optional=gccinternal)_ZN25QFontEngineMultiBasicImplD0Ev@Base 5.4.0 1
- (optional=gccinternal)_ZN25QFontEngineMultiBasicImplD1Ev@Base 5.4.0 1
- (optional=gccinternal)_ZN25QFontEngineMultiBasicImplD2Ev@Base 5.4.0 1
  _ZN25QOpenGLPaintDevicePrivateC1ERK5QSize@Base 5.4.0 1
  _ZN25QOpenGLPaintDevicePrivateC2ERK5QSize@Base 5.4.0 1
  (optional=gccinternal)_ZN25QPaintDeviceWindowPrivateD0Ev@Base 5.4.0 1
