@@ -8,6 +8,7 @@ qtbase-opensource-src (5.4.2+dfsg-2ubuntu1) UNRELEASED; urgency=medium
     - upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
     - upstream_xcb_use_themed_cursor.patch
     - enable_pie.patch
+  * Bump ABI:s in symbols files
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 08 Jun 2015 07:12:43 +0000
 

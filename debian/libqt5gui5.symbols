@@ -1,6 +1,6 @@
 # SymbolsHelper-Confirmed: 5.4.1 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
-| libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#, qtbase-abi-5-4-1
+| libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#, qtbase-abi-5-4-2
 | libqt5gui5 #MINVER#
 | libqt5gui5-gles #MINVER#
  _Z11qDrawBorderP8QPainterRK5QRectPKN4QCss11BorderStyleEPKiPK6QBrushPK5QSize@Base 5.0.2
