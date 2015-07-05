@@ -175,6 +175,7 @@ endif
 	            -accessibility \
 	            -compile-examples \
 	            -no-directfb \
+	            -gstreamer 1.0 \
 	            $(extra_configure_opts) \
 	            $(cpu_opt)
 
