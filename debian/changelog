@@ -6,6 +6,7 @@ qtbase-opensource-src (5.5.0-0ubuntu1) UNRELEASED; urgency=medium
     Add-environment-variable-support-for-testability-lib.patch
   * Drop patches in upstream:
     - Correct-typo-in-the-Gujarati-openType-identififer.patch
+  * Rebase enable-tests.patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
