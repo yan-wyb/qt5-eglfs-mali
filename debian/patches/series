@@ -1,5 +1,5 @@
 # Backported stuff
-load_testability_from_env_var.patch
+Add-environment-variable-support-for-testability-lib.patch
 
 # Debian specific.
 gnukfreebsd.diff

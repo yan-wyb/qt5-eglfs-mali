@@ -1,0 +1,35 @@
+From 322e1245c64144d072c8ca1ec686709e611ab3cb Mon Sep 17 00:00:00 2001
+From: Timo Jyrinki <timo.jyrinki@canonical.com>
+Date: Tue, 24 Feb 2015 14:12:38 +0000
+Subject: [PATCH] Add environment variable support for testability library use.
+
+Add the option to load the testability library based on whether
+an environment variable QT_LOAD_TESTABILITY is set, in addition
+to the current "-testability" flag.
+
+This improves the use of testability library together with the
+autopilot functional testing tool.
+
+Task-number: QTBUG-32974
+Change-Id: I6abf2c004cbff2ce0aff44e24a99bcc8188a52ae
+---
+ src/gui/kernel/qguiapplication.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/gui/kernel/qguiapplication.cpp b/src/gui/kernel/qguiapplication.cpp
+index 1467c96..abbbff5 100644
+--- a/src/gui/kernel/qguiapplication.cpp
++++ b/src/gui/kernel/qguiapplication.cpp
+@@ -1315,6 +1315,9 @@ void QGuiApplicationPrivate::init()
+ #endif
+ 
+ #ifndef QT_NO_LIBRARY
++    if (qEnvironmentVariableIntValue("QT_LOAD_TESTABILITY") > 0)
++        loadTestability = true;
++
+     if (loadTestability) {
+         QLibrary testLib(QStringLiteral("qttestability"));
+         if (testLib.load()) {
+-- 
+2.1.4
+
