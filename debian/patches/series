@@ -1,13 +1,12 @@
 # Backported stuff
-upstream_small-improvements-to-the-hurd-g-mkspec.patch
-upstream_Complete-MIPS-atomic-support-on-pre-MIPS32-architect.patch
-gnukfreebsd.diff
 load_testability_from_env_var.patch
 
 # Debian specific.
+gnukfreebsd.diff
 #revert_upstream_bsymbolic_change.patch # https://launchpad.net/bugs/1403758
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
+hurd-forkfd.diff
 
 # Ubuntu specific.
 disable_overlay_scrollbars.diff
@@ -16,4 +15,3 @@ Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 qopenglframebufferobject_powervrworkaround.patch
 disable-generic-plugin-when-others-available.patch
-

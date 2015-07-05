@@ -1,3 +1,36 @@
+qtbase-opensource-src (5.5.0+dfsg-1) UNRELEASED; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * New upstream release.
+  * Update symbols files with buildd's logs.
+  * Remove backported patches already present in this release:
+    - upstream_Complete-MIPS-atomic-support-on-pre-MIPS32-architect.patch
+    - upstream_small-improvements-to-the-hurd-g-mkspec.patch
+  * Refresh gnukfreebsd.diff.
+  * Update install files for already present packages.
+  * Add the new libqt5xcbqpa5 and libqt5egldeviceintegration5 libraries.
+  * Add two new plugins based on libinput. This are only installed on linux
+    due to libinput not being available on other OSs yet.
+
+  [ Pino Toscano ]
+  * Fix build on Hurd, by temporarly disabling waitid() in forkfd code;
+    patch hurd-forkfd.diff.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 29 Jun 2015 14:41:08 +0300
+
+qtbase-opensource-src (5.4.2+dfsg-4) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 23:29:30 -0300
+
+qtbase-opensource-src (5.4.2+dfsg-3) experimental; urgency=medium
+
+  * Update symbols files with buildd's logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 09:59:21 -0300
+
 qtbase-opensource-src (5.4.2+dfsg-2ubuntu1) wily; urgency=medium
 
   * New upstream release.
@@ -401,6 +434,7 @@ qtbase-opensource-src (5.4.0+dfsg-1) experimental; urgency=medium
 
  -- Dmitry Shachnev <mitya57@debian.org>  Mon, 15 Dec 2014 16:45:50 +0300
 
+<<<<<<< HEAD
 qtbase-opensource-src (5.3.2+dfsg-4ubuntu10) vivid; urgency=medium
 
   * control: Drop build-dependency on libopenvg1-mesa-dev which is gone.
@@ -514,6 +548,29 @@ qtbase-opensource-src (5.3.2+dfsg-4ubuntu1) vivid; urgency=medium
   * Restore gles compatibility to symbols
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 24 Oct 2014 12:49:31 +0000
+=======
+qtbase-opensource-src (5.3.2+dfsg-5) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Remove libopenvg1-mesa-dev as a build dependency because mesa does not
+    build it anymore (Closes: #777341).
+    Thanks Andreas Beckmann for the report.
+
+  [ Dmitry Shachnev ]
+  * Fix several DoS vulnerabilities in the image handlers.
+    - CVE-2015-0295, CVE-2015-1858, CVE-2015-1859, CVE-2015-1860.
+    - Closes: #779580.
+  * Fix HTTP upload corruptions when server closes connection.
+  * Use the latest version of debian/mark_private_symbols.sh:
+    - Strip trailing colon from symbols names.
+    - Unmark private symbols before processing them.
+  * Symbols files:
+    - Remove references to ia64 and s390 from the symbols files.
+      Build logs for these architectures are no longer available.
+    - Update for the mark_private_symbols.sh change.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 27 Apr 2015 11:54:20 +0300
+>>>>>>> experimental
 
 qtbase-opensource-src (5.3.2+dfsg-4) unstable; urgency=medium
 
