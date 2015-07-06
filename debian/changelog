@@ -7,7 +7,7 @@ qtbase-opensource-src (5.5.0-0ubuntu1) UNRELEASED; urgency=medium
   * Drop patches in upstream:
     - Correct-typo-in-the-Gujarati-openType-identififer.patch
   * Rebase enable-tests.patch
-  * Build depend on GStreamer 1.0 and add a configure option for it
+  * Build depend on GStreamer 1.0 and add a configure option for it.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
