@@ -15,3 +15,4 @@ Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 qopenglframebufferobject_powervrworkaround.patch
 disable-generic-plugin-when-others-available.patch
+Fix-compile-error-on-big-endian.patch
