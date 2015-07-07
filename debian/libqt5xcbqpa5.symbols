@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.5.0 amd64
+# SymbolsHelper-Confirmed: 5.5.0 amd64 armhf i386 powerpc
 libQt5XcbQpa.so.5 libqt5xcbqpa5 #MINVER#
 | libqt5xcbqpa5 #MINVER#, qtbase-abi-5-5-0
  _Z20QT_XCB_GLINTEGRATIONv@Base 5.5.0
@@ -249,7 +249,7 @@ libQt5XcbQpa.so.5 libqt5xcbqpa5 #MINVER#
  _ZN31QAbstractEventDispatcherPrivateD0Ev@Base 5.5.0 1
  _ZN31QAbstractEventDispatcherPrivateD1Ev@Base 5.5.0 1
  _ZN31QAbstractEventDispatcherPrivateD2Ev@Base 5.5.0 1
- _ZNK10QXcbScreen10grabWindowEyiiii@Base 5.5.0
+ (subst)_ZNK10QXcbScreen10grabWindowE{quintptr}iiii@Base 5.5.0
  _ZNK10QXcbScreen10logicalDpiEv@Base 5.5.0
  _ZNK10QXcbScreen10topLevelAtERK6QPoint@Base 5.5.0
  _ZNK10QXcbScreen10virtualDpiEv@Base 5.5.0
