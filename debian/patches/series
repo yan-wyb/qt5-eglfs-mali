@@ -1,5 +1,6 @@
 # Backported stuff
 Add-environment-variable-support-for-testability-lib.patch
+Fix-compile-error-on-big-endian.patch
 
 # Debian specific.
 gnukfreebsd.diff
@@ -15,4 +16,3 @@ Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 qopenglframebufferobject_powervrworkaround.patch
 disable-generic-plugin-when-others-available.patch
-Fix-compile-error-on-big-endian.patch

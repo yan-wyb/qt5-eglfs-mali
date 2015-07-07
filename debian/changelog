@@ -8,15 +8,14 @@ qtbase-opensource-src (5.5.0-0ubuntu1) UNRELEASED; urgency=medium
     - Correct-typo-in-the-Gujarati-openType-identififer.patch
   * Rebase enable-tests.patch
   * Build depend on GStreamer 1.0 and add a configure option for it.
-  * debian/patches/Fix-compile-error-on-big-endian.patch:
-    - Fix FTBFS on powerpc.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
-qtbase-opensource-src (5.5.0+dfsg-1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.0+dfsg-1) experimental; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * New upstream release.
+    - Bump qtbase-abi to 5-5-0.
   * Update symbols files with buildd's logs.
   * Remove backported patches already present in this release:
     - upstream_Complete-MIPS-atomic-support-on-pre-MIPS32-architect.patch
@@ -24,14 +23,30 @@ qtbase-opensource-src (5.5.0+dfsg-1) UNRELEASED; urgency=medium
   * Refresh gnukfreebsd.diff.
   * Update install files for already present packages.
   * Add the new libqt5xcbqpa5 and libqt5egldeviceintegration5 libraries.
+    - Also add symbols files for them.
+    - Add lintian overrides for them depending on qtbase-abi, that's expected.
   * Add two new plugins based on libinput. This are only installed on linux
     due to libinput not being available on other OSs yet.
+  * Update symbols files with current build log.
+  * Mark/unmark private symbols.
+  * Update debian/copyright.
+  * Add libproxy as build dependency. We now have support for it.
+  * Move adding proper Break+Replaces:
+    - libqxcb plugin from libqt5gui5 to libqt5xcbqpa5,
+    - libqeglfs plugin from libqt5gui5 to libqt5egldeviceintegration5,
+    as they now depend on the aforementioned libraries. This solves an
+    uneeded circular dependency.
 
   [ Pino Toscano ]
   * Fix build on Hurd, by temporarly disabling waitid() in forkfd code;
     patch hurd-forkfd.diff.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 29 Jun 2015 14:41:08 +0300
+  [ Timo Jyrinki ]
+  * Build depend on GStreamer 1.0 and add a configure option for it.
+  * debian/patches/Fix-compile-error-on-big-endian.patch:
+    - Fix FTBFS on powerpc.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 06 Jul 2015 18:37:23 -0300
 
 qtbase-opensource-src (5.4.2+dfsg-4) unstable; urgency=medium
 
