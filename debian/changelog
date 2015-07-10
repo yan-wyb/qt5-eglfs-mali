@@ -63,6 +63,13 @@ qtbase-opensource-src (5.4.2+dfsg-3) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 09:59:21 -0300
 
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu2) wily; urgency=medium
+
+  * Rebuild for GCC5 transition.
+  * Update symbols.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 10 Jul 2015 08:01:23 +0300
+
 qtbase-opensource-src (5.4.2+dfsg-2ubuntu1) wily; urgency=medium
 
   * New upstream release.

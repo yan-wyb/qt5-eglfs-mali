@@ -261,8 +261,8 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN10QTableViewD0Ev@Base 5.0.2
  _ZN10QTableViewD1Ev@Base 5.0.2
  _ZN10QTableViewD2Ev@Base 5.0.2
- (arch=powerpc)_ZN10QTransformC1ERKS_@Base 5.3.0
- (arch=powerpc)_ZN10QTransformC2ERKS_@Base 5.3.0
+ (optional=gccinternal|arch=powerpc)_ZN10QTransformC1ERKS_@Base 5.3.0
+ (optional=gccinternal|arch=powerpc)_ZN10QTransformC2ERKS_@Base 5.3.0
  _ZN10QUndoGroup11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
  _ZN10QUndoGroup11qt_metacastEPKc@Base 5.0.2
  _ZN10QUndoGroup11removeStackEP10QUndoStack@Base 5.0.2
@@ -2412,8 +2412,8 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN15QStyleOptionTabC1Ev@Base 5.0.2
  _ZN15QStyleOptionTabC2Ei@Base 5.0.2
  _ZN15QStyleOptionTabC2Ev@Base 5.0.2
- (arch=!amd64 !armhf !i386 !ia64)_ZN15QStyleOptionTabD1Ev@Base 5.0.2
- (arch=!amd64 !armhf !i386 !ia64)_ZN15QStyleOptionTabD2Ev@Base 5.0.2
+ (optional=gccinternal|arch=!amd64 !armhf !i386 !ia64)_ZN15QStyleOptionTabD1Ev@Base 5.0.2
+ (optional=gccinternal|arch=!amd64 !armhf !i386 !ia64)_ZN15QStyleOptionTabD2Ev@Base 5.0.2
  _ZN15QSystemTrayIcon10setToolTipERK7QString@Base 5.0.2
  _ZN15QSystemTrayIcon10setVisibleEb@Base 5.0.2
  _ZN15QSystemTrayIcon11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
@@ -3388,8 +3388,8 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN19QStyleOptionToolBoxC1Ev@Base 5.0.2
  _ZN19QStyleOptionToolBoxC2Ei@Base 5.0.2
  _ZN19QStyleOptionToolBoxC2Ev@Base 5.0.2
- (arch=!amd64 !armhf !i386 !ia64)_ZN19QStyleOptionToolBoxD1Ev@Base 5.0.2
- (arch=!amd64 !armhf !i386 !ia64)_ZN19QStyleOptionToolBoxD2Ev@Base 5.0.2
+ (optional=gccinternal|arch=!amd64 !armhf !i386 !ia64)_ZN19QStyleOptionToolBoxD1Ev@Base 5.0.2
+ (optional=gccinternal|arch=!amd64 !armhf !i386 !ia64)_ZN19QStyleOptionToolBoxD2Ev@Base 5.0.2
  _ZN19QStyledItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex@Base 5.0.2
  _ZN19QStyledItemDelegate11eventFilterEP7QObjectP6QEvent@Base 5.0.2
  _ZN19QStyledItemDelegate11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
@@ -3541,8 +3541,8 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN20QStyleOptionComboBoxC1Ev@Base 5.0.2
  _ZN20QStyleOptionComboBoxC2Ei@Base 5.0.2
  _ZN20QStyleOptionComboBoxC2Ev@Base 5.0.2
- (arch=!amd64 !armhf !i386 !ia64)_ZN20QStyleOptionComboBoxD1Ev@Base 5.0.2
- (arch=!amd64 !armhf !i386 !ia64)_ZN20QStyleOptionComboBoxD2Ev@Base 5.0.2
+ (optional=gccinternal|arch=!amd64 !armhf !i386 !ia64)_ZN20QStyleOptionComboBoxD1Ev@Base 5.0.2
+ (optional=gccinternal|arch=!amd64 !armhf !i386 !ia64)_ZN20QStyleOptionComboBoxD2Ev@Base 5.0.2
  _ZN20QStyleOptionGroupBoxC1Ei@Base 5.0.2
  _ZN20QStyleOptionGroupBoxC1Ev@Base 5.0.2
  _ZN20QStyleOptionGroupBoxC2Ei@Base 5.0.2
@@ -3871,7 +3871,7 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN24QStyleOptionGraphicsItemC1Ev@Base 5.0.2
  _ZN24QStyleOptionGraphicsItemC2Ei@Base 5.0.2
  _ZN24QStyleOptionGraphicsItemC2Ev@Base 5.0.2
- (arch=powerpc ppc64el)_ZN24QStyleOptionGraphicsItemaSERKS_@Base 5.4.2
+ (optional=gccinternal|arch=powerpc ppc64el)_ZN24QStyleOptionGraphicsItemaSERKS_@Base 5.4.2
  (optional=gccinternal)_ZN25QAbstractItemModelPrivateD0Ev@Base 5.0.2 1
  (optional=gccinternal)_ZN25QAbstractItemModelPrivateD1Ev@Base 5.0.2 1
  (optional=gccinternal)_ZN25QAbstractItemModelPrivateD2Ev@Base 5.0.2 1
@@ -8109,25 +8109,25 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZTV22QGraphicsItemAnimation@Base 5.0.2
  _ZTV22QGraphicsOpacityEffect@Base 5.0.2
  _ZTV22QItemEditorCreatorBase@Base 5.0.2
- _ZTV23QEventTransitionPrivate@Base 5.0.2 1
+ (optional=gccinternal)_ZTV23QEventTransitionPrivate@Base 5.0.2 1
  _ZTV23QGraphicsColorizeEffect@Base 5.0.2
  _ZTV23QGraphicsSceneHelpEvent@Base 5.0.2
  _ZTV23QGraphicsSceneMoveEvent@Base 5.0.2
  _ZTV23QGraphicsSimpleTextItem@Base 5.0.2
  _ZTV23QPixmapDropShadowFilter@Base 5.0.2 1
- _ZTV24QAbstractLayoutStyleInfo@Base 5.3.0 1
+ (optional=gccinternal)_ZTV24QAbstractLayoutStyleInfo@Base 5.3.0 1
  _ZTV24QGraphicsSceneHoverEvent@Base 5.0.2
  _ZTV24QGraphicsSceneMouseEvent@Base 5.0.2
  _ZTV24QGraphicsSceneWheelEvent@Base 5.0.2
  _ZTV24QPixmapConvolutionFilter@Base 5.0.2 1
  _ZTV24QPlainTextDocumentLayout@Base 5.0.2
  _ZTV25QAbstractItemModelPrivate@Base 5.0.2 1
- _ZTV25QAccessibleImageInterface@Base 5.4.0
+ (optional=gccinternal)_ZTV25QAccessibleImageInterface@Base 5.4.0
  _ZTV25QAccessibleTableInterface@Base 5.4.0
- _ZTV25QAccessibleValueInterface@Base 5.4.0
+ (optional=gccinternal)_ZTV25QAccessibleValueInterface@Base 5.4.0
  _ZTV25QGraphicsDropShadowEffect@Base 5.0.2
  _ZTV25QGraphicsSceneResizeEvent@Base 5.0.2
- _ZTV25QOpenGLPaintDevicePrivate@Base 5.4.0 1
+ (optional=gccinternal)_ZTV25QOpenGLPaintDevicePrivate@Base 5.4.0 1
  _ZTV26QAbstractGraphicsShapeItem@Base 5.0.2
  _ZTV26QAbstractScrollAreaPrivate@Base 5.0.2 1
  _ZTV26QAccessibleTextCursorEvent@Base 5.0.2
@@ -8137,10 +8137,10 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZTV27QAccessibleStateChangeEvent@Base 5.0.2
  _ZTV27QAccessibleValueChangeEvent@Base 5.0.2
  _ZTV27QGraphicsSceneDragDropEvent@Base 5.0.2
- _ZTV29QAccessibleTableCellInterface@Base 5.4.0
+ (optional=gccinternal)_ZTV29QAccessibleTableCellInterface@Base 5.4.0
  _ZTV29QAccessibleTextSelectionEvent@Base 5.0.2
  _ZTV30QGraphicsSceneContextMenuEvent@Base 5.0.2
- _ZTV32QAccessibleEditableTextInterface@Base 5.4.0
+ (optional=gccinternal)_ZTV32QAccessibleEditableTextInterface@Base 5.4.0
  _ZTV32QAccessibleTableModelChangeEvent@Base 5.0.2
  _ZTV5QDial@Base 5.0.2
  _ZTV5QMenu@Base 5.0.2

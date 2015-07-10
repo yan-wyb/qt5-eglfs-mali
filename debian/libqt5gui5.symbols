@@ -7297,7 +7297,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZTV20QPlatformTextureList@Base 5.3.0 1
  _ZTV20QPlatformThemePlugin@Base 5.0.2 1
  _ZTV20QTextFrameLayoutData@Base 5.0.2
- _ZTV20QTextObjectInterface@Base 5.0.2
+ (optional=gccinternal)_ZTV20QTextObjectInterface@Base 5.0.2
  _ZTV21QOpenGL2PaintEngineEx@Base 5.0.2 1
  _ZTV21QOpenGLContextPrivate@Base 5.0.2 1
  _ZTV21QOpenGLSharedResource@Base 5.0.2 1
@@ -7382,7 +7382,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZTV9QTextList@Base 5.0.2
  _ZTVN29QWindowSystemInterfacePrivate10CloseEventE@Base 5.0.2 1
  _ZTVN29QWindowSystemInterfacePrivate10EnterEventE@Base 5.0.2 1
- _ZTVN29QWindowSystemInterfacePrivate10InputEventE@Base 5.0.2 1
+ (optional=gccinternal)_ZTVN29QWindowSystemInterfacePrivate10InputEventE@Base 5.0.2 1
  _ZTVN29QWindowSystemInterfacePrivate10LeaveEventE@Base 5.0.2 1
  _ZTVN29QWindowSystemInterfacePrivate10MouseEventE@Base 5.0.2 1
  _ZTVN29QWindowSystemInterfacePrivate10TouchEventE@Base 5.0.2 1
