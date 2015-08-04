@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.4.0 amd64 arm64 armhf i386 powerpc ppc64el
+# SymbolsHelper-Confirmed: 5.5.0 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
 | libqt5printsupport5 #MINVER#, qtbase-abi-5-5-0
  _Z19qt_printerPaperSizeN8QPrinter11OrientationEN17QPagedPaintDevice8PageSizeENS_4UnitEi@Base 5.0.2
@@ -434,7 +434,6 @@ libQt5PrintSupport.so.5 libqt5printsupport5 #MINVER#
  _ZTS29QPlatformPrinterSupportPlugin@Base 5.0.2 1
  _ZTS8QPrinter@Base 5.0.2
  _ZTV12QPrintDialog@Base 5.0.2
- (optional=gccinternal)_ZTV12QPrintEngine@Base 5.0.2
  _ZTV15QPdfPrintEngine@Base 5.0.2 1
  _ZTV16QPageSetupDialog@Base 5.0.2
  _ZTV17QAlphaPaintEngine@Base 5.0.2 1

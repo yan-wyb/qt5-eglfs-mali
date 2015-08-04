@@ -63,6 +63,12 @@ qtbase-opensource-src (5.4.2+dfsg-3) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 09:59:21 -0300
 
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu2.1) wily; urgency=medium
+
+  * Rebuild for ICU 55.1.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 18 Jul 2015 12:19:40 +0200
+
 qtbase-opensource-src (5.4.2+dfsg-2ubuntu2) wily; urgency=medium
 
   * Rebuild for GCC5 transition.
