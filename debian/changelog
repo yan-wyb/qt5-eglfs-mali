@@ -63,6 +63,15 @@ qtbase-opensource-src (5.4.2+dfsg-3) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 09:59:21 -0300
 
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu3) trusty; urgency=medium
+
+  [ Gary Wang ]
+  * debian/patches/enable_fonts_always_smoothly.patch:
+    - Workaround a glyph rendering problem by forcing distance field 
+      rendering (LP: #1462982) (LP: #1475205)
+
+ -- Timo Jyrinki <timo.jyrinki@iki.fi>  Wed, 05 Aug 2015 11:44:25 +0300
+
 qtbase-opensource-src (5.4.2+dfsg-2ubuntu2.1) wily; urgency=medium
 
   * Rebuild for ICU 55.1.
