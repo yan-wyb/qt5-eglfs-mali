@@ -4,7 +4,6 @@ Fix-compile-error-on-big-endian.patch
 
 # Debian specific.
 gnukfreebsd.diff
-#revert_upstream_bsymbolic_change.patch # https://launchpad.net/bugs/1403758
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 hurd-forkfd.diff
