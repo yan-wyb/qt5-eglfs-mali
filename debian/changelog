@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.0+dfsg-4ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
     (LP: #1437206) (LP: #1450137)
@@ -12,6 +12,49 @@ qtbase-opensource-src (5.5.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
   * Mark/unmark private symbols.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
+
+qtbase-opensource-src (5.5.0+dfsg-5) UNRELEASED; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Update debian/copyright for 5.5.0.
+  * Make libqt5gui5 recommend libqt5xcbqpa5, as it is the default
+    QPA platform.
+  * Update symbols files from buildds’ logs.
+  * Make libqt5libqgtk2 package description more verbose.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 14 Aug 2015 19:37:52 +0300
+
+qtbase-opensource-src (5.5.0+dfsg-4) experimental; urgency=medium
+
+  * Update symbols files with buildds logs.
+  * Build firebird plugin on all Linux and kFreeBSD architectures.
+    - Resurrect libqt5sql5-ibase binary package.
+    - Copy patch from qt4-x11 to link ibase sql plugin against firebird
+      (link_fbclient.diff).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 14 Aug 2015 10:37:08 +0300
+
+qtbase-opensource-src (5.5.0+dfsg-3) experimental; urgency=medium
+
+  * Update symbols files with buildds logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 03 Aug 2015 10:59:00 +0300
+
+qtbase-opensource-src (5.5.0+dfsg-2) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Bootstrap coreutils in order to be able to rebuild some pregenerated stuff.
+    - Rebuild the TLD names list.
+
+  [ Dmitry Shachnev ]
+  * Update symbols files with buildds’ logs.
+  * Merge 5.4.2+dfsg-5 unstable upload.
+  * Add processNameByPid implementation for GNU/kFreeBSD
+    (gnukfreebsd_processNameByPid.diff).
+  * Remove symbols missing with GCC 5.
+  * Drop unused outdated-autotools-helper-file Lintian overrides.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 02 Aug 2015 18:33:39 +0300
 
 qtbase-opensource-src (5.5.0+dfsg-1) experimental; urgency=medium
 
@@ -49,6 +92,18 @@ qtbase-opensource-src (5.5.0+dfsg-1) experimental; urgency=medium
     - Fix FTBFS on powerpc.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 06 Jul 2015 18:37:23 -0300
+
+qtbase-opensource-src (5.4.2+dfsg-5) unstable; urgency=medium
+
+  [ Rohan Garg ]
+  * Drop revert_upstream_bsymbolic_change.patch, still broken on armhf
+    (QTBUG-47350).
+  * Let configure work out if reduce-relocations is supported.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 24 Jul 2015 15:24:59 -0300
 
 qtbase-opensource-src (5.4.2+dfsg-4) unstable; urgency=medium
 

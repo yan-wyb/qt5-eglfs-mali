@@ -60,6 +60,7 @@ Build-Depends: debhelper (>= 9),
                libxkbcommon-x11-dev,
                libxrender-dev,
                pkg-kde-tools (>= 0.15.17),
+               publicsuffix,
                unixodbc-dev,
                xvfb,
                zlib1g-dev
@@ -90,6 +91,7 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
+Recommends: libqt5xcbqpa5
 Suggests: libqt5libqgtk2
 Description: Qt 5 GUI module
  Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -108,7 +110,8 @@ Description: Qt 5 GTK2 platform theme
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
  .
- The libqgtk2 module provides GTK2 theme compatibility
+ This package provides the GTK2 platform theme, which makes Qt use
+ native icon themes, fonts, and dialogs on GTK-based environments.
 
 Package: libqt5network5
 Architecture: any
@@ -204,6 +207,17 @@ Description: Qt 5 FreeTDS database driver
  .
  Install it if you intend to use or write Qt programs that are to access a
  MS SQL or Sybase SQL server.
+
+Package: libqt5sql5-ibase
+Architecture: kfreebsd-any linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Qt 5 Firebird database driver
+ This package contains the Firebird plugin for Qt 5.
+ .
+ Install it if you intend to use or write Qt programs that are to access a
+ Firebird/InterBase DB.
 
 Package: libqt5xml5
 Architecture: any
