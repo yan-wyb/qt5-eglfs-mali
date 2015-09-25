@@ -121,6 +121,16 @@ qtbase-opensource-src (5.4.2+dfsg-3) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 09:59:21 -0300
 
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu5) wily; urgency=medium
+
+  * debian/patches/Network-Fix-up-previous-corruption-patch.patch:
+    - Additional fixes to the QNAM upload corruption problem,
+      from the 5.4 upstream stable branch. (LP: #1497147)
+  * debian/patches/enable-tests.patch:
+    - Disable two unrelated tests that fail likely due to new Mesa 11.0.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 24 Sep 2015 07:34:12 +0000
+
 qtbase-opensource-src (5.4.2+dfsg-2ubuntu3) trusty; urgency=medium
 
   [ Gary Wang ]
