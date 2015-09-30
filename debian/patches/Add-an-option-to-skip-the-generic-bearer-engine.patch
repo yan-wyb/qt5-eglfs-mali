@@ -1,0 +1,55 @@
+From 4f3379655caac2032e894bf838316ce087802bb7 Mon Sep 17 00:00:00 2001
+From: Timur Pocheptsov <timur.pocheptsov@theqtcompany.com>
+Date: Tue, 22 Sep 2015 09:01:30 +0200
+Subject: [PATCH] Add an option to skip the generic bearer engine
+
+Add an option to skip a generic bearer engine if needed (by testing
+environment variable QT_EXCLUDE_GENERIC_BEARER).
+
+Task-number: QTBUG-41866
+Change-Id: I1b53ed1d22a7b34de5c6f6d0386ed242b2ca5e00
+Reviewed-by: Alex Blasche <alexander.blasche@theqtcompany.com>
+---
+ src/network/bearer/qnetworkconfigmanager_p.cpp | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/src/network/bearer/qnetworkconfigmanager_p.cpp b/src/network/bearer/qnetworkconfigmanager_p.cpp
+index 49daa22..71e435b 100644
+--- a/src/network/bearer/qnetworkconfigmanager_p.cpp
++++ b/src/network/bearer/qnetworkconfigmanager_p.cpp
+@@ -43,6 +43,10 @@
+ #include <QtCore/qthread.h>
+ #include <QtCore/private/qcoreapplication_p.h>
+ 
++#include <QtCore/qbytearray.h>
++#include <QtCore/qglobal.h>
++
++
+ #ifndef QT_NO_BEARERMANAGEMENT
+ 
+ QT_BEGIN_NAMESPACE
+@@ -375,6 +379,8 @@ void QNetworkConfigurationManagerPrivate::updateConfigurations()
+         updating = false;
+ 
+ #ifndef QT_NO_LIBRARY
++        bool envOK  = false;
++        const int skipGeneric = qgetenv("QT_EXCLUDE_GENERIC_BEARER").toInt(&envOK);
+         QBearerEngine *generic = 0;
+         QFactoryLoader *l = loader();
+         const PluginKeyMap keyMap = l->keyMap();
+@@ -409,8 +415,10 @@ void QNetworkConfigurationManagerPrivate::updateConfigurations()
+             }
+         }
+ 
+-        if (generic)
+-            sessionEngines.append(generic);
++        if (generic) {
++            if (!envOK || skipGeneric <= 0)
++                sessionEngines.append(generic);
++        }
+ #endif // QT_NO_LIBRARY
+     }
+ 
+-- 
+2.5.0
+

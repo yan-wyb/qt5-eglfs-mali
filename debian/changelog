@@ -10,6 +10,11 @@ qtbase-opensource-src (5.5.0+dfsg-4ubuntu1) UNRELEASED; urgency=medium
   * Build depend on GStreamer 1.0 and add a configure option for it.
   * Update symbols.
   * Mark/unmark private symbols.
+  * Replace two Ubuntu patches with upstreamed patches:
+    - Drop disable-generic-plugin-when-others-available.patch, replace with
+      Add-an-option-to-skip-the-generic-bearer-engine.patch
+    - Drop qopenglframebufferobject_powervrworkaround.patch, replace with
+      Blacklist-PowerVR-Rogue-G6200-v1.3-from-supporting-B.patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
