@@ -105,6 +105,14 @@ qtbase-opensource-src (5.5.0+dfsg-1) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 06 Jul 2015 18:37:23 -0300
 
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu6) wily; urgency=medium
+
+  * debian/patches/stale-process-lock.patch:
+    - Fix QLockFile not noticing if the lock pid is re-used by unrelated
+      process (LP: #1500444)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 29 Sep 2015 07:18:23 +0000
+
 qtbase-opensource-src (5.4.2+dfsg-5) unstable; urgency=medium
 
   [ Rohan Garg ]
