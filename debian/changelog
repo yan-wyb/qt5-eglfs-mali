@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.0+dfsg-4ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release. (LP: #1437206) (LP: #1450137) (LP: #1474313)
     (LP: #1470700) (LP: #1504631) (LP: #1423659)
@@ -16,8 +16,7 @@ qtbase-opensource-src (5.5.0+dfsg-4ubuntu1) UNRELEASED; urgency=medium
     - Drop qopenglframebufferobject_powervrworkaround.patch, replace with
       Blacklist-PowerVR-Rogue-G6200-v1.3-from-supporting-B.patch
   * debian/patches/Make-sure-networkAccessibilityChanged-is-emitted.patch:
-    - Include a network fix from Qt 5.5 branch (merged after 5.5.1), but 
-      disable it until 5.5.1 is out that has two pre-required patches
+    - Include a network fix from Qt 5.5 branch (merged after 5.5.1)
       (LP: #1470700)
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
