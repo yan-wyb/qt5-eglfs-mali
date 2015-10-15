@@ -16952,7 +16952,7 @@ Index: qtbase-opensource-src-5.4.1/tests/auto/widgets/kernel/qtooltip/tst_qtoolt
 --- qtbase-opensource-src-5.4.1.orig/tests/auto/widgets/kernel/qtooltip/tst_qtooltip.cpp
 +++ qtbase-opensource-src-5.4.1/tests/auto/widgets/kernel/qtooltip/tst_qtooltip.cpp
 @@ -102,6 +102,7 @@ void tst_QToolTip::task183679()
-     Widget_task183679 widget;
+                           + QLatin1Char(' ') + QLatin1String(QTest::currentDataTag()));
      widget.show();
      QApplication::setActiveWindow(&widget);
 +    QSKIP("Skipping failing test");
@@ -17345,7 +17345,7 @@ Index: qtbase-opensource-src-5.4.1/tests/auto/widgets/widgets/qmenubar/tst_qmenu
  
 @@ -1314,6 +1323,7 @@ void tst_QMenuBar::taskQTBUG11823_crashw
  
- void tst_QMenuBar::closeOnSecondClick() // QTBUG-32807, menu should close on 2nd click.
+ void tst_QMenuBar::closeOnSecondClickAndOpenOnThirdClick() // QTBUG-32807, menu should close on 2nd click.
  {
 +    QSKIP("Skipping failing test");
      QMainWindow mainWindow;
@@ -17457,7 +17457,7 @@ Index: qtbase-opensource-src-5.4.1/tests/auto/corelib/mimetypes/qmimedatabase/qm
 +++ qtbase-opensource-src-5.4.1/tests/auto/corelib/mimetypes/qmimedatabase/qmimedatabase-cache/tst_qmimedatabase-cache.cpp
 @@ -41,6 +41,7 @@
  
- void tst_QMimeDatabase::init()
+ void tst_QMimeDatabase::initTestCaseInternal()
  {
 +    QSKIP("Skipping failing test");
  #ifdef QT_NO_PROCESS
