@@ -1,7 +1,5 @@
 # Backported stuff
 Add-environment-variable-support-for-testability-lib.patch
-Fix-compile-error-on-big-endian.patch
-Network-Fix-up-previous-corruption-patch.patch
 Add-an-option-to-skip-the-generic-bearer-engine.patch
 Blacklist-PowerVR-Rogue-G6200-v1.3-from-supporting-B.patch
 #Make-sure-networkAccessibilityChanged-is-emitted.patch
