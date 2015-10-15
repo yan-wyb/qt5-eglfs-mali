@@ -2,7 +2,7 @@
 Add-environment-variable-support-for-testability-lib.patch
 Add-an-option-to-skip-the-generic-bearer-engine.patch
 Blacklist-PowerVR-Rogue-G6200-v1.3-from-supporting-B.patch
-#Make-sure-networkAccessibilityChanged-is-emitted.patch
+Make-sure-networkAccessibilityChanged-is-emitted.patch
 
 # Debian specific.
 gnukfreebsd.diff
