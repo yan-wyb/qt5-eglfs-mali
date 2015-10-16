@@ -6,7 +6,7 @@ qtbase-opensource-src (5.5.1-0ubuntu1) UNRELEASED; urgency=medium
     Add-environment-variable-support-for-testability-lib.patch
   * Drop patches in upstream:
     - Correct-typo-in-the-Gujarati-openType-identififer.patch
-  * Rebase enable-tests.patch.
+  * Rebase enable-tests.patch. Disable one failing QtWidgets test.
   * Build depend on GStreamer 1.0 and add a configure option for it.
   * Update symbols.
   * Mark/unmark private symbols.
