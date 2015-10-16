@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.1-0ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-1ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release. (LP: #1437206) (LP: #1450137) (LP: #1474313)
     (LP: #1470700) (LP: #1504631) (LP: #1423659)
