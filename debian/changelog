@@ -21,9 +21,43 @@ qtbase-opensource-src (5.5.1-0ubuntu1) UNRELEASED; urgency=medium
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
-qtbase-opensource-src (5.5.0+dfsg-5) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-1) experimental; urgency=medium
+
+  [ Sune Vuorela ]
+  * Add Suggests: qt5-image-formats-plugins to libqt5gui5 to get a
+    bit of visibility to the plugins that people using QImage might
+    need.
+  * Update my email address.
 
   [ Dmitry Shachnev ]
+  * Make libqt5gui5 also recommend libqt5svg5, needed to support
+    SVG icon themes.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * New upstream release.
+  * Bump qtbase-abi to 5-5-1.
+  * Remove screen_crash.patch, already present upstream.
+  * Refresh pacthes:
+    - Fix-compile-error-on-big-endian.patch
+    - hurd-forkfd.diff
+  * Remove gnukfreebsd_processNameByPid.diff, seems implemented with a
+    different solution.
+  * Update installation file listing for qtbase5-dev.install-common.
+  * Update symbols files with current build log. All missing symbols
+    where private or not available on the public headers.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 15 Oct 2015 14:54:55 -0300
+
+qtbase-opensource-src (5.5.0+dfsg-6) experimental; urgency=medium
+
+  [ Ralf Jung ]
+  * When a screen comes back online, the windows need to be told
+    about it (screen_crash.diff) (Closes: #787680)
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 07 Sep 2015 15:15:43 -0300
+
+qtbase-opensource-src (5.5.0+dfsg-5) experimental; urgency=medium
+
   * Update debian/copyright for 5.5.0.
   * Make libqt5gui5 recommend libqt5xcbqpa5, as it is the default
     QPA platform.
@@ -33,7 +67,7 @@ qtbase-opensource-src (5.5.0+dfsg-5) UNRELEASED; urgency=medium
     on libqt5xcbqpa5, as it provides unversioned .so symlinks for these
     libraries.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 14 Aug 2015 19:37:52 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 03 Sep 2015 18:33:59 +0300
 
 qtbase-opensource-src (5.5.0+dfsg-4) experimental; urgency=medium
 

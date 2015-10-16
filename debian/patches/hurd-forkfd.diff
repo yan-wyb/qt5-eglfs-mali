@@ -8,10 +8,12 @@ Description: Disable use of waitid() on Hurd
 Forwarded: no (possibly not needed)
 Last-Update: 2015-07-04
 
-Index: qtbase-opensource-src-5.5.1/src/3rdparty/forkfd/forkfd.c
-===================================================================
---- qtbase-opensource-src-5.5.1.orig/src/3rdparty/forkfd/forkfd.c
-+++ qtbase-opensource-src-5.5.1/src/3rdparty/forkfd/forkfd.c
+---
+ src/3rdparty/forkfd/forkfd.c |    3 +++
+ 1 file changed, 3 insertions(+)
+
+--- a/src/3rdparty/forkfd/forkfd.c
++++ b/src/3rdparty/forkfd/forkfd.c
 @@ -54,6 +54,9 @@
  #    define HAVE_PIPE2    1
  #  endif

@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Sune Vuorela <debian@pusling.com>,
+Uploaders: Sune Vuorela <sune@debian.org>,
            Pino Toscano <pino@debian.org>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
            Timo Jyrinki <timo@debian.org>,
@@ -74,7 +74,7 @@ Package: libqt5core5a
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Provides: qtbase-abi-5-5-0
+Provides: qtbase-abi-5-5-1
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: qttranslations5-l10n
 Suggests: libthai0
@@ -91,8 +91,8 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
-Recommends: libqt5xcbqpa5
-Suggests: libqt5libqgtk2
+Recommends: libqt5svg5, libqt5xcbqpa5
+Suggests: libqt5libqgtk2, qt5-image-formats-plugins
 Description: Qt 5 GUI module
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
