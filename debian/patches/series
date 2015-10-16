@@ -17,3 +17,4 @@ qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 enable_fonts_always_smoothly.patch
+Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch

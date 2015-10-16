@@ -1,0 +1,28 @@
+From 72e981a239e0031dd88a5b48862e79588ff53040 Mon Sep 17 00:00:00 2001
+From: Albert Astals Cid <albert.astals@canonical.com>
+Date: Fri, 16 Oct 2015 13:09:46 +0200
+Subject: [PATCH] Use Node::name if Node::logicalModuleName is empty for qml
+ modules
+
+Change-Id: I55693a4f34f0a89ceb326b5eb4b229dd3f91c172
+---
+ src/tools/qdoc/qdocindexfiles.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/tools/qdoc/qdocindexfiles.cpp b/src/tools/qdoc/qdocindexfiles.cpp
+index 8961ff7..2262801 100644
+--- a/src/tools/qdoc/qdocindexfiles.cpp
++++ b/src/tools/qdoc/qdocindexfiles.cpp
+@@ -900,6 +900,9 @@ bool QDocIndexFiles::generateIndexSection(QXmlStreamWriter& writer,
+     if (node->isQmlModule()) {
+         logicalModuleName = node->logicalModuleName();
+         logicalModuleVersion = node->logicalModuleVersion();
++        if (logicalModuleName.isEmpty()) {
++            logicalModuleName = node->name();
++        }
+         if (!logicalModuleName.isEmpty()) {
+             writer.writeAttribute("qml-module-name", logicalModuleName);
+             if (node->isQmlModule())
+-- 
+2.5.0
+

@@ -18,6 +18,8 @@ qtbase-opensource-src (5.5.1+dfsg-1ubuntu1) UNRELEASED; urgency=medium
   * debian/patches/Make-sure-networkAccessibilityChanged-is-emitted.patch:
     - Include a network fix from Qt 5.5 branch (merged after 5.5.1)
       (LP: #1470700)
+  * debian/patches/Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch:
+    - Fix a qdoc issue (LP: #1447182)
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
