@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.5.0 amd64 arm64 armhf i386 powerpc ppc64el
+# SymbolsHelper-Confirmed: 5.5.1 amd64 arm64 armhf i386 powerpc ppc64el
 libQt5Core.so.5 libqt5core5a #MINVER#
 | libqt5core5a #MINVER#, qtbase-abi-5-5-0
  _Z10forcepointR11QTextStream@Base 5.0.2
@@ -3535,6 +3535,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_@Base 5.0.2
  _ZNK11QMetaMethod8revisionEv@Base 5.0.2
  _ZNK11QMetaMethod8typeNameEv@Base 5.0.2
+ _ZNK11QMetaObject10Connection18isConnected_helperEv@Base 5.5.1
  _ZNK11QMetaObject10enumeratorEi@Base 5.0.2
  _ZNK11QMetaObject11constructorEi@Base 5.0.2
  _ZNK11QMetaObject11indexOfSlotEPKc@Base 5.0.2
