@@ -20,6 +20,7 @@ qtbase-opensource-src (5.5.1+dfsg-1ubuntu1) UNRELEASED; urgency=medium
       (LP: #1470700)
   * debian/patches/Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch:
     - Fix a qdoc issue (LP: #1447182)
+  * Remove disable_overlay_scrollbars.diff as overlay scrollbars were dropped.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 

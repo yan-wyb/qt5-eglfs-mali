@@ -12,7 +12,6 @@ hurd-forkfd.diff
 link_fbclient.diff
 
 # Ubuntu specific.
-disable_overlay_scrollbars.diff
 qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
