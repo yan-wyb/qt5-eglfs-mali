@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.1+dfsg-1ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-6ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release. (LP: #1437206) (LP: #1450137) (LP: #1474313)
     (LP: #1470700) (LP: #1504631) (LP: #1423659) (LP: #1474775)
@@ -23,6 +23,65 @@ qtbase-opensource-src (5.5.1+dfsg-1ubuntu1) UNRELEASED; urgency=medium
   * Remove disable_overlay_scrollbars.diff as overlay scrollbars were dropped.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-6) unstable; urgency=medium
+
+  * Drop hurd-forkfd.diff, we do not need to have two patches for the same
+    thing (the second one is hurd_forkfd.diff).
+  * Mark bsd_volumeinfo.diff and hurd_forkfd.diff as applied upstream.
+  * Disable broken MIPS atomics code, let Qt fall back to C++11/GCC atomics
+    (mips_no_atomic.diff).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 02 Nov 2015 10:30:14 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-5) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add upstream's set_WA_OutsideWSRange_for_native_widgets.patch
+    to avoid invalidating the backing store (Closes: #798661).
+
+  [ Dmitry Shachnev ]
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 28 Oct 2015 16:52:04 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-4) unstable; urgency=medium
+
+  * Move libqt5xcbqpa5 from libqt5gui5's recommends to depends. Recommendations
+    do not always get installed when the user is updating the packages, and so
+    most of our users had a bad experience. We can consider to push it back as
+    a recommendation after Stretch maybe (Closes: #802656).
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 23 Oct 2015 13:25:32 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-3) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to set positionAutomatic when using setX/setY
+    (set_positionautomatic.diff; partially fixes the VLC display issues).
+  * Make qtbase5-private-dev depend on libinput-dev and libxkbcommon-dev,
+    as these packages are needed to link to libQt5PlatformSupport.a static
+    library (closes: #802704).
+  * Add a patch to fix QStorageInfo implementation for BSD4 systems
+    (bsd_volumeinfo.diff), to fix the build failure on kfreebsd.
+  * Add a patch to undef HAVE_WAITID if needed constants are not defined
+    (hurd_forkfd.diff), to fix the build failure on hurd.
+  * Update symbols files from buildds’ logs.
+  * Mark four new private symbols in debian/libqt5gui5.symbols.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add qtwayland5 as a libqt5gui5 suggestion. We want people trying to
+    use Wayland to have it there. This can be reconsidered later if needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 23 Oct 2015 11:49:47 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 21 Oct 2015 15:18:39 -0300
 
 qtbase-opensource-src (5.5.1+dfsg-1) experimental; urgency=medium
 
@@ -141,13 +200,30 @@ qtbase-opensource-src (5.5.0+dfsg-1) experimental; urgency=medium
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 06 Jul 2015 18:37:23 -0300
 
-qtbase-opensource-src (5.4.2+dfsg-2ubuntu6) wily; urgency=medium
+qtbase-opensource-src (5.4.2+dfsg-9) unstable; urgency=medium
 
-  * debian/patches/stale-process-lock.patch:
-    - Fix QLockFile not noticing if the lock pid is re-used by unrelated
-      process (LP: #1500444)
+  * Update symbols files with buildds’ logs.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 29 Sep 2015 07:18:23 +0000
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 31 Aug 2015 09:12:23 +0300
+
+qtbase-opensource-src (5.4.2+dfsg-8) unstable; urgency=medium
+
+  * Yet another symbols update.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 06 Aug 2015 10:47:17 -0300
+
+qtbase-opensource-src (5.4.2+dfsg-7) unstable; urgency=medium
+
+  * Update symbols files, marking two symbols in libqt5widgets5.symbols
+    as optional.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 05 Aug 2015 14:01:15 -0300
+
+qtbase-opensource-src (5.4.2+dfsg-6) unstable; urgency=medium
+
+  * Update symbols files using gcc5 (Closes: #794518).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 05 Aug 2015 10:16:28 -0300
 
 qtbase-opensource-src (5.4.2+dfsg-5) unstable; urgency=medium
 
@@ -173,6 +249,14 @@ qtbase-opensource-src (5.4.2+dfsg-3) experimental; urgency=medium
   * Update symbols files with buildd's logs.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 22 Jun 2015 09:59:21 -0300
+
+qtbase-opensource-src (5.4.2+dfsg-2ubuntu6) wily; urgency=medium
+
+  * debian/patches/stale-process-lock.patch:
+    - Fix QLockFile not noticing if the lock pid is re-used by unrelated
+      process (LP: #1500444)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 29 Sep 2015 07:18:23 +0000
 
 qtbase-opensource-src (5.4.2+dfsg-2ubuntu5) wily; urgency=medium
 
