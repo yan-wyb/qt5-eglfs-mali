@@ -8,6 +8,10 @@ set_positionautomatic.diff
 set_WA_OutsideWSRange_for_native_widgets.patch
 bsd_volumeinfo.diff
 hurd_forkfd.diff
+Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
+Fix-crash-on-exit-caused-by-QStringLiterals.patch
+Fix-falsely-reported-style-for-fallback-font.patch
+Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
 
 # Will be no longer needed with Qt 5.7
 mips_no_atomic.diff
@@ -22,5 +26,5 @@ link_fbclient.diff
 qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
-enable_fonts_always_smoothly.patch
 Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch
+net-bearer-nm-disconnect-ap-signals5.patch

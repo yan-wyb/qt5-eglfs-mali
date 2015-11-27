@@ -1,7 +1,7 @@
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release. (LP: #1437206) (LP: #1450137) (LP: #1474313)
-    (LP: #1470700) (LP: #1504631) (LP: #1423659) (LP: #1474775)
+    (LP: #1470700) (LP: #1504631) (LP: #1423659) (LP: #1474775) (LP: #1508945)
   * Replace load_testability_from_env_var.patch with upstreamed
     Add-environment-variable-support-for-testability-lib.patch
   * Drop patches in upstream:
@@ -21,6 +21,18 @@ qtbase-opensource-src (5.5.1+dfsg-6ubuntu1) UNRELEASED; urgency=medium
   * debian/patches/Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch:
     - Fix a qdoc issue (LP: #1447182)
   * Remove disable_overlay_scrollbars.diff as overlay scrollbars were dropped.
+  * debian/patches/Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch:
+    - Backport. Prefer QT_PLUGIN_PATH over compiled-in paths (LP: #1519927)
+  * debian/patches/net-bearer-nm-disconnect-ap-signals5.patch:
+    - Backport. Reduce UI freezing caused by dbus signals (LP: #1480877)
+  * debian/patches/Fix-crash-on-exit-caused-by-QStringLiterals.patch
+    - Backport. Fix a crasher on exit (LP: #1436973)
+  * Replace our workaround for font rendering with new backported upstream 
+    patches:
+    - Add debian/patches/Fix-falsely-reported-style-for-fallback-font.patch
+    - Add debian/patches/Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
+    - Remove debian/patches/enable_fonts_always_smoothly.patch
+      (LP: #1475205)
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 24 Mar 2015 13:56:14 +0000
 
