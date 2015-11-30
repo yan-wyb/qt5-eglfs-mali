@@ -23,8 +23,6 @@ qtbase-opensource-src (5.5.1+dfsg-6ubuntu1) UNRELEASED; urgency=medium
   * Remove disable_overlay_scrollbars.diff as overlay scrollbars were dropped.
   * debian/patches/Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch:
     - Backport. Prefer QT_PLUGIN_PATH over compiled-in paths (LP: #1519927)
-  * debian/patches/net-bearer-nm-disconnect-ap-signals5.patch:
-    - Backport. Reduce UI freezing caused by dbus signals (LP: #1480877)
   * debian/patches/Fix-crash-on-exit-caused-by-QStringLiterals.patch
     - Backport. Fix a crasher on exit (LP: #1436973)
   * Replace our workaround for font rendering with new backported upstream 
