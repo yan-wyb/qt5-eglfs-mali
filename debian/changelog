@@ -1,5 +1,9 @@
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu2) UNRELEASED; urgency=medium
 
+  * debian/patches/enable-tests.patch:
+    - Replace the non-DFSG-free RFC files with public domain content.
+  * debian/copyright: mention the replacement.
+
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 04 Dec 2015 09:44:17 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu1) xenial; urgency=medium

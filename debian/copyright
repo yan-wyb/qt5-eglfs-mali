@@ -16,6 +16,10 @@ Files-Excluded: src/3rdparty/zlib/doc/rfc*.txt
 # * RFCs (see QTBUG-30544 and QTBUG-30545)
 # * Luxi and Adobe Utopia fonts
 # * htmlinfo example which contains non-free websites snapshots
+#
+# Three of the removed non-free files are replaced by public domain text 
+# content from https://en.wikisource.org/wiki/The_Kalevala/Rune_I to keep 
+# some of tests working. See debian/patches/enable-tests.patch.
 
 Files: *
 Copyright: 2012-2015 The Qt Company Ltd.
