@@ -66,8 +66,8 @@ ifeq ($(DEB_HOST_ARCH_CPU),i386)
 	cpu_opt = -no-sse2 -no-pch
 endif
 
-# Skip tests on the archs they are known to be flaky  with current configuration
-testskip_architectures := arm64 powerpc ppc64el
+# Run tests only on archs known to pass in the past
+testrun_architectures := amd64 armhf i386
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
   ifneq (,$(filter $(DEB_HOST_ARCH),alpha ia64 mips64 mips64el arm64))
@@ -180,7 +180,7 @@ endif
 	            $(cpu_opt)
 
 override_dh_auto_test:
-ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(testskip_architectures)))
+ifeq ($(DEB_HOST_ARCH),$(filter $(DEB_HOST_ARCH),$(testrun_architectures)))
 ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
 		xvfb-run -a -s "-screen 0 640x480x24" make check QT_PLUGIN_PATH=$(CURDIR)/plugins LD_LIBRARY_PATH=$(CURDIR)/lib PATH=$(CURDIR)/bin:$(PATH)
 endif
