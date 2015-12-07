@@ -27,3 +27,4 @@ qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch
+skip-largefile-test-s390x.patch
