@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.1+dfsg-6ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-6ubuntu3) xenial; urgency=medium
 
   * debian/patches/enable-tests.patch:
     - Replace the non-DFSG-free RFC files with public domain content.
@@ -7,7 +7,7 @@ qtbase-opensource-src (5.5.1+dfsg-6ubuntu3) UNRELEASED; urgency=medium
   * debian/copyright: mention the replacement.
   * Switch to opt-in for architectures to run tests on.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 07 Dec 2015 08:43:14 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 07 Dec 2015 14:02:11 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu2) xenial; urgency=high
 
