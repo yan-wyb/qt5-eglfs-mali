@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.5.1+dfsg-6ubuntu4) xenial; urgency=medium
+
+  * Update symbols for s390x.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 08 Dec 2015 13:35:46 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu3) xenial; urgency=medium
 
   * debian/patches/enable-tests.patch:

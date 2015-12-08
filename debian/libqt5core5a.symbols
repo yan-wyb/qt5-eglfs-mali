@@ -12,7 +12,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  (arch=ia64)_Z10qvsnprintfPcmPKcPv@Base 5.0.2
  (arch=ppc64el)_Z10qvsnprintfPcmPKcS_@Base 5.2.0
  (arch=arm64)_Z10qvsnprintfPcmPKcSt9__va_list@Base 5.2.0
- (arch=amd64 powerpc|subst)_Z10qvsnprintfPc{size_t}PKcP13__va_list_tag@Base 5.0.2
+ (arch=amd64 powerpc s390x|subst)_Z10qvsnprintfPc{size_t}PKcP13__va_list_tag@Base 5.0.2
  _Z10scientificR11QTextStream@Base 5.0.2
  _Z11noforcesignR11QTextStream@Base 5.0.2
  _Z11qHBFreeFaceP11HB_FaceRec_@Base 5.0.2
@@ -96,9 +96,9 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _Z5qHashRK9QBitArrayj@Base 5.0.2
  _Z5qHashRK9QDateTimej@Base 5.0.2
  _Z5qHashdj@Base 5.3.0
- (arch=!powerpc !ppc64el)_Z5qHashej@Base 5.3.0
+ (arch=!powerpc !ppc64el !s390x)_Z5qHashej@Base 5.3.0
  _Z5qHashfj@Base 5.3.0
- (arch=powerpc ppc64el)_Z5qHashgj@Base 5.3.0
+ (arch=powerpc ppc64el s390x)_Z5qHashgj@Base 5.3.0
  _Z5qQNaNv@Base 5.0.2
  _Z5qSNaNv@Base 5.0.2
  _Z5qdtoadiiPiS_PPcS1_@Base 5.0.2
@@ -2723,12 +2723,12 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN7QString8asprintfEPKcz@Base 5.5.0
  _ZN7QString8fromUcs4EPKji@Base 5.0.2
  _ZN7QString8truncateEi@Base 5.0.2
- (arch=amd64 powerpc)_ZN7QString8vsprintfEPKcP13__va_list_tag@Base 5.0.2
+ (arch=amd64 powerpc s390x)_ZN7QString8vsprintfEPKcP13__va_list_tag@Base 5.0.2
  (arch=hurd-i386 i386 ppc64el)_ZN7QString8vsprintfEPKcPc@Base 5.0.2
  (arch=ia64)_ZN7QString8vsprintfEPKcPv@Base 5.0.2
  (arch=armhf arm64)_ZN7QString8vsprintfEPKcSt9__va_list@Base 5.2.0
  _ZN7QString9fromUtf16EPKti@Base 5.0.2
- (arch=amd64 powerpc)_ZN7QString9vasprintfEPKcP13__va_list_tag@Base 5.5.0
+ (arch=amd64 powerpc s390x)_ZN7QString9vasprintfEPKcP13__va_list_tag@Base 5.5.0
  (arch=i386 ppc64el)_ZN7QString9vasprintfEPKcPc@Base 5.5.0
  (arch=arm64 armhf)_ZN7QString9vasprintfEPKcSt9__va_list@Base 5.5.0
  _ZN7QStringC1E5QChar@Base 5.0.2
