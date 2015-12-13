@@ -1,6 +1,7 @@
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu5) UNRELEASED; urgency=medium
 
   * Add libqt5gui5-gles (<< 5.5.0~) to Breaks/Replaces in libqt5xcbqpa5.
+    (LP: #1521739)
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Sun, 13 Dec 2015 14:26:48 +0300
 
