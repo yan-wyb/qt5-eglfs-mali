@@ -12,6 +12,7 @@ Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
 Fix-crash-on-exit-caused-by-QStringLiterals.patch
 Fix-falsely-reported-style-for-fallback-font.patch
 Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
+Make-UnknownAccessibility-not-block-requests.patch
 
 # Will be no longer needed with Qt 5.7
 mips_no_atomic.diff

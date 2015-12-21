@@ -1,9 +1,14 @@
-qtbase-opensource-src (5.5.1+dfsg-6ubuntu5) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-6ubuntu5) xenial; urgency=medium
 
+  [ Dmitry Shachnev ]
   * Add libqt5gui5-gles (<< 5.5.0~) to Breaks/Replaces in libqt5xcbqpa5.
     (LP: #1521739)
 
- -- Dmitry Shachnev <mitya57@ubuntu.com>  Sun, 13 Dec 2015 14:26:48 +0300
+  [ Timo Jyrinki ]
+  * debian/patches/Make-UnknownAccessibility-not-block-requests.patch:
+    - Another upstream fix for QNAM issues.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 21 Dec 2015 14:29:39 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu4) xenial; urgency=medium
 
