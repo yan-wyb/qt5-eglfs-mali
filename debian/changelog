@@ -3,6 +3,7 @@ qtbase-opensource-src (5.5.1+dfsg-10ubuntu1) UNRELEASED; urgency=medium
   * Merge with Debian.
   * qnetworkaccessmanager_accessibility.diff replaces 
     Make-sure-networkAccessibilityChanged-is-emitted.patch.
+  * debian/patches/series: reorder to apply Ubuntu's backported patches
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 04 Jan 2016 06:51:38 +0000
 

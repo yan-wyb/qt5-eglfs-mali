@@ -2,16 +2,13 @@
 Add-environment-variable-support-for-testability-lib.patch
 Add-an-option-to-skip-the-generic-bearer-engine.patch
 Blacklist-PowerVR-Rogue-G6200-v1.3-from-supporting-B.patch
-Fix-compile-error-on-big-endian.patch
 set_positionautomatic.diff
 set_WA_OutsideWSRange_for_native_widgets.patch
 bsd_volumeinfo.diff
 hurd_forkfd.diff
 Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
-Fix-crash-on-exit-caused-by-QStringLiterals.patch
 Fix-falsely-reported-style-for-fallback-font.patch
 Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
-Make-UnknownAccessibility-not-block-requests.patch
 
 # Will be no longer needed with Qt 5.7
 mips_no_atomic.diff
@@ -20,6 +17,7 @@ qnetworkreply_abort_socket.diff
 qnetworkaccessmanager_accessibility.diff
 uic_qvalidator_qtgui.diff
 Fix-crash-on-exit-caused-by-QStringLiterals.patch
+Make-UnknownAccessibility-not-block-requests.patch
 
 # Debian specific.
 gnukfreebsd.diff
