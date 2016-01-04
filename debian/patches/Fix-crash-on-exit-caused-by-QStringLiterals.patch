@@ -43,5 +43,9 @@ index 637b065..ae1ba18 100644
      if (m_enabled)
          emit enabledChanged(true);
 -- 
+<<<<<<< HEAD
 2.6.2
+=======
+2.1.4
+>>>>>>> master
 

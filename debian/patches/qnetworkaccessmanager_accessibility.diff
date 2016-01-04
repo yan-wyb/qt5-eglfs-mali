@@ -1,23 +1,11 @@
-From bb281eea179d50a413f4ec1ff172d27ee48d3a41 Mon Sep 17 00:00:00 2001
-From: Lorn Potter <lorn.potter@gmail.com>
-Date: Fri, 17 Jul 2015 15:32:23 +1000
-Subject: [PATCH] Make sure networkAccessibilityChanged is emitted
+Description: make sure networkAccessibilityChanged is emitted
+Origin: upstream, http://code.qt.io/cgit/qt/qtbase.git/commit/?id=bb281eea179d50a4
+Bug: https://bugs.debian.org/804883
+Last-Update: 2015-11-17
 
-Task-number: QTBUG-46323
-Change-Id: I8297072b62763136f457ca6ae15282d1c22244f4
-Reviewed-by: Timo Jyrinki <timo.jyrinki@canonical.com>
-Reviewed-by: Alex Blasche <alexander.blasche@theqtcompany.com>
----
- src/network/access/qnetworkaccessmanager.cpp       | 70 +++++++++++++++-------
- src/network/access/qnetworkaccessmanager_p.h       | 14 ++++-
- .../tst_qnetworkaccessmanager.cpp                  | 31 +++++-----
- 3 files changed, 77 insertions(+), 38 deletions(-)
-
-diff --git a/src/network/access/qnetworkaccessmanager.cpp b/src/network/access/qnetworkaccessmanager.cpp
-index 84931cb..f9e9513 100644
 --- a/src/network/access/qnetworkaccessmanager.cpp
 +++ b/src/network/access/qnetworkaccessmanager.cpp
-@@ -278,7 +278,8 @@ static void ensureInitialized()
+@@ -278,7 +278,8 @@
  
      \snippet code/src_network_access_qnetworkaccessmanager.cpp 4
  
@@ -27,7 +15,7 @@ index 84931cb..f9e9513 100644
  
      \snippet code/src_network_access_qnetworkaccessmanager.cpp 5
  
-@@ -467,16 +468,12 @@ QNetworkAccessManager::QNetworkAccessManager(QObject *parent)
+@@ -467,16 +468,12 @@
      qRegisterMetaType<QSharedPointer<char> >();
  
  #ifndef QT_NO_BEARERMANAGEMENT
@@ -50,7 +38,7 @@ index 84931cb..f9e9513 100644
  #endif
  }
  
-@@ -946,7 +943,8 @@ QNetworkConfiguration QNetworkAccessManager::activeConfiguration() const
+@@ -946,7 +943,8 @@
  void QNetworkAccessManager::setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility accessible)
  {
      Q_D(QNetworkAccessManager);
@@ -60,7 +48,7 @@ index 84931cb..f9e9513 100644
  
      if (d->networkAccessible != accessible) {
          NetworkAccessibility previous = networkAccessible();
-@@ -965,6 +963,10 @@ void QNetworkAccessManager::setNetworkAccessible(QNetworkAccessManager::NetworkA
+@@ -965,6 +963,10 @@
  QNetworkAccessManager::NetworkAccessibility QNetworkAccessManager::networkAccessible() const
  {
      Q_D(const QNetworkAccessManager);
@@ -71,7 +59,7 @@ index 84931cb..f9e9513 100644
      if (d->networkSessionRequired) {
          QSharedPointer<QNetworkSession> networkSession(d->getNetworkSession());
          if (networkSession) {
-@@ -1622,32 +1624,56 @@ void QNetworkAccessManagerPrivate::_q_networkSessionStateChanged(QNetworkSession
+@@ -1622,32 +1624,56 @@
      if (online) {
          if (state != QNetworkSession::Connected && state != QNetworkSession::Roaming) {
              online = false;
@@ -138,11 +126,9 @@ index 84931cb..f9e9513 100644
      }
  }
  
-diff --git a/src/network/access/qnetworkaccessmanager_p.h b/src/network/access/qnetworkaccessmanager_p.h
-index c715da0..54ae114 100644
 --- a/src/network/access/qnetworkaccessmanager_p.h
 +++ b/src/network/access/qnetworkaccessmanager_p.h
-@@ -78,7 +78,6 @@ public:
+@@ -78,7 +78,6 @@
            customNetworkConfiguration(false),
            networkSessionRequired(networkConfigurationManager.capabilities()
                                   & QNetworkConfigurationManager::NetworkSessionRequired),
@@ -150,7 +136,7 @@ index c715da0..54ae114 100644
            activeReplyCount(0),
            online(false),
            initializeSession(true),
-@@ -86,7 +85,18 @@ public:
+@@ -86,7 +85,18 @@
            cookieJarCreated(false),
            defaultAccessControl(true),
            authenticationManager(QSharedPointer<QNetworkAccessAuthenticationManager>::create())
@@ -170,11 +156,9 @@ index c715da0..54ae114 100644
      ~QNetworkAccessManagerPrivate();
  
      void _q_replyFinished();
-diff --git a/tests/auto/network/access/qnetworkaccessmanager/tst_qnetworkaccessmanager.cpp b/tests/auto/network/access/qnetworkaccessmanager/tst_qnetworkaccessmanager.cpp
-index b4e4b9c..8ecb57d 100644
 --- a/tests/auto/network/access/qnetworkaccessmanager/tst_qnetworkaccessmanager.cpp
 +++ b/tests/auto/network/access/qnetworkaccessmanager/tst_qnetworkaccessmanager.cpp
-@@ -74,6 +74,10 @@ void tst_QNetworkAccessManager::networkAccessible()
+@@ -74,6 +74,10 @@
      // if there is no session, we cannot know in which state we are in
      QNetworkAccessManager::NetworkAccessibility initialAccessibility =
              manager.networkAccessible();
@@ -185,7 +169,7 @@ index b4e4b9c..8ecb57d 100644
      QCOMPARE(manager.networkAccessible(), initialAccessibility);
  
      manager.setNetworkAccessible(QNetworkAccessManager::NotAccessible);
-@@ -94,29 +98,28 @@ void tst_QNetworkAccessManager::networkAccessible()
+@@ -94,29 +98,28 @@
      QCOMPARE(manager.networkAccessible(), initialAccessibility);
  
      QNetworkConfigurationManager configManager;
@@ -228,6 +212,3 @@ index b4e4b9c..8ecb57d 100644
  #endif
  }
  
--- 
-2.5.0
-

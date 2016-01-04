@@ -1,3 +1,54 @@
+qtbase-opensource-src (5.5.1+dfsg-10ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge with Debian.
+  * qnetworkaccessmanager_accessibility.diff replaces 
+    Make-sure-networkAccessibilityChanged-is-emitted.patch.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 04 Jan 2016 06:51:38 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-10) unstable; urgency=medium
+
+  * Demote libqt5gui5's dependency on libqt5xcbqpa5 to a recommendation,
+    solving a circular dependency (Closes: #808607).
+  * Update libqt5xcbqpa5's description to suggest a dependency on this lib
+    for apps that can only run on X.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 22 Dec 2015 10:39:59 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-9) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to make uic generate correct include paths for
+    QValidator-derived classes (uic_qvalidator_qtgui.diff; closes: #800375).
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Backport Fix-crash-on-exit-caused-by-QStringLiterals.patch to solve a crash
+    (Closes: #808287).
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 21 Dec 2015 12:35:25 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-8) unstable; urgency=medium
+
+  * Backport two upstream patches fix some issues with QNetworkAccessManager:
+    - qnetworkaccessmanager_accessibility.diff to fix upstream QTBUG-46323.
+    - qnetworkreply_abort_socket.diff to fix upstream QTBUG-47471.
+    Closes: #804883. Thanks to Soeren D. Schulze for the bug report and to
+    Gaudenz Steinlin for pointing me to the patches.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 17 Nov 2015 16:18:39 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-7) unstable; urgency=medium
+
+  * Backport upstream change (detect_64bit_atomic.diff) to auto-detect
+    whether 64-bit std::atomic really works.
+  * Mark mips_no_atomic.diff as applied upstream.
+  * Drop Fix-compile-error-on-big-endian.patch. The fix was applied upstream
+    in 5.5.1, and the refreshed version of that patch changes an unrelated
+    function.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 16 Nov 2015 21:13:36 +0300
+
 qtbase-opensource-src (5.5.1+dfsg-6ubuntu5) xenial; urgency=medium
 
   [ Dmitry Shachnev ]
