@@ -9,6 +9,7 @@ hurd_forkfd.diff
 Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
 Fix-falsely-reported-style-for-fallback-font.patch
 Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
+xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
 
 # Will be no longer needed with Qt 5.7
 mips_no_atomic.diff
