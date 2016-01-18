@@ -64,6 +64,8 @@ Build-Depends: debhelper (>= 9),
                unixodbc-dev,
                xvfb,
                zlib1g-dev
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.6.0~),
+                     qttools5-dev-tools (>= 5.6.0~)
 Build-Conflicts: libmariadbclient-dev
 Standards-Version: 3.9.6
 Homepage: http://qt-project.org/
@@ -74,7 +76,7 @@ Package: libqt5core5a
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Provides: qtbase-abi-5-5-1
+Provides: qtbase-abi-5-6-0
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: qttranslations5-l10n
 Suggests: libthai0
@@ -352,7 +354,7 @@ Description: Qt 5 base development files
  applications.
  .
  If you are interested in packaging Qt 5 stuff please take a look at
- http://pkg-kde.alioth.debian.org/packagingqtstuff.html
+ http://pkg-kde.alioth.debian.org/packagingqtbasedstuff.html
 
 Package: qtbase5-private-dev
 Architecture: any
@@ -399,7 +401,7 @@ Description: Qt 5 base development programs
  is its rich set of widgets that provide standard GUI functionality.
  .
  This package contains the development programs used for building Qt 5
- applications, such as moc, qdbuscpp2xml, qdbusxml2cpp, qdoc, rcc,
+ applications, such as moc, qdbuscpp2xml, qdbusxml2cpp, rcc,
  syncqt and uic.
 
 Package: qt5-qmake
@@ -530,8 +532,19 @@ Description: Qt 5 development defaults package
  installations from being used.
  .
  This package should not be used for building Debian packages. Take a
- look at http://pkg-kde.alioth.debian.org/packagingqtstuff.html for
+ look at http://pkg-kde.alioth.debian.org/packagingqtbasedstuff.html for
  more information.
+
+Package: qtbase5-doc
+Priority: extra
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Qt 5 base documentation
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains the documentation for the Qt 5 base libraries.
 
 Package: qtbase5-doc-html
 Priority: extra

@@ -19,8 +19,8 @@ upstream_changes := dist/changes-$(shell dpkg-parsechangelog | sed -n 's/^Versio
 # Distribution vendor
 vendor := $(shell dpkg-vendor --query Vendor)
 
-# To easier the files installation according OSes and archs, we create three
-# kinds of install files: foo.install-common, foo.install-$DEB_HOST_ARCH and
+# To easier the files installation according to OSes and CPUs, we create three
+# kinds of install files: foo.install-common, foo.install-$DEB_HOST_ARCH_CPU and
 # foo.install-$DEB_HOST_ARCH_OS. In this case we can fine-tune what we install.
 #
 # Note that if any foo.install-* file exists and foo.install exist too, the
@@ -31,8 +31,8 @@ vendor := $(shell dpkg-vendor --query Vendor)
 
 # Retrieve packages that have a .install-common file
 pkgs_with_common = $(patsubst debian/%.install-common,%,$(wildcard debian/*.install-common))
-# Retrieve packages that have a .install-$DEB_HOST_ARCH file
-pkgs_with_arch = $(patsubst debian/%.install-$(DEB_HOST_ARCH),%,$(wildcard debian/*.install-$(DEB_HOST_ARCH)))
+# Retrieve packages that have a .install-$DEB_HOST_ARCH_CPU file
+pkgs_with_arch = $(patsubst debian/%.install-$(DEB_HOST_ARCH_CPU),%,$(wildcard debian/*.install-$(DEB_HOST_ARCH_CPU)))
 # Retrieve packages that have a .install-$DEB_HOST_ARCH_OS file
 pkgs_with_os = $(patsubst debian/%.install-$(DEB_HOST_ARCH_OS),%,$(wildcard debian/*.install-$(DEB_HOST_ARCH_OS)))
 
@@ -166,7 +166,7 @@ endif
 	            -verbose \
 	            -optimized-qmake \
 	            -dbus-linked \
-		    -no-strip \
+	            -no-strip \
 	            -no-separate-debug-info \
 	            -qpa xcb \
 	            -xcb \
@@ -268,10 +268,7 @@ ifeq ($(vendor),Ubuntu)
 endif
 
 override_dh_auto_build-indep:
-	cd $(CURDIR)/src; ../bin/qmake; make sub-qdoc
-	cd $(CURDIR)/src/corelib; ../../bin/qmake
-	cd $(CURDIR)/src/xml; ../../bin/qmake
-	dh_auto_build -Smakefile -- html_docs
+	dh_auto_build -- docs
 
 override_dh_auto_build-arch:
 	# Bootstrap corelibs in order to be able to build the helper tools to
@@ -351,10 +348,7 @@ endif
 		-exec chmod a-x {} \;
 
 override_dh_auto_install-indep:
-	make INSTALL_ROOT=$(CURDIR)/debian/tmp install_html_docs
-	# Docs are shipping empty directories, most probably for scripts only present
-	# when building online-html. See QTBUG-44655.
-	find $(CURDIR)/debian/tmp/usr/share/qt5/doc/ -type d -empty -delete -print
+	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
 
 override_dh_install:
 	# Now flush all the .install-* files as .install files.
@@ -363,7 +357,7 @@ override_dh_install:
 	done
 
 	set -e; for pkg in $(pkgs_with_arch); do \
-		cat debian/$$pkg.install-$(DEB_HOST_ARCH) >> debian/$$pkg.install ; \
+		cat debian/$$pkg.install-$(DEB_HOST_ARCH_CPU) >> debian/$$pkg.install ; \
 	done
 
 	set -e; for pkg in $(pkgs_with_os); do \
@@ -378,7 +372,11 @@ override_dh_installdocs:
 	dh_installdocs --all LGPL_EXCEPTION.txt
 
 override_dh_installchangelogs:
-	dh_installchangelogs $(upstream_changes)
+	if [ -f $(upstream_changes) ] ; then \
+		dh_installchangelogs $(upstream_changes); \
+	else \
+		dh_installchangelogs; \
+	fi
 
 override_dh_strip:
 	dh_strip -pqtbase5-examples --dbg-package=qtbase5-examples-dbg
@@ -390,9 +388,6 @@ override_dh_makeshlibs:
 	# Don't uncomment until rid of -gles packages
 	#dh_makeshlibs -V
 	dh_makeshlibs
-
-	# Check for private symbols not marked as such. Be verbose.
-	pkgkde-mark-private-symbols debian/qtbase5-private-dev/usr/include
 
 override_dh_clean:
 	dh_clean

@@ -1,24 +1,7 @@
-# Backported stuff
-Add-environment-variable-support-for-testability-lib.patch
-Add-an-option-to-skip-the-generic-bearer-engine.patch
-Blacklist-PowerVR-Rogue-G6200-v1.3-from-supporting-B.patch
-set_positionautomatic.diff
-set_WA_OutsideWSRange_for_native_widgets.patch
-bsd_volumeinfo.diff
-hurd_forkfd.diff
-Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
-Fix-falsely-reported-style-for-fallback-font.patch
-Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
-xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
-
-# Will be no longer needed with Qt 5.7
-mips_no_atomic.diff
-detect_64bit_atomic.diff
-qnetworkreply_abort_socket.diff
-qnetworkaccessmanager_accessibility.diff
-uic_qvalidator_qtgui.diff
-Fix-crash-on-exit-caused-by-QStringLiterals.patch
-Make-UnknownAccessibility-not-block-requests.patch
+# Backported from upstream
+no_dbus_dependency.diff
+qnativesocketengine_freebsd.diff
+qt_functions_missing_eval.diff
 multiscreen.diff
 xcb_dont_select_XInput_events_on_root_window.patch
 xcb_fix_drag_and_drop_when_window_is_hidden.patch
@@ -32,6 +15,5 @@ link_fbclient.diff
 # Ubuntu specific.
 qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
-enable-tests.patch
-Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch
+#enable-tests.patch
 skip-largefile-test-s390x.patch

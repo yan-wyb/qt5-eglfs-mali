@@ -1,3 +1,105 @@
+qtbase-opensource-src (5.6.0~beta+dfsg-5) UNRELEASED; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Fix URLs pointing to our "How to package Qt based stuff" page
+    (Closes: #810282). Thanks Jakob Haufe for the pointer.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 08 Jan 2016 12:17:40 -0300
+
+qtbase-opensource-src (5.6.0~beta+dfsg-4) experimental; urgency=medium
+
+  * Drop unused dbus build-dependency.
+  * Stop running pkgkde-mark-qt5-private-symbols script during build. The new
+    way is that the maintainers run it themselves after each symbols update.
+  * Make sure dh_installchangelogs is called even when upstream changelog is
+    not present.
+  * Use wildcards instead of hardcoded ABI versions in Lintian overrides files.
+  * Merge 5.5.1+dfsg-11 and 5.5.1+dfsg-12 unstable uploads.
+    - Refresh patches.
+  * When merging install files, take DEB_HOST_ARCH_CPU into account, instead of
+    DEB_HOST_ARCH. This is much more useful for us, because it allows us not to
+    ship identical files for i386, hurd-i386 and kfreebsd-i386.
+  * Exclude qdoc documentation from debian/qtbase5-doc-html.install (moved to
+    qttools module).
+  * Remove qdoc mention from qtbase5-dev-tools package description.
+  * Re-enable building the documentation.
+    - Add libqt5sql5-sqlite and qttools5-dev-tools to Build-Depends-Indep.
+  * README.source:
+    - Update the section on marking the private symbols.
+    - Add a new section about bootstrapping the docs packages.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 08 Jan 2016 10:21:22 +0300
+
+qtbase-opensource-src (5.6.0~beta+dfsg-3) experimental; urgency=medium
+
+  * Add qt_functions_missing_eval.diff to make qmake generate proper code for
+    custom plugin paths. This change is needed to make qtimageformats tests
+    success.
+  * Small updates to debian/copyright.
+  * Drop debian/source/lintian-overrides, the only override there is no longer
+    needed.
+  * Update the symbols files for kfreebsd-i386.
+  * Remove sparc references from the symbols files, sparc is dead.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 03 Jan 2016 21:03:01 +0300
+
+qtbase-opensource-src (5.6.0~beta+dfsg-2) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add meta-information to symbols files in order to make sure that the
+    dependency generated is at least as strict as the version of qtbase5-dev
+    used during the compilation. This should avoid parts of the Qt stack
+    (or any other app) migrating to testing before qtbase itself due to it
+    using only symbols present in older versions.
+
+  [ Dmitry Shachnev ]
+  * Bump qtbase-abi version to 5-6-0.
+  * Add qnativesocketengine_freebsd.diff to fix the build failure on kFreeBSD.
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 30 Dec 2015 09:48:18 +0300
+
+qtbase-opensource-src (5.6.0~beta+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * New upstream beta release.
+  * Update debian/watch to track experimental releases (needs to be reverted
+    before uploading 5.6.0 final).
+  * Drop the following patches, all are applied upstream:
+    - set_positionautomatic.diff
+    - set_WA_OutsideWSRange_for_native_widgets.patch
+    - bsd_volumeinfo.diff
+    - hurd_forkfd.diff
+    - mips_no_atomic.diff
+    - detect_64bit_atomic.diff
+    - qnetworkreply_abort_socket.diff
+    - qnetworkaccessmanager_accessibility.diff
+    - uic_qvalidator_qtgui.diff
+    - Fix-crash-on-exit-caused-by-QStringLiterals.patch
+  * Refresh debian/patches/gnukfreebsd.diff.
+  * Add a new script (debian/scripts/migrate-symbols.py) to help with migrating
+    the symbols files to a new upstream symbols versioning scheme (Qt_5 or
+    Qt_5_PRIVATE_API as the version part).
+  * Update the symbols files using the script, and with build logs for amd64
+    and i386.
+  * Use the new pkgkde-mark-qt5-private-symbols script (which takes upstream
+    version tags into account) from pkg-kde-tools ≥ 0.15.20.
+  * Add a patch to remove useless check for D-Bus presense on configure time.
+
+  [ Diane Trout ]
+  * Disable building docs. Upstream moved qdoc to qttools source, so we
+    will re-enable building them when we get qttools 5.6 built.
+  * Add guard for no new upstream changelog.
+  * Add new headers.
+  * Remove MetaType headers.
+  * Remove missing pkg-config files.
+  * Add new documentation resources.
+  * Remove qatomic_mips.h header, dropped upstream.
+  * Remove qdoc from qtbase5-dev-tools.install as it appears to be missing.
+  * Add fixqt4headers.pl to qtbase5-dev-tools.install.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 29 Dec 2015 22:29:25 +0300
+
 qtbase-opensource-src (5.5.1+dfsg-12ubuntu1) UNRELEASED; urgency=medium
 
   * Backport XCB patch related to screen disconnection handling QTBUG-42985:
