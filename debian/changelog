@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.5.1+dfsg-12ubuntu1) UNRELEASED; urgency=medium
+
+  * 
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 08:36:13 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-12) unstable; urgency=medium
 
   * Backport xcb_dont_select_XInput_events_on_root_window.patch
