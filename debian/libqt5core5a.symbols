@@ -8,11 +8,10 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _Z10qShapeItemP14HB_ShaperItem_@Qt_5 5.0.2
  _Z10qTerminatev@Qt_5 5.0.2
  (arch=hurd-i386 i386)_Z10qvsnprintfPcjPKcS_@Qt_5 5.0.2
- (arch=armhf)_Z10qvsnprintfPcjPKcSt9__va_list@Base 5.2.0
- (arch=ia64)_Z10qvsnprintfPcmPKcPv@Base 5.0.2
- (arch=ppc64el)_Z10qvsnprintfPcmPKcS_@Base 5.2.0
- (arch=arm64)_Z10qvsnprintfPcmPKcSt9__va_list@Base 5.2.0
- (arch=amd64 powerpc s390x|subst)_Z10qvsnprintfPc{size_t}PKcP13__va_list_tag@Base 5.0.2
+ (arch=armhf)_Z10qvsnprintfPcjPKcSt9__va_list@Qt_5 5.2.0
+ (arch=ppc64el)_Z10qvsnprintfPcmPKcS_@Qt_5 5.2.0
+ (arch=arm64)_Z10qvsnprintfPcmPKcSt9__va_list@Qt_5 5.2.0
+ (arch=amd64 powerpc s390x|subst)_Z10qvsnprintfPc{size_t}PKcP13__va_list_tag@Qt_5 5.0.2
  _Z10scientificR11QTextStream@Qt_5 5.0.2
  _Z11noforcesignR11QTextStream@Qt_5 5.0.2
  _Z11qHBFreeFaceP11HB_FaceRec_@Qt_5 5.0.2
@@ -98,7 +97,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _Z5qHashdj@Qt_5 5.3.0
  (arch=!powerpc !ppc64el !s390x)_Z5qHashej@Qt_5 5.3.0
  _Z5qHashfj@Qt_5 5.3.0
- (arch=powerpc ppc64el s390x)_Z5qHashgj@Base 5.3.0
+ (arch=powerpc ppc64el s390x)_Z5qHashgj@Qt_5 5.3.0
  _Z5qQNaNv@Qt_5 5.0.2
  _Z5qSNaNv@Qt_5 5.0.2
  _Z5qdtoadiiPiS_PPcS1_@Qt_5 5.0.2
@@ -974,8 +973,6 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN14QTimerInfoList9timerWaitER8timespec@Qt_5_PRIVATE_API 5.2.0 1
  _ZN14QTimerInfoListC1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QTimerInfoListC2Ev@Qt_5_PRIVATE_API 5.0.2 1
- (arch=ia64)_ZN14QTimerInfoListD1Ev@Base 5.0.2
- (arch=ia64)_ZN14QTimerInfoListD2Ev@Base 5.0.2
  _ZN14QUnicodeTables10propertiesEj@Qt_5 5.0.2
  _ZN14QUnicodeTables10propertiesEt@Qt_5 5.0.2
  _ZN14QUnicodeTables14lineBreakClassEj@Qt_5 5.0.2
@@ -2723,14 +2720,13 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN7QString8asprintfEPKcz@Qt_5 5.5.0
  _ZN7QString8fromUcs4EPKji@Qt_5 5.0.2
  _ZN7QString8truncateEi@Qt_5 5.0.2
- (arch=amd64 powerpc s390x)_ZN7QString8vsprintfEPKcP13__va_list_tag@Base 5.0.2
+ (arch=amd64 powerpc s390x)_ZN7QString8vsprintfEPKcP13__va_list_tag@Qt_5 5.0.2
  (arch=hurd-i386 i386 ppc64el)_ZN7QString8vsprintfEPKcPc@Qt_5 5.0.2
- (arch=ia64)_ZN7QString8vsprintfEPKcPv@Base 5.0.2
- (arch=armhf arm64)_ZN7QString8vsprintfEPKcSt9__va_list@Base 5.2.0
+ (arch=armhf arm64)_ZN7QString8vsprintfEPKcSt9__va_list@Qt_5 5.2.0
  _ZN7QString9fromUtf16EPKti@Qt_5 5.0.2
- (arch=amd64 powerpc s390x)_ZN7QString9vasprintfEPKcP13__va_list_tag@Base 5.5.0
+ (arch=amd64 powerpc s390x)_ZN7QString9vasprintfEPKcP13__va_list_tag@Qt_5 5.5.0
  (arch=i386 ppc64el)_ZN7QString9vasprintfEPKcPc@Qt_5 5.5.0
- (arch=arm64 armhf)_ZN7QString9vasprintfEPKcSt9__va_list@Base 5.5.0
+ (arch=arm64 armhf)_ZN7QString9vasprintfEPKcSt9__va_list@Qt_5 5.5.0
  _ZN7QStringC1E5QChar@Qt_5 5.0.2
  _ZN7QStringC1EPK5QChari@Qt_5 5.0.2
  _ZN7QStringC1Ei5QChar@Qt_5 5.0.2
@@ -4954,79 +4950,9 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZNK9QtPrivate18ResultIteratorBase9batchSizeEv@Qt_5 5.0.2
  _ZNK9QtPrivate18ResultIteratorBaseeqERKS0_@Qt_5 5.0.2
  _ZNK9QtPrivate18ResultIteratorBaseneERKS0_@Qt_5 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP21QPersistentModelIndexS0_EC1ES1_S1_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP21QPersistentModelIndexS0_EC2ES1_S1_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP5QPairI21QPersistentModelIndexjES2_EC1ES3_S3_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP5QPairI21QPersistentModelIndexjES2_EC2ES3_S3_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP5QPairI21QPersistentModelIndexjES2_ED1Ev@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP5QPairI21QPersistentModelIndexjES2_ED2Ev@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP5QPairIiiES1_EC1ES2_S2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt17_Temporary_bufferIP5QPairIiiES1_EC2ES2_S2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZNSt38__uninitialized_construct_buf_dispatchILb0EE5__ucrIP5QPairI21QPersistentModelIndexjES4_EEvT_S6_RT0_@Base 5.0.2
  (optional=templinst)_ZNSt3_V28__rotateIP21QPersistentModelIndexEET_S3_S3_S3_St26random_access_iterator_tag@Qt_5 5.4.2
  (optional=templinst)_ZNSt3_V28__rotateIPiEET_S2_S2_S2_St26random_access_iterator_tag@Qt_5 5.4.2
- (optional=templinst|arch=ia64|subst)_ZSt11__push_heapIN5QListI5QPairI7QStringiEE8iteratorE{qptrdiff}S3_PFbRKS3_S7_EEvT_T0_SB_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt11lower_boundIP5QPairI21QPersistentModelIndexjES2_ET_S4_S4_RKT0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt11lower_boundIP5QPairIiiES1_ET_S3_S3_RKT0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt11stable_sortIP5QPairI21QPersistentModelIndexjEEvT_S4_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt11upper_boundIP5QPairI21QPersistentModelIndexjES2_ET_S4_S4_RKT0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt11upper_boundIP5QPairIiiES1_ET_S3_S3_RKT0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt12__move_mergeIP5QPairI21QPersistentModelIndexjES3_S3_ET1_T_S5_T0_S6_S4_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt12__move_mergeIP5QPairIiiES2_S2_ET1_T_S4_T0_S5_S3_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt12__move_mergeIPiS0_S0_29QSortFilterProxyModelLessThanET1_T_S3_T0_S4_S2_T2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt12__move_mergeIPiS0_S0_32QSortFilterProxyModelGreaterThanET1_T_S3_T0_S4_S2_T2_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt13__adjust_heapIN5QListI5QPairI7QStringiEE8iteratorE{qptrdiff}S3_PFbRKS3_S7_EEvT_T0_SB_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt13move_backwardIP21QPersistentModelIndexS1_ET0_T_S3_S2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt13move_backwardIP5QPairI21QPersistentModelIndexjES3_ET0_T_S5_S4_@Base 5.0.2
  (optional=templinst)_ZSt13move_backwardIPiS0_ET0_T_S2_S1_@Qt_5 5.4.2
- (optional=templinst|arch=ia64)_ZSt16__insertion_sortIN5QListI5QPairI7QStringiEE8iteratorEPFbRKS3_S7_EEvT_SA_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt16__insertion_sortIP5QPairI21QPersistentModelIndexjEEvT_S4_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt16__insertion_sortIP5QPairIiiEEvT_S3_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt16__insertion_sortIPi29QSortFilterProxyModelLessThanEvT_S2_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt16__insertion_sortIPi32QSortFilterProxyModelGreaterThanEvT_S2_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt16__introsort_loopIN5QListI5QPairI7QStringiEE8iteratorEiPFbRKS3_S7_EEvT_SA_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt16__merge_adaptiveIP5QPairI21QPersistentModelIndexjE{ssize_t}S3_EvT_S4_S4_T0_S5_T1_S5_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt16__merge_adaptiveIP5QPairIiiE{ssize_t}S2_EvT_S3_S3_T0_S4_T1_S4_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt16__merge_adaptiveIPi{ssize_t}S0_29QSortFilterProxyModelLessThanEvT_S2_S2_T0_S3_T1_S3_T2_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt16__merge_adaptiveIPi{ssize_t}S0_32QSortFilterProxyModelGreaterThanEvT_S2_S2_T0_S3_T1_S3_T2_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt17__merge_sort_loopIP5QPairI21QPersistentModelIndexjES3_{ssize_t}EvT_S4_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt17__merge_sort_loopIP5QPairIiiES2_{ssize_t}EvT_S3_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt17__merge_sort_loopIPiS0_{ssize_t}29QSortFilterProxyModelLessThanEvT_S2_T0_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt17__merge_sort_loopIPiS0_{ssize_t}32QSortFilterProxyModelGreaterThanEvT_S2_T0_T1_T2_@Base 5.0.2
- (optional=templinst|subst)_ZSt17__rotate_adaptiveIP21QPersistentModelIndexS1_{ssize_t}ET_S2_S2_S2_T1_S3_T0_S3_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt17__rotate_adaptiveIP5QPairI21QPersistentModelIndexjES3_{ssize_t}ET_S4_S4_S4_T1_S5_T0_S5_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt17__rotate_adaptiveIP5QPairIiiES2_{ssize_t}ET_S3_S3_S3_T1_S4_T0_S4_@Base 5.0.2
- (optional=templinst|subst)_ZSt17__rotate_adaptiveIPiS0_{ssize_t}ET_S1_S1_S1_T1_S2_T0_S2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt19__move_median_firstIN5QListI5QPairI7QStringiEE8iteratorEPFbRKS3_S7_EEvT_SA_SA_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt21__inplace_stable_sortIP5QPairI21QPersistentModelIndexjEEvT_S4_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt21__inplace_stable_sortIP5QPairIiiEEvT_S3_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt21__inplace_stable_sortIPi29QSortFilterProxyModelLessThanEvT_S2_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt21__inplace_stable_sortIPi32QSortFilterProxyModelGreaterThanEvT_S2_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt21__unguarded_partitionIN5QListI5QPairI7QStringiEE8iteratorES3_PFbRKS3_S7_EET_SA_SA_RKT0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__merge_without_bufferIP5QPairI21QPersistentModelIndexjE{ssize_t}EvT_S4_S4_T0_S5_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__merge_without_bufferIP5QPairIiiE{ssize_t}EvT_S3_S3_T0_S4_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__merge_without_bufferIPi{ssize_t}29QSortFilterProxyModelLessThanEvT_S2_S2_T0_S3_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__merge_without_bufferIPi{ssize_t}32QSortFilterProxyModelGreaterThanEvT_S2_S2_T0_S3_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__stable_sort_adaptiveIP5QPairI21QPersistentModelIndexjES3_{ssize_t}EvT_S4_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__stable_sort_adaptiveIP5QPairIiiES2_{ssize_t}EvT_S3_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__stable_sort_adaptiveIPiS0_{ssize_t}29QSortFilterProxyModelLessThanEvT_S2_T0_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64|subst)_ZSt22__stable_sort_adaptiveIPiS0_{ssize_t}32QSortFilterProxyModelGreaterThanEvT_S2_T0_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt24__merge_sort_with_bufferIP5QPairI21QPersistentModelIndexjES3_EvT_S4_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt24__merge_sort_with_bufferIP5QPairIiiES2_EvT_S3_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt24__merge_sort_with_bufferIPiS0_29QSortFilterProxyModelLessThanEvT_S2_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt24__merge_sort_with_bufferIPiS0_32QSortFilterProxyModelGreaterThanEvT_S2_T0_T1_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt25__unguarded_linear_insertIN5QListI5QPairI7QStringiEE8iteratorEPFbRKS3_S7_EEvT_T0_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt25__unguarded_linear_insertIP21QPersistentModelIndexEvT_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt25__unguarded_linear_insertIP5QPairI21QPersistentModelIndexjEEvT_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt30__move_merge_adaptive_backwardIP5QPairI21QPersistentModelIndexjES3_S3_EvT_S4_T0_S5_T1_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt30__move_merge_adaptive_backwardIP5QPairIiiES2_S2_EvT_S3_T0_S4_T1_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt30__move_merge_adaptive_backwardIPiS0_S0_29QSortFilterProxyModelLessThanEvT_S2_T0_S3_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt30__move_merge_adaptive_backwardIPiS0_S0_32QSortFilterProxyModelGreaterThanEvT_S2_T0_S3_T1_T2_@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt4moveIP5QPairI21QPersistentModelIndexjES3_ET0_T_S5_S4_@Base 5.0.2
- (optional=templinst|arch=armhf i386 powerpc)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Qt_5_PRIVATE_API 5.4.2 1
- (optional=templinst|arch=ia64)_ZSt8__rotateIP5QPairI21QPersistentModelIndexjEEvT_S4_S4_St26random_access_iterator_tag@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt8__rotateIP5QPairIiiEEvT_S3_S3_St26random_access_iterator_tag@Base 5.0.2
- (optional=templinst|arch=ia64)_ZSt9make_heapIN5QListI5QPairI7QStringiEE8iteratorEPFbRKS3_S7_EEvT_SA_T0_@Base 5.0.2
  _ZTI10QEventLoop@Qt_5 5.0.2
  _ZTI10QException@Qt_5 5.0.2
  _ZTI10QTextCodec@Qt_5 5.0.2
