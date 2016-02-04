@@ -10,6 +10,7 @@ Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
 Fix-falsely-reported-style-for-fallback-font.patch
 Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
 xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
+Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch
 
 # Will be no longer needed with Qt 5.7
 mips_no_atomic.diff
@@ -33,5 +34,4 @@ link_fbclient.diff
 qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
-Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch
 skip-largefile-test-s390x.patch
