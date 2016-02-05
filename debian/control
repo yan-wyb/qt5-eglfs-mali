@@ -406,18 +406,6 @@ Description: Qt 5 qmake Makefile generator tool
  .
  This package contains also these platform specifications.
 
-Package: qt5-qmake-cross-armhf
-Architecture: amd64 i386
-Multi-Arch: same
-Section: oldlibs
-Depends: qt5-qmake-arm-linux-gnueabihf, ${misc:Depends}
-Description: Transitional dummy package for qt5-qmake-arm-linux-gnueabihf
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This is a transitional dummy package for qt5-qmake-arm-linux-gnueabihf
- which can be safely removed.
-
 Package: qt5-qmake-arm-linux-gnueabihf
 Architecture: amd64 i386 
 Multi-Arch: same
