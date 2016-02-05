@@ -90,14 +90,29 @@ Package: libqt5gui5
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: fontconfig, libqt5xcbqpa5, ${misc:Depends}, ${shlibs:Depends}
+Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
 Recommends: libqt5svg5
+Breaks: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
+        libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
+Replaces: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
+          libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
 Suggests: libqt5libqgtk2, qt5-image-formats-plugins, qtwayland5
 Description: Qt 5 GUI module
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
  .
  The QtGui module extends QtCore with GUI functionality.
+
+Package: libqt5xcbqpa5
+Architecture: any
+Section: oldlibs
+Depends: libqt5gui5, ${misc:Depends}
+Description: transitional dummy package for the XCB platform plugin
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This is a transitional dummy package for the XCB platform plugin which can be
+ safely removed.
 
 Package: libqt5libqgtk2
 Architecture: any
@@ -284,35 +299,6 @@ Description: Qt 5 print support module
  The QtPrintSupport module provides classes to make printing easier and
  portable.
 
-Package: libqt5egldeviceintegration5
-Architecture: linux-any
-Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: libqt5gui5 (<< 5.5.0~)
-Replaces: libqt5gui5 (<< 5.5.0~)
-Description: Qt 5 EGL device integration
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This module provides integration with different EGL devices through
- specific plugins for kms, x11, etc.
-
-Package: libqt5xcbqpa5
-Architecture: any
-Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: libqt5gui5 (<< 5.5.0~), libqt5gui5-gles (<< 5.5.0~)
-Replaces: libqt5gui5 (<< 5.5.0~), libqt5gui5-gles (<< 5.5.0~)
-Description: Qt 5 XCB platform module
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This module provides XCB integration used on regular desktop Linux platforms.
- Applications that can't work in anything but X should consider depending on
- this lib.
-
 Package: qtbase5-dev
 Architecture: any
 Multi-Arch: same
@@ -323,14 +309,12 @@ Depends: libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf],
          libqt5concurrent5 (= ${binary:Version}),
          libqt5core5a (= ${binary:Version}),
          libqt5dbus5 (= ${binary:Version}),
-         libqt5egldeviceintegration5 (= ${binary:Version}) [linux-any],
          libqt5gui5 (= ${binary:Version}),
          libqt5network5 (= ${binary:Version}),
          libqt5printsupport5 (= ${binary:Version}),
          libqt5sql5 (= ${binary:Version}),
          libqt5test5 (= ${binary:Version}),
          libqt5widgets5 (= ${binary:Version}),
-         libqt5xcbqpa5 (= ${binary:Version}),
          libqt5xml5 (= ${binary:Version}),
          libxext-dev,
          qt5-qmake (= ${binary:Version}),
@@ -352,7 +336,7 @@ Description: Qt 5 base development files
  applications.
  .
  If you are interested in packaging Qt 5 stuff please take a look at
- http://pkg-kde.alioth.debian.org/packagingqtstuff.html
+ http://pkg-kde.alioth.debian.org/packagingqtbasedstuff.html
 
 Package: qtbase5-private-dev
 Architecture: any
@@ -530,7 +514,7 @@ Description: Qt 5 development defaults package
  installations from being used.
  .
  This package should not be used for building Debian packages. Take a
- look at http://pkg-kde.alioth.debian.org/packagingqtstuff.html for
+ look at http://pkg-kde.alioth.debian.org/packagingqtbasedstuff.html for
  more information.
 
 Package: qtbase5-doc-html

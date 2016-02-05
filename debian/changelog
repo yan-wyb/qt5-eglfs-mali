@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.1+dfsg-12ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-13ubuntu1) UNRELEASED; urgency=medium
 
   * Merge with Debian.
   * debian/patches/series: move a patch to under correct subheading
@@ -6,6 +6,24 @@ qtbase-opensource-src (5.5.1+dfsg-12ubuntu1) UNRELEASED; urgency=medium
     - xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 08:36:13 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-13) unstable; urgency=medium
+
+  * Fix URLs pointing to our "How to package Qt based stuff" page
+    (Closes: #810282). Thanks Jakob Haufe for the pointer.
+  * Merge platforms plugins back into libqt5gui5: libqt5egldeviceintegration5
+    and libqt5xcbqpa5(Closes: #796956, #802715, #809172, #809176).
+    - Avoid creating shlibs and symbols files for the private libraries they
+      ship.
+    - Add lintian overrides for the plugins's private libs. See the override's
+      description for more info.
+    - Add proper Breaks+Replaces.
+    - Remove other mentions of them.
+    - Add a transitional dummy package for libqt5xcbqpa5 as it's the only one
+      which has rdeps. We can safely remove it after the rdeps are fixed
+      (they are manually added).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 20 Jan 2016 18:06:21 -0300
 
 qtbase-opensource-src (5.5.1+dfsg-12) unstable; urgency=medium
 
