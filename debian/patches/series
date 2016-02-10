@@ -35,3 +35,5 @@ qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 skip-largefile-test-s390x.patch
+net-bearer-nm-disconnect-ap-signals7.patch
+qnam-ubuntu-fix6.patch
