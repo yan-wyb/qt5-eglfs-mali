@@ -37,3 +37,4 @@ enable-tests.patch
 skip-largefile-test-s390x.patch
 net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
+disable_overlay_scrollbars.diff
