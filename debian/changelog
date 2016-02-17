@@ -1,3 +1,18 @@
+qtbase-opensource-src (5.5.1+dfsg-14ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 17 Feb 2016 09:50:07 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-14) unstable; urgency=medium
+
+  * Backport fix_not_delivering_focus.patch to fix not delivering focusIn event
+    on hide/show.
+  * Backport fix_potential_division_by_zero.patch to fix potential division by
+    zero (Closes: #814699).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 15 Feb 2016 14:51:51 -0300
+
 qtbase-opensource-src (5.5.1+dfsg-13ubuntu3) xenial; urgency=medium
 
   * Add back disable_overlay_scrollbars.diff, needed until Qt 5.7 for GTK2.
