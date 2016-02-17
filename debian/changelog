@@ -1,8 +1,4 @@
-qtbase-opensource-src (5.6.0~beta+dfsg-4ubuntu1) UNRELEASED; urgency=medium
-
-  [ Lisandro Damián Nicanor Pérez Meyer ]
-  * Fix URLs pointing to our "How to package Qt based stuff" page
-    (Closes: #810282). Thanks Jakob Haufe for the pointer.
+qtbase-opensource-src (5.6.0~beta+dfsg-5ubuntu1) UNRELEASED; urgency=medium
 
   [ Timo Jyrinki ]
   * New upstream release. 
@@ -10,6 +6,19 @@ qtbase-opensource-src (5.6.0~beta+dfsg-4ubuntu1) UNRELEASED; urgency=medium
   * Update symbols and bump symbols abi.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 10:06:17 +0000
+
+qtbase-opensource-src (5.6.0~beta+dfsg-5) experimental; urgency=medium
+
+  * Fix URLs pointing to our "How to package Qt based stuff" page
+    (Closes: #810282). Thanks Jakob Haufe for the pointer.
+  * Merge 5.5.1+dfsg-13's changes into the experimental branch.
+    - Bump libqt5gui5's Breaks+Replaces so that users who installed
+      the experimental version have a proper package update.
+  * Remove the transitional package libqt5xcbqpa5, their only rdeps
+    lived in sid/testing and already removed it.
+  * Merge 5.5.1+dfsg-14 from master, importing fix_not_delivering_focus.patch.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 15 Feb 2016 15:49:42 -0300
 
 qtbase-opensource-src (5.6.0~beta+dfsg-4) experimental; urgency=medium
 
@@ -104,6 +113,33 @@ qtbase-opensource-src (5.6.0~beta+dfsg-1) experimental; urgency=medium
   * Add fixqt4headers.pl to qtbase5-dev-tools.install.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Tue, 29 Dec 2015 22:29:25 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-14) unstable; urgency=medium
+
+  * Backport fix_not_delivering_focus.patch to fix not delivering focusIn event
+    on hide/show.
+  * Backport fix_potential_division_by_zero.patch to fix potential division by
+    zero (Closes: #814699).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 15 Feb 2016 14:51:51 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-13) unstable; urgency=medium
+
+  * Fix URLs pointing to our "How to package Qt based stuff" page
+    (Closes: #810282). Thanks Jakob Haufe for the pointer.
+  * Merge platforms plugins back into libqt5gui5: libqt5egldeviceintegration5
+    and libqt5xcbqpa5(Closes: #796956, #802715, #809172, #809176).
+    - Avoid creating shlibs and symbols files for the private libraries they
+      ship.
+    - Add lintian overrides for the plugins's private libs. See the override's
+      description for more info.
+    - Add proper Breaks+Replaces.
+    - Remove other mentions of them.
+    - Add a transitional dummy package for libqt5xcbqpa5 as it's the only one
+      which has rdeps. We can safely remove it after the rdeps are fixed
+      (they are manually added).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 20 Jan 2016 18:06:21 -0300
 
 qtbase-opensource-src (5.5.1+dfsg-12ubuntu1) UNRELEASED; urgency=medium
 

@@ -48,7 +48,7 @@ def apply_substs(symbol):
 
 def main(buildlog_path, mark_private, source_version):
     new_symbols = {}
-    with open(buildlog_path) as buildlog:
+    with open(buildlog_path, errors='replace') as buildlog:
         for line in buildlog:
             if not line.startswith('+ '):
                 continue
@@ -88,7 +88,9 @@ def main(buildlog_path, mark_private, source_version):
                 format_string = ' %s"%s@%s" %s' if 'c++' in options else ' %s%s@%s %s'
                 if mark_private and 'PRIVATE' in abi:
                     format_string += ' 1'
-                new_version = source_version or match.group(3)
+                new_version = match.group(3)
+                if source_version and symbol_subst in new_symbols:
+                    new_version = source_version
                 new_lines.append(format_string % (options, symbol, abi, new_version))
         with open(symbols_file_path, 'w') as symbols_file:
             for line in new_lines:
@@ -100,4 +102,7 @@ if __name__ == '__main__':
     parser.add_argument('--version', help='version to change all symbols to')
     parser.add_argument('buildlog', help='build log path')
     args = parser.parse_args()
+    if not args.version:
+        print('Please use the --version flag to bump the symbols versions.', file=sys.stderr)
+        print('For example: --version 5.6.0~beta', file=sys.stderr)
     main(args.buildlog, not args.no_mark_private, args.version)
