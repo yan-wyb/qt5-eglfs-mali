@@ -94,10 +94,10 @@ Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
 Recommends: libqt5svg5
-Breaks: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
-        libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
-Replaces: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
-          libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
+Breaks: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
+        libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
+Replaces: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
+          libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
 Suggests: libqt5libqgtk2, qt5-image-formats-plugins, qtwayland5
 Description: Qt 5 GUI module
  Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -396,18 +396,6 @@ Description: Qt 5 qmake Makefile generator tool
  many default values used to generate appropriate Makefiles.
  .
  This package contains also these platform specifications.
-
-Package: qt5-qmake-cross-armhf
-Architecture: amd64 i386
-Multi-Arch: same
-Section: oldlibs
-Depends: qt5-qmake-arm-linux-gnueabihf, ${misc:Depends}
-Description: Transitional dummy package for qt5-qmake-arm-linux-gnueabihf
- Qt is a cross-platform C++ application framework. Qt's primary feature
- is its rich set of widgets that provide standard GUI functionality.
- .
- This is a transitional dummy package for qt5-qmake-arm-linux-gnueabihf
- which can be safely removed.
 
 Package: qt5-qmake-arm-linux-gnueabihf
 Architecture: amd64 i386 

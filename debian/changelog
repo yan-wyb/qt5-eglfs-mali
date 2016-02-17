@@ -114,6 +114,12 @@ qtbase-opensource-src (5.6.0~beta+dfsg-1) experimental; urgency=medium
 
  -- Dmitry Shachnev <mitya57@debian.org>  Tue, 29 Dec 2015 22:29:25 +0300
 
+qtbase-opensource-src (5.5.1+dfsg-14ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 17 Feb 2016 09:50:07 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-14) unstable; urgency=medium
 
   * Backport fix_not_delivering_focus.patch to fix not delivering focusIn event
@@ -122,6 +128,33 @@ qtbase-opensource-src (5.5.1+dfsg-14) unstable; urgency=medium
     zero (Closes: #814699).
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 15 Feb 2016 14:51:51 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-13ubuntu3) xenial; urgency=medium
+
+  * Add back disable_overlay_scrollbars.diff, needed until Qt 5.7 for GTK2.
+    (LP: #1531516)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 16 Feb 2016 06:27:42 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-13ubuntu2) xenial; urgency=medium
+
+  * Forward-port networking fixes from 5.4 series:
+    - net-bearer-nm-disconnect-ap-signals7.patch (LP: #1480877)
+    - qnam-ubuntu-fix6.patch (LP: #1528886)
+    - xenial would potentially now have fixes for (LP: #1506015)
+      (LP: #1507769) (LP: #1533508)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 09 Feb 2016 08:19:43 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-13ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian.
+  * debian/patches/series: move a patch to under correct subheading
+  * Backport XCB patch related to screen disconnection handling QTBUG-42985:
+    - xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
+  * Remove transitional package qt5-qmake-cross-armhf.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 05 Feb 2016 07:18:59 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-13) unstable; urgency=medium
 
@@ -140,13 +173,6 @@ qtbase-opensource-src (5.5.1+dfsg-13) unstable; urgency=medium
       (they are manually added).
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 20 Jan 2016 18:06:21 -0300
-
-qtbase-opensource-src (5.5.1+dfsg-12ubuntu1) UNRELEASED; urgency=medium
-
-  * Backport XCB patch related to screen disconnection handling QTBUG-42985:
-    - xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
-
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 08:36:13 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-12) unstable; urgency=medium
 
