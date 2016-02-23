@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.5.1+dfsg-14ubuntu2) UNRELEASED; urgency=medium
+
+  * debian/patches/enable-tests.patch: some qnetworkcookiejar tests have 
+    started failing without any Qt changes (LP: #1548686)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 19 Feb 2016 08:46:28 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-14ubuntu1) xenial; urgency=medium
 
   * Merge with Debian.
