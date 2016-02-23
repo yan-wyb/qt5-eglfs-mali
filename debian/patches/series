@@ -26,6 +26,7 @@ xcb_fix_drag_and_drop_when_window_is_hidden.patch
 fix_not_delivering_focus.patch
 fix_potential_division_by_zero.patch
 Fix-for-deferredDelete-bug-when-calling-the-glib-loo.patch
+xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch
 
 # Debian specific.
 gnukfreebsd.diff

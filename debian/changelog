@@ -4,6 +4,8 @@ qtbase-opensource-src (5.5.1+dfsg-14ubuntu2) UNRELEASED; urgency=medium
     started failing without any Qt changes (LP: #1548686)
   * debian/patches/Fix-for-deferredDelete-bug-when-calling-the-glib-loo.patch:
     - Fix DeferredDelete events handling. (LP: #1460970)
+  * xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch:
+    - Another multi-monitor crasher fix (LP: #1548766)
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 19 Feb 2016 08:46:28 +0000
 
