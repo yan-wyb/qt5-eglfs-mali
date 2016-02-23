@@ -1,0 +1,330 @@
+From c5d49725779292a04fed599eb7f508d334ffc5c3 Mon Sep 17 00:00:00 2001
+From: Paolo Angelelli <paolo.angelelli@theqtcompany.com>
+Date: Thu, 3 Dec 2015 10:57:55 +0100
+Subject: [PATCH] Fix for deferredDelete() bug when calling the glib loop
+ directly
+
+This patch makes sure that all events posted using Qt on top of the
+GLib event loop have the loopLevel counter incremented.
+This is done since Qt depends on the fact that all deleteLater() calls
+are issued within the scope of some signal handler (in other words,
+triggered by the chain sendEvent() -> notifyInternal2()).
+There is a side effect though: in the conditions affected by this
+patch, that is deleteLater()s issued within a glib event handler for
+example, manually calling processEvents() or sendPostedEvents() with
+or without the QEvent::DeferredDelete flag has the same effect, and
+deferred deleted events are always processed.
+While this is not a currently working feature which the patch breaks,
+this side effect seems to be difficult to avoid without separating
+sendPostedEvents() and processEvents() into a public and a private
+method, in order to detect when they are manually called.
+Such change could perhaps be done for Qt6.
+An autotest for QTBUG-36434 is also included.
+Autotesting for QTBUG-32859 seems to be more challenging in this
+respect, due to its dependency on GLib.
+
+Task-number: QTBUG-18434
+Task-number: QTBUG-32859
+Task-number: QTBUG-36434
+Change-Id: Ib89175aa27c9e38bca68ae254d182b2cd21cf7e9
+Reviewed-by: Olivier Goffart (Woboq GmbH) <ogoffart@woboq.com>
+---
+ src/corelib/kernel/qabstracteventdispatcher.cpp   |  2 +-
+ src/corelib/kernel/qcoreapplication.cpp           | 46 ++++++++---
+ src/corelib/thread/qthread.cpp                    |  2 +-
+ src/corelib/thread/qthread_p.h                    | 11 +--
+ src/plugins/platforms/cocoa/qcocoamenu.mm         |  2 +-
+ src/plugins/platforms/cocoa/qcocoamenuloader.mm   |  2 +-
+ tests/auto/corelib/kernel/qobject/tst_qobject.cpp | 97 +++++++++++++++++++++++
+ 7 files changed, 143 insertions(+), 19 deletions(-)
+
+diff --git a/src/corelib/kernel/qabstracteventdispatcher.cpp b/src/corelib/kernel/qabstracteventdispatcher.cpp
+index 31369f9..907b3cc 100644
+--- a/src/corelib/kernel/qabstracteventdispatcher.cpp
++++ b/src/corelib/kernel/qabstracteventdispatcher.cpp
+@@ -458,7 +458,7 @@ bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray &eventType, vo
+     if (!d->eventFilters.isEmpty()) {
+         // Raise the loopLevel so that deleteLater() calls in or triggered
+         // by event_filter() will be processed from the main event loop.
+-        QScopedLoopLevelCounter loopLevelCounter(d->threadData);
++        QScopedScopeLevelCounter scopeLevelCounter(d->threadData);
+         for (int i = 0; i < d->eventFilters.size(); ++i) {
+             QAbstractNativeEventFilter *filter = d->eventFilters.at(i);
+             if (!filter)
+diff --git a/src/corelib/kernel/qcoreapplication.cpp b/src/corelib/kernel/qcoreapplication.cpp
+index 60f3dc0..42bda25 100644
+--- a/src/corelib/kernel/qcoreapplication.cpp
++++ b/src/corelib/kernel/qcoreapplication.cpp
+@@ -980,7 +980,7 @@ bool QCoreApplication::notifyInternal2(QObject *receiver, QEvent *event)
+     // call overhead.
+     QObjectPrivate *d = receiver->d_func();
+     QThreadData *threadData = d->threadData;
+-    QScopedLoopLevelCounter loopLevelCounter(threadData);
++    QScopedScopeLevelCounter scopeLevelCounter(threadData);
+     return notify(receiver, event);
+ }
+ 
+@@ -1193,6 +1193,9 @@ void QCoreApplication::processEvents(QEventLoop::ProcessEventsFlags flags)
+ */
+ void QCoreApplication::processEvents(QEventLoop::ProcessEventsFlags flags, int maxtime)
+ {
++    // ### Qt 6: consider splitting this method into a public and a private
++    //           one, so that a user-invoked processEvents can be detected
++    //           and handled properly.
+     QThreadData *data = QThreadData::current();
+     if (!data->hasEventDispatcher())
+         return;
+@@ -1396,8 +1399,24 @@ void QCoreApplication::postEvent(QObject *receiver, QEvent *event, int priority)
+ 
+     if (event->type() == QEvent::DeferredDelete && data == QThreadData::current()) {
+         // remember the current running eventloop for DeferredDelete
+-        // events posted in the receiver's thread
+-        static_cast<QDeferredDeleteEvent *>(event)->level = data->loopLevel;
++        // events posted in the receiver's thread.
++
++        // Events sent by non-Qt event handlers (such as glib) may not
++        // have the scopeLevel set correctly. The scope level makes sure that
++        // code like this:
++        //     foo->deleteLater();
++        //     qApp->processEvents(); // without passing QEvent::DeferredDelete
++        // will not cause "foo" to be deleted before returning to the event loop.
++
++        // If the scope level is 0 while loopLevel != 0, we are called from a
++        // non-conformant code path, and our best guess is that the scope level
++        // should be 1. (Loop level 0 is special: it means that no event loops
++        // are running.)
++        int loopLevel = data->loopLevel;
++        int scopeLevel = data->scopeLevel;
++        if (scopeLevel == 0 && loopLevel != 0)
++            scopeLevel = 1;
++        static_cast<QDeferredDeleteEvent *>(event)->level = loopLevel + scopeLevel;
+     }
+ 
+     // delete the event on exceptions to protect against memory leaks till the event is
+@@ -1474,6 +1493,9 @@ bool QCoreApplication::compressEvent(QEvent *event, QObject *receiver, QPostEven
+ */
+ void QCoreApplication::sendPostedEvents(QObject *receiver, int event_type)
+ {
++    // ### Qt 6: consider splitting this method into a public and a private
++    //           one, so that a user-invoked sendPostedEvents can be detected
++    //           and handled properly.
+     QThreadData *data = QThreadData::current();
+ 
+     QCoreApplicationPrivate::sendPostedEvents(receiver, event_type, data);
+@@ -1565,15 +1587,19 @@ void QCoreApplicationPrivate::sendPostedEvents(QObject *receiver, int event_type
+         }
+ 
+         if (pe.event->type() == QEvent::DeferredDelete) {
+-            // DeferredDelete events are only sent when we are explicitly asked to
+-            // (s.a. QEvent::DeferredDelete), and then only if the event loop that
+-            // posted the event has returned.
+-            int loopLevel = static_cast<QDeferredDeleteEvent *>(pe.event)->loopLevel();
++            // DeferredDelete events are sent either
++            // 1) when the event loop that posted the event has returned; or
++            // 2) if explicitly requested (with QEvent::DeferredDelete) for
++            //    events posted by the current event loop; or
++            // 3) if the event was posted before the outermost event loop.
++
++            int eventLevel = static_cast<QDeferredDeleteEvent *>(pe.event)->loopLevel();
++            int loopLevel = data->loopLevel + data->scopeLevel;
+             const bool allowDeferredDelete =
+-                (loopLevel > data->loopLevel
+-                 || (!loopLevel && data->loopLevel > 0)
++                (eventLevel > loopLevel
++                 || (!eventLevel && loopLevel > 0)
+                  || (event_type == QEvent::DeferredDelete
+-                     && loopLevel == data->loopLevel));
++                     && eventLevel == loopLevel));
+             if (!allowDeferredDelete) {
+                 // cannot send deferred delete
+                 if (!event_type && !receiver) {
+diff --git a/src/corelib/thread/qthread.cpp b/src/corelib/thread/qthread.cpp
+index 14209d8..69f8d72 100644
+--- a/src/corelib/thread/qthread.cpp
++++ b/src/corelib/thread/qthread.cpp
+@@ -56,7 +56,7 @@ QT_BEGIN_NAMESPACE
+ */
+ 
+ QThreadData::QThreadData(int initialRefCount)
+-    : _ref(initialRefCount), loopLevel(0), thread(0), threadId(0),
++    : _ref(initialRefCount), loopLevel(0), scopeLevel(0), thread(0), threadId(0),
+       eventDispatcher(0), quitNow(false), canWait(true), isAdopted(false)
+ {
+     // fprintf(stderr, "QThreadData %p created\n", this);
+diff --git a/src/corelib/thread/qthread_p.h b/src/corelib/thread/qthread_p.h
+index 39a41f1..5f7d01f 100644
+--- a/src/corelib/thread/qthread_p.h
++++ b/src/corelib/thread/qthread_p.h
+@@ -280,6 +280,7 @@ private:
+ 
+ public:
+     int loopLevel;
++    int scopeLevel;
+ 
+     QStack<QEventLoop *> eventLoops;
+     QPostEventList postEventList;
+@@ -295,15 +296,15 @@ public:
+     bool isAdopted;
+ };
+ 
+-class QScopedLoopLevelCounter
++class QScopedScopeLevelCounter
+ {
+     QThreadData *threadData;
+ public:
+-    inline QScopedLoopLevelCounter(QThreadData *threadData)
++    inline QScopedScopeLevelCounter(QThreadData *threadData)
+         : threadData(threadData)
+-    { ++threadData->loopLevel; }
+-    inline ~QScopedLoopLevelCounter()
+-    { --threadData->loopLevel; }
++    { ++threadData->scopeLevel; }
++    inline ~QScopedScopeLevelCounter()
++    { --threadData->scopeLevel; }
+ };
+ 
+ // thread wrapper for the main() thread
+diff --git a/src/plugins/platforms/cocoa/qcocoamenu.mm b/src/plugins/platforms/cocoa/qcocoamenu.mm
+index 8091ba8..8c576c7 100644
+--- a/src/plugins/platforms/cocoa/qcocoamenu.mm
++++ b/src/plugins/platforms/cocoa/qcocoamenu.mm
+@@ -128,7 +128,7 @@ QT_NAMESPACE_ALIAS_OBJC_CLASS(QCocoaMenuDelegate);
+ - (void) itemFired:(NSMenuItem*) item
+ {
+     QCocoaMenuItem *cocoaItem = reinterpret_cast<QCocoaMenuItem *>([item tag]);
+-    QScopedLoopLevelCounter loopLevelCounter(QGuiApplicationPrivate::instance()->threadData);
++    QScopedScopeLevelCounter scopeLevelCounter(QGuiApplicationPrivate::instance()->threadData);
+     QGuiApplicationPrivate::modifier_buttons = [QNSView convertKeyModifiers:[NSEvent modifierFlags]];
+     static QMetaMethod activatedSignal = QMetaMethod::fromSignal(&QCocoaMenuItem::activated);
+     activatedSignal.invoke(cocoaItem, Qt::QueuedConnection);
+diff --git a/src/plugins/platforms/cocoa/qcocoamenuloader.mm b/src/plugins/platforms/cocoa/qcocoamenuloader.mm
+index d73b9a8..e440a90 100644
+--- a/src/plugins/platforms/cocoa/qcocoamenuloader.mm
++++ b/src/plugins/platforms/cocoa/qcocoamenuloader.mm
+@@ -308,7 +308,7 @@ QT_END_NAMESPACE
+ 
+     if ([item tag]) {
+         QCocoaMenuItem *cocoaItem = reinterpret_cast<QCocoaMenuItem *>([item tag]);
+-        QScopedLoopLevelCounter loopLevelCounter(QGuiApplicationPrivate::instance()->threadData);
++        QScopedScopeLevelCounter scopeLevelCounter(QGuiApplicationPrivate::instance()->threadData);
+         cocoaItem->activated();
+     }
+ }
+diff --git a/tests/auto/corelib/kernel/qobject/tst_qobject.cpp b/tests/auto/corelib/kernel/qobject/tst_qobject.cpp
+index 0f45ba4..540284f 100644
+--- a/tests/auto/corelib/kernel/qobject/tst_qobject.cpp
++++ b/tests/auto/corelib/kernel/qobject/tst_qobject.cpp
+@@ -142,6 +142,7 @@ private slots:
+     void qmlConnect();
+     void exceptions();
+     void noDeclarativeParentChangedOnDestruction();
++    void deleteLaterInAboutToBlockHandler();
+ };
+ 
+ struct QObjectCreatedOnShutdown
+@@ -5789,6 +5790,102 @@ void tst_QObject::connectFunctorWithContext()
+     context->deleteLater();
+ }
+ 
++class StatusChanger : public QObject
++{
++    Q_OBJECT
++public:
++    StatusChanger(int *status) : m_status(status)
++    {
++    }
++    ~StatusChanger()
++    {
++        *m_status = 2;
++    }
++private:
++    int *m_status;
++};
++
++class DispatcherWatcher : public QObject
++{
++    Q_OBJECT
++public:
++    DispatcherWatcher(QEventLoop &e, int *statusAwake, int *statusAboutToBlock) :
++        m_statusAboutToBlock(statusAboutToBlock),
++        m_statusAwake(statusAwake),
++        m_eventLoop(&e),
++        m_aboutToBlocks(0),
++        m_awakes(0)
++    {
++        awake = new StatusChanger(statusAwake);
++        abouttoblock = new StatusChanger(statusAboutToBlock);
++        QCOMPARE(*statusAwake, 1);
++        QCOMPARE(*statusAboutToBlock, 1);
++        connect(QAbstractEventDispatcher::instance(), SIGNAL(awake()), this, SLOT(onAwake()));
++        connect(QAbstractEventDispatcher::instance(), SIGNAL(aboutToBlock()), this, SLOT(onAboutToBlock()));
++
++    }
++
++    ~DispatcherWatcher()
++    {
++        if (awake)
++            awake->deleteLater();
++        if (abouttoblock)
++            abouttoblock->deleteLater();
++    }
++
++public slots:
++    // The order of these 2 handlers differs on different event dispatchers
++    void onAboutToBlock()
++    {
++        if (abouttoblock) {
++            abouttoblock->deleteLater();
++            abouttoblock = 0;
++        }
++        ++m_aboutToBlocks;
++    }
++    void onAwake()
++    {
++        if (awake) {
++            awake->deleteLater();
++            awake = 0;
++        }
++        ++m_awakes;
++
++    }
++    void onSignal1()
++    {
++        // Status check. At this point the event loop should have spinned enough to delete all the objects.
++        QCOMPARE(*m_statusAwake, 2);
++        QCOMPARE(*m_statusAboutToBlock, 2);
++        QMetaObject::invokeMethod(m_eventLoop, "quit", Qt::QueuedConnection);
++    }
++
++private:
++    StatusChanger *awake;
++    StatusChanger *abouttoblock;
++    QEventLoop    *m_eventLoop;
++    int *m_statusAwake;
++    int *m_statusAboutToBlock;
++    int m_aboutToBlocks;
++    int m_awakes;
++};
++
++
++void tst_QObject::deleteLaterInAboutToBlockHandler()
++{
++    int statusAwake        = 1;
++    int statusAboutToBlock = 1;
++    QEventLoop e;
++    DispatcherWatcher dw(e, &statusAwake, &statusAboutToBlock);
++    QTimer::singleShot(2000, &dw, &DispatcherWatcher::onSignal1);
++
++    QCOMPARE(statusAwake, 1);
++    QCOMPARE(statusAboutToBlock, 1);
++    e.exec();
++    QCOMPARE(statusAwake, 2);
++    QCOMPARE(statusAboutToBlock, 2);
++}
++
+ class MyFunctor
+ {
+ public:
+-- 
+2.7.0
+
