@@ -106,14 +106,15 @@ index 50d49ca..231fe9a 100644
          // Only update geometry when there's a valid mode on the CRTC
          // CRTC with node mode could mean that output has been disabled, and we'll
          // get RRNotifyOutputChange notification for that.
-@@ -260,16 +225,7 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
+@@ -260,17 +225,7 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
  
          if (screen && output.connection == XCB_RANDR_CONNECTION_DISCONNECTED) {
              qCDebug(lcQpaScreen) << "screen" << screen->name() << "has been disconnected";
 -
 -            // Known screen removed -> delete it
 -            m_screens.removeOne(screen);
--            virtualDesktop->removeScreen(screen);
+-            foreach (QXcbScreen *otherScreen, m_screens)
+-                otherScreen->removeVirtualSibling((QPlatformScreen *) screen);
 -
 -            QXcbIntegration::instance()->destroyScreen(screen);
 -
@@ -124,7 +125,7 @@ index 50d49ca..231fe9a 100644
          } else if (!screen && output.connection == XCB_RANDR_CONNECTION_CONNECTED) {
              // New XRandR output is available and it's enabled
              if (output.crtc != XCB_NONE && output.mode != XCB_NONE) {
-@@ -278,59 +234,142 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
+@@ -278,65 +234,142 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
                  QScopedPointer<xcb_randr_get_output_info_reply_t, QScopedPointerPodDeleter> outputInfo(
                      xcb_randr_get_output_info_reply(xcb_connection(), outputInfoCookie, NULL));
  
@@ -132,7 +133,9 @@ index 50d49ca..231fe9a 100644
 -                qCDebug(lcQpaScreen) << "output" << screen->name() << "is connected and enabled";
 -
 -                screen->setPrimary(checkOutputIsPrimary(output.window, output.output));
--                virtualDesktop->addScreen(screen);
+-                foreach (QXcbScreen *otherScreen, m_screens)
+-                    if (otherScreen->root() == output.window)
+-                        otherScreen->addVirtualSibling(screen);
 -                m_screens << screen;
 -                QXcbIntegration::instance()->screenAdded(screen, screen->isPrimary());
 +                // Find a fake screen
@@ -174,7 +177,8 @@ index 50d49ca..231fe9a 100644
                  if (outputInfo->crtc == XCB_NONE) {
                      qCDebug(lcQpaScreen) << "output" << screen->name() << "has been disabled";
 -                    m_screens.removeOne(screen);
--                    virtualDesktop->removeScreen(screen);
+-                    foreach (QXcbScreen *otherScreen, m_screens)
+-                        otherScreen->removeVirtualSibling((QPlatformScreen *) screen);
 -                    QXcbIntegration::instance()->destroyScreen(screen);
 +                    destroyScreen(screen);
                  } else {
@@ -192,10 +196,13 @@ index 50d49ca..231fe9a 100644
 -                    screen->updateRefreshRate(output.mode);
 -
 -                // If the screen became primary, reshuffle the order in QGuiApplicationPrivate
+-                // TODO: add a proper mechanism for updating primary screen
 -                if (!wasPrimary && screen->isPrimary()) {
--                    const int idx = m_screens.indexOf(screen);
--                    m_screens.swap(0, idx);
--                    QXcbIntegration::instance()->setPrimaryScreen(screen);
+-                    QScreen *realScreen = static_cast<QPlatformScreen*>(screen)->screen();
+-                    QGuiApplicationPrivate::screen_list.removeOne(realScreen);
+-                    QGuiApplicationPrivate::screen_list.prepend(realScreen);
+-                    m_screens.removeOne(screen);
+-                    m_screens.prepend(screen);
 -                }
 +                updateScreen(screen, output);
                  qCDebug(lcQpaScreen) << "output has changed" << screen;
@@ -348,16 +355,18 @@ index 50d49ca..231fe9a 100644
                              m_screens << screen;
  
                              // There can be multiple outputs per screen, use either
-@@ -435,11 +471,23 @@ void QXcbConnection::initializeScreens()
+@@ -435,12 +471,24 @@ void QXcbConnection::initializeScreens()
                                  }
                              }
                          }
-+                        virtualDesktop->setScreens(siblings);
++                        foreach (QPlatformScreen* s, siblings)
++                           ((QXcbScreen*)s)->setVirtualSiblings(siblings);
                      }
                  }
              }
          }
--        virtualDesktop->setScreens(siblings);
+-        foreach (QPlatformScreen* s, siblings)
+-            ((QXcbScreen*)s)->setVirtualSiblings(siblings);
 +        if (virtualDesktop->screens().isEmpty()) {
 +            // If there are no XRandR outputs or XRandR extension is missing,
 +            // then create a fake/legacy screen.
@@ -374,8 +383,8 @@ index 50d49ca..231fe9a 100644
          ++xcbScreenNumber;
      } // for each xcb screen
 @@ -447,39 +495,25 @@ void QXcbConnection::initializeScreens()
-     foreach (QXcbVirtualDesktop *virtualDesktop, m_virtualDesktops)
-         virtualDesktop->subscribeToXFixesSelectionNotify();
+         ++xcbScreenNumber;
+     } // for each xcb screen
  
 -    // If there's no randr extension, or there was some error above, or we found a
 -    // screen which doesn't have outputs for some other reason (e.g. on VNC or ssh -X),
@@ -385,7 +394,7 @@ index 50d49ca..231fe9a 100644
 -    QXcbVirtualDesktop *virtualDesktop = m_virtualDesktops.value(0);
 -    if (virtualDesktop && !hasOutputs && !virtualDesktop->size().isEmpty() && m_screens.isEmpty()) {
 -        QXcbScreen *screen = createScreen(virtualDesktop, 0, Q_NULLPTR);
--        virtualDesktop->setScreens(QList<QPlatformScreen *>() << screen);
+-        screen->setVirtualSiblings(QList<QPlatformScreen *>() << screen);
 -        m_screens << screen;
 -        primaryScreen = screen;
 -        primaryScreen->setPrimary(true);
@@ -413,7 +422,7 @@ index 50d49ca..231fe9a 100644
 -    // Push the screens to QApplication
 -    QXcbIntegration *integration = QXcbIntegration::instance();
 -    foreach (QXcbScreen* screen, m_screens) {
--        qCDebug(lcQpaScreen) << "adding" << screen << "(Primary:" << screen->isPrimary() << ')';
+-        qCDebug(lcQpaScreen) << "adding" << screen << "(Primary:" << screen->isPrimary() << ")";
 -        integration->screenAdded(screen, screen->isPrimary());
 -    }
 +        // Push the screens to QGuiApplication
@@ -429,15 +438,15 @@ index 50d49ca..231fe9a 100644
  
  QXcbConnection::QXcbConnection(QXcbNativeInterface *nativeInterface, bool canGrabServer, xcb_visualid_t defaultVisualId, const char *displayName)
 @@ -553,9 +587,6 @@ QXcbConnection::QXcbConnection(QXcbNativeInterface *nativeInterface, bool canGra
-     initializeXFixes();
+     initializeXRandr();
      initializeScreens();
  
 -    if (m_screens.isEmpty())
 -        qFatal("QXcbConnection: no screens available");
 -
+     initializeXFixes();
      initializeXRender();
      m_xi2Enabled = false;
- #if defined(XCB_USE_XINPUT2)
 diff --git a/src/plugins/platforms/xcb/qxcbconnection.h b/src/plugins/platforms/xcb/qxcbconnection.h
 index 3c82170..fb7cc13 100644
 --- a/src/plugins/platforms/xcb/qxcbconnection.h
@@ -461,15 +470,16 @@ index 3c82170..fb7cc13 100644
 +    void destroyScreen(QXcbScreen *screen);
      void initializeScreens();
 -    void updateScreens(const xcb_randr_notify_event_t *event);
-     bool compressEvent(xcb_generic_event_t *event, int currentIndex, QXcbEventArray *eventqueue) const;
  
      bool m_xi2Enabled;
+     int m_xi2Minor;
+ #ifdef XCB_USE_XINPUT2
 diff --git a/src/plugins/platforms/xcb/qxcbscreen.cpp b/src/plugins/platforms/xcb/qxcbscreen.cpp
 index 0e99d58..f05432e 100644
 --- a/src/plugins/platforms/xcb/qxcbscreen.cpp
 +++ b/src/plugins/platforms/xcb/qxcbscreen.cpp
 @@ -81,6 +81,13 @@ void QXcbVirtualDesktop::addScreen(QPlatformScreen *s)
-     ((QXcbScreen *) s)->isPrimary() ? m_screens.prepend(s) : m_screens.append(s);
+     delete m_xSettings;
  }
  
 +void QXcbVirtualDesktop::setPrimaryScreen(QPlatformScreen *s)
@@ -567,9 +577,9 @@ index c68c290..79620f4 100644
 --- a/src/plugins/platforms/xcb/qxcbscreen.h
 +++ b/src/plugins/platforms/xcb/qxcbscreen.h
 @@ -72,6 +72,7 @@ public:
-     void setScreens(QList<QPlatformScreen *> sl) { m_screens = sl; }
-     void removeScreen(QPlatformScreen *s) { m_screens.removeOne(s); }
-     void addScreen(QPlatformScreen *s);
+     int number() const { return m_number; }
+     QSize size() const { return QSize(m_screen->width_in_pixels, m_screen->height_in_pixels); }
+     QSize physicalSize() const { return QSize(m_screen->width_in_millimeters, m_screen->height_in_millimeters); }
 +    void setPrimaryScreen(QPlatformScreen *s);
  
      QXcbXSettings *xSettings() const;
@@ -669,21 +679,21 @@ index 6add0a6..bdbb9e9 100644
          xcb_translate_coordinates_cookie_t cookie = xcb_translate_coordinates(xcb_connection(), xcb_window(),
                                                                                xcbScreen()->root(), 0, 0);
 @@ -2305,8 +2291,6 @@ void QXcbWindow::handleEnterNotifyEvent(const xcb_enter_notify_event_t *event)
-         return;
  
-     const QPoint local(event->event_x, event->event_y);
+     const int dpr = int(devicePixelRatio());
+     const QPoint local(event->event_x/dpr, event->event_y/dpr);
 -    if (!xcbScreen())
 -        return;
-     QPoint global = QPoint(event->root_x, event->root_y);
+     QPoint global = xcbScreen()->mapFromNative(QPoint(event->root_x, event->root_y));
      QWindowSystemInterface::handleEnterEvent(window(), local, global);
  }
 @@ -2324,8 +2308,6 @@ void QXcbWindow::handleLeaveNotifyEvent(const xcb_leave_notify_event_t *event)
- 
      if (enterWindow) {
-         QPoint local(enter->event_x, enter->event_y);
+         const int dpr = int(devicePixelRatio());
+         QPoint local(enter->event_x/dpr, enter->event_y/dpr);
 -        if (!xcbScreen())
 -            return;
-         QPoint global = QPoint(event->root_x, event->root_y);
+         QPoint global = xcbScreen()->mapFromNative(QPoint(event->root_x, event->root_y));
  
          QWindowSystemInterface::handleEnterLeaveEvent(enterWindow->window(), window(), local, global);
 @@ -2341,8 +2323,6 @@ void QXcbWindow::handlePropertyNotifyEvent(const xcb_property_notify_event_t *ev
