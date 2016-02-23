@@ -8,8 +8,28 @@ qtbase-opensource-src (5.5.1+dfsg-14ubuntu2) UNRELEASED; urgency=medium
     - Another multi-monitor crasher fix (LP: #1548766)
   * Rebase the xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch to 
     apply to Qt 5.5.
+  * Merge with unreleased Debian's 5.5.1+dfsg-15
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 19 Feb 2016 08:46:28 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-15) UNRELEASED; urgency=medium
+
+  [ Timo Jyrinki ]
+  * Backport XCB patch related to screen disconnection handling QTBUG-42985:
+    - xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
+  * debian/patches/Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch:
+    - Backport. Prefer QT_PLUGIN_PATH over compiled-in paths (LP: #1519927)
+  * Fix Chinese glyph font rendering with new backported upstream patches:
+    - debian/patches/Fix-falsely-reported-style-for-fallback-font.patch
+    - debian/patches/Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
+      (LP: #1475205)
+
+  [ Dmitry Shachnev ]
+  * Backport several upstream dbusmenu/dbustray related fixes from 5.6 branch.
+  * Correct license of japanese_230_50.qpf font in debian/copyright. Thanks to
+    Arnout Vandecappelle for the patch (closes: #815616).
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 17 Feb 2016 10:15:48 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-14ubuntu1) xenial; urgency=medium
 
