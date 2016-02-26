@@ -2,13 +2,15 @@ qtbase-opensource-src (5.5.1+dfsg-14ubuntu2) UNRELEASED; urgency=medium
 
   * debian/patches/enable-tests.patch: some qnetworkcookiejar tests have 
     started failing without any Qt changes (LP: #1548686)
-  * xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch:
-    - Another multi-monitor crasher fix (LP: #1548766)
-  * Rebase the xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch to 
-    apply to Qt 5.5.
+  * Notify-when-the-primary-screen-changes.patch
+    xcb-Handle-screen-siblings-in-QXcbVirtualDesktop.patch
+    xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch:
+    - Another multi-monitor crasher fix and its pre-requirement patches
+      (LP: #1548766)
+    - Rebase the patches slightly to apply to Qt 5.5.
   * Merge with unreleased Debian's 5.5.1+dfsg-15
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 19 Feb 2016 08:46:28 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 26 Feb 2016 07:03:24 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-15) UNRELEASED; urgency=medium
 
