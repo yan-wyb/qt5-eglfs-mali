@@ -1,0 +1,135 @@
+From 8beec998999b0ad7abf3192069c649b64aa999f5 Mon Sep 17 00:00:00 2001
+From: Alexander Volkov <a.volkov@rusbitech.ru>
+Date: Thu, 5 Nov 2015 18:31:32 +0300
+Subject: [PATCH] xcb: Handle screen siblings in QXcbVirtualDesktop
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Change-Id: I2f3c3ad75bb3914667cf6f27dc2d91aac103607b
+Reviewed-by: Błażej Szczygieł <spaz16@wp.pl>
+Reviewed-by: Shawn Rutledge <shawn.rutledge@theqtcompany.com>
+---
+ src/plugins/platforms/xcb/qxcbconnection.cpp | 15 +++++----------
+ src/plugins/platforms/xcb/qxcbscreen.cpp     |  5 +++++
+ src/plugins/platforms/xcb/qxcbscreen.h       | 12 +++++++-----
+ 3 files changed, 17 insertions(+), 15 deletions(-)
+
+diff --git a/src/plugins/platforms/xcb/qxcbconnection.cpp b/src/plugins/platforms/xcb/qxcbconnection.cpp
+index a20d957..e4eaeef 100644
+--- a/src/plugins/platforms/xcb/qxcbconnection.cpp
++++ b/src/plugins/platforms/xcb/qxcbconnection.cpp
+@@ -263,8 +263,7 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
+ 
+             // Known screen removed -> delete it
+             m_screens.removeOne(screen);
+-            foreach (QXcbScreen *otherScreen, m_screens)
+-                otherScreen->removeVirtualSibling((QPlatformScreen *) screen);
++            virtualDesktop->removeScreen(screen);
+ 
+             QXcbIntegration::instance()->destroyScreen(screen);
+ 
+@@ -283,9 +282,7 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
+                 qCDebug(lcQpaScreen) << "output" << screen->name() << "is connected and enabled";
+ 
+                 screen->setPrimary(checkOutputIsPrimary(output.window, output.output));
+-                foreach (QXcbScreen *otherScreen, m_screens)
+-                    if (otherScreen->root() == output.window)
+-                        otherScreen->addVirtualSibling(screen);
++                virtualDesktop->addScreen(screen);
+                 m_screens << screen;
+                 QXcbIntegration::instance()->screenAdded(screen, screen->isPrimary());
+ 
+@@ -308,8 +305,7 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
+                 if (outputInfo->crtc == XCB_NONE) {
+                     qCDebug(lcQpaScreen) << "output" << screen->name() << "has been disabled";
+                     m_screens.removeOne(screen);
+-                    foreach (QXcbScreen *otherScreen, m_screens)
+-                        otherScreen->removeVirtualSibling((QPlatformScreen *) screen);
++                    virtualDesktop->removeScreen(screen);
+                     QXcbIntegration::instance()->destroyScreen(screen);
+                 } else {
+                     qCDebug(lcQpaScreen) << "output" << screen->name() << "has been temporarily disabled for the mode switch";
+@@ -443,8 +439,7 @@ void QXcbConnection::initializeScreens()
+                 }
+             }
+         }
+-        foreach (QPlatformScreen* s, siblings)
+-            ((QXcbScreen*)s)->setVirtualSiblings(siblings);
++        virtualDesktop->setScreens(siblings);
+         xcb_screen_next(&it);
+         ++xcbScreenNumber;
+     } // for each xcb screen
+@@ -460,7 +455,7 @@ void QXcbConnection::initializeScreens()
+     QXcbVirtualDesktop *virtualDesktop = m_virtualDesktops.value(0);
+     if (virtualDesktop && !hasOutputs && !virtualDesktop->size().isEmpty() && m_screens.isEmpty()) {
+         QXcbScreen *screen = createScreen(virtualDesktop, 0, Q_NULLPTR);
+-        screen->setVirtualSiblings(QList<QPlatformScreen *>() << screen);
++        virtualDesktop->setScreens(QList<QPlatformScreen *>() << screen);
+         m_screens << screen;
+         primaryScreen = screen;
+         primaryScreen->setPrimary(true);
+diff --git a/src/plugins/platforms/xcb/qxcbscreen.cpp b/src/plugins/platforms/xcb/qxcbscreen.cpp
+index 0aa5810..9b24884 100644
+--- a/src/plugins/platforms/xcb/qxcbscreen.cpp
++++ b/src/plugins/platforms/xcb/qxcbscreen.cpp
+@@ -74,6 +74,11 @@ QXcbScreen *QXcbVirtualDesktop::screenAt(const QPoint &pos) const
+     delete m_xSettings;
+ }
+ 
++void QXcbVirtualDesktop::addScreen(QPlatformScreen *s)
++{
++    ((QXcbScreen *) s)->isPrimary() ? m_screens.prepend(s) : m_screens.append(s);
++}
++
+ QXcbXSettings *QXcbVirtualDesktop::xSettings() const
+ {
+     if (!m_xSettings) {
+diff --git a/src/plugins/platforms/xcb/qxcbscreen.h b/src/plugins/platforms/xcb/qxcbscreen.h
+index 51c92a4..7b5d3cb 100644
+--- a/src/plugins/platforms/xcb/qxcbscreen.h
++++ b/src/plugins/platforms/xcb/qxcbscreen.h
+@@ -68,6 +68,11 @@ public:
+     QSize size() const { return QSize(m_screen->width_in_pixels, m_screen->height_in_pixels); }
+     QSize physicalSize() const { return QSize(m_screen->width_in_millimeters, m_screen->height_in_millimeters); }
+ 
++    QList<QPlatformScreen *> screens() const { return m_screens; }
++    void setScreens(QList<QPlatformScreen *> sl) { m_screens = sl; }
++    void removeScreen(QPlatformScreen *s) { m_screens.removeOne(s); }
++    void addScreen(QPlatformScreen *s);
++
+     QXcbXSettings *xSettings() const;
+ 
+ private:
+@@ -78,6 +83,7 @@ public:
+ private:
+     xcb_screen_t *m_screen;
+     int m_number;
++    QList<QPlatformScreen *> m_screens;
+ 
+     QXcbXSettings *m_xSettings;
+ };
+@@ -110,10 +116,8 @@ public:
+     QPlatformCursor *cursor() const Q_DECL_OVERRIDE;
+     qreal refreshRate() const Q_DECL_OVERRIDE { return m_refreshRate; }
+     Qt::ScreenOrientation orientation() const Q_DECL_OVERRIDE { return m_orientation; }
+-    QList<QPlatformScreen *> virtualSiblings() const Q_DECL_OVERRIDE { return m_siblings; }
+-    void setVirtualSiblings(QList<QPlatformScreen *> sl) { m_siblings = sl; }
+-    void removeVirtualSibling(QPlatformScreen *s) { m_siblings.removeOne(s); }
+-    void addVirtualSibling(QPlatformScreen *s) { ((QXcbScreen *) s)->isPrimary() ? m_siblings.prepend(s) : m_siblings.append(s); }
++    QList<QPlatformScreen *> virtualSiblings() const Q_DECL_OVERRIDE { return m_virtualDesktop->screens(); }
++    QXcbVirtualDesktop *virtualDesktop() const { return m_virtualDesktop; }
+ 
+     void setPrimary(bool primary) { m_primary = primary; }
+     bool isPrimary() const { return m_primary; }
+@@ -171,7 +174,6 @@ private:
+     QRect m_availableGeometry;
+     QSize m_virtualSize;
+     QSizeF m_virtualSizeMillimeters;
+-    QList<QPlatformScreen *> m_siblings;
+     Qt::ScreenOrientation m_orientation;
+     QString m_windowManagerName;
+     bool m_syncRequestSupported;
+-- 
+2.7.0
+

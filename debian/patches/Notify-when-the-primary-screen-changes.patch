@@ -1,0 +1,232 @@
+From 8cbaea441a8c9adea6ba804b76bf3bd1e79f77b7 Mon Sep 17 00:00:00 2001
+From: Aleix Pol <aleixpol@kde.org>
+Date: Fri, 4 Sep 2015 16:52:04 +0200
+Subject: [PATCH] Notify when the primary screen changes
+
+Makes it possible to notify that the QGuiApplication::primaryScreen has
+changed.
+XCB backend adopts the new API, as it was accessing QGuiApplication private
+API directly.
+
+Change-Id: Icde05c44138265f865fa42d2cd6974c552fdc5e2
+Task-number: QTBUG-38404
+Task-number: QTBUG-40659
+Reviewed-by: Frederik Gladhorn <frederik.gladhorn@theqtcompany.com>
+Reviewed-by: Shawn Rutledge <shawn.rutledge@theqtcompany.com>
+---
+ src/gui/kernel/qguiapplication.cpp           | 12 +++++++++
+ src/gui/kernel/qguiapplication.h             |  2 ++
+ src/gui/kernel/qplatformintegration.cpp      | 39 +++++++++++++++++++++++++++-
+ src/gui/kernel/qplatformintegration.h        |  4 +++
+ src/gui/kernel/qplatformscreen.cpp           |  2 +-
+ src/plugins/platforms/xcb/qxcbconnection.cpp |  9 +++----
+ src/widgets/kernel/qdesktopwidget.cpp        |  1 +
+ src/widgets/kernel/qdesktopwidget.h          |  1 +
+ src/widgets/kernel/qdesktopwidget.qdoc       | 14 ++++++++++
+ 9 files changed, 76 insertions(+), 8 deletions(-)
+
+diff --git a/src/gui/kernel/qguiapplication.cpp b/src/gui/kernel/qguiapplication.cpp
+index d0aab73..87bd7ea 100644
+--- a/src/gui/kernel/qguiapplication.cpp
++++ b/src/gui/kernel/qguiapplication.cpp
+@@ -921,6 +921,18 @@ QList<QScreen *> QGuiApplication::screens()
+     \since 5.4
+ */
+ 
++/*!
++    \fn void QGuiApplication::primaryScreenChanged(QScreen *screen)
++
++    This signal is emitted whenever the primary \a screen changes. This way
++    applications can keep track of the primaryScreen and react if there is a
++    new primary screen.
++
++    \sa primaryScreen
++
++    \since 5.6
++*/
++
+ 
+ /*!
+     Returns the highest screen device pixel ratio found on
+diff --git a/src/gui/kernel/qguiapplication.h b/src/gui/kernel/qguiapplication.h
+index c89268d..d995387 100644
+--- a/src/gui/kernel/qguiapplication.h
++++ b/src/gui/kernel/qguiapplication.h
+@@ -70,6 +70,7 @@ class Q_GUI_EXPORT QGuiApplication : public QCoreApplication
+     Q_PROPERTY(Qt::LayoutDirection layoutDirection READ layoutDirection WRITE setLayoutDirection NOTIFY layoutDirectionChanged)
+     Q_PROPERTY(QString platformName READ platformName STORED false)
+     Q_PROPERTY(bool quitOnLastWindowClosed  READ quitOnLastWindowClosed WRITE setQuitOnLastWindowClosed)
++    Q_PROPERTY(QScreen *primaryScreen READ primaryScreen NOTIFY primaryScreenChanged STORED false)
+ 
+ public:
+ #ifdef Q_QDOC
+@@ -158,6 +159,7 @@ Q_SIGNALS:
+     void fontDatabaseChanged();
+     void screenAdded(QScreen *screen);
+     void screenRemoved(QScreen *screen);
++    void primaryScreenChanged(QScreen *screen);
+     void lastWindowClosed();
+     void focusObjectChanged(QObject *focusObject);
+     void focusWindowChanged(QWindow *focusWindow);
+diff --git a/src/gui/kernel/qplatformintegration.cpp b/src/gui/kernel/qplatformintegration.cpp
+index e935907..457a420 100644
+--- a/src/gui/kernel/qplatformintegration.cpp
++++ b/src/gui/kernel/qplatformintegration.cpp
+@@ -456,6 +456,24 @@ void QPlatformIntegration::screenAdded(QPlatformScreen *ps, bool isPrimary)
+         QGuiApplicationPrivate::screen_list.append(screen);
+     }
+     emit qGuiApp->screenAdded(screen);
++
++    if (isPrimary)
++        emit qGuiApp->primaryScreenChanged(screen);
++}
++
++/*!
++  Just removes the screen, call destroyScreen instead.
++
++  \sa destroyScreen()
++*/
++
++void QPlatformIntegration::removeScreen(QScreen *screen)
++{
++    const bool wasPrimary = (!QGuiApplicationPrivate::screen_list.isEmpty() && QGuiApplicationPrivate::screen_list[0] == screen);
++    QGuiApplicationPrivate::screen_list.removeOne(screen);
++
++    if (wasPrimary && qGuiApp && !QGuiApplicationPrivate::screen_list.isEmpty())
++        emit qGuiApp->primaryScreenChanged(QGuiApplicationPrivate::screen_list[0]);
+ }
+ 
+ /*!
+@@ -469,11 +487,30 @@ void QPlatformIntegration::screenAdded(QPlatformScreen *ps, bool isPrimary)
+ */
+ void QPlatformIntegration::destroyScreen(QPlatformScreen *screen)
+ {
+-    QGuiApplicationPrivate::screen_list.removeOne(screen->d_func()->screen);
++    removeScreen(screen->d_func()->screen);
+     delete screen->d_func()->screen;
+     delete screen;
+ }
+ 
++/*!
++  Should be called whenever the primary screen changes.
++
++  When the screen specified as primary changes, this method will notify
++  QGuiApplication and emit the QGuiApplication::primaryScreenChanged signal.
++ */
++
++void QPlatformIntegration::setPrimaryScreen(QPlatformScreen *newPrimary)
++{
++    QScreen* newPrimaryScreen = newPrimary->screen();
++    int idx = QGuiApplicationPrivate::screen_list.indexOf(newPrimaryScreen);
++    Q_ASSERT(idx >= 0);
++    if (idx == 0)
++        return;
++
++    QGuiApplicationPrivate::screen_list.swap(0, idx);
++    emit qGuiApp->primaryScreenChanged(newPrimaryScreen);
++}
++
+ QStringList QPlatformIntegration::themeNames() const
+ {
+     return QStringList();
+diff --git a/src/gui/kernel/qplatformintegration.h b/src/gui/kernel/qplatformintegration.h
+index 2aa502b..00c50a9 100644
+--- a/src/gui/kernel/qplatformintegration.h
++++ b/src/gui/kernel/qplatformintegration.h
+@@ -172,9 +172,13 @@ public:
+     virtual QOpenGLContext::OpenGLModuleType openGLModuleType();
+ #endif
+     virtual void setApplicationIcon(const QIcon &icon) const;
++
++    void removeScreen(QScreen *screen);
++
+ protected:
+     void screenAdded(QPlatformScreen *screen, bool isPrimary = false);
+     void destroyScreen(QPlatformScreen *screen);
++    void setPrimaryScreen(QPlatformScreen *newPrimary);
+ };
+ 
+ QT_END_NAMESPACE
+diff --git a/src/gui/kernel/qplatformscreen.cpp b/src/gui/kernel/qplatformscreen.cpp
+index 2fb53fe..d1d8eba 100644
+--- a/src/gui/kernel/qplatformscreen.cpp
++++ b/src/gui/kernel/qplatformscreen.cpp
+@@ -56,7 +56,7 @@ QPlatformScreen::~QPlatformScreen()
+     Q_D(QPlatformScreen);
+     if (d->screen) {
+         qWarning("Manually deleting a QPlatformScreen. Call QPlatformIntegration::destroyScreen instead.");
+-        QGuiApplicationPrivate::screen_list.removeOne(d->screen);
++        QGuiApplicationPrivate::platformIntegration()->removeScreen(d->screen);
+         delete d->screen;
+     }
+ }
+diff --git a/src/plugins/platforms/xcb/qxcbconnection.cpp b/src/plugins/platforms/xcb/qxcbconnection.cpp
+index e612cff..5fd0df5 100644
+--- a/src/plugins/platforms/xcb/qxcbconnection.cpp
++++ b/src/plugins/platforms/xcb/qxcbconnection.cpp
+@@ -305,13 +305,10 @@ void QXcbConnection::updateScreens(const xcb_randr_notify_event_t *event)
+                     screen->updateRefreshRate(output.mode);
+ 
+                 // If the screen became primary, reshuffle the order in QGuiApplicationPrivate
+-                // TODO: add a proper mechanism for updating primary screen
+                 if (!wasPrimary && screen->isPrimary()) {
+-                    QScreen *realScreen = static_cast<QPlatformScreen*>(screen)->screen();
+-                    QGuiApplicationPrivate::screen_list.removeOne(realScreen);
+-                    QGuiApplicationPrivate::screen_list.prepend(realScreen);
+-                    m_screens.removeOne(screen);
+-                    m_screens.prepend(screen);
++                    const int idx = m_screens.indexOf(screen);
++                    m_screens.swap(0, idx);
++                    QXcbIntegration::instance()->setPrimaryScreen(screen);
+                 }
+                 qCDebug(lcQpaScreen) << "output has changed" << screen;
+             }
+diff --git a/src/widgets/kernel/qdesktopwidget.cpp b/src/widgets/kernel/qdesktopwidget.cpp
+index 9471602..b88b3cc 100644
+--- a/src/widgets/kernel/qdesktopwidget.cpp
++++ b/src/widgets/kernel/qdesktopwidget.cpp
+@@ -134,6 +134,7 @@ QDesktopWidget::QDesktopWidget()
+     setObjectName(QLatin1String("desktop"));
+     d->_q_updateScreens();
+     connect(qApp, SIGNAL(screenAdded(QScreen*)), this, SLOT(_q_updateScreens()));
++    connect(qApp, SIGNAL(primaryScreenChanged(QScreen*)), this, SIGNAL(primaryScreenChanged()));
+ }
+ 
+ QDesktopWidget::~QDesktopWidget()
+diff --git a/src/widgets/kernel/qdesktopwidget.h b/src/widgets/kernel/qdesktopwidget.h
+index c0cc4f1..f5f7d69 100644
+--- a/src/widgets/kernel/qdesktopwidget.h
++++ b/src/widgets/kernel/qdesktopwidget.h
+@@ -77,6 +77,7 @@ Q_SIGNALS:
+     void resized(int);
+     void workAreaResized(int);
+     void screenCountChanged(int);
++    void primaryScreenChanged();
+ 
+ protected:
+     void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
+diff --git a/src/widgets/kernel/qdesktopwidget.qdoc b/src/widgets/kernel/qdesktopwidget.qdoc
+index 31a99f1..d1a6eca 100644
+--- a/src/widgets/kernel/qdesktopwidget.qdoc
++++ b/src/widgets/kernel/qdesktopwidget.qdoc
+@@ -271,3 +271,17 @@
+ 
+     \sa screenCount
+ */
++
++
++/*!
++    \fn void QDesktopWidget::primaryScreenChanged()
++
++    \since 5.6
++
++    \brief This signal is emitted whenever the primary screen changes.
++
++    \note This doesn't mean the QDesktopWidget::primaryScreen index will
++    necessarily be different, but now it will refer to the new primary screen.
++
++    \sa primaryScreen, screenGeometry()
++*/
+-- 
+2.7.0
+
