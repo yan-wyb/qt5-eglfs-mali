@@ -1,0 +1,97 @@
+From 7532fb4e61fc4102fd11022f57f7d8195414167b Mon Sep 17 00:00:00 2001
+From: Paul Olav Tvete <paul.tvete@theqtcompany.com>
+Date: Fri, 23 Oct 2015 10:37:49 +0200
+Subject: [PATCH] Xcb: fix crash on screen power save
+
+Handle various cases where we have null QScreen or QPlatformScreen
+pointers. With this change, I can run Qt Creator for several days.
+Before, it would crash multiple times per day with a two-monitor
+setup.
+
+Change-Id: I0923d886ae2a4199ac37edd711ddd4f6f99df93d
+Reviewed-by: Friedemann Kleint <Friedemann.Kleint@theqtcompany.com>
+Reviewed-by: Lars Knoll <lars.knoll@theqtcompany.com>
+Reviewed-by: Shawn Rutledge <shawn.rutledge@theqtcompany.com>
+---
+ src/plugins/platforms/xcb/qxcbbackingstore.cpp | 13 +++++++++++--
+ src/plugins/platforms/xcb/qxcbbackingstore.h   |  1 +
+ src/plugins/platforms/xcb/qxcbwindow.cpp       |  4 ++--
+ 3 files changed, 14 insertions(+), 4 deletions(-)
+
+diff --git a/src/plugins/platforms/xcb/qxcbbackingstore.cpp b/src/plugins/platforms/xcb/qxcbbackingstore.cpp
+index 25f1ea5..1825a46 100644
+--- a/src/plugins/platforms/xcb/qxcbbackingstore.cpp
++++ b/src/plugins/platforms/xcb/qxcbbackingstore.cpp
+@@ -311,9 +311,12 @@ QPaintDevice *QXcbBackingStore::paintDevice()
+ 
+ void QXcbBackingStore::beginPaint(const QRegion &region)
+ {
++    if (!m_image && !m_size.isEmpty())
++        resize(m_size, QRegion());
++
+     if (!m_image)
+         return;
+-
++    m_size = QSize();
+     int dpr = int(m_image->image()->devicePixelRatio());
+     const int windowDpr = int(window()->devicePixelRatio());
+     if (windowDpr != dpr) {
+@@ -420,7 +423,8 @@ void QXcbBackingStore::resize(const QSize &size, const QRegion &)
+         return;
+     Q_XCB_NOOP(connection());
+ 
+-    QXcbScreen *screen = static_cast<QXcbScreen *>(window()->screen()->handle());
++
++    QXcbScreen *screen = window()->screen() ? static_cast<QXcbScreen *>(window()->screen()->handle()) : 0;
+     QPlatformWindow *pw = window()->handle();
+     if (!pw) {
+         window()->create();
+@@ -429,6 +433,11 @@ void QXcbBackingStore::resize(const QSize &size, const QRegion &)
+     QXcbWindow* win = static_cast<QXcbWindow *>(pw);
+ 
+     delete m_image;
++    if (!screen) {
++        m_image = 0;
++        m_size = size;
++        return;
++    }
+     m_image = new QXcbShmImage(screen, xSize, win->depth(), win->imageFormat());
+     m_image->image()->setDevicePixelRatio(dpr);
+     // Slow path for bgr888 VNC: Create an additional image, paint into that and
+diff --git a/src/plugins/platforms/xcb/qxcbbackingstore.h b/src/plugins/platforms/xcb/qxcbbackingstore.h
+index b58a32d..1bea36d 100644
+--- a/src/plugins/platforms/xcb/qxcbbackingstore.h
++++ b/src/plugins/platforms/xcb/qxcbbackingstore.h
+@@ -71,6 +71,7 @@ private:
+     QXcbShmImage *m_image;
+     QRegion m_paintRegion;
+     QImage m_rgbImage;
++    QSize m_size;
+ };
+ 
+ QT_END_NAMESPACE
+diff --git a/src/plugins/platforms/xcb/qxcbwindow.cpp b/src/plugins/platforms/xcb/qxcbwindow.cpp
+index bde8826..b691c75 100644
+--- a/src/plugins/platforms/xcb/qxcbwindow.cpp
++++ b/src/plugins/platforms/xcb/qxcbwindow.cpp
+@@ -652,7 +652,7 @@ void QXcbWindow::setGeometry(const QRect &rect)
+     const QRect xRect = mapToNative(rect, newScreen);
+     const QRect wmGeometry = windowToWmGeometry(xRect);
+ 
+-    if (newScreen != currentScreen)
++    if (newScreen && newScreen != currentScreen)
+         QWindowSystemInterface::handleWindowScreenChanged(window(), newScreen->QPlatformScreen::screen());
+ 
+     if (qt_window_private(window())->positionAutomatic) {
+@@ -1606,7 +1606,7 @@ void QXcbWindow::requestActivateWindow()
+         return;
+     }
+ 
+-    if (!m_mapped) {
++    if (!m_mapped || !xcbScreen()) {
+         m_deferredActivation = true;
+         return;
+     }
+-- 
+2.7.0
+

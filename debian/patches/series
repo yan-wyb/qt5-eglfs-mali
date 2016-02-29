@@ -11,8 +11,6 @@ Fix-falsely-reported-style-for-fallback-font.patch
 Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
 xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
 Use-Node-name-if-Node-logicalModuleName-is-empty-for.patch
-
-# Will be no longer needed with Qt 5.7
 mips_no_atomic.diff
 detect_64bit_atomic.diff
 qnetworkreply_abort_socket.diff
@@ -26,6 +24,7 @@ xcb_fix_drag_and_drop_when_window_is_hidden.patch
 fix_not_delivering_focus.patch
 fix_potential_division_by_zero.patch
 Notify-when-the-primary-screen-changes.patch
+Xcb-fix-crash-on-screen-power-save.patch
 xcb-Handle-screen-siblings-in-QXcbVirtualDesktop.patch
 xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch
 dbusmenu_fixes.diff
