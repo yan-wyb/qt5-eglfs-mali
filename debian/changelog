@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.6.0~beta+dfsg-5ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.0~rc+dfsg-5ubuntu1) UNRELEASED; urgency=medium
 
   [ Timo Jyrinki ]
   * New upstream release. 
