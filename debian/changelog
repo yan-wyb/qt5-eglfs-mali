@@ -1,11 +1,11 @@
-qtbase-opensource-src (5.5.1+dfsg-14ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-14ubuntu3) xenial; urgency=medium
 
   * debian/patches/Xcb-fix-crash-on-screen-power-save.patch:
     - Fix additional cases where crash could occur on monitor disconnections 
       or power save. (LP: #1551122)
   * Build with C.UTF-8 locale to (LP: #1551145) and re-enable tests (LP: #1548686)
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 02 Mar 2016 10:27:00 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 02 Mar 2016 10:28:04 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-14ubuntu2) xenial; urgency=medium
 
