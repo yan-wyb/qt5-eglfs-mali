@@ -9,9 +9,6 @@ DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 DEB_HOST_ARCH_BITS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_BITS)
 DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
-LC_ALL := C.UTF-8
-export LC_ALL
-
 export PATH := $(PATH):$(shell pwd)/bin
 export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
@@ -281,7 +278,7 @@ override_dh_auto_build-arch:
 	# regenerate some upstream-provided files.
 	cd $(CURDIR)/src; ../bin/qmake; make sub-corelib
 	# Add here the code to generate the helpers and then the headers.
-	sh debian/generateTLDs.sh
+	LC_ALL=C.UTF-8 sh debian/generateTLDs.sh
 	# Clean up the compiled code and start again.
 	cd $(CURDIR)/src; make distclean
 	make clean
