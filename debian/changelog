@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge with Debian 5.5.1+dfsg-16.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 07 Mar 2016 09:17:30 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-16) unstable; urgency=medium
 
   * Add fix_alsa_detection.patch to workaround ALSA >= 1.1.0 detection.
