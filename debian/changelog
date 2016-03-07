@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.6.0~rc+dfsg-5ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.0~rc+dfsg-1ubuntu1) UNRELEASED; urgency=medium
 
   [ Timo Jyrinki ]
   * New upstream release. 
@@ -6,6 +6,31 @@ qtbase-opensource-src (5.6.0~rc+dfsg-5ubuntu1) UNRELEASED; urgency=medium
   * Update symbols and bump symbols abi.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 10:06:17 +0000
+
+qtbase-opensource-src (5.6.0~rc+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * New upstream release candidate.
+  * Merge 5.5.1+dfsg-15 from master.
+  * Drop the following patches, all applied upstream:
+    - Fix-falsely-reported-style-for-fallback-font.patch
+    - Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch
+    - Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
+    - multiscreen.diff
+    - qnativesocketengine_freebsd.diff
+    - qt_functions_missing_eval.diff
+    - xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
+    - xcb_dont_select_XInput_events_on_root_window.patch
+    - xcb_fix_drag_and_drop_when_window_is_hidden.patch
+  * Add new build-dependency on libxcb-xinerama0-dev.
+  * Update symbols files from the build log.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Add fix_alsa_detection.patch to workaround ALSA >= 1.1.0 detection. The
+    patch is a simple workaround, a proper bug has been opened upstream as
+    stated in the patch's headers.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 05 Mar 2016 10:35:53 +0300
 
 qtbase-opensource-src (5.6.0~beta+dfsg-5) experimental; urgency=medium
 
@@ -113,6 +138,40 @@ qtbase-opensource-src (5.6.0~beta+dfsg-1) experimental; urgency=medium
   * Add fixqt4headers.pl to qtbase5-dev-tools.install.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Tue, 29 Dec 2015 22:29:25 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-16) unstable; urgency=medium
+
+  * Add fix_alsa_detection.patch to workaround ALSA >= 1.1.0 detection.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 05 Mar 2016 10:24:48 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-15) unstable; urgency=medium
+
+  [ Timo Jyrinki ]
+  * Backport XCB patch related to screen disconnection handling QTBUG-42985:
+    - xcb-fix-yet-another-crash-when-screens-are-disconnec.patch
+  * debian/patches/Prefer-QT_PLUGIN_PATH-over-compiled-in-paths.patch:
+    - Backport. Prefer QT_PLUGIN_PATH over compiled-in paths (LP: #1519927)
+  * Fix Chinese glyph font rendering with new backported upstream patches:
+    - debian/patches/Fix-falsely-reported-style-for-fallback-font.patch
+    - debian/patches/Remove-historical-4-padding-in-QFontEngine-alphaMapF.patch
+      (LP: #1475205)
+
+  [ Dmitry Shachnev ]
+  * Backport several upstream dbusmenu/dbustray related fixes from 5.6 branch.
+  * Correct license of japanese_230_50.qpf font in debian/copyright. Thanks to
+    Arnout Vandecappelle for the patch (closes: #815616).
+  * debian/generateTLDs.sh: Set -e to fail when a subcommand fails.
+  * Call generateTLDs.sh with LC_ALL=C.UTF-8, to workaround a bug in grep.
+    See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=22838.
+  * Use https URIs for Vcs fields.
+  * Bump Standards-Version to 3.9.7, no changes needed.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Remove the transitional package libqt5xcbqpa5, there are no rdeps left in
+    sid or testing.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 03 Mar 2016 20:34:47 +0300
 
 qtbase-opensource-src (5.5.1+dfsg-14ubuntu1) xenial; urgency=medium
 
