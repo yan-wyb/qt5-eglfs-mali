@@ -276,7 +276,7 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkreplyhttpimpl
 +            QObject::connect(networkSession.data(), SIGNAL(stateChanged(QNetworkSession::State)),
 +                             q, SLOT(_q_networkSessionStateChanged(QNetworkSession::State)), Qt::QueuedConnection);
 +
-         postRequest();
+         postRequest(newHttpRequest);
          return true;
      } else if (synchronous) {
 @@ -1648,7 +1653,7 @@ void QNetworkReplyHttpImplPrivate::_q_st
@@ -288,19 +288,6 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkreplyhttpimpl
                  session->open();
              }
          } else {
-@@ -1669,8 +1674,10 @@ void QNetworkReplyHttpImplPrivate::_q_st
- #endif
-     } else {
- #ifndef QT_NO_BEARERMANAGEMENT
--        QObject::connect(session.data(), SIGNAL(stateChanged(QNetworkSession::State)),
--                         q, SLOT(_q_networkSessionStateChanged(QNetworkSession::State)), Qt::QueuedConnection);
-+        if (session) {
-+            QObject::connect(session.data(), SIGNAL(stateChanged(QNetworkSession::State)),
-+                             q, SLOT(_q_networkSessionStateChanged(QNetworkSession::State)), Qt::QueuedConnection);
-+        }
- #endif
-     }
- 
 @@ -1811,6 +1818,7 @@ void QNetworkReplyHttpImplPrivate::_q_bu
  #ifndef QT_NO_BEARERMANAGEMENT
  void QNetworkReplyHttpImplPrivate::_q_networkSessionConnected()
@@ -319,14 +306,6 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkreplyhttpimpl
              && (state != Idle || state != Reconnecting)) {
          error(QNetworkReplyImpl::NetworkSessionFailedError,
                QCoreApplication::translate("QNetworkReply", "Network session error."));
-@@ -1970,7 +1979,6 @@ void QNetworkReplyHttpImplPrivate::finis
-         }
- #endif
-     }
--
-     state = Finished;
-     q->setFinished(true);
- 
 Index: qtbase-opensource-src-5.4.1+dfsg/src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp
 ===================================================================
 --- qtbase-opensource-src-5.4.1+dfsg.orig/src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp
@@ -608,7 +587,7 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/plugins/bearer/networkmanager/qnetwo
          i.next();
          propertyMap.insert(i.key(),i.value());
 -
--        if (i.key() == QStringLiteral("State")) {
+-        if (i.key() == QLatin1String("State")) {
 -            quint32 state = i.value().toUInt();
 -            if (state == NM_DEVICE_STATE_ACTIVATED
 -                || state == NM_DEVICE_STATE_DISCONNECTED
@@ -617,7 +596,7 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/plugins/bearer/networkmanager/qnetwo
 -                Q_EMIT propertiesChanged(map);
 -                Q_EMIT stateChanged(state);
 -            }
--        } else if (i.key() == QStringLiteral("ActiveConnections")) {
+-        } else if (i.key() == QLatin1String("ActiveConnections")) {
 -            Q_EMIT propertiesChanged(map);
 -        }
      }
@@ -639,7 +618,7 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/plugins/bearer/networkmanager/qnetwo
      QMapIterator<QString, QVariant> i(map);
      while (i.hasNext()) {
          i.next();
--        if (i.key() == QStringLiteral("AvailableConnections")) { //Device
+-        if (i.key() == QLatin1String("AvailableConnections")) { //Device
 -            const QDBusArgument &dbusArgs = i.value().value<QDBusArgument>();
 -            QDBusObjectPath path;
 -            QStringList paths;
@@ -691,7 +670,7 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/plugins/bearer/networkmanager/qnetwo
      while (i.hasNext()) {
          i.next();
          propertyMap.insert(i.key(),i.value());
--        if (i.key() == QStringLiteral("State")) {
+-        if (i.key() == QLatin1String("State")) {
 -            quint32 state = i.value().toUInt();
 -            if (state == NM_ACTIVE_CONNECTION_STATE_ACTIVATED
 -                || state == NM_ACTIVE_CONNECTION_STATE_DEACTIVATED) {
