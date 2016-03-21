@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.6.0~rc amd64
+# SymbolsHelper-Confirmed: 5.6.0 amd64 arm64 armhf i386 powerpc ppc64el s390x
 libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
 | libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#, qtbase-abi-5-6-0
 | libqt5gui5 #MINVER#
