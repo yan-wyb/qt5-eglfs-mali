@@ -138,9 +138,9 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZN15QDBusConnectionD1Ev@Qt_5 5.0.2
  _ZN15QDBusConnectionD2Ev@Qt_5 5.0.2
  _ZN15QDBusConnectionaSERKS_@Qt_5 5.0.2
- _ZN15QDBusMetaObject16createMetaObjectERK7QStringS2_R5QHashIS0_PS_ER10QDBusError@Qt_5_PRIVATE_API 5.0.2 1
- _ZN15QDBusMetaObjectC1Ev@Qt_5_PRIVATE_API 5.0.2 1
- _ZN15QDBusMetaObjectC2Ev@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN15QDBusMetaObject16createMetaObjectERK7QStringS2_R5QHashIS0_PS_ER10QDBusError@Qt_5_PRIVATE_API 5.0.2
+ _ZN15QDBusMetaObjectC1Ev@Qt_5_PRIVATE_API 5.0.2
+ _ZN15QDBusMetaObjectC2Ev@Qt_5_PRIVATE_API 5.0.2
  _ZN15QDBusObjectPath7doCheckEv@Qt_5 5.0.2
  _ZN16QDBusPendingCall15waitForFinishedEv@Qt_5 5.0.2
  _ZN16QDBusPendingCall17fromCompletedCallERK12QDBusMessage@Qt_5 5.0.2
@@ -350,9 +350,9 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZNK15QDBusConnection9asyncCallERK12QDBusMessagei@Qt_5 5.0.2
  _ZNK15QDBusConnection9interfaceEv@Qt_5 5.0.2
  _ZNK15QDBusConnection9lastErrorEv@Qt_5 5.0.2
- _ZNK15QDBusMetaObject16propertyMetaTypeEi@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDBusMetaObject19inputTypesForMethodEi@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDBusMetaObject20outputTypesForMethodEi@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK15QDBusMetaObject16propertyMetaTypeEi@Qt_5_PRIVATE_API 5.0.2
+ _ZNK15QDBusMetaObject19inputTypesForMethodEi@Qt_5_PRIVATE_API 5.0.2
+ _ZNK15QDBusMetaObject20outputTypesForMethodEi@Qt_5_PRIVATE_API 5.0.2
  _ZNK16QDBusPendingCall10isFinishedEv@Qt_5 5.0.2
  _ZNK16QDBusPendingCall5errorEv@Qt_5 5.0.2
  _ZNK16QDBusPendingCall5replyEv@Qt_5 5.0.2

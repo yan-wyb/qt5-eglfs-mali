@@ -5,6 +5,7 @@ qtbase-opensource-src (5.6.0+dfsg-2ubuntu1) UNRELEASED; urgency=medium
   * Update symbols and bump symbols abi.
   * Rebase and refresh enable-tests.patch.
   * Rebase qnam-ubuntu-fix6.patch.
+  * Mark private symbols.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 10:06:17 +0000
 
