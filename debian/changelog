@@ -1,6 +1,5 @@
 qtbase-opensource-src (5.6.0+dfsg-2ubuntu1) UNRELEASED; urgency=medium
 
-  [ Timo Jyrinki ]
   * New upstream release. 
   * Migrate symbols using the script to the Qt_5 versioning scheme.
   * Update symbols and bump symbols abi.

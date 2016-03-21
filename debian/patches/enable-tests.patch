@@ -23597,3 +23597,18 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/corelib/io/qtextstream/tst_qtex
      }
      {
          // Shift-JIS device
+diff -urN qtbase-opensource-src-5.6.0.old/tests/auto/corelib/thread/qatomicinteger/tst_qatomicinteger.cpp qtbase-opensource-src-5.6.0/tests/auto/corelib/thread/qatomicinteger/tst_qatomicinteger.cpp
+--- qtbase-opensource-src-5.6.0.old/tests/auto/corelib/thread/qatomicinteger/tst_qatomicinteger.cpp	2016-03-03 11:35:22.000000000 +0000
++++ qtbase-opensource-src-5.6.0/tests/auto/corelib/thread/qatomicinteger/tst_qatomicinteger.cpp	2016-03-18 13:25:42.621419518 +0000
+@@ -100,9 +100,11 @@
+ #  endif
+ #endif
+ #ifdef Q_ATOMIC_INT64_IS_SUPPORTED
++#if !defined(__i386__)
+ #  define TYPE_SUPPORTED_qlonglong  1
+ #  define TYPE_SUPPORTED_qulonglong 1
+ #endif
++#endif
+ 
+ #ifdef Q_MOC_RUN
+ #  define QATOMIC_TYPE_SUPPORTED(type)      1
