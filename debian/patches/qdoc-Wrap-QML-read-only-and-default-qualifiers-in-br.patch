@@ -1,0 +1,49 @@
+From afdbf65a98792b6de5968fa3d1c2f8267af9d838 Mon Sep 17 00:00:00 2001
+From: Topi Reinio <topi.reinio@theqtcompany.com>
+Date: Thu, 19 Nov 2015 11:45:05 +0100
+Subject: [PATCH] qdoc: Wrap QML 'read-only' and 'default' qualifiers in
+ brackets
+
+The documentation for QML properties will be visually closer to
+that of C++ reference ([virtual] etc.). Also, this solves the
+issue in simplified CSS where there was no whitespace between
+the QML qualifier and the property name.
+
+Change-Id: Icebc72916ee06439b07b52550648912c9d57b080
+Task-number: QTBUG-49264
+Reviewed-by: Martin Smith <martin.smith@theqtcompany.com>
+---
+ src/tools/qdoc/htmlgenerator.cpp | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/qdoc/htmlgenerator.cpp b/src/qdoc/htmlgenerator.cpp
+index b4a12b4..6d013de 100644
+--- a/src/tools/qdoc/htmlgenerator.cpp
++++ b/src/tools/qdoc/htmlgenerator.cpp
+@@ -4212,9 +4212,9 @@ void HtmlGenerator::generateDetailedQmlMember(Node *node,
+                 out() << "<a name=\"" + nodeRef + "\"></a>";
+ 
+                 if (!qpn->isWritable())
+-                    out() << "<span class=\"qmlreadonly\">read-only</span>";
++                    out() << "<span class=\"qmlreadonly\">[read-only] </span>";
+                 if (qpn->isDefault())
+-                    out() << "<span class=\"qmldefault\">default</span>";
++                    out() << "<span class=\"qmldefault\">[default] </span>";
+                 generateQmlItem(qpn, relative, marker, false);
+                 out() << "</p></td></tr>";
+             }
+@@ -4231,9 +4231,9 @@ void HtmlGenerator::generateDetailedQmlMember(Node *node,
+                 qpn->setReadOnly(!qpn->isWritable());
+         }
+         if (qpn->isReadOnly())
+-            out() << "<span class=\"qmlreadonly\">read-only</span>";
++            out() << "<span class=\"qmlreadonly\">[read-only] </span>";
+         if (qpn->isDefault())
+-            out() << "<span class=\"qmldefault\">default</span>";
++            out() << "<span class=\"qmldefault\">[default] </span>";
+         generateQmlItem(qpn, relative, marker, false);
+         out() << "</p></td></tr>";
+         out() << "</table></div>";
+-- 
+2.7.3
+

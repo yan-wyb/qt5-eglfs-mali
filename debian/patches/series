@@ -29,6 +29,7 @@ xcb-Handle-screen-siblings-in-QXcbVirtualDesktop.patch
 xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch
 dbusmenu_fixes.diff
 dbustray_fixes.diff
+qdoc-Wrap-QML-read-only-and-default-qualifiers-in-br.patch
 
 # Debian specific.
 gnukfreebsd.diff
