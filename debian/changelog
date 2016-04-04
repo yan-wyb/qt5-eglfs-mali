@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.1+dfsg-16ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu4) xenial; urgency=medium
 
   * debian/patches/qdoc-Wrap-QML-read-only-and-default-qualifiers-in-br.patch:
     - Fix typos in property definitions. (LP: #1557259)
