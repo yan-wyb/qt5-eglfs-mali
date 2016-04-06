@@ -1,3 +1,18 @@
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu6) xenial; urgency=medium
+
+  [ Alberto Mardegan ]
+  * debian/patches/xcb_fix_parent_screen_of_embedded_windows.patch:
+    - Fix wrong size of embedded window. Fixed in upstream Qt 5.6.
+      (LP: #1564767)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 05 Apr 2016 13:59:17 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu5) xenial; urgency=medium
+
+  * Rebuild against libmysqlclient20.
+
+ -- Robie Basak <robie.basak@ubuntu.com>  Tue, 05 Apr 2016 12:57:34 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-16ubuntu4) xenial; urgency=medium
 
   * debian/patches/qdoc-Wrap-QML-read-only-and-default-qualifiers-in-br.patch:

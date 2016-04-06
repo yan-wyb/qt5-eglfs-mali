@@ -1,0 +1,14 @@
+Index: qtbase-opensource-src-5.5.1+dfsg/src/plugins/platforms/xcb/qxcbwindow.cpp
+===================================================================
+--- qtbase-opensource-src-5.5.1+dfsg.orig/src/plugins/platforms/xcb/qxcbwindow.cpp
++++ qtbase-opensource-src-5.5.1+dfsg/src/plugins/platforms/xcb/qxcbwindow.cpp
+@@ -174,7 +174,8 @@ static inline QRect mapLocalGeometryFrom
+ 
+ QXcbScreen *QXcbWindow::parentScreen()
+ {
+-    return parent() ? static_cast<QXcbWindow*>(parent())->parentScreen() : m_xcbScreen;
++    return (parent() && parent()->window()->type() != Qt::ForeignWindow) ?
++        static_cast<QXcbWindow*>(parent())->parentScreen() : m_xcbScreen;
+ }
+ 
+ QPoint QXcbWindow::mapToNative(const QPoint &pos, const QXcbScreen *screen) const
