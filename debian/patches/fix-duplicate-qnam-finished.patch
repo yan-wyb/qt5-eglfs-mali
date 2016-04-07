@@ -31,9 +31,9 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager
 --- qtbase-opensource-src-5.4.1+dfsg.orig/src/network/access/qnetworkaccessmanager.h
 +++ qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager.h
 @@ -169,8 +169,6 @@ private:
-     Q_PRIVATE_SLOT(d_func(), void _q_replyFinished())
      Q_PRIVATE_SLOT(d_func(), void _q_replyEncrypted())
      Q_PRIVATE_SLOT(d_func(), void _q_replySslErrors(QList<QSslError>))
+     Q_PRIVATE_SLOT(d_func(), void _q_replyPreSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*))
 -    Q_PRIVATE_SLOT(d_func(), void _q_replyErrors(QNetworkReply::NetworkError))
 -
  #ifndef QT_NO_BEARERMANAGEMENT
@@ -44,9 +44,9 @@ Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager
 --- qtbase-opensource-src-5.4.1+dfsg.orig/src/network/access/qnetworkaccessmanager_p.h
 +++ qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager_p.h
 @@ -107,7 +107,6 @@ public:
-     void _q_replyFinished();
      void _q_replyEncrypted();
      void _q_replySslErrors(const QList<QSslError> &errors);
+     void _q_replyPreSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator *authenticator);
 -    void _q_replyErrors(QNetworkReply::NetworkError);
  
      QNetworkReply *postProcess(QNetworkReply *reply);
