@@ -1,9 +1,9 @@
-qtbase-opensource-src (5.5.1+dfsg-16ubuntu7) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu7) xenial; urgency=medium
 
   * debian/patches/fix-duplicate-qnam-finished.patch:
     - Fix multiple calls to signals of QNAM object (LP: #1564142)
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 07 Apr 2016 08:59:15 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 07 Apr 2016 12:58:50 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-16ubuntu6) xenial; urgency=medium
 
