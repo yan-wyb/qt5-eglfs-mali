@@ -1180,6 +1180,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN16QIODevicePrivateD0Ev@Base 5.0.2 1
  _ZN16QIODevicePrivateD1Ev@Base 5.0.2 1
  _ZN16QIODevicePrivateD2Ev@Base 5.0.2 1
+ _ZN16QLockFilePrivate16processNameByPidEx@Base 5.5.1
  _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb@Base 5.2.0
  _ZN16QLoggingCategory13installFilterEPFvPS_E@Base 5.2.0
  _ZN16QLoggingCategory14setFilterRulesERK7QString@Base 5.2.0

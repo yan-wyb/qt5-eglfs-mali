@@ -1721,6 +1721,7 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN14QDesktopWidget15workAreaResizedEi@Base 5.0.2
  _ZN14QDesktopWidget16staticMetaObjectE@Base 5.0.2
  _ZN14QDesktopWidget18screenCountChangedEi@Base 5.0.2
+ _ZN14QDesktopWidget20primaryScreenChangedEv@Base 5.5.1
  _ZN14QDesktopWidget6screenEi@Base 5.0.2
  _ZN14QDesktopWidget7resizedEi@Base 5.0.2
  _ZN14QDesktopWidgetC1Ev@Base 5.0.2

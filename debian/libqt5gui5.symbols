@@ -1599,6 +1599,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZN15QGuiApplication19fontDatabaseChangedEv@Base 5.0.2
  _ZN15QGuiApplication20changeOverrideCursorERK7QCursor@Base 5.0.2
  _ZN15QGuiApplication20desktopSettingsAwareEv@Base 5.0.2
+ _ZN15QGuiApplication20primaryScreenChangedEP7QScreen@Base 5.5.1
  _ZN15QGuiApplication21restoreOverrideCursorEv@Base 5.0.2
  _ZN15QGuiApplication22applicationDisplayNameEv@Base 5.0.2
  _ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE@Base 5.4.0
@@ -2716,8 +2717,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZN20QPlatformCursorImage3setERK6QImageii@Base 5.0.2 1
  _ZN20QPlatformIntegration10initializeEv@Base 5.2.0 1
  _ZN20QPlatformIntegration11screenAddedEP15QPlatformScreenb@Base 5.5.0 1
+ _ZN20QPlatformIntegration12removeScreenEP7QScreen@Base 5.5.1 1
  _ZN20QPlatformIntegration13destroyScreenEP15QPlatformScreen@Base 5.5.0 1
  _ZN20QPlatformIntegration16openGLModuleTypeEv@Base 5.3.0 1
+ _ZN20QPlatformIntegration16setPrimaryScreenEP15QPlatformScreen@Base 5.5.1 1
  _ZN20QPlatformIntegration4syncEv@Base 5.2.0 1
  _ZN20QPlatformIntegration7destroyEv@Base 5.5.0 1
  _ZN20QPlatformTextureList11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.3.0 1
