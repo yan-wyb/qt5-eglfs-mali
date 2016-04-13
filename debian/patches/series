@@ -20,5 +20,4 @@ skip-largefile-test-s390x.patch
 net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff
-xcb_fix_parent_screen_of_embedded_windows.patch
 fix-duplicate-qnam-finished.patch
