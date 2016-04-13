@@ -1,0 +1,53 @@
+Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager.cpp
+===================================================================
+--- qtbase-opensource-src-5.4.1+dfsg.orig/src/network/access/qnetworkaccessmanager.cpp
++++ qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager.cpp
+@@ -1340,23 +1340,11 @@ void QNetworkAccessManagerPrivate::_q_re
+ #endif
+ }
+ 
+-void QNetworkAccessManagerPrivate::_q_replyErrors(QNetworkReply::NetworkError error)
+-{
+-    Q_Q(QNetworkAccessManager);
+-
+-    QNetworkReply *reply = qobject_cast<QNetworkReply *>(q->sender());
+-
+-    qCDebug(lcQnam)<< error << reply;
+-    if (reply && error != QNetworkReply::NoError)
+-        emit q->finished(reply);
+-}
+-
+ QNetworkReply *QNetworkAccessManagerPrivate::postProcess(QNetworkReply *reply)
+ {
+     Q_Q(QNetworkAccessManager);
+     QNetworkReplyPrivate::setManager(reply, q);
+     q->connect(reply, SIGNAL(finished()), SLOT(_q_replyFinished()));
+-    q->connect(reply,SIGNAL(error(QNetworkReply::NetworkError)),SLOT(_q_replyErrors(QNetworkReply::NetworkError)));
+ #ifndef QT_NO_SSL
+     /* In case we're compiled without SSL support, we don't have this signal and we need to
+      * avoid getting a connection error. */
+Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager.h
+===================================================================
+--- qtbase-opensource-src-5.4.1+dfsg.orig/src/network/access/qnetworkaccessmanager.h
++++ qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager.h
+@@ -169,8 +169,6 @@ private:
+     Q_PRIVATE_SLOT(d_func(), void _q_replyEncrypted())
+     Q_PRIVATE_SLOT(d_func(), void _q_replySslErrors(QList<QSslError>))
+     Q_PRIVATE_SLOT(d_func(), void _q_replyPreSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator*))
+-    Q_PRIVATE_SLOT(d_func(), void _q_replyErrors(QNetworkReply::NetworkError))
+-
+ #ifndef QT_NO_BEARERMANAGEMENT
+     Q_PRIVATE_SLOT(d_func(), void _q_networkSessionClosed())
+     Q_PRIVATE_SLOT(d_func(), void _q_networkSessionStateChanged(QNetworkSession::State))
+Index: qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager_p.h
+===================================================================
+--- qtbase-opensource-src-5.4.1+dfsg.orig/src/network/access/qnetworkaccessmanager_p.h
++++ qtbase-opensource-src-5.4.1+dfsg/src/network/access/qnetworkaccessmanager_p.h
+@@ -107,7 +107,6 @@ public:
+     void _q_replyEncrypted();
+     void _q_replySslErrors(const QList<QSslError> &errors);
+     void _q_replyPreSharedKeyAuthenticationRequired(QSslPreSharedKeyAuthenticator *authenticator);
+-    void _q_replyErrors(QNetworkReply::NetworkError);
+ 
+     QNetworkReply *postProcess(QNetworkReply *reply);
+     void createCookieJar() const;

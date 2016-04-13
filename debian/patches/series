@@ -3,6 +3,7 @@ dbusmenu_fixes.diff
 dbustray_fixes.diff
 no_dbus_dependency.diff
 fix_not_delivering_focus.patch
+detect-indicator-application.diff
 
 # Debian specific.
 gnukfreebsd.diff
@@ -19,3 +20,5 @@ skip-largefile-test-s390x.patch
 net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff
+xcb_fix_parent_screen_of_embedded_windows.patch
+fix-duplicate-qnam-finished.patch

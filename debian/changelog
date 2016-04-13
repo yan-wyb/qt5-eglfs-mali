@@ -168,11 +168,59 @@ qtbase-opensource-src (5.6.0~beta+dfsg-1) experimental; urgency=medium
 
  -- Dmitry Shachnev <mitya57@debian.org>  Tue, 29 Dec 2015 22:29:25 +0300
 
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu7) xenial; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream change from 5.6 branch to implement better detection
+    of indicator-application based trays. Refs LP: #1546328.
+  * Update symbols files for symbols added in the latest patches.
+
+  [ Timo Jyrinki ]
+  * debian/patches/fix-duplicate-qnam-finished.patch:
+    - Fix multiple calls to signals of QNAM object (LP: #1564142)
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 12 Apr 2016 19:17:34 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu6) xenial; urgency=medium
+
+  [ Alberto Mardegan ]
+  * debian/patches/xcb_fix_parent_screen_of_embedded_windows.patch:
+    - Fix wrong size of embedded window. Fixed in upstream Qt 5.6.
+      (LP: #1564767)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 05 Apr 2016 13:59:17 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu5) xenial; urgency=medium
+
+  * Rebuild against libmysqlclient20.
+
+ -- Robie Basak <robie.basak@ubuntu.com>  Tue, 05 Apr 2016 12:57:34 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu4) xenial; urgency=medium
+
+  * debian/patches/qdoc-Wrap-QML-read-only-and-default-qualifiers-in-br.patch:
+    - Fix typos in property definitions. (LP: #1557259)
+  * Temporarily disable a test broken by glibc upgrade (LP: #1560528). 
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 29 Mar 2016 11:30:45 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian 5.5.1+dfsg-16.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 07 Mar 2016 09:17:45 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-16) unstable; urgency=medium
 
   * Add fix_alsa_detection.patch to workaround ALSA >= 1.1.0 detection.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 05 Mar 2016 10:24:48 -0300
+
+qtbase-opensource-src (5.5.1+dfsg-15ubuntu1) xenial; urgency=medium
+
+  * Merge with Debian 5.5.1+dfsg-15.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 04 Mar 2016 10:01:08 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-15) unstable; urgency=medium
 
@@ -201,6 +249,29 @@ qtbase-opensource-src (5.5.1+dfsg-15) unstable; urgency=medium
     sid or testing.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Thu, 03 Mar 2016 20:34:47 +0300
+
+qtbase-opensource-src (5.5.1+dfsg-14ubuntu3) xenial; urgency=medium
+
+  * debian/patches/Xcb-fix-crash-on-screen-power-save.patch:
+    - Fix additional cases where crash could occur on monitor disconnections 
+      or power save. (LP: #1551122)
+  * Build with C.UTF-8 locale to (LP: #1551145) and re-enable tests (LP: #1548686)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 02 Mar 2016 10:28:04 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-14ubuntu2) xenial; urgency=medium
+
+  * debian/patches/enable-tests.patch: some qnetworkcookiejar tests have 
+    started failing without any Qt changes (LP: #1548686)
+  * Notify-when-the-primary-screen-changes.patch
+    xcb-Handle-screen-siblings-in-QXcbVirtualDesktop.patch
+    xcb-Use-a-placeholder-QScreen-when-there-are-no-outp.patch:
+    - Another multi-monitor crasher fix and its pre-requirement patches
+      (LP: #1548766)
+    - Rebase the patches slightly to apply to Qt 5.5.
+  * Merge with unreleased Debian's 5.5.1+dfsg-15
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 26 Feb 2016 07:03:24 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-14ubuntu1) xenial; urgency=medium
 
