@@ -18,7 +18,7 @@ Last-Update: 2016-04-12
 +    Q_CORE_EXPORT static QString processNameByPid(qint64 pid);
  
  #ifdef Q_OS_UNIX
-     static int checkFcntlWorksAfterFlock();
+     static int checkFcntlWorksAfterFlock(const QString &fn);
 --- a/src/platformsupport/dbustray/qdbustrayicon.cpp
 +++ b/src/platformsupport/dbustray/qdbustrayicon.cpp
 @@ -47,13 +47,19 @@
