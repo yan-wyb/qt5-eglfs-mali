@@ -4,6 +4,7 @@ dbustray_fixes.diff
 no_dbus_dependency.diff
 fix_not_delivering_focus.patch
 detect-indicator-application.diff
+Blacklist-Mali-T760-Mali-T720-from-supporting-BGRA.patch
 
 # Debian specific.
 gnukfreebsd.diff
