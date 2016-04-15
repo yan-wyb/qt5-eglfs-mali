@@ -8,6 +8,7 @@ qtbase-opensource-src (5.6.0+dfsg-2ubuntu1) UNRELEASED; urgency=medium
   * Mark private symbols.
   * Drop xcb_fix_parent_screen_of_embedded_windows.patch:
     - Fixed differently in Qt 5.6.
+  * Tests enablement for Qt 5.6.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 18 Jan 2016 10:06:17 +0000
 
