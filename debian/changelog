@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.5.1+dfsg-16ubuntu10) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu10) yakkety; urgency=medium
 
   * debian/patches/Blacklist-Mali-T760-Mali-T720-from-supporting-BGRA.patch
     - Backport from upstream 5.6 (LP: #1557915) (LP: #1559906)
