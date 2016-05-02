@@ -2,6 +2,10 @@ qtbase-opensource-src (5.5.1+dfsg-16ubuntu10) UNRELEASED; urgency=medium
 
   * debian/patches/Blacklist-Mali-T760-Mali-T720-from-supporting-BGRA.patch
     - Backport from upstream 5.6 (LP: #1557915) (LP: #1559906)
+  * Add two patches from stable Qt 5.6 branch to fix another case of 
+    QXcbWindow crashes (LP: #1571158).
+    - debian/patches/Fix-crash-because-of-NULL-screen-in-QXcbWindow.patch
+    - debian/patches/QtGui-Don-t-set-a-screen-to-a-child-window.patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 02 May 2016 07:14:37 +0000
 
