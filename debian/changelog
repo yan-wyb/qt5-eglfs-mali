@@ -6,6 +6,9 @@ qtbase-opensource-src (5.5.1+dfsg-16ubuntu10) UNRELEASED; urgency=medium
     QXcbWindow crashes (LP: #1571158).
     - debian/patches/Fix-crash-because-of-NULL-screen-in-QXcbWindow.patch
     - debian/patches/QtGui-Don-t-set-a-screen-to-a-child-window.patch
+  * Fix drag and drop issues with patches from upstream. (LP: #1577313)
+    - debian/patches/xcb-Fix-drag-and-drop-to-Emacs.patch
+    - debian/patches/xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 02 May 2016 07:14:37 +0000
 
