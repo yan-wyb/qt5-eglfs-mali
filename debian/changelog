@@ -171,12 +171,31 @@ qtbase-opensource-src (5.6.0~beta+dfsg-1) experimental; urgency=medium
 
  -- Dmitry Shachnev <mitya57@debian.org>  Tue, 29 Dec 2015 22:29:25 +0300
 
-qtbase-opensource-src (5.5.1+dfsg-16ubuntu8) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu10) UNRELEASED; urgency=medium
 
   * debian/patches/Blacklist-Mali-T760-Mali-T720-from-supporting-BGRA.patch
     - Backport from upstream 5.6 (LP: #1557915) (LP: #1559906)
+  * Add two patches from stable Qt 5.6 branch to fix another case of 
+    QXcbWindow crashes (LP: #1571158).
+    - debian/patches/Fix-crash-because-of-NULL-screen-in-QXcbWindow.patch
+    - debian/patches/QtGui-Don-t-set-a-screen-to-a-child-window.patch
+  * Fix drag and drop issues with patches from upstream. (LP: #1577313)
+    - debian/patches/xcb-Fix-drag-and-drop-to-Emacs.patch
+    - debian/patches/xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 15 Apr 2016 06:52:29 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 02 May 2016 07:14:37 +0000
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu9) yakkety; urgency=medium
+
+  * Disable running the tests for a first build with ICU 57.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 25 Apr 2016 20:04:55 +0200
+
+qtbase-opensource-src (5.5.1+dfsg-16ubuntu8) yakkety; urgency=medium
+
+  * No-change rebuild for libpng soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 23 Apr 2016 00:21:09 +0000
 
 qtbase-opensource-src (5.5.1+dfsg-16ubuntu7) xenial; urgency=medium
 
