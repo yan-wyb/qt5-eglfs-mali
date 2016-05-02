@@ -67,7 +67,7 @@ ifeq ($(DEB_HOST_ARCH_CPU),i386)
 endif
 
 # Run tests only on archs known to pass in the past
-#testrun_architectures := amd64 armhf i386
+testrun_architectures := amd64 armhf i386
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
   ifneq (,$(filter $(DEB_HOST_ARCH),alpha ia64 mips64 mips64el arm64))
