@@ -67,7 +67,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _Z29qt_set_sequence_auto_mnemonicb@Base 5.0.2
  _Z30qt_gl_set_global_share_contextP14QOpenGLContext@Base 5.4.0
  _Z32qGamma_correct_back_to_linear_csP6QImage@Base 5.0.2
- (arch=amd64)_Z32qt_convert_rgb888_to_rgb32_ssse3PjPKhi@Base 5.0.2
+ (arch=any-amd64)_Z32qt_convert_rgb888_to_rgb32_ssse3PjPKhi@Base 5.0.2
  _Z33hb_qt_font_get_use_design_metricsP9hb_font_t@Base 5.2.0
  _Z33hb_qt_font_set_use_design_metricsP9hb_font_tj@Base 5.2.0
  _Z35qtInitializeVertexArrayObjectHelperP30QOpenGLVertexArrayObjectHelperP14QOpenGLContext@Base 5.4.0

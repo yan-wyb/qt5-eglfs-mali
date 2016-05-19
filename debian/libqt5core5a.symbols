@@ -12,7 +12,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  (arch=ia64)_Z10qvsnprintfPcmPKcPv@Base 5.0.2
  (arch=ppc64el)_Z10qvsnprintfPcmPKcS_@Base 5.2.0
  (arch=arm64)_Z10qvsnprintfPcmPKcSt9__va_list@Base 5.2.0
- (arch=amd64 powerpc s390x|subst)_Z10qvsnprintfPc{size_t}PKcP13__va_list_tag@Base 5.0.2
+ (arch=any-amd64 powerpc s390x|subst)_Z10qvsnprintfPc{size_t}PKcP13__va_list_tag@Base 5.0.2
  _Z10scientificR11QTextStream@Base 5.0.2
  _Z11noforcesignR11QTextStream@Base 5.0.2
  _Z11qHBFreeFaceP11HB_FaceRec_@Base 5.0.2
@@ -62,7 +62,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _Z23qt_qFindChildren_helperPK7QObjectRK7QStringRK11QMetaObjectP5QListIPvE6QFlagsIN2Qt15FindChildOptionEE@Base 5.0.2
  _Z24qGlobalPostedEventsCountv@Base 5.0.2
  _Z24qcoreStateMachineHandlerv@Base 5.0.2
- (arch=!hurd-i386)_Z24qt_linux_find_symbol_sysPKc@Base 5.0.2
+ (arch=linux-any)_Z24qt_linux_find_symbol_sysPKc@Base 5.0.2
  _Z24qt_subtract_from_timeoutii@Base 5.4.2
  _Z25qEnvironmentVariableIsSetPKc@Base 5.0.2
  _Z26qt_QMetaEnum_debugOperatorR6QDebugiPK11QMetaObjectPKc@Base 5.5.0
@@ -961,9 +961,9 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN14QTemporaryFileD0Ev@Base 5.0.2
  _ZN14QTemporaryFileD1Ev@Base 5.0.2
  _ZN14QTemporaryFileD2Ev@Base 5.0.2
- _ZN14QTimerInfoList11timeChangedEP8timespec@Base 5.2.0 1
+ (arch=!kfreebsd-amd64) _ZN14QTimerInfoList11timeChangedEP8timespec@Base 5.2.0 1
  _ZN14QTimerInfoList11timerInsertEP10QTimerInfo@Base 5.0.2 1
- _ZN14QTimerInfoList11timerRepairERK8timespec@Base 5.2.0 1
+ (arch=!kfreebsd-amd64) _ZN14QTimerInfoList11timerRepairERK8timespec@Base 5.2.0 1
  _ZN14QTimerInfoList13registerTimerEiiN2Qt9TimerTypeEP7QObject@Base 5.0.2 1
  _ZN14QTimerInfoList14activateTimersEv@Base 5.0.2 1
  _ZN14QTimerInfoList15unregisterTimerEi@Base 5.0.2 1
@@ -2724,12 +2724,12 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN7QString8asprintfEPKcz@Base 5.5.0
  _ZN7QString8fromUcs4EPKji@Base 5.0.2
  _ZN7QString8truncateEi@Base 5.0.2
- (arch=amd64 powerpc s390x)_ZN7QString8vsprintfEPKcP13__va_list_tag@Base 5.0.2
+ (arch=any-amd64 powerpc s390x)_ZN7QString8vsprintfEPKcP13__va_list_tag@Base 5.0.2
  (arch=hurd-i386 i386 ppc64el)_ZN7QString8vsprintfEPKcPc@Base 5.0.2
  (arch=ia64)_ZN7QString8vsprintfEPKcPv@Base 5.0.2
  (arch=armhf arm64)_ZN7QString8vsprintfEPKcSt9__va_list@Base 5.2.0
  _ZN7QString9fromUtf16EPKti@Base 5.0.2
- (arch=amd64 powerpc s390x)_ZN7QString9vasprintfEPKcP13__va_list_tag@Base 5.5.0
+ (arch=any-amd64 powerpc s390x)_ZN7QString9vasprintfEPKcP13__va_list_tag@Base 5.5.0
  (arch=i386 ppc64el)_ZN7QString9vasprintfEPKcPc@Base 5.5.0
  (arch=arm64 armhf)_ZN7QString9vasprintfEPKcSt9__va_list@Base 5.5.0
  _ZN7QStringC1E5QChar@Base 5.0.2
