@@ -2539,22 +2539,22 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  (optional)_ZN20QOpenGLFunctions_3_1D0Ev@Base 5.2.0 2
  (optional)_ZN20QOpenGLFunctions_3_1D1Ev@Base 5.2.0 2
  (optional)_ZN20QOpenGLFunctions_3_1D2Ev@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES214versionProfileEv@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES214versionProfileEv@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES219isContextCompatibleEP14QOpenGLContext@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES219isContextCompatibleEP14QOpenGLContext@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES225initializeOpenGLFunctionsEv@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES225initializeOpenGLFunctionsEv@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES2C1Ev@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES2C1Ev@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES2C2Ev@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES2C2Ev@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES2D0Ev@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES2D0Ev@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES2D1Ev@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES2D1Ev@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZN20QOpenGLFunctions_ES2D2Ev@Base 5.2.0 3
- (arch=armhf armel)_ZN20QOpenGLFunctions_ES2D2Ev@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES214versionProfileEv@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES214versionProfileEv@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES219isContextCompatibleEP14QOpenGLContext@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES219isContextCompatibleEP14QOpenGLContext@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES225initializeOpenGLFunctionsEv@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES225initializeOpenGLFunctionsEv@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES2C1Ev@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES2C1Ev@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES2C2Ev@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES2C2Ev@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES2D0Ev@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES2D0Ev@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES2D1Ev@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES2D1Ev@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZN20QOpenGLFunctions_ES2D2Ev@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZN20QOpenGLFunctions_ES2D2Ev@Base 5.2.0 2
  _ZN20QOpenGLShaderProgram11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
  _ZN20QOpenGLShaderProgram11qt_metacastEPKc@Base 5.0.2
  _ZN20QOpenGLShaderProgram12removeShaderEP13QOpenGLShader@Base 5.0.2
@@ -6654,8 +6654,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  (optional)_ZTI20QOpenGLFunctions_2_1@Base 5.2.0 2
  (optional)_ZTI20QOpenGLFunctions_3_0@Base 5.2.0 2
  (optional)_ZTI20QOpenGLFunctions_3_1@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZTI20QOpenGLFunctions_ES2@Base 5.2.0 3
- (arch=armhf armel)_ZTI20QOpenGLFunctions_ES2@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZTI20QOpenGLFunctions_ES2@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZTI20QOpenGLFunctions_ES2@Base 5.2.0 2
  _ZTI20QOpenGLShaderProgram@Base 5.0.2
  _ZTI20QPictureFormatPlugin@Base 5.0.2
  _ZTI20QPlatformIntegration@Base 5.0.2 1
@@ -6899,8 +6899,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  (optional)_ZTS20QOpenGLFunctions_2_1@Base 5.2.0 2
  (optional)_ZTS20QOpenGLFunctions_3_0@Base 5.2.0 2
  (optional)_ZTS20QOpenGLFunctions_3_1@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZTS20QOpenGLFunctions_ES2@Base 5.2.0 3
- (arch=armhf armel)_ZTS20QOpenGLFunctions_ES2@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZTS20QOpenGLFunctions_ES2@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZTS20QOpenGLFunctions_ES2@Base 5.2.0 2
  _ZTS20QOpenGLShaderProgram@Base 5.0.2
  _ZTS20QPictureFormatPlugin@Base 5.0.2
  _ZTS20QPlatformIntegration@Base 5.0.2 1
@@ -7142,8 +7142,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  (optional)_ZTV20QOpenGLFunctions_2_1@Base 5.2.0 2
  (optional)_ZTV20QOpenGLFunctions_3_0@Base 5.2.0 2
  (optional)_ZTV20QOpenGLFunctions_3_1@Base 5.2.0 2
- (optional|arch=!armhf !armel)_ZTV20QOpenGLFunctions_ES2@Base 5.2.0 3
- (arch=armhf armel)_ZTV20QOpenGLFunctions_ES2@Base 5.2.0 2
+ (optional|arch=!armhf !armel !arm64)_ZTV20QOpenGLFunctions_ES2@Base 5.2.0 3
+ (arch=armhf armel arm64)_ZTV20QOpenGLFunctions_ES2@Base 5.2.0 2
  _ZTV20QOpenGLShaderProgram@Base 5.0.2
  _ZTV20QPictureFormatPlugin@Base 5.0.2
  _ZTV20QPlatformIntegration@Base 5.0.2 1
