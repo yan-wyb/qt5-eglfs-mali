@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.5.1+dfsg-17ubuntu1) yakkety; urgency=medium
+
+  * Merge with Debian because qtchooser got autosynced from Debian and broke 
+    package installation.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 23 May 2016 08:15:39 +0000
+
 qtbase-opensource-src (5.5.1+dfsg-17) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
