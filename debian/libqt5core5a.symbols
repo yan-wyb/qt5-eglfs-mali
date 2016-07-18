@@ -1,6 +1,6 @@
-# SymbolsHelper-Confirmed: 5.6.0~rc amd64
+# SymbolsHelper-Confirmed: 5.6.1 amd64
 libQt5Core.so.5 libqt5core5a #MINVER#
-| libqt5core5a #MINVER#, qtbase-abi-5-6-0
+| libqt5core5a #MINVER#, qtbase-abi-5-6-1
  Qt_5.0@Qt_5.0 5.6.0~beta
  Qt_5.1@Qt_5.1 5.6.0~beta
  Qt_5.2@Qt_5.2 5.6.0~beta
@@ -111,9 +111,9 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _Z5qHashRK9QMimeTypej@Qt_5 5.6.0~beta
  _Z5qHashRK9QUrlQueryj@Qt_5 5.6.0~beta
  _Z5qHashdj@Qt_5 5.3.0
- (arch=!powerpc !ppc64el !s390x)_Z5qHashej@Qt_5 5.3.0
+ (arch=!alpha !powerpc !powerpcspe !ppc64 !ppc64el !s390x)_Z5qHashej@Qt_5 5.3.0
  _Z5qHashfj@Qt_5 5.3.0
- (arch=powerpc ppc64el s390x)_Z5qHashgj@Qt_5 5.3.0
+ (arch=alpha powerpc powerpcspe ppc64 ppc64el s390x)_Z5qHashgj@Qt_5 5.6.1
  _Z5qQNaNv@Qt_5 5.0.2
  _Z5qSNaNv@Qt_5 5.0.2
  _Z5qdtoadiiPiS_PPcS1_@Qt_5 5.0.2
@@ -244,6 +244,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN10QJsonArray6insertEiRK10QJsonValue@Qt_5 5.0.2
  _ZN10QJsonArray6takeAtEi@Qt_5 5.0.2
  _ZN10QJsonArray7compactEv@Qt_5 5.0.2
+ _ZN10QJsonArray7detach2Ej@Qt_5 5.6.1
  _ZN10QJsonArray7prependERK10QJsonValue@Qt_5 5.0.2
  _ZN10QJsonArray7replaceEiRK10QJsonValue@Qt_5 5.0.2
  _ZN10QJsonArray8removeAtEi@Qt_5 5.0.2
@@ -413,6 +414,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN11QJsonObject6insertERK7QStringRK10QJsonValue@Qt_5 5.0.2
  _ZN11QJsonObject6removeERK7QString@Qt_5 5.0.2
  _ZN11QJsonObject7compactEv@Qt_5 5.0.2
+ _ZN11QJsonObject7detach2Ej@Qt_5 5.6.1
  _ZN11QJsonObjectC1EPN12QJsonPrivate4DataEPNS0_6ObjectE@Qt_5 5.0.2
  _ZN11QJsonObjectC1ERKS_@Qt_5 5.0.2
  _ZN11QJsonObjectC1Ev@Qt_5 5.0.2
@@ -1051,6 +1053,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN15QAnimationGroupD0Ev@Qt_5 5.0.2
  _ZN15QAnimationGroupD1Ev@Qt_5 5.0.2
  _ZN15QAnimationGroupD2Ev@Qt_5 5.0.2
+ _ZN15QDateTimeParser11SectionNode4nameENS_7SectionE@Qt_5_PRIVATE_API 5.6.1 1
  _ZN15QDateTimeParser11parseFormatERK7QString@Qt_5_PRIVATE_API 5.0.2 1
  _ZN15QIPAddressUtils8parseIp4ERjPK5QCharS3_@Qt_5 5.0.2
  _ZN15QIPAddressUtils8parseIp6ERA16_hPK5QCharS4_@Qt_5 5.0.2
@@ -1167,7 +1170,6 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN16QCoreApplication25organizationDomainChangedEv@Qt_5 5.2.0
  _ZN16QCoreApplication4execEv@Qt_5 5.0.2
  _ZN16QCoreApplication4exitEi@Qt_5 5.0.2
- _ZN16QCoreApplication4initEv@Qt_5 5.0.2
  _ZN16QCoreApplication4quitEv@Qt_5 5.0.2
  _ZN16QCoreApplication4selfE@Qt_5 5.0.2
  _ZN16QCoreApplication5eventEP6QEvent@Qt_5 5.0.2
@@ -1222,6 +1224,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN16QIODevicePrivateD0Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QIODevicePrivateD1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QIODevicePrivateD2Ev@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN16QLockFilePrivate16processNameByPidEx@Qt_5 5.6.1
  _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb@Qt_5 5.2.0
  _ZN16QLoggingCategory13installFilterEPFvPS_E@Qt_5 5.2.0
  _ZN16QLoggingCategory14setFilterRulesERK7QString@Qt_5 5.2.0
@@ -2159,6 +2162,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZN23QCoreApplicationPrivate34sendThroughApplicationEventFiltersEP7QObjectP6QEvent@Qt_5_PRIVATE_API 5.0.2 1
  _ZN23QCoreApplicationPrivate35appendApplicationPathToLibraryPathsEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN23QCoreApplicationPrivate3refEv@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN23QCoreApplicationPrivate4initEv@Qt_5_PRIVATE_API 5.6.1 1
  _ZN23QCoreApplicationPrivate5derefEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN23QCoreApplicationPrivate7attribsE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN23QCoreApplicationPrivate9maybeQuitEv@Qt_5_PRIVATE_API 5.0.2 1
@@ -2792,7 +2796,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  (arch=hurd-i386 i386 ppc64el)_ZN7QString8vsprintfEPKcPc@Qt_5 5.0.2
  (arch=armhf arm64)_ZN7QString8vsprintfEPKcSt9__va_list@Qt_5 5.2.0
  _ZN7QString9fromUtf16EPKti@Qt_5 5.0.2
- (arch=any-amd64 powerpc s390x)_ZN7QString9vasprintfEPKcP13__va_list_tag@Qt_5 5.5.0
+ (arch=amd64 kfreebsd-amd64 powerpc powerpcspe s390x x32)_ZN7QString9vasprintfEPKcP13__va_list_tag@Qt_5 5.6.1
  (arch=i386 ppc64el)_ZN7QString9vasprintfEPKcPc@Qt_5 5.5.0
  (arch=arm64 armhf)_ZN7QString9vasprintfEPKcSt9__va_list@Qt_5 5.5.0
  _ZN7QStringC1E5QChar@Qt_5 5.0.2
@@ -3888,18 +3892,17 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZNK15QDateTimeParser10getMinimumEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser10sectionPosERKNS_11SectionNodeE@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser10sectionPosEi@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK15QDateTimeParser11SectionNode6formatEv@Qt_5_PRIVATE_API 5.6.1 1
+ _ZNK15QDateTimeParser11SectionNode9maxChangeEv@Qt_5_PRIVATE_API 5.6.1 1
  _ZNK15QDateTimeParser11absoluteMaxEiRK9QDateTime@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11absoluteMinEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11getAmPmTextENS_4AmPmENS_4CaseE@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDateTimeParser11sectionNameEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11sectionNodeEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11sectionSizeEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11sectionTextERK7QStringii@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11sectionTextEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser11sectionTypeEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser12parseSectionERK9QDateTimeiR7QStringRiiRNS_5StateEPi@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDateTimeParser13sectionFormatENS_7SectionEi@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDateTimeParser13sectionFormatEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser14potentialValueERK7QStringiiiRK9QDateTimei@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser14sectionMaxSizeENS_7SectionEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser14sectionMaxSizeEi@Qt_5_PRIVATE_API 5.0.2 1
@@ -3911,8 +3914,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZNK15QDateTimeParser8setDigitER9QDateTimeii@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser9fieldInfoEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK15QDateTimeParser9findMonthERK7QStringiiPS0_Pi@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDateTimeParser9maxChangeEi@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK15QDateTimeParser9stateNameEi@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK15QDateTimeParser9stateNameENS_5StateE@Qt_5_PRIVATE_API 5.6.1 1
  _ZNK15QJsonParseError11errorStringEv@Qt_5 5.0.2
  _ZNK15QPauseAnimation10metaObjectEv@Qt_5 5.0.2
  _ZNK15QPauseAnimation8durationEv@Qt_5 5.0.2
@@ -5043,7 +5045,8 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  (optional=templinst)_ZSt13move_backwardIPiS0_ET0_T_S2_S1_@Qt_5 5.4.2
  (optional=templinst|subst)_ZSt17__rotate_adaptiveIP21QPersistentModelIndexS1_{ssize_t}ET_S2_S2_S2_T1_S3_T0_S3_@Qt_5 5.6.0~beta
  (optional=templinst|subst)_ZSt17__rotate_adaptiveIPiS0_{ssize_t}ET_S1_S1_S1_T1_S2_T0_S2_@Qt_5 5.6.0~beta
- (optional=templinst|arch=armhf i386 powerpc)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Qt_5 5.6.0~beta
+ (optional=templinst|arch=!alpha !amd64 !arm64 !hppa !kfreebsd-amd64 !mips64el !ppc64 !ppc64el !s390x !sparc64 !x32)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Qt_5 5.6.1
+ (optional=templinst|arch=!amd64)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Qt_5 5.6.1
  _ZTI10QEventLoop@Qt_5 5.0.2
  _ZTI10QException@Qt_5 5.0.2
  _ZTI10QTextCodec@Qt_5 5.0.2
