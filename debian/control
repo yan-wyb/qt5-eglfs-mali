@@ -18,9 +18,9 @@ Build-Depends: debhelper (>= 9),
                libdbus-1-dev,
                libfontconfig1-dev,
                libfreetype6-dev,
-               libgbm-dev [linux-any],
+               libgbm-dev [linux-any kfreebsd-any],
                libgl1-mesa-dev | libgl-dev,
-               libgles2-mesa-dev [linux-any] | libgles2-dev [linux-any],
+               libgles2-mesa-dev | libgles2-dev,
                libglib2.0-dev,
                libglu1-mesa-dev | libglu-dev,
                libgstreamer-plugins-base1.0-dev,
@@ -68,7 +68,7 @@ Build-Depends: debhelper (>= 9),
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.6.0~),
                      qttools5-dev-tools (>= 5.6.0~)
 Build-Conflicts: libmariadbclient-dev
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: http://qt-project.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtbase.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtbase.git
@@ -77,11 +77,11 @@ Package: libqt5core5a
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Provides: qtbase-abi-5-6-0
+Provides: qtbase-abi-5-6-1
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: qttranslations5-l10n
 Suggests: libthai0
-Breaks: libqt5core5 (<< 5.2.0+dfsg~)
+Breaks: libqt5core5 (<< 5.2.0+dfsg~), libqt5scintilla2-12v5 (<< 2.9.2+dfsg-2~)
 Replaces: libqt5core5 (<< 5.2.0+dfsg~)
 Description: Qt 5 core module
  Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -93,12 +93,12 @@ Package: libqt5gui5
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: fontconfig, mesa-utils, ${misc:Depends}, ${shlibs:Depends}
-Recommends: libqt5svg5
-Breaks: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
-        libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
-Replaces: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
-          libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
+Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
+Recommends: libqt5svg5, mesa-utils
+Breaks: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
+        libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
+Replaces: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
+          libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
 Suggests: libqt5libqgtk2, qt5-image-formats-plugins, qtwayland5
 Description: Qt 5 GUI module
  Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -483,6 +483,7 @@ Description: Qt 5 base examples debugging symbols
 Package: qt5-default
 Architecture: any
 Multi-Arch: same
+Section: libdevel
 Depends: qtbase5-dev, qtchooser (>= 55-gc9562a1-1~), ${misc:Depends}
 Conflicts: qt4-default
 Provides: qt-default
