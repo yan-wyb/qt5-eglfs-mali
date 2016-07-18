@@ -1,10 +1,5 @@
 # Backported from upstream
 no_dbus_dependency.diff
-fix_not_delivering_focus.patch
-detect-indicator-application.diff
-Blacklist-Mali-T760-Mali-T720-from-supporting-BGRA.patch
-xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
-xcb-Fix-drag-and-drop-to-Emacs.patch
 
 # Debian specific.
 gnukfreebsd.diff
@@ -21,4 +16,3 @@ skip-largefile-test-s390x.patch
 net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff
-fix-duplicate-qnam-finished.patch
