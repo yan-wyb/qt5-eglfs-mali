@@ -23772,3 +23772,14 @@ diff -urN qtbase-opensource-src-5.6.0.old/tests/auto/gui/image/qimagereader/tst_
      QTest::newRow("YCbCr_cmyk.png") << QString("YCbCr_cmyk.png")
                                             << QByteArray("png") << QSize(75, 50)
                                             << QString("");
+diff -urN qtbase-opensource-src-5.6.1.old/tests/auto/corelib/tools/tools.pro qtbase-opensource-src-5.6.1/tests/auto/corelib/tools/tools.pro
+--- qtbase-opensource-src-5.6.1.old/tests/auto/corelib/tools/tools.pro	2016-05-25 15:46:17.000000000 +0000
++++ qtbase-opensource-src-5.6.1/tests/auto/corelib/tools/tools.pro	2016-07-18 14:11:26.773000112 +0000
+@@ -1,6 +1,6 @@
+ TEMPLATE=subdirs
+ SUBDIRS=\
+-    collections \
++    #LP: #1603991 collections \
+     qalgorithms \
+     qarraydata \
+     qarraydata_strictiterators \
