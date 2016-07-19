@@ -150,7 +150,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZN10QHideEventD2Ev@Qt_5 5.0.2
  _ZN10QImageData14convertInPlaceEN6QImage6FormatE6QFlagsIN2Qt19ImageConversionFlagEE@Qt_5_PRIVATE_API 5.0.2
  _ZN10QImageData6createEPhiiiN6QImage6FormatEbPFvPvES3_@Qt_5_PRIVATE_API 5.0.2
- _ZN10QImageData6createERK5QSizeN6QImage6FormatE@Qt_5_PRIVATE_API 5.6.1 1
+ _ZN10QImageData6createERK5QSizeN6QImage6FormatE@Qt_5_PRIVATE_API 5.6.1
  _ZN10QImageDataC1Ev@Qt_5_PRIVATE_API 5.0.2
  _ZN10QImageDataC2Ev@Qt_5_PRIVATE_API 5.0.2
  _ZN10QImageDataD1Ev@Qt_5_PRIVATE_API 5.0.2
@@ -3698,8 +3698,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER# | libqt5gui5-gles #MINVER#
  _ZN29QScreenOrientationChangeEventD0Ev@Qt_5 5.0.2
  _ZN29QScreenOrientationChangeEventD1Ev@Qt_5 5.0.2
  _ZN29QScreenOrientationChangeEventD2Ev@Qt_5 5.0.2
- _ZN29QWindowSystemInterfacePrivate10WheelEventC1EP7QWindowmRK7QPointFS5_6QPointS6_iN2Qt11OrientationE6QFlagsINS7_16KeyboardModifierEENS7_11ScrollPhaseENS7_16MouseEventSourceE@Qt_5 5.6.1
- _ZN29QWindowSystemInterfacePrivate10WheelEventC2EP7QWindowmRK7QPointFS5_6QPointS6_iN2Qt11OrientationE6QFlagsINS7_16KeyboardModifierEENS7_11ScrollPhaseENS7_16MouseEventSourceE@Qt_5 5.6.1
+ _ZN29QWindowSystemInterfacePrivate10WheelEventC1EP7QWindowmRK7QPointFS5_6QPointS6_iN2Qt11OrientationE6QFlagsINS7_16KeyboardModifierEENS7_11ScrollPhaseENS7_16MouseEventSourceE@Qt_5 5.6.1 1
+ _ZN29QWindowSystemInterfacePrivate10WheelEventC2EP7QWindowmRK7QPointFS5_6QPointS6_iN2Qt11OrientationE6QFlagsINS7_16KeyboardModifierEENS7_11ScrollPhaseENS7_16MouseEventSourceE@Qt_5 5.6.1 1
  _ZN29QWindowSystemInterfacePrivate11ExposeEventC1EP7QWindowRK7QRegion@Qt_5 5.0.2 1
  _ZN29QWindowSystemInterfacePrivate11ExposeEventC2EP7QWindowRK7QRegion@Qt_5 5.0.2 1
  _ZN29QWindowSystemInterfacePrivate12eventHandlerE@Qt_5 5.6.0~beta 1
