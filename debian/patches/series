@@ -1,5 +1,7 @@
 # Backported from upstream
 no_dbus_dependency.diff
+color-fonts.patch
+fix-scalable-bitmap-factor-caching.patch
 
 # Debian specific.
 gnukfreebsd.diff
