@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.6.1+dfsg-3ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu1~4) yakkety; urgency=medium
 
   * New upstream release. 
   * Migrate symbols using the script to the Qt_5 versioning scheme.
