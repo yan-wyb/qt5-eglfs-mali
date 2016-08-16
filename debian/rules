@@ -69,6 +69,12 @@ endif
 # Run tests only on archs known to pass in the past
 testrun_architectures := amd64 armhf i386
 
+nogoldlinker_architectures := powerpc
+
+ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(nogoldlinker_architectures)))
+	extra_configure_opts += -no-use-gold-linker
+endif
+
 ifeq ($(DEB_HOST_ARCH_OS),linux)
   ifneq (,$(filter $(DEB_HOST_ARCH),alpha ia64 mips64 mips64el arm64))
 	platform_arg = linux-g++
