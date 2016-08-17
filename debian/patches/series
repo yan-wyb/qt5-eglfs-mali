@@ -2,6 +2,7 @@
 no_dbus_dependency.diff
 color-fonts.patch
 fix-scalable-bitmap-factor-caching.patch
+QDBusServer-delay-processing-of-D-Bus-messages.patch
 
 # Debian specific.
 gnukfreebsd.diff
