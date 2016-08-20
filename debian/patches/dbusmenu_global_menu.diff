@@ -611,3 +611,7 @@ Last-Update: 2016-08-18
  #if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
      QPlatformSystemTrayIcon *createPlatformSystemTrayIcon() const Q_DECL_OVERRIDE;
  #endif
+--- /dev/null
++++ b/include/QtPlatformSupport/5.6.1/QtPlatformSupport/private/qdbusmenubar_p.h
+@@ -0,0 +1 @@
++#include "../../../../../src/platformsupport/dbusmenu/qdbusmenubar_p.h"
