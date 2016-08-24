@@ -1,0 +1,42 @@
+From 3fa18bf8816ccbbdf43eed2759c9a223cec039e8 Mon Sep 17 00:00:00 2001
+From: Albert Astals Cid <albert.astals@canonical.com>
+Date: Tue, 16 Aug 2016 11:42:42 +0200
+Subject: [PATCH] Make sure connection is not null before using it
+
+connectionFromId can return null if the id isn't found.
+
+This causes crashes like http://paste.ubuntu.com/23061009/
+
+Change-Id: Ib72412f61dc7661455394679b3e90662de505920
+Reviewed-by: Lorn Potter <lorn.potter@canonical.com>
+---
+ src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp b/src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp
+index 42037ffb..13b64a5 100644
+--- a/src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp
++++ b/src/plugins/bearer/networkmanager/qnetworkmanagerengine.cpp
+@@ -218,6 +218,10 @@ void QNetworkManagerEngine::disconnectFromId(const QString &id)
+     QMutexLocker locker(&mutex);
+ 
+     QNetworkManagerSettingsConnection *connection = connectionFromId(id);
++
++    if (!connection)
++        return;
++
+     QNmSettingsMap map = connection->getSettings();
+     bool connectionAutoconnect = map.value("connection").value("autoconnect",true).toBool(); //if not present is true !!
+     if (connectionAutoconnect) { //autoconnect connections will simply be reconnected by nm
+@@ -563,7 +567,7 @@ bool QNetworkManagerEngine::isConnectionActive(const QString &settingsPath)
+     }
+ 
+     QNetworkManagerSettingsConnection *settingsConnection = connectionFromId(settingsPath);
+-    if (settingsConnection->getType() == DEVICE_TYPE_MODEM) {
++    if (settingsConnection && settingsConnection->getType() == DEVICE_TYPE_MODEM) {
+         return isActiveContext(settingsConnection->path());
+     }
+ 
+-- 
+2.8.1
+

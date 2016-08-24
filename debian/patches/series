@@ -8,6 +8,7 @@ dbustray_use_separate_connections.diff
 dbusmenu_exclusive_groups.diff
 qplatformmenubar_createmenu.diff
 dbusmenu_global_menu.diff
+Make-sure-connection-is-not-null-before-using-it.patch
 
 # Debian specific.
 gnukfreebsd.diff
