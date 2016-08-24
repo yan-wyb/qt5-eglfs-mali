@@ -1,0 +1,53 @@
+From 3d621af54be7b34e6cc6357b48c4d15f911937ee Mon Sep 17 00:00:00 2001
+From: Urs Fleisch <ufleisch@users.sourceforge.net>
+Date: Sun, 15 May 2016 16:56:40 +0200
+Subject: [PATCH] xcb: Send also "text/plain" when a "text/uri-list" is
+ dropped.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This will allow dropping of files from Qt applications to applications
+like Skype, which only accept "text/plain", but not "text/uri-list" or
+"text/x-moz-url".
+
+Task-number: QTBUG-53238
+Change-Id: I01bca5c8e20647cedfc9323f542ab07f0cc48658
+Reviewed-by: Dmitry Shachnev <mitya57@gmail.com>
+Reviewed-by: Błażej Szczygieł <spaz16@wp.pl>
+Reviewed-by: Gatis Paeglis <gatis.paeglis@qt.io>
+---
+ src/plugins/platforms/xcb/qxcbmime.cpp | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/src/plugins/platforms/xcb/qxcbmime.cpp b/src/plugins/platforms/xcb/qxcbmime.cpp
+index 7fea068..cc90da3 100644
+--- a/src/plugins/platforms/xcb/qxcbmime.cpp
++++ b/src/plugins/platforms/xcb/qxcbmime.cpp
+@@ -125,6 +125,11 @@ bool QXcbMime::mimeDataForAtom(QXcbConnection *connection, xcb_atom_t a, QMimeDa
+         ret = true;
+     } else if ((a == XCB_ATOM_PIXMAP || a == XCB_ATOM_BITMAP) && mimeData->hasImage()) {
+         ret = true;
++    } else if (atomName == QLatin1String("text/plain")
++               && mimeData->hasFormat(QLatin1String("text/uri-list"))) {
++        // Return URLs also as plain text.
++        *data = QInternalMimeData::renderDataHelper(atomName, mimeData);
++        ret = true;
+     }
+     return ret;
+ }
+@@ -143,8 +148,10 @@ QVector<xcb_atom_t> QXcbMime::mimeAtomsForFormat(QXcbConnection *connection, con
+     }
+ 
+     // special cases for uris
+-    if (format == QLatin1String("text/uri-list"))
++    if (format == QLatin1String("text/uri-list")) {
+         atoms.append(connection->internAtom("text/x-moz-url"));
++        atoms.append(connection->internAtom("text/plain"));
++    }
+ 
+     //special cases for images
+     if (format == QLatin1String("image/ppm"))
+-- 
+2.8.1
+
