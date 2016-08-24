@@ -21,7 +21,7 @@ Last-Update: <YYYY-MM-DD>
 
 --- /dev/null
 +++ qtbase-opensource-src/mkspecs/ubuntu-arm-gnueabihf-g++/qmake.conf
-@@ -0,0 +1,34 @@
+@@ -0,0 +1,33 @@
 +#
 +# qmake configuration for building with arm-linux-gnueabi-g++
 +#
@@ -51,8 +51,7 @@ Last-Update: <YYYY-MM-DD>
 +QMAKE_STRIP             = arm-linux-gnueabihf-strip
 +QMAKE_LIBDIR            = /usr/lib/arm-linux-gnueabihf
 +
-+contains(DISTRO_OPTS, deb-multi-arch): \
-+ PKG_CONFIG = $${CROSS_COMPILE}pkg-config
++ PKG_CONFIG = arm-linux-gnueabihf-pkg-config
 +
 +load(qt_config)
 +QMAKE_DEFAULT_INCDIRS   = /usr/include/arm-linux-gnueabihf/c++/4.9 /usr/include/arm-linux-gnueabihf/c++/4.9/backward /usr/include/arm-linux-gnueabihf
