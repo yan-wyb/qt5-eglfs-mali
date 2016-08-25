@@ -236,14 +236,16 @@ override_dh_auto_clean:
 	# Leftover files and all symlinks
         # Ubuntu diff: tests enablement related
 	find \( -false \
-	  -o -name \*.a \
+	  -o -name lib\*.a \
 	  -o -name Makefile.Debug \
 	  -o -name Makefile.Release \
 	  -o -name \*.o \
 	  -o -name \*.prl \
+	  -o -name lib\*.so \
+	  -o -type l \
 	  -o -name \*.so \
 	  -o -name \*.so.debug \
-	  -o -type l \) -print \
+        \) -print \
         | grep -v tests/auto/corelib/plugin/qpluginloader/elftest \
         | grep -v tests/auto/corelib/io/qdir/types \
         | grep -v tests/auto/corelib/plugin/qlibrary/library_path/invalid.so \
@@ -384,13 +386,8 @@ override_dh_strip:
 
 override_dh_makeshlibs:
 	# Don't uncomment until rid of -gles packages
-	#dh_makeshlibs -V -plibqt5gui5 -XlibQt5EglDeviceIntegration.so -X libQt5XcbQpa.so
-	#dh_makeshlibs -V --remaining-packages
-	dh_makeshlibs -plibqt5gui5 -XlibQt5EglDeviceIntegration.so -X libQt5XcbQpa.so
-	dh_makeshlibs --remaining-packages
-
-	# Check for private symbols not marked as such. Be verbose.
-	pkgkde-mark-private-symbols debian/qtbase5-private-dev/usr/include
+	#dh_makeshlibs -V -XlibQt5EglDeviceIntegration. -XlibQt5EglFsKmsSupport -XlibQt5XcbQpa
+	dh_makeshlibs -XlibQt5EglDeviceIntegration -XlibQt5EglFsKmsSupport -XlibQt5XcbQpa
 
 override_dh_clean:
 	dh_clean

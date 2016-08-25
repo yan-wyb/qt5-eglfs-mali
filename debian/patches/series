@@ -16,6 +16,8 @@ no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 link_fbclient.diff
 gnukfreebsd_cloexec.diff
+qdevicediscovery_dummy.diff
+armv4.diff
 
 # Ubuntu specific.
 qt5-qmake-arm-linux-gnueabihf
