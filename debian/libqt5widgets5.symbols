@@ -9,7 +9,7 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  Qt_5.5@Qt_5.5 5.6.0~beta
  Qt_5.6@Qt_5.6 5.6.0~beta
  Qt_5@Qt_5 5.6.0~beta
- Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.6.0~beta
+ Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.6.0~beta 1
  _Z11qFadeEffectP7QWidgeti@Qt_5 5.0.2
  _Z12qt_blurImageP8QPainterR6QImagedbbi@Qt_5 5.0.2
  _Z12qt_blurImageR6QImagedbi@Qt_5 5.0.2
@@ -3585,9 +3585,9 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN21QAbstractItemDelegate16staticMetaObjectE@Qt_5 5.0.2
  _ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex@Qt_5 5.0.2
  _ZN21QAbstractItemDelegateC1EP7QObject@Qt_5 5.0.2
- _ZN21QAbstractItemDelegateC1ER14QObjectPrivateP7QObject@Qt_5 5.0.2 1
+ _ZN21QAbstractItemDelegateC1ER14QObjectPrivateP7QObject@Qt_5 5.0.2
  _ZN21QAbstractItemDelegateC2EP7QObject@Qt_5 5.0.2
- _ZN21QAbstractItemDelegateC2ER14QObjectPrivateP7QObject@Qt_5 5.0.2 1
+ _ZN21QAbstractItemDelegateC2ER14QObjectPrivateP7QObject@Qt_5 5.0.2
  _ZN21QAbstractItemDelegateD0Ev@Qt_5 5.0.2
  _ZN21QAbstractItemDelegateD1Ev@Qt_5 5.0.2
  _ZN21QAbstractItemDelegateD2Ev@Qt_5 5.0.2
@@ -3986,7 +3986,7 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZN5QMenu15insertSeparatorEP7QAction@Qt_5 5.0.2
  _ZN5QMenu15mousePressEventEP11QMouseEvent@Qt_5 5.0.2
  _ZN5QMenu15setActiveActionEP7QAction@Qt_5 5.0.2
- _ZN5QMenu15setPlatformMenuEP13QPlatformMenu@Qt_5 5.3.0 1
+ _ZN5QMenu15setPlatformMenuEP13QPlatformMenu@Qt_5 5.3.0
  _ZN5QMenu16setDefaultActionEP7QAction@Qt_5 5.0.2
  _ZN5QMenu16staticMetaObjectE@Qt_5 5.0.2
  _ZN5QMenu17mouseReleaseEventEP11QMouseEvent@Qt_5 5.0.2
@@ -7635,7 +7635,7 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZTI23QGraphicsSceneMoveEvent@Qt_5 5.0.2
  _ZTI23QGraphicsSimpleTextItem@Qt_5 5.0.2
  _ZTI23QPixmapDropShadowFilter@Qt_5_PRIVATE_API 5.0.2 1
- _ZTI24QAbstractLayoutStyleInfo@Qt_5 5.3.0 1
+ _ZTI24QAbstractLayoutStyleInfo@Qt_5 5.3.0
  _ZTI24QGraphicsSceneHoverEvent@Qt_5 5.0.2
  _ZTI24QGraphicsSceneMouseEvent@Qt_5 5.0.2
  _ZTI24QGraphicsSceneWheelEvent@Qt_5 5.0.2
@@ -7828,7 +7828,7 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  _ZTS23QGraphicsSceneMoveEvent@Qt_5 5.0.2
  _ZTS23QGraphicsSimpleTextItem@Qt_5 5.0.2
  _ZTS23QPixmapDropShadowFilter@Qt_5_PRIVATE_API 5.0.2 1
- _ZTS24QAbstractLayoutStyleInfo@Qt_5 5.3.0 1
+ _ZTS24QAbstractLayoutStyleInfo@Qt_5 5.3.0
  _ZTS24QGraphicsSceneHoverEvent@Qt_5 5.0.2
  _ZTS24QGraphicsSceneMouseEvent@Qt_5 5.0.2
  _ZTS24QGraphicsSceneWheelEvent@Qt_5 5.0.2
@@ -8123,11 +8123,11 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  (c++)"non-virtual thunk to QDialog::~QDialog()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QDialogButtonBox::~QDialogButtonBox()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QDockWidget::~QDockWidget()@Qt_5" 5.0.2
- (c++)"non-virtual thunk to QDockWidgetLayout::maximumSize() const@Qt_5_PRIVATE_API" 5.0.2
- (c++)"non-virtual thunk to QDockWidgetLayout::minimumSize() const@Qt_5_PRIVATE_API" 5.0.2
- (c++)"non-virtual thunk to QDockWidgetLayout::setGeometry(QRect const&)@Qt_5_PRIVATE_API" 5.0.2
- (c++)"non-virtual thunk to QDockWidgetLayout::sizeHint() const@Qt_5_PRIVATE_API" 5.0.2
- (c++)"non-virtual thunk to QDockWidgetLayout::~QDockWidgetLayout()@Qt_5_PRIVATE_API" 5.0.2
+ (c++)"non-virtual thunk to QDockWidgetLayout::maximumSize() const@Qt_5_PRIVATE_API" 5.0.2 1
+ (c++)"non-virtual thunk to QDockWidgetLayout::minimumSize() const@Qt_5_PRIVATE_API" 5.0.2 1
+ (c++)"non-virtual thunk to QDockWidgetLayout::setGeometry(QRect const&)@Qt_5_PRIVATE_API" 5.0.2 1
+ (c++)"non-virtual thunk to QDockWidgetLayout::sizeHint() const@Qt_5_PRIVATE_API" 5.0.2 1
+ (c++)"non-virtual thunk to QDockWidgetLayout::~QDockWidgetLayout()@Qt_5_PRIVATE_API" 5.0.2 1
  (c++)"non-virtual thunk to QDoubleSpinBox::~QDoubleSpinBox()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QErrorMessage::~QErrorMessage()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QFileDialog::~QFileDialog()@Qt_5" 5.0.2
@@ -8298,6 +8298,6 @@ libQt5Widgets.so.5 libqt5widgets5 #MINVER#
  (c++)"non-virtual thunk to QWidget::redirected(QPoint*) const@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QWidget::sharedPainter() const@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QWidget::~QWidget()@Qt_5" 5.0.2
- (c++)"non-virtual thunk to QWindowContainer::~QWindowContainer()@Qt_5_PRIVATE_API" 5.3.0
+ (c++)"non-virtual thunk to QWindowContainer::~QWindowContainer()@Qt_5_PRIVATE_API" 5.3.0 1
  (c++)"non-virtual thunk to QWizard::~QWizard()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QWizardPage::~QWizardPage()@Qt_5" 5.0.2

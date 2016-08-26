@@ -9,6 +9,7 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu3) UNRELEASED; urgency=medium
     - Support cross-compilation inside chroot using pkg-config (LP: #1580981)
   * debian/patches/Make-sure-connection-is-not-null-before-using-it.patch:
     - Fix unity8 crasher (LP: #1612309)
+  * Update symbols with pkgkde-mark-qt5-private-symbols.
 
   [ Dmitry Shachnev ]
   * Backport some upstream patches to add support for D-Bus global menus,
