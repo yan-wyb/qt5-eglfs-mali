@@ -389,9 +389,6 @@ override_dh_makeshlibs:
 	dh_makeshlibs -plibqt5gui5 -XlibQt5EglDeviceIntegration.so -X libQt5XcbQpa.so
 	dh_makeshlibs --remaining-packages
 
-	# Check for private symbols not marked as such. Be verbose.
-	pkgkde-mark-private-symbols debian/qtbase5-private-dev/usr/include
-
 override_dh_clean:
 	dh_clean
 
