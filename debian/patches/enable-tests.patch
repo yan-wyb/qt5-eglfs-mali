@@ -9,7 +9,7 @@ Index: qtbase-opensource-src-5.6.0-rc/qtbase.pro
 +QT_BUILD_PARTS+=tests
  load(qt_parts)
  
- SUBDIRS += qmake/qmake-docs.pro
+ SUBDIRS += qmake/qmake-aux.pro
 Index: qtbase-opensource-src-5.6.0-rc/tests/auto/corelib/io/qtextstream/rfc3261.txt
 ===================================================================
 --- /dev/null
@@ -21681,9 +21681,9 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/opengl/qglthreads/tst_qglthread
  void tst_QGLThreads::painterOnGLWidgetInThread()
  {
 +    QSKIP("Skipping failing test");
-     if (!QGuiApplicationPrivate::platformIntegration()->hasCapability(QPlatformIntegration::ThreadedOpenGL))
-         QSKIP("No platformsupport for ThreadedOpenGL");
-     if (!((QGLFormat::openGLVersionFlags() & QGLFormat::OpenGL_Version_2_0) ||
+     //QTBUG-46446 tst_qglthreads is unstable on windows 7
+     if (QGuiApplication::platformName().compare("windows 7", Qt::CaseInsensitive))
+         QSKIP("Doesn't work on this platform. QTBUG-46446");
 @@ -725,6 +729,7 @@ void tst_QGLThreads::painterOnGLWidgetIn
  */
  void tst_QGLThreads::painterOnPixmapInThread()
@@ -21697,17 +21697,17 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/opengl/qglthreads/tst_qglthread
  void tst_QGLThreads::painterOnPboInThread()
  {
 +    QSKIP("Skipping failing test");
-     if (!QGuiApplicationPrivate::platformIntegration()->hasCapability(QPlatformIntegration::ThreadedOpenGL))
-         QSKIP("No platformsupport for ThreadedOpenGL");
-     if (!((QGLFormat::openGLVersionFlags() & QGLFormat::OpenGL_Version_2_0) ||
+     //QTBUG-46446 tst_qglthreads is unstable on windows 7
+     if (QGuiApplication::platformName().compare("windows 7", Qt::CaseInsensitive))
+         QSKIP("Doesn't work on this platform. QTBUG-46446");
 @@ -773,6 +779,7 @@ void tst_QGLThreads::painterOnPboInThrea
  */
  void tst_QGLThreads::painterOnFboInThread()
  {
 +    QSKIP("Skipping failing test");
-     if (!QGuiApplicationPrivate::platformIntegration()->hasCapability(QPlatformIntegration::ThreadedOpenGL))
-         QSKIP("No platformsupport for ThreadedOpenGL");
-     if (!((QGLFormat::openGLVersionFlags() & QGLFormat::OpenGL_Version_2_0) ||
+     //QTBUG-46446 tst_qglthreads is unstable on windows 7
+     if (QGuiApplication::platformName().compare("windows 7", Qt::CaseInsensitive))
+         QSKIP("Doesn't work on this platform. QTBUG-46446");
 Index: qtbase-opensource-src-5.6.0-rc/tests/auto/other/qaccessibility/tst_qaccessibility.cpp
 ===================================================================
 --- qtbase-opensource-src-5.6.0-rc.orig/tests/auto/other/qaccessibility/tst_qaccessibility.cpp
@@ -22073,7 +22073,7 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/widgets/itemviews/qtreeview/tst
 +    QSKIP("Skipping failing test");
      QTreeWidget treeWidget;
      treeWidget.setColumnCount(5);
-     new QTreeWidgetItem(&treeWidget, QStringList(QString("1;2;3;4;5").split(";")));
+     new QTreeWidgetItem(&treeWidget, QStringList(QString("1;2;3;4;5").split(QLatin1Char(';'))));
 @@ -4292,6 +4293,7 @@ void tst_QTreeView::testInitialFocus()
      treeWidget.show();
      QTest::qWaitForWindowExposed(&treeWidget);
@@ -22249,7 +22249,7 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/widgets/kernel/qwidget/tst_qwid
 +    QSKIP("Skipping failing test");
      if (m_platform == QStringLiteral("wayland"))
          QSKIP("Wayland: This fails. Figure out why.");
- #if defined(Q_OS_QNX) && !defined(Q_OS_BLACKBERRY)
+ #if defined(Q_OS_QNX)
 @@ -7924,6 +7935,7 @@ void tst_QWidget::doubleRepaint()
  
  void tst_QWidget::resizeInPaintEvent()
