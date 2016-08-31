@@ -10,6 +10,8 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu3) UNRELEASED; urgency=medium
   * debian/patches/Make-sure-connection-is-not-null-before-using-it.patch:
     - Fix unity8 crasher (LP: #1612309)
   * Update symbols with pkgkde-mark-qt5-private-symbols.
+  * Disable printsupport tests that started failing but only on builders, 
+    possibly with new glibc. See LP: #1612767 for details.
 
   [ Dmitry Shachnev ]
   * Backport some upstream patches to add support for D-Bus global menus,
