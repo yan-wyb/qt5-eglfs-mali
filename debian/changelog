@@ -3,6 +3,9 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu4) UNRELEASED; urgency=medium
   [ Timo Jyrinki ]
   * debian/patches/Make-QDBusConnectionPrivate-relaySignal-be-called-in.patch:
     - Antoher DBus fix needed for telephony-service (LP: #1620945)
+  * debian/patches/Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
+    debian/patches/Fix-the-GCC-version-supporting-Wsuggest-override.patch:
+    - Fix GCC -Wsuggest-override warning on Q_OBJECT (LP: #1619483)
 
  -- Ubuntu Developers <ubuntu-devel-discuss@ubuntu.com>  Wed, 07 Sep 2016 07:42:31 +0000
 
