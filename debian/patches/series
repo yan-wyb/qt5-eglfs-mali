@@ -26,3 +26,4 @@ net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff
 allow_native_menubar.diff
+Make-QDBusConnectionPrivate-relaySignal-be-called-in.patch
