@@ -6,6 +6,10 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu4) UNRELEASED; urgency=medium
   * debian/patches/Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
     debian/patches/Fix-the-GCC-version-supporting-Wsuggest-override.patch:
     - Fix GCC -Wsuggest-override warning on Q_OBJECT (LP: #1619483)
+  * debian/patches/Replace-qdtoa-and-qstrtod-implementation-by-a-3rdpar.patch
+    debian/patches/Add-thorough-tests-for-QLocale-string-double-conversions.patch
+    debian/patches/Interpret-precision-128-as-shortest-double-conversio.patch:
+    - Fix broken conversion from QVariant to QString (LP: #1620173)
 
  -- Ubuntu Developers <ubuntu-devel-discuss@ubuntu.com>  Wed, 07 Sep 2016 07:42:31 +0000
 

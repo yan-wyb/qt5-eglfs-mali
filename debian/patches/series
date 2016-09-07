@@ -12,6 +12,9 @@ Make-sure-connection-is-not-null-before-using-it.patch
 Make-QDBusConnectionPrivate-relaySignal-be-called-in.patch
 Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
 Fix-the-GCC-version-supporting-Wsuggest-override.patch
+Replace-qdtoa-and-qstrtod-implementation-by-a-3rdpar.patch
+Add-thorough-tests-for-QLocale-string-double-conversions.patch
+Interpret-precision-128-as-shortest-double-conversio.patch
 
 # Debian specific.
 gnukfreebsd.diff
