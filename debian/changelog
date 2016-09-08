@@ -10,6 +10,7 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu4) UNRELEASED; urgency=medium
     debian/patches/Add-thorough-tests-for-QLocale-string-double-conversions.patch
     debian/patches/Interpret-precision-128-as-shortest-double-conversio.patch:
     - Fix broken conversion from QVariant to QString (LP: #1620173)
+    - Remove related qdtoa symbol.
 
  -- Ubuntu Developers <ubuntu-devel-discuss@ubuntu.com>  Wed, 07 Sep 2016 07:42:31 +0000
 
