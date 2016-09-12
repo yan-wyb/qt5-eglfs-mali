@@ -15,6 +15,7 @@ Fix-the-GCC-version-supporting-Wsuggest-override.patch
 Replace-qdtoa-and-qstrtod-implementation-by-a-3rdpar.patch
 Add-thorough-tests-for-QLocale-string-double-conversions.patch
 Interpret-precision-128-as-shortest-double-conversio.patch
+Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch
 
 # Debian specific.
 gnukfreebsd.diff
