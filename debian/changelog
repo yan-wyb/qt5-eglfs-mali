@@ -13,6 +13,11 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu4) UNRELEASED; urgency=medium
     - Remove related qdtoa symbol.
   * debian/patches/Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch:
     - Fix parsing of rule zone names for certain time zones (LP: #1622089)
+  * debian/patches/Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
+    debian/patches/QtWidgets-Reduce-paint-events-when-resizing-native-w.patch
+    debian/patches/QtWidgets-Send-show-hide-event-to-children-on-restor.patch:
+    - Fix event sending to children, hurting Oxide-Qt use on desktop
+      (LP: #1613670)
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 12 Sep 2016 05:42:31 +0000
 

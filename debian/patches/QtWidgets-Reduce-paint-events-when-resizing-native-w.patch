@@ -1,0 +1,94 @@
+From bc410cc706e107881d3ee982287441993cabb8a6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?B=C5=82a=C5=BCej=20Szczygie=C5=82?= <spaz16@wp.pl>
+Date: Mon, 1 Feb 2016 11:49:02 +0100
+Subject: [PATCH] QtWidgets: Reduce paint events when resizing native widget
+
+This patch reduces paint events by removing code which sets native
+widgets dirty in QWidgetWindow::handleExposeEvent. Native widgets are
+also marked dirty in QWidgetPrivate::drawWidget, so it is enough for
+proper painting.
+
+This restores Qt4 behavior when one resize means one repaint for native
+widgets. Without this patch the native widget is marked as dirty on
+every expose event, so one repaint is from syncBackingStore and second
+(or more) is from marking the widget dirty explicitly.
+
+This patch improves performance of native widgets and it also reduces
+locks when paint event is v-synced, e.g. on OpenGL swap buffers or on
+any other technology like VDPAU, VA-API, etc.
+
+Added autotest for checking number of paint events for native widgets.
+
+Task-number: QTBUG-50796
+Change-Id: I4e1649069e2e73d15b038fd1834d0551915252ee
+Reviewed-by: Friedemann Kleint <Friedemann.Kleint@qt.io>
+---
+ src/widgets/kernel/qwidgetwindow.cpp               |  8 +-------
+ .../kernel/qwidget_window/tst_qwidget_window.cpp   | 24 ++++++++++++++++++++++
+ 2 files changed, 25 insertions(+), 7 deletions(-)
+
+diff --git a/src/widgets/kernel/qwidgetwindow.cpp b/src/widgets/kernel/qwidgetwindow.cpp
+index 5290d79..872572a 100644
+--- a/src/widgets/kernel/qwidgetwindow.cpp
++++ b/src/widgets/kernel/qwidgetwindow.cpp
+@@ -873,14 +873,8 @@ void QWidgetWindow::handleExposeEvent(QExposeEvent *event)
+ {
+     if (isExposed()) {
+         m_widget->setAttribute(Qt::WA_Mapped);
+-        if (!event->region().isNull()) {
+-            // Exposed native widgets need to be marked dirty to get them repainted correctly.
+-            if (m_widget->internalWinId() && !m_widget->isWindow() && m_widget->isVisible() && m_widget->updatesEnabled()) {
+-                if (QWidgetBackingStore *bs = m_widget->d_func()->maybeBackingStore())
+-                    bs->markDirty(event->region(), m_widget);
+-            }
++        if (!event->region().isNull())
+             m_widget->d_func()->syncBackingStore(event->region());
+-        }
+     } else {
+         m_widget->setAttribute(Qt::WA_Mapped, false);
+     }
+diff --git a/tests/auto/widgets/kernel/qwidget_window/tst_qwidget_window.cpp b/tests/auto/widgets/kernel/qwidget_window/tst_qwidget_window.cpp
+index 27be063..3a4b563 100644
+--- a/tests/auto/widgets/kernel/qwidget_window/tst_qwidget_window.cpp
++++ b/tests/auto/widgets/kernel/qwidget_window/tst_qwidget_window.cpp
+@@ -88,6 +88,7 @@ private slots:
+ 
+     void tst_showWithoutActivating();
+     void tst_paintEventOnSecondShow();
++    void tst_paintEventOnResize_QTBUG50796();
+ 
+ #ifndef QT_NO_DRAGANDDROP
+     void tst_dnd();
+@@ -369,6 +370,29 @@ void tst_QWidget_window::tst_paintEventOnSecondShow()
+     QTRY_VERIFY(w.paintEventCount > 0);
+ }
+ 
++void tst_QWidget_window::tst_paintEventOnResize_QTBUG50796()
++{
++    const QRect availableGeo = QGuiApplication::primaryScreen()->availableGeometry();
++
++    QWidget root;
++    root.setGeometry(availableGeo.width()/2 - 100, availableGeo.height()/2 - 100,
++                     200, 200);
++
++    PaintTestWidget *native = new PaintTestWidget(&root);
++    native->winId(); // We're testing native widgets
++    native->setGeometry(10, 10, 50, 50);
++
++    root.show();
++    QVERIFY(QTest::qWaitForWindowExposed(&root));
++    QVERIFY(QTest::qWaitForWindowActive(&root));
++    QVERIFY(native->isVisible());
++
++    native->paintEventCount = 0;
++    native->resize(native->width() + 10, native->height() + 10);
++    QTest::qWait(50); // Wait for paint events
++    QTRY_COMPARE(native->paintEventCount, 1); // Only one paint event must occur
++}
++
+ #ifndef QT_NO_DRAGANDDROP
+ 
+ /* DnD test for QWidgetWindow (handleDrag*Event() functions).
+-- 
+2.9.3
+
