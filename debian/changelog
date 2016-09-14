@@ -10,7 +10,6 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu4) UNRELEASED; urgency=medium
     debian/patches/Add-thorough-tests-for-QLocale-string-double-conversions.patch
     debian/patches/Interpret-precision-128-as-shortest-double-conversio.patch:
     - Fix broken conversion from QVariant to QString (LP: #1620173)
-    - Remove related qdtoa symbol.
   * debian/patches/Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch:
     - Fix parsing of rule zone names for certain time zones (LP: #1622089)
   * debian/patches/Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
