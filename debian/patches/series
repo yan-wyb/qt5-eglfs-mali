@@ -12,9 +12,6 @@ Make-sure-connection-is-not-null-before-using-it.patch
 Make-QDBusConnectionPrivate-relaySignal-be-called-in.patch
 Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
 Fix-the-GCC-version-supporting-Wsuggest-override.patch
-Replace-qdtoa-and-qstrtod-implementation-by-a-3rdpar.patch
-Add-thorough-tests-for-QLocale-string-double-conversions.patch
-Interpret-precision-128-as-shortest-double-conversio.patch
 Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch
 Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
 QtWidgets-Send-show-hide-event-to-children-on-restor.patch
