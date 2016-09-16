@@ -2,6 +2,9 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu5) UNRELEASED; urgency=medium
 
   * debian/patches/dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch:
     - Fix a crasher in qdbusmenu code (LP: #1620937)
+  * debian/patches/QMenuBar-Get-rid-of-QMenuBarPrivate-nativeMenuBar.patch:
+    - Improve menu bar code, but for now allow_native_menubar.diff is still 
+      needed.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 16 Sep 2016 05:08:05 +0000
 
