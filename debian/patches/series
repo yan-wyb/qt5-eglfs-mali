@@ -15,6 +15,7 @@ Fix-the-GCC-version-supporting-Wsuggest-override.patch
 Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch
 Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
 QtWidgets-Send-show-hide-event-to-children-on-restor.patch
+dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch
 
 # Debian specific.
 gnukfreebsd.diff
