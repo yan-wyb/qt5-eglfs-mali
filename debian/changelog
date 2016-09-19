@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.6.1+dfsg-3ubuntu5) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu5~1) yakkety; urgency=medium
 
   * debian/patches/dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch:
     - Fix a crasher in qdbusmenu code (LP: #1620937)
