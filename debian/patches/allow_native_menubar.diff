@@ -4,12 +4,8 @@ Description: do not set Qt::AA_DontUseNativeMenuBar unconditionally
  Instead of setting it forcefully to false in QGenericUnixTheme, I would
  prefer to not set this attribute at all in Qt code, to allow application
  developers to override this attribute if needed.
- .
- This cannot be forwarded as is, and needs to be discussed with upstream
- developers first.
-Author: Dmitry Shachnev <mitya57@ubuntu.com>
-Forwarded: no
-Last-Update: 2016-09-03
+Origin: upstream, https://code.qt.io/cgit/qt/qtbase.git/commit/?id=8cd28ea8850c5365
+Last-Update: 2016-09-27
 
 --- a/src/gui/kernel/qguiapplication.cpp
 +++ b/src/gui/kernel/qguiapplication.cpp

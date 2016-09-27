@@ -17,6 +17,7 @@ Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
 QtWidgets-Send-show-hide-event-to-children-on-restor.patch
 dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch
 QMenuBar-Get-rid-of-QMenuBarPrivate-nativeMenuBar.patch
+allow_native_menubar.diff
 
 # Debian specific.
 gnukfreebsd.diff
@@ -33,4 +34,3 @@ skip-largefile-test-s390x.patch
 net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff
-allow_native_menubar.diff
