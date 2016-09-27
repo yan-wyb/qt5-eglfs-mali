@@ -1,3 +1,8 @@
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu6) UNRELEASED; urgency=medium
+
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Sep 2016 14:19:18 +0300
+
 qtbase-opensource-src (5.6.1+dfsg-3ubuntu5~1) yakkety; urgency=medium
 
   * debian/patches/dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch:
