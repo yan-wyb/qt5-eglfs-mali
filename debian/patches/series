@@ -18,6 +18,7 @@ QtWidgets-Send-show-hide-event-to-children-on-restor.patch
 dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch
 QMenuBar-Get-rid-of-QMenuBarPrivate-nativeMenuBar.patch
 allow_native_menubar.diff
+dbustray_cleanup_notifier.diff
 
 # Debian specific.
 gnukfreebsd.diff

@@ -1,6 +1,9 @@
 qtbase-opensource-src (5.6.1+dfsg-3ubuntu6) UNRELEASED; urgency=medium
 
   * Mark allow_native_menubar.diff as applied upstream.
+  * debian/patches/dbustray_cleanup_notifier.diff:
+    - Fix a bug in QSystemTrayIcon code where the notifier was not cleaned
+      up and the callback was called multiple times.
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Sep 2016 14:19:18 +0300
 
