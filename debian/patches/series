@@ -19,6 +19,9 @@ dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch
 QMenuBar-Get-rid-of-QMenuBarPrivate-nativeMenuBar.patch
 allow_native_menubar.diff
 dbustray_cleanup_notifier.diff
+Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
+Fix-some-QtDBus-crashes-during-application-destructi.patch
+Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 
 # Debian specific.
 gnukfreebsd.diff

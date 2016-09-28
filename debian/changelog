@@ -1,9 +1,16 @@
 qtbase-opensource-src (5.6.1+dfsg-3ubuntu6) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
   * Mark allow_native_menubar.diff as applied upstream.
   * debian/patches/dbustray_cleanup_notifier.diff:
     - Fix a bug in QSystemTrayIcon code where the notifier was not cleaned
       up and the callback was called multiple times.
+
+  [ Timo Jyrinki ]
+  * debian/patches/Fix-some-QtDBus-crashes-during-application-destructi.patch
+    debian/patches/Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
+    debian/patches/Make-the-bearer-QFactoryLoader-a-member-variable-not.patch:
+    - More D-Bus fixes (LP: #1618590)
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Sep 2016 14:19:18 +0300
 
