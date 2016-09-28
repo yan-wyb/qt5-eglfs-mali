@@ -1,4 +1,4 @@
-From b3b8b1a4b4623b344f3e50644d4b662a572ec139 Mon Sep 17 00:00:00 2001
+From 45b484dee691671fc125e418b1f40815a07880ff Mon Sep 17 00:00:00 2001
 From: Thiago Macieira <thiago.macieira@intel.com>
 Date: Tue, 27 Sep 2016 16:52:55 -0700
 Subject: [PATCH] Make the bearer QFactoryLoader a member variable, not a
@@ -28,12 +28,12 @@ Task-number: QTBUG-56228
 Task-number: QTBUG-52988
 Change-Id: I33dc971f005a4848bb8ffffd147853376f82de2a
 ---
- src/network/bearer/qnetworkconfigmanager_p.cpp | 8 ++++----
- src/network/bearer/qnetworkconfigmanager_p.h   | 2 ++
- 2 files changed, 6 insertions(+), 4 deletions(-)
+ src/network/bearer/qnetworkconfigmanager_p.cpp | 13 ++++---------
+ src/network/bearer/qnetworkconfigmanager_p.h   |  2 ++
+ 2 files changed, 6 insertions(+), 9 deletions(-)
 
 diff --git a/src/network/bearer/qnetworkconfigmanager_p.cpp b/src/network/bearer/qnetworkconfigmanager_p.cpp
-index ccda9dd..177e8b6 100644
+index ccda9dd..dfe15b3 100644
 --- a/src/network/bearer/qnetworkconfigmanager_p.cpp
 +++ b/src/network/bearer/qnetworkconfigmanager_p.cpp
 @@ -34,8 +34,6 @@
@@ -45,9 +45,15 @@ index ccda9dd..177e8b6 100644
  #include <QtCore/qdebug.h>
  #include <QtCore/qtimer.h>
  #include <QtCore/qstringlist.h>
-@@ -57,7 +55,9 @@ Q_GLOBAL_STATIC_WITH_ARGS(QFactoryLoader, loader,
- #endif
+@@ -51,13 +49,10 @@
  
+ QT_BEGIN_NAMESPACE
+ 
+-#ifndef QT_NO_LIBRARY
+-Q_GLOBAL_STATIC_WITH_ARGS(QFactoryLoader, loader,
+-                          (QBearerEngineFactoryInterface_iid, QLatin1String("/bearer")))
+-#endif
+-
  QNetworkConfigurationManagerPrivate::QNetworkConfigurationManagerPrivate()
 -    : QObject(), pollTimer(0), mutex(QMutex::Recursive), forcedPolling(0), firstUpdate(true)
 +    : QObject(), pollTimer(0), mutex(QMutex::Recursive),
@@ -56,7 +62,7 @@ index ccda9dd..177e8b6 100644
  {
      qRegisterMetaType<QNetworkConfiguration>();
      qRegisterMetaType<QNetworkConfigurationPrivatePointer>();
-@@ -382,7 +382,7 @@ void QNetworkConfigurationManagerPrivate::updateConfigurations()
+@@ -382,7 +377,7 @@ void QNetworkConfigurationManagerPrivate::updateConfigurations()
          bool envOK  = false;
          const int skipGeneric = qgetenv("QT_EXCLUDE_GENERIC_BEARER").toInt(&envOK);
          QBearerEngine *generic = 0;
@@ -86,5 +92,5 @@ index 73407d3..5fd6143 100644
  
      QSet<QString> onlineConfigurations;
 -- 
-2.7.4
+2.9.3
 

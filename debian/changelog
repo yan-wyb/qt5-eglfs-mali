@@ -12,7 +12,7 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu6) UNRELEASED; urgency=medium
     debian/patches/Make-the-bearer-QFactoryLoader-a-member-variable-not.patch:
     - More D-Bus fixes (LP: #1618590)
 
- -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 27 Sep 2016 14:19:18 +0300
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 28 Sep 2016 18:14:12 +0000
 
 qtbase-opensource-src (5.6.1+dfsg-3ubuntu5~1) yakkety; urgency=medium
 
