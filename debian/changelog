@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.6.1+dfsg-3ubuntu6) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu6~4) yakkety; urgency=medium
 
   [ Dmitry Shachnev ]
   * Mark allow_native_menubar.diff as applied upstream.
