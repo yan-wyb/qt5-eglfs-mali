@@ -2,18 +2,12 @@
 no_dbus_dependency.diff
 color-fonts.patch
 fix-scalable-bitmap-factor-caching.patch
-xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
 QDBusServer-delay-processing-of-D-Bus-messages.patch
-dbustray_use_separate_connections.diff
 dbusmenu_exclusive_groups.diff
 qplatformmenubar_createmenu.diff
 dbusmenu_global_menu.diff
-Make-sure-connection-is-not-null-before-using-it.patch
 Make-QDBusConnectionPrivate-relaySignal-be-called-in.patch
-Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
 Fix-the-GCC-version-supporting-Wsuggest-override.patch
-Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch
-Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
 QtWidgets-Send-show-hide-event-to-children-on-restor.patch
 dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch
 QMenuBar-Get-rid-of-QMenuBarPrivate-nativeMenuBar.patch
@@ -36,6 +30,5 @@ qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
 enable-tests.patch
 skip-largefile-test-s390x.patch
-net-bearer-nm-disconnect-ap-signals7.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff

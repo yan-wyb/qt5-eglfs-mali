@@ -1,6 +1,18 @@
 qtbase-opensource-src (5.6.2+dfsg-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release 5.6.2.
+  * Drop patches in upstream 5.6.2 release:
+    - xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
+    - dbustray_use_separate_connections.diff
+    - Make-sure-connection-is-not-null-before-using-it.patch
+    - Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
+    - Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch
+    - Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
+    - net-bearer-nm-disconnect-ap-signals7.patch
+      (this upstreamed as https://codereview.qt-project.org/#/c/166147/)
+  * Update patches to non-rebased forms to apply cleanly:
+    - Fix-the-GCC-version-supporting-Wsuggest-override.patch
+    - QtWidgets-Send-show-hide-event-to-children-on-restor.patch
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 13 Oct 2016 13:22:14 +0000
 

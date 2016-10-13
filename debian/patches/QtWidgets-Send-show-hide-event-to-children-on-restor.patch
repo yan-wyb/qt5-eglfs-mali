@@ -86,7 +86,7 @@ diff --git a/src/widgets/kernel/qwidgetwindow.cpp b/src/widgets/kernel/qwidgetwi
 index 872572a..aa7bcc2 100644
 --- a/src/widgets/kernel/qwidgetwindow.cpp
 +++ b/src/widgets/kernel/qwidgetwindow.cpp
-@@ -871,15 +871,45 @@ void QWidgetWindow::handleDropEvent(QDropEvent *event)
+@@ -871,10 +871,40 @@ void QWidgetWindow::handleDropEvent(QDropEvent *event)
  
  void QWidgetWindow::handleExposeEvent(QExposeEvent *event)
  {
@@ -123,17 +123,12 @@ index 872572a..aa7bcc2 100644
 +
 +    if (exposed) {
          m_widget->setAttribute(Qt::WA_Mapped);
-         if (!event->region().isNull()) {
-             // Exposed native widgets need to be marked dirty to get them repainted correctly.
-             if (m_widget->internalWinId() && !m_widget->isWindow() && m_widget->isVisible() && m_widget->updatesEnabled()) {
-                 if (QWidgetBackingStore *bs = m_widget->d_func()->maybeBackingStore())
-                     bs->markDirty(event->region(), m_widget);
-             }
+         if (!event->region().isNull())
 -            m_widget->d_func()->syncBackingStore(event->region());
 +            wPriv->syncBackingStore(event->region());
-         }
      } else {
          m_widget->setAttribute(Qt::WA_Mapped, false);
+     }
 diff --git a/tests/auto/widgets/kernel/qwidget/tst_qwidget.cpp b/tests/auto/widgets/kernel/qwidget/tst_qwidget.cpp
 index b7c1526..34a1835 100644
 --- a/tests/auto/widgets/kernel/qwidget/tst_qwidget.cpp
