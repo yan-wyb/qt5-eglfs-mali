@@ -13,6 +13,7 @@ qtbase-opensource-src (5.6.2+dfsg-0ubuntu1) UNRELEASED; urgency=medium
   * Update patches to non-rebased forms to apply cleanly:
     - Fix-the-GCC-version-supporting-Wsuggest-override.patch
     - QtWidgets-Send-show-hide-event-to-children-on-restor.patch
+  * Skip a few widgets related tests having failures.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 13 Oct 2016 13:22:14 +0000
 
