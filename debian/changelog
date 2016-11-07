@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.7.0+dfsg-3ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1~20161021+dfsg-6ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Drop patches included in upstream release:
@@ -12,12 +12,59 @@ qtbase-opensource-src (5.7.0+dfsg-3ubuntu1) UNRELEASED; urgency=medium
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 25 Aug 2016 11:01:48 +0000
 
-qtbase-opensource-src (5.7.0+dfsg-4) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1~20161021+dfsg-6) UNRELEASED; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Make libqt5network5 depend on libssl1.0.2. It will crash when
+    only newer libssl versions are installed.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 04 Nov 2016 20:29:15 +0300
+
+qtbase-opensource-src (5.7.1~20161021+dfsg-5) unstable; urgency=medium
+
+  * Switch libssl-dev to libssl1.0-dev. We can't yet use libssl 1.1.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 02 Nov 2016 19:09:23 -0300
+
+qtbase-opensource-src (5.7.1~20161021+dfsg-4) unstable; urgency=medium
+
+  * Drop Build-Conflicts: libmariadbclient-dev, should be no longer needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 01 Nov 2016 16:20:07 +0300
+
+qtbase-opensource-src (5.7.1~20161021+dfsg-3) unstable; urgency=medium
+
+  * Change build-dependency libmysqlclient-dev → default-libmysqlclient-dev.
+  * Upload to unstable.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 01 Nov 2016 13:47:12 +0300
+
+qtbase-opensource-src (5.7.1~20161021+dfsg-2) experimental; urgency=medium
+
+  * Backport two patches to add proper support for XDG_CONFIG_DIRS to
+    QSettings; needed for LXQt transition (qsettings_simplify_logic.diff,
+    qsettings_XDG_CONFIG_DIRS.diff).
+  * Configure with -no-use-gold-linker on i386 to work around build failures
+    of qtscript and qtgraphicaleffects (see binutils bug #842304).
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 28 Oct 2016 17:04:09 +0300
+
+qtbase-opensource-src (5.7.1~20161021+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * New upstream snapshot.
+  * Drop debian/patches/qdevicediscovery_dummy.diff, applied upstream.
+  * Update the copyright script to use a stricter formula for GPL-2 license.
+  * Update debian/copyright.
+  * Install the qtpng static library in qtbase5-dev (following upstream).
+  * Update the symbols files from amd64 build log.
+  * Bump qtbase-abi version to 5-7-1.
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Require pkg-kde-tools (>= 0.15.17~) to allow using backported versions.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 16 Jul 2016 21:32:48 -0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 21 Oct 2016 21:08:52 +0300
 
 qtbase-opensource-src (5.7.0+dfsg-3) experimental; urgency=medium
 

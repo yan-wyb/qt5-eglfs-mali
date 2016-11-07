@@ -1,4 +1,6 @@
 # Backported from upstream
+qsettings_simplify_logic.diff
+qsettings_XDG_CONFIG_DIRS.diff
 no_dbus_dependency.diff
 fix-scalable-bitmap-factor-caching.patch
 xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
@@ -11,7 +13,6 @@ no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 link_fbclient.diff
 gnukfreebsd_cloexec.diff
-qdevicediscovery_dummy.diff
 armv4.diff
 
 # Ubuntu specific.
