@@ -1,15 +1,3 @@
-Index: qtbase-opensource-src-5.6.0-rc/qtbase.pro
-===================================================================
---- qtbase-opensource-src-5.6.0-rc.orig/qtbase.pro
-+++ qtbase-opensource-src-5.6.0-rc/qtbase.pro
-@@ -2,6 +2,7 @@
- # Main projectfile
- #####################################################################
- 
-+QT_BUILD_PARTS+=tests
- load(qt_parts)
- 
- SUBDIRS += qmake/qmake-aux.pro
 Index: qtbase-opensource-src-5.6.0-rc/tests/auto/corelib/io/qtextstream/rfc3261.txt
 ===================================================================
 --- /dev/null
@@ -23339,7 +23327,7 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/widgets/dialogs/qfiledialog2/ts
  void tst_QFileDialog2::completionOnLevelAfterRoot()
  {
 +    QSKIP("Skipping failing test in 5.5.0 beta");
-     QNonNativeFileDialog fd;
+     QFileDialog fd;
  #if defined(Q_OS_WIN) && !defined(Q_OS_WINCE)
      fd.setDirectory("C:/");
 @@ -1227,6 +1229,7 @@ void tst_QFileDialog2::task259105_filter
@@ -23371,7 +23359,7 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/widgets/dialogs/qfiledialog2/ts
  void tst_QFileDialog2::dontShowCompleterOnRoot()
  {
 +    QSKIP("Skipping failing test in 5.5.0 beta");
-     QNonNativeFileDialog fd(0, "TestFileDialog");
+     QFileDialog fd(0, "TestFileDialog");
      fd.setAcceptMode(QFileDialog::AcceptSave);
      fd.show();
 Index: qtbase-opensource-src-5.6.0-rc/tests/auto/other/gestures/tst_gestures.cpp
@@ -23403,7 +23391,7 @@ Index: qtbase-opensource-src-5.6.0-rc/tests/auto/widgets/dialogs/qfiledialog/tst
  void tst_QFiledialog::focus()
  {
 +    QSKIP("Skipping failing test in 5.5.0 beta");
-     QNonNativeFileDialog fd;
+     QFileDialog fd;
      fd.setDirectory(QDir::currentPath());
      fd.show();
 Index: qtbase-opensource-src-5.6.0-rc/tests/auto/other/other.pro
