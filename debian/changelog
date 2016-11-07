@@ -12,6 +12,7 @@ qtbase-opensource-src (5.7.1~20161021+dfsg-6ubuntu1) UNRELEASED; urgency=medium
     - xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
   * Update symbols and mark private ones.
   * Adjust tests enablement patch for Qt 5.7 and 5.7.1.
+  * Drop also net-bearer-nm-disconnect-ap-signals7.patch that was upstreamed.
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 25 Aug 2016 11:01:48 +0000
 
