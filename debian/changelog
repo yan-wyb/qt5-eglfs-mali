@@ -7,6 +7,9 @@ qtbase-opensource-src (5.7.1~20161021+dfsg-6ubuntu1) UNRELEASED; urgency=medium
     - dbusmenu_global_menu.diff
     - dbustray_use_separate_connections.diff
     - qplatformmenubar_createmenu.diff
+    - fix-scalable-bitmap-factor-caching.patch
+    - Make-sure-connection-is-not-null-before-using-it.patch
+    - xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
   * Update symbols and mark private ones.
   * Adjust tests enablement patch for Qt 5.7.
 

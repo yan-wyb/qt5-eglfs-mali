@@ -2,10 +2,6 @@
 qsettings_simplify_logic.diff
 qsettings_XDG_CONFIG_DIRS.diff
 no_dbus_dependency.diff
-fix-scalable-bitmap-factor-caching.patch
-xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
-#QDBusServer-delay-processing-of-D-Bus-messages.patch
-Make-sure-connection-is-not-null-before-using-it.patch
 
 # Debian specific.
 gnukfreebsd.diff
