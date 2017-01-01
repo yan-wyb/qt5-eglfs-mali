@@ -152,7 +152,6 @@ endif
 	            -headerdir "/usr/include/$(DEB_HOST_MULTIARCH)/qt5" \
 	            -datadir "/usr/share/qt5" \
 	            -archdatadir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5" \
-	            -hostdatadir "/usr/share/qt5" \
 	            -plugindir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/plugins" \
 	            -importdir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/imports" \
 	            -translationdir "/usr/share/qt5/translations" \
@@ -172,6 +171,7 @@ endif
 	            -system-zlib \
 	            -system-libpng \
 	            -system-libjpeg \
+	            -system-doubleconversion \
 	            -openssl \
 	            -no-rpath \
 	            -verbose \
@@ -384,10 +384,9 @@ override_dh_installchangelogs:
 	fi
 
 override_dh_strip:
-	dh_strip -pqtbase5-examples --dbg-package=qtbase5-examples-dbg
-	dh_strip -pqtbase5-dev-tools --dbg-package=qtbase5-dev-tools-dbg
-	dh_strip -pqt5-qmake --dbg-package=qtbase5-dev-tools-dbg
-	dh_strip --remaining-packages --dbg-package=qtbase5-dbg
+	dh_strip -pqtbase5-examples --dbgsym-migration='qtbase5-examples-dbg (<< 5.7.1+dfsg-1~)'
+	dh_strip -pqtbase5-dev-tools -pqt5-qmake --dbgsym-migration='qtbase5-dev-tools-dbg (<< 5.7.1+dfsg-1~)'
+	dh_strip --remaining-packages --dbgsym-migration='qtbase5-dbg (<< 5.7.1+dfsg-1~)'
 
 override_dh_makeshlibs:
 	# Don't uncomment until rid of -gles packages

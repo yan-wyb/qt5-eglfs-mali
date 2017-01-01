@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.7.1~20161021+dfsg-6ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1+dfsg-2ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Drop patches included in upstream release:
@@ -17,13 +17,44 @@ qtbase-opensource-src (5.7.1~20161021+dfsg-6ubuntu1) UNRELEASED; urgency=medium
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 25 Aug 2016 11:01:48 +0000
 
-qtbase-opensource-src (5.7.1~20161021+dfsg-6) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1+dfsg-2) unstable; urgency=medium
+
+  * Backport upstream patch to fix build with gcc 6.3 and newer versions
+    (gcc_6.3.diff; closes: #846996).
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 25 Dec 2016 23:36:18 +0300
+
+qtbase-opensource-src (5.7.1+dfsg-1) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * New upstream final release.
+  * Refresh qsettings_XDG_CONFIG_DIRS.diff and qsettings_simplify_logic.diff.
+  * Build with system libdouble-conversion library (closes: #845372).
+  * Convert to automatic dbgsym packages.
+  * Bump documentation build-dependencies to 5.7.1.
+  * Replace 5.7.1~20161021 with 5.7.1 in the symbols files.
+  * Drop one optional symbol from debian/libqt5network5.symbols.
+  * Make qtbase5-dev suggest default-libmysqlclient-dev.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Remove a bogus double hostdatadir entry while configuring Qt. Thanks
+    Nick Shaforostoff for the bug! (Closes: 847769).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 14 Dec 2016 17:23:44 +0300
+
+qtbase-opensource-src (5.7.1~20161021+dfsg-6) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
   * Make libqt5network5 depend on libssl1.0.2. It will crash when
     only newer libssl versions are installed.
+  * Backport upstream patch to fix build on x32 (fix_build_on_x32.diff).
+  * Merge some more entries in the update-copyright script.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 04 Nov 2016 20:29:15 +0300
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 20 Nov 2016 11:28:29 -0300
 
 qtbase-opensource-src (5.7.1~20161021+dfsg-5) unstable; urgency=medium
 
