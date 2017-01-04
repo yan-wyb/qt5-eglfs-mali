@@ -149,7 +149,77 @@ qtbase-opensource-src (5.7.0+dfsg-1) experimental; urgency=medium
 
  -- Dmitry Shachnev <mitya57@debian.org>  Wed, 29 Jun 2016 09:26:08 +0300
 
-qtbase-opensource-src (5.6.1+dfsg-3ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.2+dfsg-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release 5.6.2.
+  * Drop patches in upstream 5.6.2 release:
+    - xcb-Send-also-text-plain-when-a-text-uri-list-is-dro.patch
+    - dbustray_use_separate_connections.diff
+    - Make-sure-connection-is-not-null-before-using-it.patch
+    - Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
+    - Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch
+    - Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
+    - net-bearer-nm-disconnect-ap-signals7.patch
+      (this upstreamed as https://codereview.qt-project.org/#/c/166147/)
+  * Update patches to non-rebased forms to apply cleanly:
+    - Fix-the-GCC-version-supporting-Wsuggest-override.patch
+    - QtWidgets-Send-show-hide-event-to-children-on-restor.patch
+  * Skip a few widgets related tests having failures.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 13 Oct 2016 13:22:14 +0000
+
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu7~2) yakkety; urgency=medium
+
+  * debian/patches/Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch:
+    - Backport from Qt 5.8.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 06 Oct 2016 07:18:59 +0000
+
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu6~4) yakkety; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Mark allow_native_menubar.diff as applied upstream.
+  * debian/patches/dbustray_cleanup_notifier.diff:
+    - Fix a bug in QSystemTrayIcon code where the notifier was not cleaned
+      up and the callback was called multiple times.
+
+  [ Timo Jyrinki ]
+  * debian/patches/Fix-some-QtDBus-crashes-during-application-destructi.patch
+    debian/patches/Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
+    debian/patches/Make-the-bearer-QFactoryLoader-a-member-variable-not.patch:
+    - More D-Bus fixes (LP: #1618590)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 28 Sep 2016 18:14:12 +0000
+
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu5~1) yakkety; urgency=medium
+
+  * debian/patches/dbusmenu-Don-t-leave-dangling-pointers-when-menus-ar.patch:
+    - Fix a crasher in qdbusmenu code (LP: #1620937)
+  * debian/patches/QMenuBar-Get-rid-of-QMenuBarPrivate-nativeMenuBar.patch:
+    - Improve menu bar code, but for now allow_native_menubar.diff is still 
+      needed.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 16 Sep 2016 05:08:05 +0000
+
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu4~6) yakkety; urgency=medium
+
+  [ Timo Jyrinki ]
+  * debian/patches/Make-QDBusConnectionPrivate-relaySignal-be-called-in.patch:
+    - Antoher DBus fix needed for telephony-service (LP: #1620945)
+  * debian/patches/Fix-gcc-Wsuggest-override-warning-on-Q_OBJECT.patch
+    debian/patches/Fix-the-GCC-version-supporting-Wsuggest-override.patch:
+    - Fix GCC -Wsuggest-override warning on Q_OBJECT (LP: #1619483)
+  * debian/patches/Fix-parsing-of-tzfile-5-POSIX-rule-zone-names-with-b.patch:
+    - Fix parsing of rule zone names for certain time zones (LP: #1622089)
+  * debian/patches/Avoid-artifacts-when-hiding-or-closing-a-QOpenGLWidg.patch
+    debian/patches/QtWidgets-Send-show-hide-event-to-children-on-restor.patch:
+    - Fix event sending to children, hurting Oxide-Qt use on desktop
+      (LP: #1613670)
+  * Disable QStaticText tests for now (QTBUG-55653)
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 12 Sep 2016 05:42:31 +0000
+
+qtbase-opensource-src (5.6.1+dfsg-3ubuntu3~3) yakkety; urgency=medium
 
   [ Timo Jyrinki ]
   * debian/patches/QDBusServer-delay-processing-of-D-Bus-messages.patch:
@@ -171,8 +241,11 @@ qtbase-opensource-src (5.6.1+dfsg-3ubuntu3) UNRELEASED; urgency=medium
     + dbusmenu_exclusive_groups.diff (fix for radio actions)
     + qplatformmenubar_createmenu.diff (adding a method to QPlatformMenuBar)
     + dbusmenu_global_menu.diff (add support for D-Bus global menus)
+  * Add a distro patch to stop setting AA_DontUseNativeMenuBar unconditionally
+    (allow_native_menubar.diff): we want this attribute to be false by default,
+    but applications should be able to override it.
 
- -- Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>  Wed, 17 Aug 2016 09:58:32 +0000
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Sat, 03 Sep 2016 13:58:20 +0000
 
 qtbase-opensource-src (5.6.1+dfsg-3ubuntu2~1) yakkety; urgency=medium
 
