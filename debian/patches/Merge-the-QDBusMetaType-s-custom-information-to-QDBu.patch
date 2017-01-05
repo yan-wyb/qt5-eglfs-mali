@@ -74,14 +74,6 @@ diff --git a/src/dbus/qdbusmetatype.cpp b/src/dbus/qdbusmetatype.cpp
 index 2aaf0e2..ce0d0c8 100644
 --- a/src/dbus/qdbusmetatype.cpp
 +++ b/src/dbus/qdbusmetatype.cpp
-@@ -1,6 +1,7 @@
- /****************************************************************************
- **
- ** Copyright (C) 2015 The Qt Company Ltd.
-+** Copyright (C) 2016 Intel Corporation.
- ** Contact: http://www.qt.io/licensing/
- **
- ** This file is part of the QtDBus module of the Qt Toolkit.
 @@ -33,19 +34,15 @@
  
  #include "qdbusmetatype.h"
@@ -357,14 +349,6 @@ diff --git a/src/dbus/qdbusmetatype_p.h b/src/dbus/qdbusmetatype_p.h
 index 348fc6c..24c8326 100644
 --- a/src/dbus/qdbusmetatype_p.h
 +++ b/src/dbus/qdbusmetatype_p.h
-@@ -1,6 +1,7 @@
- /****************************************************************************
- **
- ** Copyright (C) 2015 The Qt Company Ltd.
-+** Copyright (C) 2016 Intel Corporation.
- ** Contact: http://www.qt.io/licensing/
- **
- ** This file is part of the QtDBus module of the Qt Toolkit.
 @@ -53,10 +54,27 @@
  #include <qdbuserror.h>
  #include <qdbusunixfiledescriptor.h>

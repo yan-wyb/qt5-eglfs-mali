@@ -32,11 +32,11 @@ Change-Id: I33dc971f005a4848bb8ffffd147853376f82de2a
  src/network/bearer/qnetworkconfigmanager_p.h   |  2 ++
  2 files changed, 6 insertions(+), 9 deletions(-)
 
-diff --git a/src/network/bearer/qnetworkconfigmanager_p.cpp b/src/network/bearer/qnetworkconfigmanager_p.cpp
-index ccda9dd..dfe15b3 100644
---- a/src/network/bearer/qnetworkconfigmanager_p.cpp
-+++ b/src/network/bearer/qnetworkconfigmanager_p.cpp
-@@ -34,8 +34,6 @@
+Index: qtbase-opensource-src-5.7.1/src/network/bearer/qnetworkconfigmanager_p.cpp
+===================================================================
+--- qtbase-opensource-src-5.7.1.orig/src/network/bearer/qnetworkconfigmanager_p.cpp
++++ qtbase-opensource-src-5.7.1/src/network/bearer/qnetworkconfigmanager_p.cpp
+@@ -40,8 +40,6 @@
  #include "qnetworkconfigmanager_p.h"
  #include "qbearerplugin_p.h"
  
@@ -45,15 +45,9 @@ index ccda9dd..dfe15b3 100644
  #include <QtCore/qdebug.h>
  #include <QtCore/qtimer.h>
  #include <QtCore/qstringlist.h>
-@@ -51,13 +49,10 @@
- 
+@@ -60,7 +58,9 @@
  QT_BEGIN_NAMESPACE
  
--#ifndef QT_NO_LIBRARY
--Q_GLOBAL_STATIC_WITH_ARGS(QFactoryLoader, loader,
--                          (QBearerEngineFactoryInterface_iid, QLatin1String("/bearer")))
--#endif
--
  QNetworkConfigurationManagerPrivate::QNetworkConfigurationManagerPrivate()
 -    : QObject(), pollTimer(0), mutex(QMutex::Recursive), forcedPolling(0), firstUpdate(true)
 +    : QObject(), pollTimer(0), mutex(QMutex::Recursive),
@@ -62,20 +56,19 @@ index ccda9dd..dfe15b3 100644
  {
      qRegisterMetaType<QNetworkConfiguration>();
      qRegisterMetaType<QNetworkConfigurationPrivatePointer>();
-@@ -382,7 +377,7 @@ void QNetworkConfigurationManagerPrivate::updateConfigurations()
+@@ -365,7 +365,6 @@ void QNetworkConfigurationManagerPrivate
          bool envOK  = false;
-         const int skipGeneric = qgetenv("QT_EXCLUDE_GENERIC_BEARER").toInt(&envOK);
+         const int skipGeneric = qEnvironmentVariableIntValue("QT_EXCLUDE_GENERIC_BEARER", &envOK);
          QBearerEngine *generic = 0;
--        QFactoryLoader *l = loader();
-+        QFactoryLoader *l = &loader;
+-        static QFactoryLoader loader(QBearerEngineFactoryInterface_iid, QLatin1String("/bearer"));
+         QFactoryLoader *l = &loader;
          const PluginKeyMap keyMap = l->keyMap();
          const PluginKeyMapConstIterator cend = keyMap.constEnd();
-         QStringList addedEngines;
-diff --git a/src/network/bearer/qnetworkconfigmanager_p.h b/src/network/bearer/qnetworkconfigmanager_p.h
-index 73407d3..5fd6143 100644
---- a/src/network/bearer/qnetworkconfigmanager_p.h
-+++ b/src/network/bearer/qnetworkconfigmanager_p.h
-@@ -48,6 +48,7 @@
+Index: qtbase-opensource-src-5.7.1/src/network/bearer/qnetworkconfigmanager_p.h
+===================================================================
+--- qtbase-opensource-src-5.7.1.orig/src/network/bearer/qnetworkconfigmanager_p.h
++++ qtbase-opensource-src-5.7.1/src/network/bearer/qnetworkconfigmanager_p.h
+@@ -54,6 +54,7 @@
  #include "qnetworkconfigmanager.h"
  #include "qnetworkconfiguration_p.h"
  
@@ -83,7 +76,7 @@ index 73407d3..5fd6143 100644
  #include <QtCore/qmutex.h>
  #include <QtCore/qset.h>
  
-@@ -111,6 +112,7 @@ private:
+@@ -117,6 +118,7 @@ private:
  private:
      mutable QMutex mutex;
  
@@ -91,6 +84,3 @@ index 73407d3..5fd6143 100644
      QList<QBearerEngine *> sessionEngines;
  
      QSet<QString> onlineConfigurations;
--- 
-2.9.3
-
