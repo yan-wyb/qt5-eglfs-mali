@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.7.1+dfsg-2ubuntu2) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1+dfsg-2ubuntu2~1) zesty; urgency=medium
 
   * Disable gold linker also on arm64 and ppc64el (LP: #1656431)
 
