@@ -8,6 +8,7 @@ Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
 Fix-some-QtDBus-crashes-during-application-destructi.patch
 Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch
+global_menu_shortcuts.diff
 
 # Debian specific.
 no_dbus_dependency.diff

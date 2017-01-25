@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.7.1+dfsg-2ubuntu3) UNRELEASED; urgency=medium
+
+  * Backport upstream change to make shortcuts working with global menu
+    on Unity (global_menu_shortcuts.diff, LP: #1380702).
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 25 Jan 2017 20:38:18 +0300
+
 qtbase-opensource-src (5.7.1+dfsg-2ubuntu2~1) zesty; urgency=medium
 
   * Disable gold linker also on arm64 and ppc64el (LP: #1656431)
