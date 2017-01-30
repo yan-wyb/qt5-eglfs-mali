@@ -1,9 +1,14 @@
 qtbase-opensource-src (5.7.1+dfsg-2ubuntu3) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
   * Backport upstream change to make shortcuts working with global menu
     on Unity (global_menu_shortcuts.diff, LP: #1380702).
 
- -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 25 Jan 2017 20:38:18 +0300
+  [ Timo Jyrinki ]
+  * debian/patches/Add-support-for-selecting-the-printer-plugin-via-the.patch:
+    - Backport from Qt 5.9.
+
+ -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 30 Jan 2017 09:02:08 +0000
 
 qtbase-opensource-src (5.7.1+dfsg-2ubuntu2~1) zesty; urgency=medium
 
