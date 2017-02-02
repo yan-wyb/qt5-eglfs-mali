@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.7.1+dfsg-2ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1+dfsg-2ubuntu3~2) zesty; urgency=medium
 
   [ Dmitry Shachnev ]
   * Backport upstream change to make shortcuts working with global menu
