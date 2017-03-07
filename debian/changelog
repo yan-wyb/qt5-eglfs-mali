@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.7.1+dfsg-2ubuntu4) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.7.1+dfsg-2ubuntu4~1) zesty; urgency=medium
 
   [ Marco Trevisan (Treviño) ]
   * debian/patch/qdbus-tray-icon-use-runtimedir.patch:
