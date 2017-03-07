@@ -1,3 +1,84 @@
+qtbase-opensource-src (5.8.0+dfsg-4) UNRELEASED; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Bump dpkg-dev build-dependency to 1.17.14, for build profiles.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 16 Feb 2017 11:40:03 +0300
+
+qtbase-opensource-src (5.8.0+dfsg-3) experimental; urgency=medium
+
+  * Mark the private parts of QtEglFSDeviceIntegration as non-Hurd too.
+  * Mark hurd_tilde.diff as applied upstream.
+  * Replace qvncscreen_semicolon.diff with a more complete patch from
+    Shawn Rutledge (vnc_big_endian.diff).
+  * Drop no_dbus_dependency.diff. We do not run tests so it is not needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 16 Feb 2017 11:19:06 +0300
+
+qtbase-opensource-src (5.8.0+dfsg-2) experimental; urgency=medium
+
+  * Add a patch to fix compilation error on big endian systems because of
+    missing semicolon (qvncscreen_semicolon.diff).
+  * Add a patch to fix compilation error on Hurd (hurd_tilde.diff).
+  * Switch from *.install-* files to dh-exec based .install files.
+  * Do not install QtGlxSupport library on armel and armhf, it is not
+    built when opengles2 is in use.
+  * Mark QtInputSupport as linux-only, because it needs libinput.
+  * Do not override dh_installdocs anymore. LGPL_EXCEPTION.txt is included
+    in the copyright file.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 11 Feb 2017 12:33:12 +0300
+
+qtbase-opensource-src (5.8.0+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * New upstream release.
+  * Drop patches, applied upstream in 5.8.0:
+    - fix_build_on_x32.diff
+    - gcc_6.3.diff
+    - fix_accessibility_crash.diff
+    - gtkdialogs_wayland.diff
+    - stop_unloading_plugins.diff
+  * Rebase patches against upstream changes:
+    - link_fbclient.diff
+    - no_dbus_dependency.diff
+    - qsettings_simplify_logic.diff
+    - qsettings_XDG_CONFIG_DIRS.diff
+  * Drop “-gstreamer 1.0” configuration option, dropped upstream.
+  * Pass the compiler and linker flags to configure explicitly,
+    they will be no longer read from the environment.
+  * Update symbols files from amd64 and i386 build logs.
+  * Bump qtbase-abi version to 5-8-0.
+  * Update debian/copyright using debian/scripts/update-copyright.
+  * Update the dh_makeshlibs call and the Lintian overrides for
+    libQt5EglDeviceIntegration → libQt5EglFSDeviceIntegration rename.
+  * Do not build the documentation packages when nodoc profile is enabled
+    (closes: #852447).
+  * Bump Qt build-dependencies for documentation to 5.8.0, for the new
+    qtattributionsscanner tool.
+  * Remove unused code which is leftover from Qt 4.
+  * After generating qurltlds_p.h, rebuild only the corresponding source
+    file, not the whole qtcore.
+
+  [ Alexander Volkov ]
+  * Remove debian/90qt5-opengl script, no longer needed (refs: #850705).
+  * Update the .install files.
+    - The QtPlatformSupport static library has been split into a set of
+      smaller libraries.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 10 Feb 2017 10:20:43 +0300
+
+qtbase-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
+
+  * Backport upstream change to fix accessibility-related crashes
+    (fix_accessibility_crash.diff; closes: #834750).
+  * Backport upstream fix to make QGtk3Dialog not crash on Wayland
+    (gtkdialogs_wayland.diff; closes: #850746).
+  * Backport upstream change to stop unloading plugins in QPluginLoader
+    and QFactoryLoader (stop_unloading_pluings.diff; closes: #845662).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 11 Jan 2017 18:14:40 +0300
+
 qtbase-opensource-src (5.7.1+dfsg-2ubuntu4~1) zesty; urgency=medium
 
   [ Marco Trevisan (Treviño) ]

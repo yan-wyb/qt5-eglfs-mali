@@ -16,26 +16,6 @@ export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 
 # Upstream changelog
 upstream_changes := dist/changes-$(shell dpkg-parsechangelog | sed -n 's/^Version: //p' | cut -f1 -d '-' | sed -e 's/+dfsg//' | sed -e 's/+git.*//')
-# Distribution vendor
-vendor := $(shell dpkg-vendor --query Vendor)
-
-# To easier the files installation according to OSes and CPUs, we create three
-# kinds of install files: foo.install-common, foo.install-$DEB_HOST_ARCH_CPU and
-# foo.install-$DEB_HOST_ARCH_OS. In this case we can fine-tune what we install.
-#
-# Note that if any foo.install-* file exists and foo.install exist too, the
-# later will get overwritten.
-#
-# I've opened a bug in debhelper to allow this:
-# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=703201
-
-# Retrieve packages that have a .install-common file
-pkgs_with_common = $(patsubst debian/%.install-common,%,$(wildcard debian/*.install-common))
-# Retrieve packages that have a .install-$DEB_HOST_ARCH_CPU file
-pkgs_with_arch = $(patsubst debian/%.install-$(DEB_HOST_ARCH_CPU),%,$(wildcard debian/*.install-$(DEB_HOST_ARCH_CPU)))
-# Retrieve packages that have a .install-$DEB_HOST_ARCH_OS file
-pkgs_with_os = $(patsubst debian/%.install-$(DEB_HOST_ARCH_OS),%,$(wildcard debian/*.install-$(DEB_HOST_ARCH_OS)))
-
 
 ifneq (,$(filter libqt5sql5-ibase,$(shell dh_listpackages)))
 	extra_configure_opts += -plugin-sql-ibase
@@ -109,7 +89,9 @@ x86_architectures := i386 amd64
 
 override_dh_auto_configure:
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(x86_architectures)))
-	MAKEFLAGS="-j$(NUMJOBS)" ./configure -v -confirm-license \
+	MAKEFLAGS="-j$(NUMJOBS) ${CXXFLAGS:%=EXTRA_CXXFLAGS+=%} ${LDFLAGS:%=EXTRA_LFLAGS+=%}" \
+	        ./configure \
+	            -confirm-license \
             -prefix "/usr" \
             -bindir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin" \
             -libdir "/usr/lib/arm-linux-gnueabihf" \
@@ -144,7 +126,9 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(x86_architectures)))
             -xplatform ubuntu-arm-gnueabihf-g++ || file $(CURDIR)/bin/qmake;
 	mv $(CURDIR)/bin/qmake  $(CURDIR)/bin/qt5-qmake-arm-linux-gnueabihf
 endif
-	MAKEFLAGS="-j$(NUMJOBS)" ./configure -confirm-license \
+	MAKEFLAGS="-j$(NUMJOBS) ${CXXFLAGS:%=EXTRA_CXXFLAGS+=%} ${LDFLAGS:%=EXTRA_LFLAGS+=%}" \
+	        ./configure \
+	            -confirm-license \
 	            -prefix "/usr" \
 	            -bindir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin" \
 	            -libdir "/usr/lib/$(DEB_HOST_MULTIARCH)" \
@@ -186,9 +170,16 @@ endif
 	            -accessibility \
 	            -compile-examples \
 	            -no-directfb \
-	            -gstreamer 1.0 \
 	            $(extra_configure_opts) \
-	            $(cpu_opt)
+	            $(cpu_opt) \
+	            QMAKE_CFLAGS="$(CFLAGS)" \
+	            QMAKE_CXXFLAGS="$(CXXFLAGS)" \
+	            QMAKE_LFLAGS="$(LDFLAGS)"
+	# qtConfOutput_qmakeArgs sets the flags inside a !host_build {...}
+	# block, but we want them to be set for tools using host_build too.
+	sed -i "s/\!host_build {/true {/" mkspecs/qmodule.pri
+	# Prevent Makefile from re-running qmake after the .pri was changed.
+	touch Makefile
 
 override_dh_auto_test:
 ifeq ($(DEB_HOST_ARCH),$(filter $(DEB_HOST_ARCH),$(testrun_architectures)))
@@ -276,10 +267,6 @@ override_dh_auto_clean:
 	# more leftovers
 	rm -f .device.vars .qmake.vars
 
-ifeq ($(vendor),Ubuntu)
-	rm -rf po
-endif
-
 override_dh_auto_build-indep:
 	dh_auto_build -- docs
 
@@ -289,9 +276,8 @@ override_dh_auto_build-arch:
 	cd $(CURDIR)/src; ../bin/qmake; make sub-corelib
 	# Add here the code to generate the helpers and then the headers.
 	LC_ALL=C.UTF-8 sh debian/generateTLDs.sh
-	# Clean up the compiled code and start again.
-	cd $(CURDIR)/src; make distclean
-	make clean
+	# Rebuild only the object file that used the generated header.
+	rm src/corelib/.obj/qtldurl.o
 	dh_auto_build
 
 override_dh_auto_install-arch:
@@ -356,25 +342,7 @@ override_dh_auto_install-indep:
 	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
 
 override_dh_install:
-	# Now flush all the .install-* files as .install files.
-	set -e; for pkg in $(pkgs_with_common); do \
-		cat debian/$$pkg.install-common >> debian/$$pkg.install ; \
-	done
-
-	set -e; for pkg in $(pkgs_with_arch); do \
-		cat debian/$$pkg.install-$(DEB_HOST_ARCH_CPU) >> debian/$$pkg.install ; \
-	done
-
-	set -e; for pkg in $(pkgs_with_os); do \
-		cat debian/$$pkg.install-$(DEB_HOST_ARCH_OS) >> debian/$$pkg.install ; \
-	done
-
-	# Call dh_install normally. It will process .install, .install.ARCH
-	# and/or .install.OS files.
 	dh_install --fail-missing
-
-override_dh_installdocs:
-	dh_installdocs --all LGPL_EXCEPTION.txt
 
 override_dh_installchangelogs:
 	if [ -f $(upstream_changes) ] ; then \
@@ -390,21 +358,5 @@ override_dh_strip:
 
 override_dh_makeshlibs:
 	# Don't uncomment until rid of -gles packages
-	#dh_makeshlibs -V -XlibQt5EglDeviceIntegration. -XlibQt5EglFsKmsSupport -XlibQt5XcbQpa
-	dh_makeshlibs -XlibQt5EglDeviceIntegration -XlibQt5EglFsKmsSupport -XlibQt5XcbQpa
-
-override_dh_clean:
-	dh_clean
-
-	# Don't forget to remove the .install files we generated.
-	for pkg in $(pkgs_with_common); do \
-		rm -f debian/$$pkg.install ; \
-	done
-
-	for pkg in $(pkgs_with_arch); do \
-		rm -f debian/$$pkg.install ; \
-	done
-
-	for pkg in $(pkgs_with_os); do \
-		rm -f debian/$$pkg.install ; \
-	done
+	#dh_makeshlibs -V -XlibQt5EglFSDeviceIntegration -XlibQt5EglFsKmsSupport -XlibQt5XcbQpa
+	dh_makeshlibs -XlibQt5EglFSDeviceIntegration -XlibQt5EglFsKmsSupport -XlibQt5XcbQpa

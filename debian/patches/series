@@ -1,18 +1,17 @@
 # Backported from upstream
 qsettings_simplify_logic.diff
 qsettings_XDG_CONFIG_DIRS.diff
-fix_build_on_x32.diff
-gcc_6.3.diff
-QSettings-Avoid-unneeded-sync-on-destruction.patch
 Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
 Fix-some-QtDBus-crashes-during-application-destructi.patch
 Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
-Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch
 global_menu_shortcuts.diff
 Add-support-for-selecting-the-printer-plugin-via-the.patch
+hurd_tilde.diff
+
+# Forwarded upstream
+vnc_big_endian.diff
 
 # Debian specific.
-no_dbus_dependency.diff
 gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
