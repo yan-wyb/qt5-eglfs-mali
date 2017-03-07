@@ -11,19 +11,19 @@ Reviewed-by: Andy Shaw <andy.shaw@qt.io>
  src/printsupport/kernel/qplatformprintplugin.cpp | 14 ++++++++++++--
  1 file changed, 12 insertions(+), 2 deletions(-)
 
-Index: qtbase-opensource-src-5.7.1/src/printsupport/kernel/qplatformprintplugin.cpp
+Index: qtbase-opensource-src-5.8.0/src/printsupport/kernel/qplatformprintplugin.cpp
 ===================================================================
---- qtbase-opensource-src-5.7.1.orig/src/printsupport/kernel/qplatformprintplugin.cpp
-+++ qtbase-opensource-src-5.7.1/src/printsupport/kernel/qplatformprintplugin.cpp
+--- qtbase-opensource-src-5.8.0.orig/src/printsupport/kernel/qplatformprintplugin.cpp
++++ qtbase-opensource-src-5.8.0/src/printsupport/kernel/qplatformprintplugin.cpp
 @@ -42,6 +42,7 @@
  #include "qprinterinfo.h"
  #include "private/qfactoryloader_p.h"
  #include <qcoreapplication.h>
 +#include <qdebug.h>
  
- QT_BEGIN_NAMESPACE
+ #ifndef QT_NO_PRINTER
  
-@@ -77,8 +78,17 @@ QPlatformPrinterSupport *QPlatformPrinte
+@@ -79,8 +80,17 @@ QPlatformPrinterSupport *QPlatformPrinte
  {
      if (!printerSupport) {
          const QMultiMap<int, QString> keyMap = loader()->keyMap();

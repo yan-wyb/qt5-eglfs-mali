@@ -25,8 +25,8 @@ Reviewed-by: Dmitry Shachnev <mitya57@gmail.com>
 
 diff --git a/src/platformsupport/dbustray/qdbustrayicon.cpp b/src/platformsupport/dbustray/qdbustrayicon.cpp
 index b55ace3..9baf947 100644
---- a/src/platformsupport/dbustray/qdbustrayicon.cpp
-+++ b/src/platformsupport/dbustray/qdbustrayicon.cpp
+--- a/src/platformsupport/themes/genericunix/dbustray/qdbustrayicon.cpp
++++ b/src/platformsupport/themes/genericunix/dbustray/qdbustrayicon.cpp
 @@ -65,9 +65,32 @@ QT_BEGIN_NAMESPACE
  
  Q_LOGGING_CATEGORY(qLcTray, "qt.qpa.tray")

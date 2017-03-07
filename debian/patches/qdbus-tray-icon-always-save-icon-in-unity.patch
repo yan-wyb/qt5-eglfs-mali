@@ -23,8 +23,8 @@ Reviewed-by: Shawn Rutledge <shawn.rutledge@qt.io>
 
 diff --git a/src/platformsupport/dbustray/qdbustrayicon.cpp b/src/platformsupport/dbustray/qdbustrayicon.cpp
 index 5c4157c..b55ace3 100644
---- a/src/platformsupport/dbustray/qdbustrayicon.cpp
-+++ b/src/platformsupport/dbustray/qdbustrayicon.cpp
+--- a/src/platformsupport/themes/genericunix/dbustray/qdbustrayicon.cpp
++++ b/src/platformsupport/themes/genericunix/dbustray/qdbustrayicon.cpp
 @@ -171,6 +171,12 @@ QTemporaryFile *QDBusTrayIcon::tempIcon(const QIcon &icon)
          uint pid = session.interface()->servicePid(KDEWatcherService).value();
          QString processName = QLockFilePrivate::processNameByPid(pid);

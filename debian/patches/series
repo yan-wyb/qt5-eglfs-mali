@@ -3,7 +3,6 @@ qsettings_simplify_logic.diff
 qsettings_XDG_CONFIG_DIRS.diff
 Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
 Fix-some-QtDBus-crashes-during-application-destructi.patch
-Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 global_menu_shortcuts.diff
 Add-support-for-selecting-the-printer-plugin-via-the.patch
 hurd_tilde.diff
@@ -22,9 +21,9 @@ armv4.diff
 # Ubuntu specific.
 qt5-qmake-arm-linux-gnueabihf
 Add-workaround-for-GL-on-Android-emulator.patch
-enable-tests.patch
+#enable-tests.patch
 skip-largefile-test-s390x.patch
-qnam-ubuntu-fix6.patch
+#qnam-ubuntu-fix6.patch
 #disable_overlay_scrollbars.diff
 qdbus-tray-icon-always-save-icon-in-unity.patch
 qdbus-tray-icon-use-runtimedir.patch

@@ -11,7 +11,7 @@ Last-Update: 2017-01-25
  static bool correctWidgetContext(Qt::ShortcutContext context, QWidget *w, QWidget *active_window)
  {
      bool visible = w->isVisible();
--#ifdef Q_OS_MAC
+-#if defined(Q_OS_DARWIN) && !defined(QT_NO_MENUBAR)
 -    if (!qApp->testAttribute(Qt::AA_DontUseNativeMenuBar) && qobject_cast<QMenuBar *>(w))
 -        visible = true;
 +#ifndef QT_NO_MENUBAR
