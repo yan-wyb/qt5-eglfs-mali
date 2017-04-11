@@ -5,6 +5,13 @@ qtbase-opensource-src (5.8.0+dfsg-4) UNRELEASED; urgency=medium
 
   [ Timo Jyrinki ]
   * Drop support for twin gles packages.
+  * Drop Ubuntu specific patches and patches that will be in upstream 5.9.
+   - Add-workaround-for-GL-on-Android-emulator.patch - 5.9
+   - qdbus-tray-icon-always-save-icon-in-unity.patch - 5.9
+   - qdbus-tray-icon-use-runtimedir.patch - 5.9
+   - qnam-ubuntu-fix6.patch - not submitted upstream, but also might be
+     outdated
+   - skip-largefile-test-s390x.patch - likely not needed anymore
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 16 Feb 2017 11:40:03 +0300
 

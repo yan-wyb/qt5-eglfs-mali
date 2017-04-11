@@ -20,10 +20,4 @@ armv4.diff
 
 # Ubuntu specific.
 qt5-qmake-arm-linux-gnueabihf
-Add-workaround-for-GL-on-Android-emulator.patch
 #enable-tests.patch
-skip-largefile-test-s390x.patch
-#qnam-ubuntu-fix6.patch
-#disable_overlay_scrollbars.diff
-qdbus-tray-icon-always-save-icon-in-unity.patch
-qdbus-tray-icon-use-runtimedir.patch
