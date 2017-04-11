@@ -12,6 +12,8 @@ qtbase-opensource-src (5.8.0+dfsg-4) UNRELEASED; urgency=medium
    - qnam-ubuntu-fix6.patch - not submitted upstream, but also might be
      outdated
    - skip-largefile-test-s390x.patch - likely not needed anymore
+  * Remove x86 -> armhf cross-compilation qmake, maybe something more generic
+    can be done on Debian side and then synced to Ubuntu later, if needed.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 16 Feb 2017 11:40:03 +0300
 
