@@ -201,13 +201,8 @@ libQt5Sql.so.5 libqt5sql5 #MINVER#
  _ZN16QSqlCachedResult9cacheNextEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QSqlCachedResult9fetchLastEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QSqlCachedResult9fetchNextEv@Qt_5_PRIVATE_API 5.0.2 1
-#MISSING: 5.7.0# _ZN16QSqlCachedResultC1EPK10QSqlDriver@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QSqlCachedResultC1ER23QSqlCachedResultPrivate@Qt_5_PRIVATE_API 5.7.0 1
-#MISSING: 5.7.0# _ZN16QSqlCachedResultC2EPK10QSqlDriver@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QSqlCachedResultC2ER23QSqlCachedResultPrivate@Qt_5_PRIVATE_API 5.7.0 1
-#MISSING: 5.7.0# _ZN16QSqlCachedResultD0Ev@Qt_5_PRIVATE_API 5.0.2 1
-#MISSING: 5.7.0# _ZN16QSqlCachedResultD1Ev@Qt_5_PRIVATE_API 5.0.2 1
-#MISSING: 5.7.0# _ZN16QSqlCachedResultD2Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QSqlDriverPlugin11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN16QSqlDriverPlugin11qt_metacastEPKc@Qt_5 5.0.2
  _ZN16QSqlDriverPlugin16staticMetaObjectE@Qt_5 5.0.2
