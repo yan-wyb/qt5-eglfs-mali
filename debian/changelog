@@ -15,6 +15,7 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     - qsettings_simplify_logic.diff
     - vnc_big_endian.diff
     - global_menu_shortcuts.diff
+    - Add-support-for-selecting-the-printer-plugin-via-the.patch
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
 
