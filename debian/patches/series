@@ -10,5 +10,4 @@ gnukfreebsd_cloexec.diff
 armv4.diff
 
 # Ubuntu specific.
-qt5-qmake-arm-linux-gnueabihf
 #enable-tests.patch
