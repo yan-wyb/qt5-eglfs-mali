@@ -17,6 +17,11 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     - global_menu_shortcuts.diff
     - Add-support-for-selecting-the-printer-plugin-via-the.patch
     - Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
+  * Remove the following patches from the tree that were not specified in the
+    series file:
+    - armv4.diff
+    - xcb-Fix-drag-and-drop-to-Emacs.patch
+    - xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
   * Change build deps from 5.8.0 to 5.7.1 because 5.8.0 never made it in
     Ubuntu.
 
