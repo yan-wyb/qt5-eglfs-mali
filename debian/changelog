@@ -1,7 +1,59 @@
-qtbase-opensource-src (5.8.0+dfsg-4) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
+  * Remove unused gstreamer build-dependencies, thanks to Alexander Volkov.
+    See upstream commit 60e5a1c8effd4099.
+  * Drop libqt5gui5 recommendation on mesa-utils, thanks to Alexander Volkov.
+    It was needed only for 90qt5-opengl script, which we no longer ship.
+
+  [ Simon Quigley ]
+  * Merge from Debian Experimental in Git repo.
+  * Drop patches that were applied upstream in 5.9.0:
+    - Fix-some-QtDBus-crashes-during-application-destructi.patch
+    - hurd_tilde.diff
+    - qsettings_XDG_CONFIG_DIRS.diff
+    - qsettings_simplify_logic.diff
+    - vnc_big_endian.diff
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
+
+qtbase-opensource-src (5.9.0+dfsg-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Simon Quigley ]
+  * New upstream final release.
+  * Modify debian/watch to automatically pick up new development *and* final
+    releases.
+
+  [ Dmitry Shachnev ]
+  * Update symbols files from the current build logs.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 06 Jun 2017 14:49:38 -0500
+
+qtbase-opensource-src (5.9.0~beta.3+dfsg-1) experimental; urgency=medium
+
+  * New upstream beta release.
+  * Update qmake-qt5 manpage (closes: #859968).
+  * Update debian/libqt5core5a.symbols for arm64.
+  * Update debian/copyright.
+  * Update debian/libqt5gui5.symbols from the current build log.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 07 May 2017 20:00:51 +0300
+
+qtbase-opensource-src (5.9.0~beta+dfsg-1) experimental; urgency=medium
+
+  * Update debian/watch to track experimental releases.
+  * New upstream beta release.
+  * Drop all patches which were backported from upstream.
+  * Refresh other patches.
   * Bump dpkg-dev build-dependency to 1.17.14, for build profiles.
+  * Disable debug logging in /etc/xdg/QtProject/qtlogging.ini (closes:
+    #805399).
+  * Update debian/copyright using debian/scripts/update-copyright.
+  * Update install files for the new release.
+  * Update symbols files from amd64 and i386 build logs.
+  * Bump qtbase-abi version to 5-9-0.
 
   [ Timo Jyrinki ]
   * Drop support for twin gles packages.
@@ -15,7 +67,7 @@ qtbase-opensource-src (5.8.0+dfsg-4) UNRELEASED; urgency=medium
   * Remove x86 -> armhf cross-compilation qmake, maybe something more generic
     can be done on Debian side and then synced to Ubuntu later, if needed.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 16 Feb 2017 11:40:03 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 09 Apr 2017 18:45:39 +0300
 
 qtbase-opensource-src (5.8.0+dfsg-3) experimental; urgency=medium
 

@@ -1,14 +1,7 @@
 # Backported from upstream
-qsettings_simplify_logic.diff
-qsettings_XDG_CONFIG_DIRS.diff
 Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
-Fix-some-QtDBus-crashes-during-application-destructi.patch
 global_menu_shortcuts.diff
 Add-support-for-selecting-the-printer-plugin-via-the.patch
-hurd_tilde.diff
-
-# Forwarded upstream
-vnc_big_endian.diff
 
 # Debian specific.
 gnukfreebsd.diff
