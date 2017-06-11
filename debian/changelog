@@ -16,6 +16,8 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     - vnc_big_endian.diff
     - global_menu_shortcuts.diff
     - Add-support-for-selecting-the-printer-plugin-via-the.patch
+  * Change build deps from 5.8.0 to 5.7.1 because 5.8.0 never made it in
+    Ubuntu.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
 
