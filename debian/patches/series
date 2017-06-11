@@ -1,6 +1,5 @@
 # Backported from upstream
 Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
-global_menu_shortcuts.diff
 Add-support-for-selecting-the-printer-plugin-via-the.patch
 
 # Debian specific.

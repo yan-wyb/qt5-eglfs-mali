@@ -14,6 +14,7 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     - qsettings_XDG_CONFIG_DIRS.diff
     - qsettings_simplify_logic.diff
     - vnc_big_endian.diff
+    - global_menu_shortcuts.diff
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
 
