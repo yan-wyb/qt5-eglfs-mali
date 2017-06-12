@@ -19,7 +19,6 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     - Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
   * Remove the following patches from the tree that were not specified in the
     series file:
-    - armv4.diff
     - xcb-Fix-drag-and-drop-to-Emacs.patch
     - xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
   * Add revert-automatic-code-attribution-docs.patch which reverts a
