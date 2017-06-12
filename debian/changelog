@@ -22,8 +22,9 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     - armv4.diff
     - xcb-Fix-drag-and-drop-to-Emacs.patch
     - xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
-  * Change build deps from 5.8.0 to 5.7.1 because 5.8.0 never made it in
-    Ubuntu.
+  * Add revert-automatic-code-attribution-docs.patch which reverts a
+    commit from upstream because it requires a tool introduced in a Qt
+    Tools version (5.8) that Ubuntu skipped.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
 
