@@ -24,6 +24,8 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
   * Add revert-automatic-code-attribution-docs.patch which reverts a
     commit from upstream because it requires a tool introduced in a Qt
     Tools version (5.8) that Ubuntu skipped.
+  * Add arm64 to the arches GLES is built on in qtbase5-private-
+    dev.install.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
 
