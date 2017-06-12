@@ -1,6 +1,6 @@
-commit f5b46f59524cae0b2ee5dc577c75c3d2cdd76ab9
+commit 6c68df6c30572cebdcc1a0db7e40170a3ccbcc54
 Author: Simon Quigley <tsimonq2@ubuntu.com>
-Date:   Sun Jun 11 19:04:52 2017 -0500
+Date:   Sun Jun 11 19:23:37 2017 -0500
 
     Revert "Automatically generate code attribution documentation"
     
@@ -8,14 +8,13 @@ Date:   Sun Jun 11 19:04:52 2017 -0500
     automatic generation tool it uses in this commit is only available in Qt
     Tools 5.8 and over, which Ubuntu does not have.
     
-    This patch can be removed once Qt Tools 5.9.0 has landed in Ubuntu
-    Artful.
+    This patch can be removed once Qt Tools 5.9.0 has landed in Ubuntu Artful.
 
 diff --git a/doc/global/config.qdocconf b/doc/global/config.qdocconf
-index a18396876d..bb7ffa8f45 100644
+index 0c22d70529..9838ce3d89 100644
 --- a/doc/global/config.qdocconf
 +++ b/doc/global/config.qdocconf
-@@ -10,7 +10,7 @@ dita.metadata.default.audience = programmer
+@@ -10,6 +10,6 @@ dita.metadata.default.audience = programmer
  #Set the main Qt index.html
  navigation.homepage = "Qt $QT_VER"
  
@@ -23,7 +22,6 @@ index a18396876d..bb7ffa8f45 100644
 +sourcedirs += includes
  
  url = http://doc.qt.io/qt-5
- 
 diff --git a/mkspecs/features/qt_docs.prf b/mkspecs/features/qt_docs.prf
 index 72dde61a40..183d0c9502 100644
 --- a/mkspecs/features/qt_docs.prf
