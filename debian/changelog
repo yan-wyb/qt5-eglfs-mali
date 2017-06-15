@@ -27,6 +27,7 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
   * Add arm64 to the arches GLES is built on in qtbase5-private-
     dev.install.
   * Simplify disabling of gold linker in debian/rules.
+  * Remove debian/qt5-qmake-arm-linux-gnueabihf.install as it looks obsolete.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
 
