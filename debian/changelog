@@ -7,7 +7,12 @@ qtbase-opensource-src (5.9.0+dfsg-1ubuntu1) UNRELEASED; urgency=medium
     It was needed only for 90qt5-opengl script, which we no longer ship.
 
   [ Simon Quigley ]
-  * Merge from Debian Experimental in Git repo.
+  * Merge from Debian Experimental in Git repo. Remaining changes:
+    - Compile without firebird support.
+    - Disable the usage of the gold linker in debian/rules.
+    - Use libssl-dev instead of libssl1.0-dev.
+    - Enable tests for amd64, armhf, and i386.
+    - Add arm64 to the arches that GLES is enabled on.
   * Drop patches that were applied upstream in 5.9.0:
     - Fix-some-QtDBus-crashes-during-application-destructi.patch
     - hurd_tilde.diff
