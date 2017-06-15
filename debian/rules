@@ -39,11 +39,6 @@ ifneq ($(DEB_HOST_ARCH_OS),$(findstring $(DEB_HOST_ARCH_OS), linux kfreebsd))
 	extra_configure_opts += -no-eglfs
 endif
 
-# https://bugs.debian.org/842304
-ifeq ($(DEB_HOST_ARCH),i386)
-	extra_configure_opts += -no-use-gold-linker
-endif
-
 # Compile without sse2 support on i386
 # Do not use pre compiled headers in order to be able to rebuild the gui
 # submodule.
@@ -54,7 +49,8 @@ endif
 # Run tests only on archs known to pass in the past
 testrun_architectures := amd64 armhf i386
 
-nogoldlinker_architectures := powerpc armhf amd64 ppc64el arm64
+# https://bugs.debian.org/842304
+nogoldlinker_architectures := powerpc armhf amd64 ppc64el arm64 i386
 
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(nogoldlinker_architectures)))
 	extra_configure_opts += -no-use-gold-linker
