@@ -12,4 +12,3 @@ nonlinux_utime.diff
 
 # Ubuntu specific.
 #enable-tests.patch
-revert-automatic-code-attribution-docs.patch

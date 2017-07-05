@@ -32,9 +32,6 @@ qtbase-opensource-src (5.9.1+dfsg-3ubuntu1) UNRELEASED; urgency=medium
     series file:
     - xcb-Fix-drag-and-drop-to-Emacs.patch
     - xcb-Fix-drag-and-drop-to-applications-like-Emacs-and.patch
-  * Add revert-automatic-code-attribution-docs.patch which reverts a
-    commit from upstream because it requires a tool introduced in a Qt
-    Tools version (5.8) that Ubuntu skipped.
   * Add arm64 to the arches GLES is built on in qtbase5-private-
     dev.install.
   * Simplify disabling of gold linker in debian/rules.
