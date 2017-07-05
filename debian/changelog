@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.1+dfsg-2ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.1+dfsg-3ubuntu1) UNRELEASED; urgency=medium
 
   [ Timo Jyrinki ]
   * Drop support for twin gles packages.
@@ -41,6 +41,17 @@ qtbase-opensource-src (5.9.1+dfsg-2ubuntu1) UNRELEASED; urgency=medium
   * Remove debian/qt5-qmake-arm-linux-gnueabihf.install as it looks obsolete.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-3) experimental; urgency=medium
+
+  * Update headers of debian/patches/fix_atspi_condition.diff.
+  * Add a patch to use UTIME_NOW only if it is defined, to fix build on
+    kFreeBSD and Hurd (nonlinux_utime.diff).
+  * Update debian/libqt5gui5.symbols from buildds’ logs.
+  * Drop the workaround to not use gold on i386, bug #842304 should be
+    fixed now.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 04 Jul 2017 14:18:26 +0300
 
 qtbase-opensource-src (5.9.1+dfsg-2) experimental; urgency=medium
 
@@ -167,6 +178,12 @@ qtbase-opensource-src (5.8.0+dfsg-1) experimental; urgency=medium
       smaller libraries.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Fri, 10 Feb 2017 10:20:43 +0300
+
+qtbase-opensource-src (5.7.1+dfsg-4) unstable; urgency=medium
+
+  * Backport patch to remove OpenGL ES 2.0 direct calls (Closes: #866506).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 02 Jul 2017 20:07:11 -0300
 
 qtbase-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
 
