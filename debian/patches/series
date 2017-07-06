@@ -10,6 +10,7 @@ Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch
 global_menu_shortcuts.diff
 Add-support-for-selecting-the-printer-plugin-via-the.patch
+gtkdialogs_wayland.diff
 
 # Debian specific.
 no_dbus_dependency.diff
