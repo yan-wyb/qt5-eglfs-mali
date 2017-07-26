@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.1+dfsg-3ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.1+dfsg-5ubuntu1) UNRELEASED; urgency=medium
 
   [ Timo Jyrinki ]
   * Drop support for twin gles packages.
@@ -38,6 +38,25 @@ qtbase-opensource-src (5.9.1+dfsg-3ubuntu1) UNRELEASED; urgency=medium
   * Remove debian/qt5-qmake-arm-linux-gnueabihf.install as it looks obsolete.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Jun 2017 13:48:28 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-5) experimental; urgency=medium
+
+  * Build with large file support by adding LFS_CFLAGS to build flags.
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 07 Jul 2017 18:26:11 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-4) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Revert dropping the workaround to not use gold on i386.
+    See https://bugs.debian.org/842304#33.
+
+  [ Pino Toscano ]
+  * Do not install the QtKmsSupport stuff on Hurd, since it is not built
+    there.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 05 Jul 2017 18:41:19 +0300
 
 qtbase-opensource-src (5.9.1+dfsg-3) experimental; urgency=medium
 
