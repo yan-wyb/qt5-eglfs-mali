@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.1+dfsg-5ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.1+dfsg-5ubuntu1) artful; urgency=medium
 
   [ Timo Jyrinki ]
   * Drop support for twin gles packages.
