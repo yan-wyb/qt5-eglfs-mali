@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.9.1+dfsg-5ubuntu2) artful; urgency=medium
+
+  * Refresh symbols from build logs to fix FTBFS with GCC 7.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 05 Aug 2017 05:26:32 -0500
+
 qtbase-opensource-src (5.9.1+dfsg-5ubuntu1) artful; urgency=medium
 
   [ Timo Jyrinki ]
