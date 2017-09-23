@@ -5,6 +5,7 @@ qtbase-opensource-src (5.9.1+dfsg-10ubuntu1) UNRELEASED; urgency=medium
     - Depend on libssl1.0.0 instead of libssl1.0.2.
     - Enable tests for amd64, armhf, and i386.
     - Add arm64 to the architectures that GLES is enabled on.
+  * Build with firebird support to reduce delta with Debian.
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Sat, 23 Sep 2017 20:13:55 +0300
 
