@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.1 amd64 armhf i386 ppc64el s390x
+# SymbolsHelper-Confirmed: 5.9.1 alpha amd64 armel armhf hurd-i386 i386 kfreebsd-i386 m68k mips mips64el mipsel powerpc powerpcspe ppc64 ppc64el s390x sparc64
 libQt5Network.so.5 libqt5network5 #MINVER#
 | libqt5network5 #MINVER#, qtbase-abi-5-9-0
 * Build-Depends-Package: qtbase5-dev
@@ -85,7 +85,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN10QSslSocket18setPeerVerifyDepthEi@Qt_5 5.0.2
  _ZN10QSslSocket19setLocalCertificateERK15QSslCertificate@Qt_5 5.0.2
  _ZN10QSslSocket19setLocalCertificateERK7QStringN4QSsl14EncodingFormatE@Qt_5 5.0.2
- (subst)_ZN10QSslSocket19setSocketDescriptorE{qptrdiff}N15QAbstractSocket11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.6.0~beta
+ (subst)_ZN10QSslSocket19setSocketDescriptorE{qptrdiff}N15QAbstractSocket11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.0.2
  _ZN10QSslSocket19setSslConfigurationERK17QSslConfiguration@Qt_5 5.0.2
  _ZN10QSslSocket19waitForBytesWrittenEi@Qt_5 5.0.2
  _ZN10QSslSocket19waitForDisconnectedEi@Qt_5 5.0.2
@@ -102,7 +102,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN10QSslSocket24addDefaultCaCertificatesERK5QListI15QSslCertificateE@Qt_5 5.0.2
  _ZN10QSslSocket24addDefaultCaCertificatesERK7QStringN4QSsl14EncodingFormatEN7QRegExp13PatternSyntaxE@Qt_5 5.0.2
  _ZN10QSslSocket24setDefaultCaCertificatesERK5QListI15QSslCertificateE@Qt_5 5.0.2
- _ZN10QSslSocket24setLocalCertificateChainERK5QListI15QSslCertificateE@Qt_5 5.2.0
+ _ZN10QSslSocket24setLocalCertificateChainERK5QListI15QSslCertificateE@Qt_5 5.1.0
  _ZN10QSslSocket28sslLibraryBuildVersionNumberEv@Qt_5 5.4.0
  _ZN10QSslSocket28sslLibraryBuildVersionStringEv@Qt_5 5.4.0
  _ZN10QSslSocket34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator@Qt_5 5.5.0
@@ -126,8 +126,8 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN10QTcpServer14pauseAcceptingEv@Qt_5 5.0.2
  _ZN10QTcpServer15resumeAcceptingEv@Qt_5 5.0.2
  _ZN10QTcpServer16staticMetaObjectE@Qt_5 5.0.2
- (subst)_ZN10QTcpServer18incomingConnectionE{qptrdiff}@Qt_5 5.6.0~beta
- (subst)_ZN10QTcpServer19setSocketDescriptorE{qptrdiff}@Qt_5 5.6.0~beta
+ (subst)_ZN10QTcpServer18incomingConnectionE{qptrdiff}@Qt_5 5.0.2
+ (subst)_ZN10QTcpServer19setSocketDescriptorE{qptrdiff}@Qt_5 5.0.2
  _ZN10QTcpServer20addPendingConnectionEP10QTcpSocket@Qt_5 5.0.2
  _ZN10QTcpServer20waitForNewConnectionEiPb@Qt_5 5.0.2
  _ZN10QTcpServer21nextPendingConnectionEv@Qt_5 5.0.2
@@ -222,13 +222,13 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN12QLocalServer13newConnectionEv@Qt_5 5.0.2
  _ZN12QLocalServer16setSocketOptionsE6QFlagsINS_12SocketOptionEE@Qt_5 5.0.2
  _ZN12QLocalServer16staticMetaObjectE@Qt_5 5.0.2
- (subst)_ZN12QLocalServer18incomingConnectionE{quintptr}@Qt_5 5.6.0~beta
+ (subst)_ZN12QLocalServer18incomingConnectionE{quintptr}@Qt_5 5.0.2
  _ZN12QLocalServer20waitForNewConnectionEiPb@Qt_5 5.0.2
  _ZN12QLocalServer21nextPendingConnectionEv@Qt_5 5.0.2
  _ZN12QLocalServer24setMaxPendingConnectionsEi@Qt_5 5.0.2
  _ZN12QLocalServer5closeEv@Qt_5 5.0.2
  _ZN12QLocalServer6listenERK7QString@Qt_5 5.0.2
- (subst)_ZN12QLocalServer6listenE{qptrdiff}@Qt_5 5.6.0~beta
+ (subst)_ZN12QLocalServer6listenE{qptrdiff}@Qt_5 5.0.2
  _ZN12QLocalServerC1EP7QObject@Qt_5 5.0.2
  _ZN12QLocalServerC2EP7QObject@Qt_5 5.0.2
  _ZN12QLocalServerD0Ev@Qt_5 5.0.2
@@ -238,18 +238,18 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN12QLocalSocket11qt_metacastEPKc@Qt_5 5.0.2
  _ZN12QLocalSocket12disconnectedEv@Qt_5 5.0.2
  _ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE@Qt_5 5.0.2
- _ZN12QLocalSocket13setServerNameERK7QString@Qt_5 5.2.0
- _ZN12QLocalSocket15connectToServerE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.2.0
+ _ZN12QLocalSocket13setServerNameERK7QString@Qt_5 5.1.0
+ _ZN12QLocalSocket15connectToServerE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.1.0
  _ZN12QLocalSocket15connectToServerERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.0.2
  _ZN12QLocalSocket16staticMetaObjectE@Qt_5 5.0.2
  _ZN12QLocalSocket16waitForConnectedEi@Qt_5 5.0.2
  _ZN12QLocalSocket16waitForReadyReadEi@Qt_5 5.0.2
  _ZN12QLocalSocket17setReadBufferSizeEx@Qt_5 5.0.2
- (subst)_ZN12QLocalSocket19setSocketDescriptorE{qptrdiff}NS_16LocalSocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.6.0~beta
+ (subst)_ZN12QLocalSocket19setSocketDescriptorE{qptrdiff}NS_16LocalSocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.0.2
  _ZN12QLocalSocket19waitForBytesWrittenEi@Qt_5 5.0.2
  _ZN12QLocalSocket19waitForDisconnectedEi@Qt_5 5.0.2
  _ZN12QLocalSocket20disconnectFromServerEv@Qt_5 5.0.2
- _ZN12QLocalSocket4openE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.2.0
+ _ZN12QLocalSocket4openE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.1.0
  _ZN12QLocalSocket5abortEv@Qt_5 5.0.2
  _ZN12QLocalSocket5closeEv@Qt_5 5.0.2
  _ZN12QLocalSocket5errorENS_16LocalSocketErrorE@Qt_5 5.0.2
@@ -318,7 +318,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN13QNetworkReply6setUrlERK4QUrl@Qt_5 5.0.2
  _ZN13QNetworkReply8finishedEv@Qt_5 5.0.2
  _ZN13QNetworkReply8setErrorENS_12NetworkErrorERK7QString@Qt_5 5.0.2
- _ZN13QNetworkReply9encryptedEv@Qt_5 5.2.0
+ _ZN13QNetworkReply9encryptedEv@Qt_5 5.1.0
  _ZN13QNetworkReply9setHeaderEN15QNetworkRequest12KnownHeadersERK8QVariant@Qt_5 5.0.2
  _ZN13QNetworkReply9sslErrorsERK5QListI9QSslErrorE@Qt_5 5.0.2
  _ZN13QNetworkReply9writeDataEPKcx@Qt_5 5.0.2
@@ -399,7 +399,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN15QAbstractSocket16waitForReadyReadEi@Qt_5 5.0.2
  _ZN15QAbstractSocket17setReadBufferSizeEx@Qt_5 5.0.2
  _ZN15QAbstractSocket18disconnectFromHostEv@Qt_5 5.0.2
- (subst)_ZN15QAbstractSocket19setSocketDescriptorE{qptrdiff}NS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.6.0~beta
+ (subst)_ZN15QAbstractSocket19setSocketDescriptorE{qptrdiff}NS_11SocketStateE6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.0.2
  _ZN15QAbstractSocket19waitForBytesWrittenEi@Qt_5 5.0.2
  _ZN15QAbstractSocket19waitForDisconnectedEi@Qt_5 5.0.2
  _ZN15QAbstractSocket27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator@Qt_5 5.0.2
@@ -550,7 +550,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN17QSslConfiguration11setProtocolEN4QSsl11SslProtocolE@Qt_5 5.0.2
  _ZN17QSslConfiguration12setSslOptionEN4QSsl9SslOptionEb@Qt_5 5.0.2
  _ZN17QSslConfiguration13setPrivateKeyERK7QSslKey@Qt_5 5.0.2
- _ZN17QSslConfiguration16setSessionTicketERK10QByteArray@Qt_5 5.2.0
+ _ZN17QSslConfiguration16setSessionTicketERK10QByteArray@Qt_5 5.2.0~rc1
  _ZN17QSslConfiguration16supportedCiphersEv@Qt_5 5.5.0
  _ZN17QSslConfiguration17ALPNProtocolHTTP2E@Qt_5 5.8.0
  _ZN17QSslConfiguration17setCaCertificatesERK5QListI15QSslCertificateE@Qt_5 5.0.2
@@ -660,7 +660,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN21QNetworkAccessManager11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN21QNetworkAccessManager11qt_metacastEPKc@Qt_5 5.0.2
  _ZN21QNetworkAccessManager12setCookieJarEP17QNetworkCookieJar@Qt_5 5.0.2
- _ZN21QNetworkAccessManager13connectToHostERK7QStringt@Qt_5 5.2.0
+ _ZN21QNetworkAccessManager13connectToHostERK7QStringt@Qt_5 5.2.0~alpha1
  _ZN21QNetworkAccessManager13createRequestENS_9OperationERK15QNetworkRequestP9QIODevice@Qt_5 5.0.2
  _ZN21QNetworkAccessManager14deleteResourceERK15QNetworkRequest@Qt_5 5.0.2
  _ZN21QNetworkAccessManager15setProxyFactoryEP20QNetworkProxyFactory@Qt_5 5.0.2
@@ -674,7 +674,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN21QNetworkAccessManager20clearConnectionCacheEv@Qt_5 5.9.0~beta
  _ZN21QNetworkAccessManager20setNetworkAccessibleENS_20NetworkAccessibilityE@Qt_5 5.0.2
  _ZN21QNetworkAccessManager22authenticationRequiredEP13QNetworkReplyP14QAuthenticator@Qt_5 5.0.2
- _ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration@Qt_5 5.2.0
+ _ZN21QNetworkAccessManager22connectToHostEncryptedERK7QStringtRK17QSslConfiguration@Qt_5 5.2.0~alpha1
  _ZN21QNetworkAccessManager23networkSessionConnectedEv@Qt_5 5.0.2
  _ZN21QNetworkAccessManager24networkAccessibleChangedENS_20NetworkAccessibilityE@Qt_5 5.0.2
  _ZN21QNetworkAccessManager27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator@Qt_5 5.0.2
@@ -692,7 +692,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN21QNetworkAccessManager8finishedEP13QNetworkReply@Qt_5 5.0.2
  _ZN21QNetworkAccessManager8setCacheEP21QAbstractNetworkCache@Qt_5 5.0.2
  _ZN21QNetworkAccessManager8setProxyERK13QNetworkProxy@Qt_5 5.0.2
- _ZN21QNetworkAccessManager9encryptedEP13QNetworkReply@Qt_5 5.2.0
+ _ZN21QNetworkAccessManager9encryptedEP13QNetworkReply@Qt_5 5.1.0
  _ZN21QNetworkAccessManager9sslErrorsEP13QNetworkReplyRK5QListI9QSslErrorE@Qt_5 5.0.2
  _ZN21QNetworkAccessManagerC1EP7QObject@Qt_5 5.0.2
  _ZN21QNetworkAccessManagerC2EP7QObject@Qt_5 5.0.2
@@ -925,7 +925,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK10QSslSocket16sslConfigurationEv@Qt_5 5.0.2
  _ZNK10QSslSocket20peerCertificateChainEv@Qt_5 5.0.2
  _ZNK10QSslSocket21encryptedBytesToWriteEv@Qt_5 5.0.2
- _ZNK10QSslSocket21localCertificateChainEv@Qt_5 5.2.0
+ _ZNK10QSslSocket21localCertificateChainEv@Qt_5 5.1.0
  _ZNK10QSslSocket23encryptedBytesAvailableEv@Qt_5 5.0.2
  _ZNK10QSslSocket4modeEv@Qt_5 5.0.2
  _ZNK10QSslSocket5atEndEv@Qt_5 5.0.2
@@ -1140,7 +1140,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK17QNetworkInterface7isValidEv@Qt_5 5.0.2
  _ZNK17QSslConfiguration10privateKeyEv@Qt_5 5.0.2
  _ZNK17QSslConfiguration13sessionCipherEv@Qt_5 5.0.2
- _ZNK17QSslConfiguration13sessionTicketEv@Qt_5 5.2.0
+ _ZNK17QSslConfiguration13sessionTicketEv@Qt_5 5.2.0~rc1
  _ZNK17QSslConfiguration13testSslOptionEN4QSsl9SslOptionE@Qt_5 5.0.2
  _ZNK17QSslConfiguration14caCertificatesEv@Qt_5 5.0.2
  _ZNK17QSslConfiguration14ellipticCurvesEv@Qt_5 5.5.0
@@ -1152,7 +1152,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZNK17QSslConfiguration18ephemeralServerKeyEv@Qt_5 5.7.0
  _ZNK17QSslConfiguration20allowedNextProtocolsEv@Qt_5 5.3.0
  _ZNK17QSslConfiguration20peerCertificateChainEv@Qt_5 5.0.2
- _ZNK17QSslConfiguration21localCertificateChainEv@Qt_5 5.2.0
+ _ZNK17QSslConfiguration21localCertificateChainEv@Qt_5 5.1.0
  _ZNK17QSslConfiguration22nextNegotiatedProtocolEv@Qt_5 5.3.0
  _ZNK17QSslConfiguration23diffieHellmanParametersEv@Qt_5 5.8.0
  _ZNK17QSslConfiguration24preSharedKeyIdentityHintEv@Qt_5 5.8.0
@@ -1299,7 +1299,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  (optional=templinst)_ZNSt6vectorIhSaIhEE15_M_range_insertIPKhEEvN9__gnu_cxx17__normal_iteratorIPhS1_EET_S9_St20forward_iterator_tag@Qt_5 5.8.0
  (optional=templinst|subst)_ZNSt6vectorIhSaIhEE17_M_default_appendE{size_t}@Qt_5 5.8.0
  (optional=templinst)_ZNSt6vectorIjSaIjEE17_M_realloc_insertIJRKjEEEvN9__gnu_cxx17__normal_iteratorIPjS1_EEDpOT_@Qt_5 5.9.1
- (optional=templinst|arch=!amd64)_ZSt13move_backwardIjESt15_Deque_iteratorIT_RS1_PS1_ES4_S4_S4_@Qt_5 5.8.0
+ (optional=templinst|arch=alpha armel armhf hurd-i386 i386 kfreebsd-i386 m68k mips mips64el mipsel powerpc powerpcspe ppc64 ppc64el s390x sparc64)_ZSt13move_backwardIjESt15_Deque_iteratorIT_RS1_PS1_ES4_S4_S4_@Qt_5 5.8.0
  _ZTI10QDnsLookup@Qt_5 5.0.2
  _ZTI10QSslSocket@Qt_5 5.0.2
  _ZTI10QTcpServer@Qt_5 5.0.2

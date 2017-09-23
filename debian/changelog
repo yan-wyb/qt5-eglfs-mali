@@ -1,3 +1,57 @@
+qtbase-opensource-src (5.9.1+dfsg-10ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge with Debian unstable, remaining changes:
+    - Compile without firebird support.
+    - Depend on libssl1.0.0 instead of libssl1.0.2.
+    - Enable tests for amd64, armhf, and i386.
+    - Add arm64 to the architectures that GLES is enabled on.
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Sat, 23 Sep 2017 20:13:55 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-10) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Add a maintscript to ensure that the obsolete 90qt5-opengl conffile
+    is removed on upgrade (closes: #873788).
+  * Bump Standards-Version to 4.1.0, stop using deprecated Priority: extra.
+  * Update symbols files from kfreebsd-i386 log.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * debian/rules: include /usr/share/dpkg/architecture.mk instead of defining
+    DEB_HOST_* variables. Thanks Helmut Grohne!
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 23 Sep 2017 17:57:53 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-9) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Remove missing symbol in libqt5network5.symbols. I clearly missed it while
+    editing them.
+
+  [ Dmitry Shachnev ]
+  * Stop using the gold linker on all architectures, because of bug #852035.
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 20 Aug 2017 19:13:27 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-8) unstable; urgency=medium
+
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 16 Aug 2017 09:31:28 -0300
+
+qtbase-opensource-src (5.9.1+dfsg-7) unstable; urgency=medium
+
+  * Brown paper bag upload to unstable. Actually start the transition :-)
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 15 Aug 2017 20:50:02 -0300
+
+qtbase-opensource-src (5.9.1+dfsg-6) experimental; urgency=medium
+
+  * Update symbols files for GCC 7 symbols changes.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 15 Aug 2017 20:45:42 -0300
+
 qtbase-opensource-src (5.9.1+dfsg-5ubuntu2) artful; urgency=medium
 
   * Refresh symbols from build logs to fix FTBFS with GCC 7.

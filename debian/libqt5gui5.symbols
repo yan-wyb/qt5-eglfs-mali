@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.1 amd64 arm64 armhf i386 kfreebsd-amd64 ppc64 ppc64el s390x sparc64
+# SymbolsHelper-Confirmed: 5.9.1 amd64 armel armhf hurd-i386 i386 kfreebsd-i386 m68k mips mipsel powerpc powerpcspe
 libQt5Gui.so.5 libqt5gui5 #MINVER#
 | libqt5gui5 #MINVER#, qtbase-abi-5-9-0
 * Build-Depends-Package: qtbase5-dev
@@ -39,14 +39,14 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _Z15qt_memrotate270PKjiiiPji@Qt_5 5.0.2
  _Z15qt_memrotate270PKtiiiPti@Qt_5 5.0.2
  _Z15qt_regionToPathRK7QRegion@Qt_5 5.0.2
- _Z16qt_fusionPalettev@Qt_5 5.2.0
+ _Z16qt_fusionPalettev@Qt_5 5.1.0
  _Z16qt_imageForBrushib@Qt_5 5.0.2
  _Z17qHasPixmapTextureRK6QBrush@Qt_5 5.0.2
  _Z17qt_convertMarginsRK9QMarginsFN11QPageLayout4UnitES3_@Qt_5 5.3.0
  _Z17qt_handleKeyEventP7QWindowN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt@Qt_5 5.0.2
  _Z17qt_imageTransformR6QImage6QFlagsIN15QImageIOHandler14TransformationEE@Qt_5 5.5.0
  _Z17qt_window_privateP7QWindow@Qt_5 5.0.2
- _Z18qt_addBitmapToPathddPKhiiiP12QPainterPath@Qt_5 5.0.2
+ _Z18qt_addBitmapToPathddPKhiiiP12QPainterPath@Qt_5 5.2.0
  _Z18qt_pixelMultiplieri@Qt_5 5.3.0
  _Z18qt_pointMultiplierN11QPageLayout4UnitE@Qt_5 5.3.0
  _Z19qtVectorPathForPathRK12QPainterPath@Qt_5 5.0.2
@@ -54,13 +54,13 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _Z19qt_handleMouseEventP7QWindowRK7QPointFS3_6QFlagsIN2Qt11MouseButtonEES4_INS5_16KeyboardModifierEEi@Qt_5 5.6.0~beta
  _Z19qt_handleTouchEventP7QWindowP12QTouchDeviceRK5QListIN11QTouchEvent10TouchPointEE6QFlagsIN2Qt16KeyboardModifierEE@Qt_5 5.0.2
  _Z20hb_qt_get_font_funcsv@Qt_5 5.2.0
- _Z20qt_scaleForTransformRK10QTransformPd@Qt_5 5.0.2
+ _Z20qt_scaleForTransformRK10QTransformPd@Qt_5 5.2.0
  _Z20qt_scrollRectInImageR6QImageRK5QRectRK6QPoint@Qt_5 5.0.2
  _Z21qAccessibleRoleStringN11QAccessible4RoleE@Qt_5 5.0.2
  _Z22QT_DISTANCEFIELD_SCALEb@Qt_5 5.8.0
  _Z22hb_qt_script_to_scriptN5QChar6ScriptE@Qt_5 5.2.0
  _Z22qAccessibleEventStringN11QAccessible5EventE@Qt_5 5.0.2
- _Z22qt_find_ellipse_coordsRK6QRectFddP7QPointFS3_@Qt_5 5.0.2
+ _Z22qt_find_ellipse_coordsRK6QRectFddP7QPointFS3_@Qt_5 5.2.0
  _Z22qt_fontdata_from_indexi@Qt_5 5.0.2
  _Z22qt_gl_read_framebufferRK5QSizebb@Qt_5 5.0.2
  _Z22qt_paint_device_metricPK12QPaintDeviceNS_17PaintDeviceMetricE@Qt_5 5.0.2
@@ -101,24 +101,24 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _Z5qHashRKN22QGuiApplicationPrivate20ActiveTouchPointsKeyE@Qt_5_PRIVATE_API 5.0.2 1
  _Z9qPolylineRK12QPainterPathRK10QTransformdb@Qt_5 5.9.0~beta
  _ZN10QBasicDrag10cancelDragEv@Qt_5_PRIVATE_API 5.7.0 1
- _ZN10QBasicDrag11eventFilterEP7QObjectP6QEvent@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag12updateCursorEN2Qt10DropActionE@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag13restoreCursorEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag16exitDndEventLoopEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag17enableEventFilterEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag18disableEventFilterEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN10QBasicDrag11eventFilterEP7QObjectP6QEvent@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag12updateCursorEN2Qt10DropActionE@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag13restoreCursorEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag16exitDndEventLoopEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag17enableEventFilterEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag18disableEventFilterEv@Qt_5_PRIVATE_API 5.1.0 1
  _ZN10QBasicDrag22moveShapedPixmapWindowERK6QPoint@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN10QBasicDrag26recreateShapedPixmapWindowEP7QScreenRK6QPoint@Qt_5_PRIVATE_API 5.6.0~beta 1
- _ZN10QBasicDrag4dragEP5QDrag@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN10QBasicDrag4dragEP5QDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZN10QBasicDrag4dropERK6QPoint@Qt_5_PRIVATE_API 5.6.0~beta 1
- _ZN10QBasicDrag6cancelEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag7endDragEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDrag9startDragEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDragC1Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDragC2Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDragD0Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDragD1Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN10QBasicDragD2Ev@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN10QBasicDrag6cancelEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag7endDragEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDrag9startDragEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDragC1Ev@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDragC2Ev@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDragD0Ev@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDragD1Ev@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN10QBasicDragD2Ev@Qt_5_PRIVATE_API 5.1.0 1
  _ZN10QBlittable4lockEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN10QBlittable6unlockEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN10QBlittableC1ERK5QSize6QFlagsINS_10CapabilityEE@Qt_5_PRIVATE_API 5.0.2 1
@@ -337,22 +337,22 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_@Qt_5 5.0.2
  _ZN10QTransform12quadToSquareERK9QPolygonFRS_@Qt_5 5.0.2
  _ZN10QTransform12squareToQuadERK9QPolygonFRS_@Qt_5 5.0.2
- _ZN10QTransform13fromTranslateEdd@Qt_5 5.0.2
- _ZN10QTransform13rotateRadiansEdN2Qt4AxisE@Qt_5 5.0.2
+ _ZN10QTransform13fromTranslateEdd@Qt_5 5.2.0
+ _ZN10QTransform13rotateRadiansEdN2Qt4AxisE@Qt_5 5.2.0
  _ZN10QTransform5resetEv@Qt_5 5.0.2
- _ZN10QTransform5scaleEdd@Qt_5 5.0.2
- _ZN10QTransform5shearEdd@Qt_5 5.0.2
- _ZN10QTransform6rotateEdN2Qt4AxisE@Qt_5 5.0.2
- _ZN10QTransform9fromScaleEdd@Qt_5 5.0.2
- _ZN10QTransform9setMatrixEddddddddd@Qt_5 5.0.2
- _ZN10QTransform9translateEdd@Qt_5 5.0.2
+ _ZN10QTransform5scaleEdd@Qt_5 5.2.0
+ _ZN10QTransform5shearEdd@Qt_5 5.2.0
+ _ZN10QTransform6rotateEdN2Qt4AxisE@Qt_5 5.2.0
+ _ZN10QTransform9fromScaleEdd@Qt_5 5.2.0
+ _ZN10QTransform9setMatrixEddddddddd@Qt_5 5.2.0
+ _ZN10QTransform9translateEdd@Qt_5 5.2.0
  _ZN10QTransformC1ERK7QMatrix@Qt_5 5.0.2
- _ZN10QTransformC1Edddddd@Qt_5 5.0.2
- _ZN10QTransformC1Eddddddddd@Qt_5 5.0.2
+ _ZN10QTransformC1Edddddd@Qt_5 5.2.0
+ _ZN10QTransformC1Eddddddddd@Qt_5 5.2.0
  _ZN10QTransformC1Ev@Qt_5 5.0.2
  _ZN10QTransformC2ERK7QMatrix@Qt_5 5.0.2
- _ZN10QTransformC2Edddddd@Qt_5 5.0.2
- _ZN10QTransformC2Eddddddddd@Qt_5 5.0.2
+ _ZN10QTransformC2Edddddd@Qt_5 5.2.0
+ _ZN10QTransformC2Eddddddddd@Qt_5 5.2.0
  _ZN10QTransformC2Ev@Qt_5 5.0.2
  _ZN10QTransformaSERKS_@Qt_5 5.0.2
  _ZN10QTransformmLERKS_@Qt_5 5.0.2
@@ -399,19 +399,19 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QAccessible18ActivationObserverD0Ev@Qt_5 5.6.0~beta
  _ZN11QAccessible18ActivationObserverD1Ev@Qt_5 5.6.0~beta
  _ZN11QAccessible18ActivationObserverD2Ev@Qt_5 5.6.0~beta
- _ZN11QAccessible19accessibleInterfaceEj@Qt_5 5.2.0
+ _ZN11QAccessible19accessibleInterfaceEj@Qt_5 5.1.0
  _ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent@Qt_5 5.0.2
  _ZN11QAccessible20installUpdateHandlerEPFvP16QAccessibleEventE@Qt_5 5.0.2
  _ZN11QAccessible24installRootObjectHandlerEPFvP7QObjectE@Qt_5 5.0.2
  _ZN11QAccessible24queryAccessibleInterfaceEP7QObject@Qt_5 5.0.2
  _ZN11QAccessible24removeActivationObserverEPNS_18ActivationObserverE@Qt_5 5.4.0
- _ZN11QAccessible25deleteAccessibleInterfaceEj@Qt_5 5.2.0
+ _ZN11QAccessible25deleteAccessibleInterfaceEj@Qt_5 5.1.0
  _ZN11QAccessible25installActivationObserverEPNS_18ActivationObserverE@Qt_5 5.4.0
- _ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface@Qt_5 5.2.0
- _ZN11QAccessible29qAccessibleTextBoundaryHelperERK11QTextCursorNS_16TextBoundaryTypeE@Qt_5 5.2.0
+ _ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface@Qt_5 5.1.0
+ _ZN11QAccessible29qAccessibleTextBoundaryHelperERK11QTextCursorNS_16TextBoundaryTypeE@Qt_5 5.1.0
  _ZN11QAccessible7cleanupEv@Qt_5 5.0.2
  _ZN11QAccessible8isActiveEv@Qt_5 5.0.2
- _ZN11QAccessible8uniqueIdEP20QAccessibleInterface@Qt_5 5.2.0
+ _ZN11QAccessible8uniqueIdEP20QAccessibleInterface@Qt_5 5.1.0
  _ZN11QAccessible9setActiveEb@Qt_5 5.4.0
  _ZN11QCloseEventC1Ev@Qt_5 5.0.2
  _ZN11QCloseEventC2Ev@Qt_5 5.0.2
@@ -430,7 +430,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QFocusEventD2Ev@Qt_5 5.0.2
  _ZN11QFontEngine11boundingBoxEjRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine13setGlyphCacheEPKvP21QFontEngineGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
- _ZN11QFontEngine14bitmapForGlyphEj6QFixedRK10QTransform@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN11QFontEngine14bitmapForGlyphEj6QFixedRK10QTransform@Qt_5_PRIVATE_API 5.1.0 1
  _ZN11QFontEngine15GlyphCacheEntryC1ERKS0_@Qt_5_PRIVATE_API 5.3.0 1
  _ZN11QFontEngine15GlyphCacheEntryC1Ev@Qt_5_PRIVATE_API 5.3.0 1
  _ZN11QFontEngine15GlyphCacheEntryC2ERKS0_@Qt_5_PRIVATE_API 5.3.0 1
@@ -439,20 +439,20 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QFontEngine15GlyphCacheEntryD2Ev@Qt_5_PRIVATE_API 5.3.0 1
  _ZN11QFontEngine15GlyphCacheEntryaSERKS0_@Qt_5_PRIVATE_API 5.3.0 1
  _ZN11QFontEngine15addGlyphsToPathEPjP11QFixedPointiP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.0.2 1
- _ZN11QFontEngine15clearGlyphCacheEPKv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN11QFontEngine16addOutlineToPathEddRK12QGlyphLayoutP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN11QFontEngine15clearGlyphCacheEPKv@Qt_5_PRIVATE_API 5.2.0~beta1 1
+ _ZN11QFontEngine16addOutlineToPathEddRK12QGlyphLayoutP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.2.0 1
  _ZN11QFontEngine16alphaMapForGlyphEj6QFixed@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine16alphaMapForGlyphEj6QFixedRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine16alphaMapForGlyphEj@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine16alphaMapForGlyphEjRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
- _ZN11QFontEngine16getGlyphBearingsEjPdS0_@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN11QFontEngine16getGlyphBearingsEjPdS0_@Qt_5_PRIVATE_API 5.2.0 1
  _ZN11QFontEngine16getUnscaledGlyphEjP12QPainterPathP15glyph_metrics_t@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine16lastRightBearingERK12QGlyphLayoutb@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine16loadKerningPairsE6QFixed@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine16tightBoundingBoxERK12QGlyphLayout@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine17getGlyphPositionsERK12QGlyphLayoutRK10QTransform6QFlagsIN9QTextItem10RenderFlagEER15QVarLengthArrayIjLi256EERSA_I11QFixedPointLi256EE@Qt_5_PRIVATE_API 5.0.2 1
- _ZN11QFontEngine17getPointInOutlineEjijP6QFixedS1_Pj@Qt_5_PRIVATE_API 5.2.0 1
- _ZN11QFontEngine19addBitmapFontToPathEddRK12QGlyphLayoutP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN11QFontEngine17getPointInOutlineEjijP6QFixedS1_Pj@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN11QFontEngine19addBitmapFontToPathEddRK12QGlyphLayoutP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.2.0 1
  _ZN11QFontEngine19alphaRGBMapForGlyphEj6QFixedRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine20removeGlyphFromCacheEj@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QFontEngine21getTrueTypeGlyphIndexEPKhij@Qt_5_PRIVATE_API 5.5.1 1
@@ -543,14 +543,14 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QQuaternion5slerpERKS_S1_f@Qt_5 5.0.2
  _ZN11QQuaternion8fromAxesERK9QVector3DS2_S2_@Qt_5 5.5.0
  _ZN11QQuaternion9normalizeEv@Qt_5 5.0.2
- _ZN11QSimpleDrag16platformDropDataEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN11QSimpleDrag16platformDropDataEv@Qt_5_PRIVATE_API 5.1.0 1
  _ZN11QSimpleDrag4dropERK6QPoint@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN11QSimpleDrag4moveERK6QPoint@Qt_5_PRIVATE_API 5.6.0~beta 1
- _ZN11QSimpleDrag6cancelEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN11QSimpleDrag9startDragEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN11QSimpleDragC1Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN11QSimpleDragC2Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN11QStaticText12setTextWidthEd@Qt_5 5.0.2
+ _ZN11QSimpleDrag6cancelEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN11QSimpleDrag9startDragEv@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN11QSimpleDragC1Ev@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN11QSimpleDragC2Ev@Qt_5_PRIVATE_API 5.1.0 1
+ _ZN11QStaticText12setTextWidthEd@Qt_5 5.2.0
  _ZN11QStaticText13setTextFormatEN2Qt10TextFormatE@Qt_5 5.0.2
  _ZN11QStaticText13setTextOptionERK11QTextOption@Qt_5 5.0.2
  _ZN11QStaticText18setPerformanceHintENS_15PerformanceHintE@Qt_5 5.0.2
@@ -669,7 +669,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QTextEngine12addUnderlineEP8QPainterRK6QLineF@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine12indexFormatsEv@Qt_5_PRIVATE_API 5.4.0 1
  _ZN11QTextEngine13clearLineDataEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZN11QTextEngine14setPreeditAreaEiRK7QString@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN11QTextEngine14setPreeditAreaEiRK7QString@Qt_5_PRIVATE_API 5.1.0 1
  _ZN11QTextEngine15FontEngineCacheC1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine15FontEngineCacheC2Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine15beginningOfLineEi@Qt_5_PRIVATE_API 5.0.2 1
@@ -687,7 +687,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QTextEngine22insertionPointsForLineEiR7QVectorIiE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine25lineNumberForTextPositionEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine27positionAfterVisualMovementEiN11QTextCursor13MoveOperationE@Qt_5_PRIVATE_API 5.0.2 1
- _ZN11QTextEngine4initEPS_@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN11QTextEngine4initEPS_@Qt_5_PRIVATE_API 5.1.0 1
  _ZN11QTextEngine7justifyERK11QScriptLine@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine9alignLineERK11QScriptLine@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QTextEngine9endOfLineEi@Qt_5_PRIVATE_API 5.0.2 1
@@ -751,7 +751,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QTextObjectD0Ev@Qt_5 5.0.2
  _ZN11QTextObjectD1Ev@Qt_5 5.0.2
  _ZN11QTextObjectD2Ev@Qt_5 5.0.2
- _ZN11QTextOption11setTabArrayERK5QListIdE@Qt_5 5.0.2
+ _ZN11QTextOption11setTabArrayERK5QListIdE@Qt_5 5.2.0
  _ZN11QTextOption7setTabsERK5QListINS_3TabEE@Qt_5 5.0.2
  _ZN11QTextOptionC1E6QFlagsIN2Qt13AlignmentFlagEE@Qt_5 5.0.2
  _ZN11QTextOptionC1ERKS_@Qt_5 5.0.2
@@ -800,13 +800,13 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QVectorPathD1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QVectorPathD2Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN11QWheelEventC1ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEE@Qt_5 5.0.2
- _ZN11QWheelEventC1ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseE@Qt_5 5.2.0
+ _ZN11QWheelEventC1ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseE@Qt_5 5.2.0~alpha1
  _ZN11QWheelEventC1ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceE@Qt_5 5.5.0
  _ZN11QWheelEventC1ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceEb@Qt_5 5.7.0
  _ZN11QWheelEventC1ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE@Qt_5 5.0.2
  _ZN11QWheelEventC1ERK7QPointFi6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE@Qt_5 5.0.2
  _ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEE@Qt_5 5.0.2
- _ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseE@Qt_5 5.2.0
+ _ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseE@Qt_5 5.2.0~alpha1
  _ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceE@Qt_5 5.5.0
  _ZN11QWheelEventC2ERK7QPointFS2_6QPointS3_iN2Qt11OrientationE6QFlagsINS4_11MouseButtonEES6_INS4_16KeyboardModifierEENS4_11ScrollPhaseENS4_16MouseEventSourceEb@Qt_5 5.7.0
  _ZN11QWheelEventC2ERK7QPointFS2_i6QFlagsIN2Qt11MouseButtonEES3_INS4_16KeyboardModifierEENS4_11OrientationE@Qt_5 5.0.2
@@ -873,7 +873,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QImageReader16setAutoTransformEb@Qt_5 5.5.0
  _ZN12QImageReader17setScaledClipRectERK5QRect@Qt_5 5.0.2
  _ZN12QImageReader18setBackgroundColorERK6QColor@Qt_5 5.0.2
- _ZN12QImageReader18supportedMimeTypesEv@Qt_5 5.2.0
+ _ZN12QImageReader18supportedMimeTypesEv@Qt_5 5.1.0
  _ZN12QImageReader21supportedImageFormatsEv@Qt_5 5.0.2
  _ZN12QImageReader24setAutoDetectImageFormatEb@Qt_5 5.0.2
  _ZN12QImageReader26setDecideFormatFromContentEb@Qt_5 5.0.2
@@ -897,7 +897,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QImageWriter14setDescriptionERK7QString@Qt_5 5.0.2
  _ZN12QImageWriter17setOptimizedWriteEb@Qt_5 5.5.0
  _ZN12QImageWriter17setTransformationE6QFlagsIN15QImageIOHandler14TransformationEE@Qt_5 5.5.0
- _ZN12QImageWriter18supportedMimeTypesEv@Qt_5 5.2.0
+ _ZN12QImageWriter18supportedMimeTypesEv@Qt_5 5.1.0
  _ZN12QImageWriter21supportedImageFormatsEv@Qt_5 5.0.2
  _ZN12QImageWriter23setProgressiveScanWriteEb@Qt_5 5.5.0
  _ZN12QImageWriter5writeERK6QImage@Qt_5 5.0.2
@@ -923,7 +923,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QInputMethod16queryFocusObjectEN2Qt16InputMethodQueryE8QVariant@Qt_5 5.3.0
  _ZN12QInputMethod16staticMetaObjectE@Qt_5 5.0.2
  _ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE@Qt_5 5.0.2
- _ZN12QInputMethod21setInputItemRectangleERK6QRectF@Qt_5 5.2.0
+ _ZN12QInputMethod21setInputItemRectangleERK6QRectF@Qt_5 5.1.0
  _ZN12QInputMethod21setInputItemTransformERK10QTransform@Qt_5 5.0.2
  _ZN12QInputMethod22anchorRectangleChangedEv@Qt_5 5.7.0
  _ZN12QInputMethod22cursorRectangleChangedEv@Qt_5 5.0.2
@@ -943,9 +943,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QKeySequence11keyBindingsENS_11StandardKeyE@Qt_5 5.0.2
  _ZN12QKeySequence12decodeStringERK7QString@Qt_5 5.0.2
  _ZN12QKeySequence12encodeStringEi@Qt_5 5.0.2
- _ZN12QKeySequence12listToStringERK5QListIS_ENS_14SequenceFormatE@Qt_5 5.2.0
- _ZN12QKeySequence14listFromStringERK7QStringNS_14SequenceFormatE@Qt_5 5.2.0
- _ZN12QKeySequence16staticMetaObjectE@Qt_5 5.2.0
+ _ZN12QKeySequence12listToStringERK5QListIS_ENS_14SequenceFormatE@Qt_5 5.1.0
+ _ZN12QKeySequence14listFromStringERK7QStringNS_14SequenceFormatE@Qt_5 5.1.0
+ _ZN12QKeySequence16staticMetaObjectE@Qt_5 5.2.0~alpha1
  _ZN12QKeySequence6assignERK7QString@Qt_5 5.0.2
  _ZN12QKeySequence6assignERK7QStringNS_14SequenceFormatE@Qt_5 5.0.2
  _ZN12QKeySequence6setKeyEii@Qt_5 5.0.2
@@ -1000,10 +1000,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QPainterPath12addRoundRectERK6QRectFii@Qt_5 5.0.2
  _ZN12QPainterPath12closeSubpathEv@Qt_5 5.0.2
  _ZN12QPainterPath13detach_helperEv@Qt_5 5.0.2
- _ZN12QPainterPath14addRoundedRectERK6QRectFddN2Qt8SizeModeE@Qt_5 5.0.2
+ _ZN12QPainterPath14addRoundedRectERK6QRectFddN2Qt8SizeModeE@Qt_5 5.2.0
  _ZN12QPainterPath17ensureData_helperEv@Qt_5 5.0.2
- _ZN12QPainterPath20setElementPositionAtEidd@Qt_5 5.0.2
- _ZN12QPainterPath5arcToERK6QRectFdd@Qt_5 5.0.2
+ _ZN12QPainterPath20setElementPositionAtEidd@Qt_5 5.2.0
+ _ZN12QPainterPath5arcToERK6QRectFdd@Qt_5 5.2.0
  _ZN12QPainterPath6detachEv@Qt_5 5.0.2
  _ZN12QPainterPath6lineToERK7QPointF@Qt_5 5.0.2
  _ZN12QPainterPath6moveToERK7QPointF@Qt_5 5.0.2
@@ -1014,8 +1014,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QPainterPath7cubicToERK7QPointFS2_S2_@Qt_5 5.0.2
  _ZN12QPainterPath8setDirtyEb@Qt_5 5.0.2
  _ZN12QPainterPath9addRegionERK7QRegion@Qt_5 5.0.2
- _ZN12QPainterPath9arcMoveToERK6QRectFd@Qt_5 5.0.2
- _ZN12QPainterPath9translateEdd@Qt_5 5.0.2
+ _ZN12QPainterPath9arcMoveToERK6QRectFd@Qt_5 5.2.0
+ _ZN12QPainterPath9translateEdd@Qt_5 5.2.0
  _ZN12QPainterPathC1ERK7QPointF@Qt_5 5.0.2
  _ZN12QPainterPathC1ERKS_@Qt_5 5.0.2
  _ZN12QPainterPathC1Ev@Qt_5 5.0.2
@@ -1030,7 +1030,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QPainterPathoRERKS_@Qt_5 5.0.2
  _ZN12QPainterPathpLERKS_@Qt_5 5.0.2
  _ZN12QPathClipper10pathToRectERK12QPainterPathP6QRectF@Qt_5_PRIVATE_API 5.0.2 1
- _ZN12QPathClipper19handleCrossingEdgesER11QWingedEdgedNS_11ClipperModeE@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN12QPathClipper19handleCrossingEdgesER11QWingedEdgedNS_11ClipperModeE@Qt_5_PRIVATE_API 5.2.0 1
  _ZN12QPathClipper4clipENS_9OperationE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN12QPathClipper6doClipER11QWingedEdgeNS_11ClipperModeE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN12QPathClipper8containsEv@Qt_5_PRIVATE_API 5.0.2 1
@@ -1087,16 +1087,16 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN12QShortcutMapD1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN12QShortcutMapD2Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN12QTabletEvent16staticMetaObjectE@Qt_5 5.4.0
- _ZN12QTabletEventC1EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx@Qt_5 5.0.2
+ _ZN12QTabletEventC1EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx@Qt_5 5.2.0
  _ZN12QTabletEventC1EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E@Qt_5 5.4.0
- _ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx@Qt_5 5.0.2
+ _ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEEx@Qt_5 5.2.0
  _ZN12QTabletEventC2EN6QEvent4TypeERK7QPointFS4_iidiiddi6QFlagsIN2Qt16KeyboardModifierEExNS6_11MouseButtonES5_IS9_E@Qt_5 5.4.0
  _ZN12QTabletEventD0Ev@Qt_5 5.0.2
  _ZN12QTabletEventD1Ev@Qt_5 5.0.2
  _ZN12QTabletEventD2Ev@Qt_5 5.0.2
  _ZN12QTouchDevice15setCapabilitiesE6QFlagsINS_14CapabilityFlagEE@Qt_5 5.0.2
  _ZN12QTouchDevice16staticMetaObjectE@Qt_5 5.5.0
- _ZN12QTouchDevice21setMaximumTouchPointsEi@Qt_5 5.2.0
+ _ZN12QTouchDevice21setMaximumTouchPointsEi@Qt_5 5.2.0~alpha1
  _ZN12QTouchDevice7devicesEv@Qt_5 5.0.2
  _ZN12QTouchDevice7setNameERK7QString@Qt_5 5.0.2
  _ZN12QTouchDevice7setTypeENS_10DeviceTypeE@Qt_5 5.0.2
@@ -1118,7 +1118,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN13QColorProfile8fromSRgbEv@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZN13QColorProfile9fromGammaEd@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZN13QFontDatabase10pointSizesERK7QStringS2_@Qt_5 5.0.2
- _ZN13QFontDatabase10systemFontENS_10SystemFontE@Qt_5 5.2.0
+ _ZN13QFontDatabase10systemFontENS_10SystemFontE@Qt_5 5.2.0~alpha1
  _ZN13QFontDatabase11smoothSizesERK7QStringS2_@Qt_5 5.0.2
  _ZN13QFontDatabase11styleStringERK5QFont@Qt_5 5.0.2
  _ZN13QFontDatabase11styleStringERK9QFontInfo@Qt_5 5.0.2
@@ -1134,7 +1134,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN13QFontDatabase23applicationFontFamiliesEi@Qt_5 5.0.2
  _ZN13QFontDatabase25removeAllApplicationFontsEv@Qt_5 5.0.2
  _ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray@Qt_5 5.0.2
- _ZN13QFontDatabase29supportsThreadedFontRenderingEv@Qt_5 5.0.2
+ _ZN13QFontDatabase29supportsThreadedFontRenderingEv@Qt_5 5.2.0~beta1
  _ZN13QFontDatabase4loadEPK12QFontPrivatei@Qt_5_PRIVATE_API 5.0.2 1
  _ZN13QFontDatabase8findFontERK8QFontDefi@Qt_5 5.5.0
  _ZN13QFontDatabaseC1Ev@Qt_5 5.0.2
@@ -1320,21 +1320,21 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF@Qt_5 5.0.2
  _ZN13QTextDocument12loadResourceEiRK4QUrl@Qt_5 5.0.2
  _ZN13QTextDocument12setPlainTextERK7QString@Qt_5 5.0.2
- _ZN13QTextDocument12setTextWidthEd@Qt_5 5.0.2
+ _ZN13QTextDocument12setTextWidthEd@Qt_5 5.2.0
  _ZN13QTextDocument13redoAvailableEb@Qt_5 5.0.2
  _ZN13QTextDocument13undoAvailableEb@Qt_5 5.0.2
  _ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem@Qt_5 5.0.2
  _ZN13QTextDocument14baseUrlChangedERK4QUrl@Qt_5 5.3.0
  _ZN13QTextDocument14contentsChangeEiii@Qt_5 5.0.2
  _ZN13QTextDocument14setDefaultFontERK5QFont@Qt_5 5.0.2
- _ZN13QTextDocument14setIndentWidthEd@Qt_5 5.0.2
+ _ZN13QTextDocument14setIndentWidthEd@Qt_5 5.2.0
  _ZN13QTextDocument15contentsChangedEv@Qt_5 5.0.2
  _ZN13QTextDocument16staticMetaObjectE@Qt_5 5.0.2
  _ZN13QTextDocument16undoCommandAddedEv@Qt_5 5.0.2
  _ZN13QTextDocument17blockCountChangedEi@Qt_5 5.0.2
  _ZN13QTextDocument17markContentsDirtyEii@Qt_5 5.0.2
  _ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout@Qt_5 5.0.2
- _ZN13QTextDocument17setDocumentMarginEd@Qt_5 5.0.2
+ _ZN13QTextDocument17setDocumentMarginEd@Qt_5 5.2.0
  _ZN13QTextDocument18setMetaInformationENS_15MetaInformationERK7QString@Qt_5 5.0.2
  _ZN13QTextDocument18setUndoRedoEnabledEb@Qt_5 5.0.2
  _ZN13QTextDocument19clearUndoRedoStacksENS_6StacksE@Qt_5 5.0.2
@@ -1361,24 +1361,24 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN13QTextDocumentD0Ev@Qt_5 5.0.2
  _ZN13QTextDocumentD1Ev@Qt_5 5.0.2
  _ZN13QTextDocumentD2Ev@Qt_5 5.0.2
- _ZN14QDistanceField4bitsEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceField8scanLineEi@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceField8setGlyphEP11QFontEnginejb@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceField8setGlyphERK8QRawFontjb@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC1EP11QFontEnginejb@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC1EP18QDistanceFieldData@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN14QDistanceField4bitsEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceField8scanLineEi@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceField8setGlyphEP11QFontEnginejb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceField8setGlyphERK8QRawFontjb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC1EP11QFontEnginejb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC1EP18QDistanceFieldData@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZN14QDistanceFieldC1ERK12QPainterPathjb@Qt_5_PRIVATE_API 5.5.0 1
- _ZN14QDistanceFieldC1ERK8QRawFontjb@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC1ERKS_@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC1Eii@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC1Ev@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC2EP11QFontEnginejb@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC2EP18QDistanceFieldData@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN14QDistanceFieldC1ERK8QRawFontjb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC1ERKS_@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC1Eii@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC1Ev@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC2EP11QFontEnginejb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC2EP18QDistanceFieldData@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZN14QDistanceFieldC2ERK12QPainterPathjb@Qt_5_PRIVATE_API 5.5.0 1
- _ZN14QDistanceFieldC2ERK8QRawFontjb@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC2ERKS_@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC2Eii@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QDistanceFieldC2Ev@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN14QDistanceFieldC2ERK8QRawFontjb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC2ERKS_@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC2Eii@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZN14QDistanceFieldC2Ev@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZN14QDragMoveEventC1ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE@Qt_5 5.0.2
  _ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE@Qt_5 5.0.2
  _ZN14QDragMoveEventD0Ev@Qt_5 5.0.2
@@ -1431,7 +1431,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN14QOpenGLContext18globalShareContextEv@Qt_5 5.5.0
  _ZN14QOpenGLContext18openGLModuleHandleEv@Qt_5 5.3.0
  _ZN14QOpenGLContext19setQGLContextHandleEPvPFvS0_E@Qt_5 5.0.2
- _ZN14QOpenGLContext19setTextureFunctionsEP20QOpenGLTextureHelper@Qt_5 5.2.0
+ _ZN14QOpenGLContext19setTextureFunctionsEP20QOpenGLTextureHelper@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLContext22supportsThreadedOpenGLEv@Qt_5 5.5.0
  _ZN14QOpenGLContext23insertExternalFunctionsEP24QAbstractOpenGLFunctions@Qt_5 5.5.0
  _ZN14QOpenGLContext23removeExternalFunctionsEP24QAbstractOpenGLFunctions@Qt_5 5.5.0
@@ -1444,63 +1444,63 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN14QOpenGLContextD0Ev@Qt_5 5.0.2
  _ZN14QOpenGLContextD1Ev@Qt_5 5.0.2
  _ZN14QOpenGLContextD2Ev@Qt_5 5.0.2
- _ZN14QOpenGLTexture10hasFeatureENS_7FeatureE@Qt_5 5.2.0
+ _ZN14QOpenGLTexture10hasFeatureENS_7FeatureE@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture10setSamplesEi@Qt_5 5.4.0
- _ZN14QOpenGLTexture11setWrapModeENS_19CoordinateDirectionENS_8WrapModeE@Qt_5 5.2.0
- _ZN14QOpenGLTexture11setWrapModeENS_8WrapModeE@Qt_5 5.2.0
- _ZN14QOpenGLTexture12setMipLevelsEi@Qt_5 5.2.0
- _ZN14QOpenGLTexture14boundTextureIdENS_13BindingTargetE@Qt_5 5.2.0
- _ZN14QOpenGLTexture14boundTextureIdEjNS_13BindingTargetE@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setBorderColorE6QColor@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setBorderColorEffff@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setBorderColorEiiii@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setBorderColorEjjjj@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setMipMaxLevelEi@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setSwizzleMaskENS_12SwizzleValueES0_S0_S0_@Qt_5 5.2.0
- _ZN14QOpenGLTexture14setSwizzleMaskENS_16SwizzleComponentENS_12SwizzleValueE@Qt_5 5.2.0
+ _ZN14QOpenGLTexture11setWrapModeENS_19CoordinateDirectionENS_8WrapModeE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture11setWrapModeENS_8WrapModeE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture12setMipLevelsEi@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14boundTextureIdENS_13BindingTargetE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14boundTextureIdEjNS_13BindingTargetE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setBorderColorE6QColor@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setBorderColorEffff@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setBorderColorEiiii@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setBorderColorEjjjj@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setMipMaxLevelEi@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setSwizzleMaskENS_12SwizzleValueES0_S0_S0_@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture14setSwizzleMaskENS_16SwizzleComponentENS_12SwizzleValueE@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture15allocateStorageENS_11PixelFormatENS_9PixelTypeE@Qt_5 5.5.0
- _ZN14QOpenGLTexture15allocateStorageEv@Qt_5 5.2.0
- _ZN14QOpenGLTexture15generateMipMapsEib@Qt_5 5.2.0
- _ZN14QOpenGLTexture15generateMipMapsEv@Qt_5 5.2.0
- _ZN14QOpenGLTexture15setMipBaseLevelEi@Qt_5 5.2.0
- _ZN14QOpenGLTexture16setMinMagFiltersENS_6FilterES0_@Qt_5 5.2.0
- _ZN14QOpenGLTexture16setMipLevelRangeEii@Qt_5 5.2.0
+ _ZN14QOpenGLTexture15allocateStorageEv@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture15generateMipMapsEib@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture15generateMipMapsEv@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture15setMipBaseLevelEi@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture16setMinMagFiltersENS_6FilterES0_@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture16setMipLevelRangeEii@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture16staticMetaObjectE@Qt_5 5.7.0
  _ZN14QOpenGLTexture17setComparisonModeENS_14ComparisonModeE@Qt_5 5.5.0
  _ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
- _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0
+ _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture17setCompressedDataEiiNS_11CubeMapFaceEiPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
- _ZN14QOpenGLTexture17setCompressedDataEiiNS_11CubeMapFaceEiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0
+ _ZN14QOpenGLTexture17setCompressedDataEiiNS_11CubeMapFaceEiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
  _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture17setCompressedDataEiiiNS_11CubeMapFaceEiPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.9.0~beta
  _ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
- _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0
- _ZN14QOpenGLTexture19setDepthStencilModeENS_16DepthStencilModeE@Qt_5 5.2.0
- _ZN14QOpenGLTexture20setLevelofDetailBiasEf@Qt_5 5.2.0
- _ZN14QOpenGLTexture20setMaximumAnisotropyEf@Qt_5 5.2.0
+ _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture19setDepthStencilModeENS_16DepthStencilModeE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture20setLevelofDetailBiasEf@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture20setMaximumAnisotropyEf@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture21setComparisonFunctionENS_18ComparisonFunctionE@Qt_5 5.5.0
- _ZN14QOpenGLTexture21setLevelOfDetailRangeEff@Qt_5 5.2.0
- _ZN14QOpenGLTexture21setMinificationFilterENS_6FilterE@Qt_5 5.2.0
- _ZN14QOpenGLTexture22setMagnificationFilterENS_6FilterE@Qt_5 5.2.0
+ _ZN14QOpenGLTexture21setLevelOfDetailRangeEff@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture21setMinificationFilterENS_6FilterE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture22setMagnificationFilterENS_6FilterE@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture23setFixedSamplePositionsEb@Qt_5 5.4.0
- _ZN14QOpenGLTexture23setMaximumLevelOfDetailEf@Qt_5 5.2.0
- _ZN14QOpenGLTexture23setMinimumLevelOfDetailEf@Qt_5 5.2.0
- _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb@Qt_5 5.2.0
- _ZN14QOpenGLTexture4bindEjNS_16TextureUnitResetE@Qt_5 5.2.0
- _ZN14QOpenGLTexture4bindEv@Qt_5 5.2.0
- _ZN14QOpenGLTexture6createEv@Qt_5 5.2.0
- _ZN14QOpenGLTexture7destroyEv@Qt_5 5.2.0
- _ZN14QOpenGLTexture7isBoundEj@Qt_5 5.2.0
- _ZN14QOpenGLTexture7releaseEjNS_16TextureUnitResetE@Qt_5 5.2.0
- _ZN14QOpenGLTexture7releaseEv@Qt_5 5.2.0
+ _ZN14QOpenGLTexture23setMaximumLevelOfDetailEf@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture23setMinimumLevelOfDetailEf@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture4bindEjNS_16TextureUnitResetE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture4bindEv@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture6createEv@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture7destroyEv@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture7isBoundEj@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture7releaseEjNS_16TextureUnitResetE@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture7releaseEv@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture7setDataENS_11PixelFormatENS_9PixelTypeEPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
- _ZN14QOpenGLTexture7setDataENS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0
- _ZN14QOpenGLTexture7setDataERK6QImageNS_16MipMapGenerationE@Qt_5 5.2.0
+ _ZN14QOpenGLTexture7setDataENS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
+ _ZN14QOpenGLTexture7setDataERK6QImageNS_16MipMapGenerationE@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture7setDataEiNS_11PixelFormatENS_9PixelTypeEPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
- _ZN14QOpenGLTexture7setDataEiNS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0
+ _ZN14QOpenGLTexture7setDataEiNS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture7setDataEiiNS_11CubeMapFaceENS_11PixelFormatENS_9PixelTypeEPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
- _ZN14QOpenGLTexture7setDataEiiNS_11CubeMapFaceENS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0
+ _ZN14QOpenGLTexture7setDataEiiNS_11CubeMapFaceENS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture7setDataEiiNS_11PixelFormatENS_9PixelTypeEPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.3.0
  _ZN14QOpenGLTexture7setDataEiiNS_11PixelFormatENS_9PixelTypeEPvPK27QOpenGLPixelTransferOptions@Qt_5 5.2.0~alpha1
  _ZN14QOpenGLTexture7setDataEiiiNS_11CubeMapFaceENS_11PixelFormatENS_9PixelTypeEPKvPK27QOpenGLPixelTransferOptions@Qt_5 5.9.0~beta
@@ -1521,7 +1521,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN14QPaintEngineEx11drawPolygonEPK6QPointiN12QPaintEngine15PolygonDrawModeE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QPaintEngineEx11drawPolygonEPK7QPointFiN12QPaintEngine15PolygonDrawModeE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QPaintEngineEx11updateStateERK17QPaintEngineState@Qt_5_PRIVATE_API 5.0.2 1
- _ZN14QPaintEngineEx15drawRoundedRectERK6QRectFddN2Qt8SizeModeE@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN14QPaintEngineEx15drawRoundedRectERK6QRectFddN2Qt8SizeModeE@Qt_5_PRIVATE_API 5.2.0 1
  _ZN14QPaintEngineEx15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QPaintEngineEx18drawStaticTextItemEP15QStaticTextItem@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QPaintEngineEx19drawPixmapFragmentsEPKN8QPainter14PixmapFragmentEiRK7QPixmap6QFlagsINS0_18PixmapFragmentHintEE@Qt_5_PRIVATE_API 5.0.2 1
@@ -1561,7 +1561,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN14QSurfaceFormat10setOptionsE6QFlagsINS_12FormatOptionEE@Qt_5 5.3.0
  _ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE@Qt_5 5.0.2
  _ZN14QSurfaceFormat10setSamplesEi@Qt_5 5.0.2
- _ZN14QSurfaceFormat10setVersionEii@Qt_5 5.2.0
+ _ZN14QSurfaceFormat10setVersionEii@Qt_5 5.1.0
  _ZN14QSurfaceFormat13defaultFormatEv@Qt_5 5.4.0
  _ZN14QSurfaceFormat15setMajorVersionEi@Qt_5 5.0.2
  _ZN14QSurfaceFormat15setMinorVersionEi@Qt_5 5.0.2
@@ -1591,10 +1591,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN14QSurfaceFormataSERKS_@Qt_5 5.0.2
  _ZN14QTextTableCell9setFormatERK15QTextCharFormat@Qt_5 5.0.2
  _ZN14QWindowPrivate11applyCursorEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZN14QWindowPrivate13_q_clearAlertEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN14QWindowPrivate13_q_clearAlertEv@Qt_5_PRIVATE_API 5.1.0 1
  _ZN14QWindowPrivate15connectToScreenEP7QScreen@Qt_5_PRIVATE_API 5.4.0 1
- _ZN14QWindowPrivate16clearFocusObjectEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZN14QWindowPrivate16updateVisibilityEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN14QWindowPrivate16clearFocusObjectEv@Qt_5_PRIVATE_API 5.2.0~rc1 1
+ _ZN14QWindowPrivate16updateVisibilityEv@Qt_5_PRIVATE_API 5.1.0 1
  _ZN14QWindowPrivate17screenForGeometryERK5QRect@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN14QWindowPrivate17setTopLevelScreenEP7QScreenb@Qt_5_PRIVATE_API 5.4.0 1
  _ZN14QWindowPrivate20deliverUpdateRequestEv@Qt_5_PRIVATE_API 5.5.0 1
@@ -1656,7 +1656,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN15QGuiApplication15desktopFileNameEv@Qt_5 5.7.0
  _ZN15QGuiApplication15layoutDirectionEv@Qt_5 5.0.2
  _ZN15QGuiApplication15topLevelWindowsEv@Qt_5 5.0.2
- _ZN15QGuiApplication16applicationStateEv@Qt_5 5.2.0
+ _ZN15QGuiApplication16applicationStateEv@Qt_5 5.2.0~alpha1
  _ZN15QGuiApplication16lastWindowClosedEv@Qt_5 5.0.2
  _ZN15QGuiApplication16platformFunctionERK10QByteArray@Qt_5 5.4.0
  _ZN15QGuiApplication16saveStateRequestER15QSessionManager@Qt_5 5.0.2
@@ -1677,7 +1677,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE@Qt_5 5.4.0
  _ZN15QGuiApplication22queryKeyboardModifiersEv@Qt_5 5.0.2
  _ZN15QGuiApplication22quitOnLastWindowClosedEv@Qt_5 5.0.2
- _ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE@Qt_5 5.2.0
+ _ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE@Qt_5 5.2.0~alpha1
  _ZN15QGuiApplication23platformNativeInterfaceEv@Qt_5 5.0.2
  _ZN15QGuiApplication23setDesktopSettingsAwareEb@Qt_5 5.0.2
  _ZN15QGuiApplication25setApplicationDisplayNameERK7QString@Qt_5 5.0.2
@@ -1687,7 +1687,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN15QGuiApplication35setFallbackSessionManagementEnabledEb@Qt_5 5.6.0~rc
  _ZN15QGuiApplication4execEv@Qt_5 5.0.2
  _ZN15QGuiApplication4fontEv@Qt_5 5.0.2
- _ZN15QGuiApplication4syncEv@Qt_5 5.2.0
+ _ZN15QGuiApplication4syncEv@Qt_5 5.2.0~rc1
  _ZN15QGuiApplication5eventEP6QEvent@Qt_5 5.0.2
  _ZN15QGuiApplication6notifyEP7QObjectP6QEvent@Qt_5 5.0.2
  _ZN15QGuiApplication7paletteEv@Qt_5 5.0.2
@@ -1737,10 +1737,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN15QLinearGradient12setFinalStopERK7QPointF@Qt_5 5.0.2
  _ZN15QLinearGradient8setStartERK7QPointF@Qt_5 5.0.2
  _ZN15QLinearGradientC1ERK7QPointFS2_@Qt_5 5.0.2
- _ZN15QLinearGradientC1Edddd@Qt_5 5.0.2
+ _ZN15QLinearGradientC1Edddd@Qt_5 5.2.0
  _ZN15QLinearGradientC1Ev@Qt_5 5.0.2
  _ZN15QLinearGradientC2ERK7QPointFS2_@Qt_5 5.0.2
- _ZN15QLinearGradientC2Edddd@Qt_5 5.0.2
+ _ZN15QLinearGradientC2Edddd@Qt_5 5.2.0
  _ZN15QLinearGradientC2Ev@Qt_5 5.0.2
  _ZN15QPlatformCursor6setPosERK6QPoint@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZN15QPlatformCursorC1Ev@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -1805,23 +1805,23 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN15QPlatformWindowD1Ev@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZN15QPlatformWindowD2Ev@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZN15QRadialGradient13setFocalPointERK7QPointF@Qt_5 5.0.2
- _ZN15QRadialGradient14setFocalRadiusEd@Qt_5 5.0.2
- _ZN15QRadialGradient15setCenterRadiusEd@Qt_5 5.0.2
+ _ZN15QRadialGradient14setFocalRadiusEd@Qt_5 5.2.0
+ _ZN15QRadialGradient15setCenterRadiusEd@Qt_5 5.2.0
  _ZN15QRadialGradient9setCenterERK7QPointF@Qt_5 5.0.2
- _ZN15QRadialGradient9setRadiusEd@Qt_5 5.0.2
- _ZN15QRadialGradientC1ERK7QPointFd@Qt_5 5.0.2
- _ZN15QRadialGradientC1ERK7QPointFdS2_@Qt_5 5.0.2
- _ZN15QRadialGradientC1ERK7QPointFdS2_d@Qt_5 5.0.2
- _ZN15QRadialGradientC1Eddd@Qt_5 5.0.2
- _ZN15QRadialGradientC1Eddddd@Qt_5 5.0.2
- _ZN15QRadialGradientC1Edddddd@Qt_5 5.0.2
+ _ZN15QRadialGradient9setRadiusEd@Qt_5 5.2.0
+ _ZN15QRadialGradientC1ERK7QPointFd@Qt_5 5.2.0
+ _ZN15QRadialGradientC1ERK7QPointFdS2_@Qt_5 5.2.0
+ _ZN15QRadialGradientC1ERK7QPointFdS2_d@Qt_5 5.2.0
+ _ZN15QRadialGradientC1Eddd@Qt_5 5.2.0
+ _ZN15QRadialGradientC1Eddddd@Qt_5 5.2.0
+ _ZN15QRadialGradientC1Edddddd@Qt_5 5.2.0
  _ZN15QRadialGradientC1Ev@Qt_5 5.0.2
- _ZN15QRadialGradientC2ERK7QPointFd@Qt_5 5.0.2
- _ZN15QRadialGradientC2ERK7QPointFdS2_@Qt_5 5.0.2
- _ZN15QRadialGradientC2ERK7QPointFdS2_d@Qt_5 5.0.2
- _ZN15QRadialGradientC2Eddd@Qt_5 5.0.2
- _ZN15QRadialGradientC2Eddddd@Qt_5 5.0.2
- _ZN15QRadialGradientC2Edddddd@Qt_5 5.0.2
+ _ZN15QRadialGradientC2ERK7QPointFd@Qt_5 5.2.0
+ _ZN15QRadialGradientC2ERK7QPointFdS2_@Qt_5 5.2.0
+ _ZN15QRadialGradientC2ERK7QPointFdS2_d@Qt_5 5.2.0
+ _ZN15QRadialGradientC2Eddd@Qt_5 5.2.0
+ _ZN15QRadialGradientC2Eddddd@Qt_5 5.2.0
+ _ZN15QRadialGradientC2Edddddd@Qt_5 5.2.0
  _ZN15QRadialGradientC2Ev@Qt_5 5.0.2
  _ZN15QRawFontPrivate12loadFromDataERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5_PRIVATE_API 5.4.0 1
  _ZN15QSessionManager11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
@@ -1880,13 +1880,13 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN16QAccessibleEventD0Ev@Qt_5 5.6.0~beta
  _ZN16QAccessibleEventD1Ev@Qt_5 5.6.0~beta
  _ZN16QAccessibleEventD2Ev@Qt_5 5.6.0~beta
- _ZN16QConicalGradient8setAngleEd@Qt_5 5.0.2
+ _ZN16QConicalGradient8setAngleEd@Qt_5 5.2.0
  _ZN16QConicalGradient9setCenterERK7QPointF@Qt_5 5.0.2
- _ZN16QConicalGradientC1ERK7QPointFd@Qt_5 5.0.2
- _ZN16QConicalGradientC1Eddd@Qt_5 5.0.2
+ _ZN16QConicalGradientC1ERK7QPointFd@Qt_5 5.2.0
+ _ZN16QConicalGradientC1Eddd@Qt_5 5.2.0
  _ZN16QConicalGradientC1Ev@Qt_5 5.0.2
- _ZN16QConicalGradientC2ERK7QPointFd@Qt_5 5.0.2
- _ZN16QConicalGradientC2Eddd@Qt_5 5.0.2
+ _ZN16QConicalGradientC2ERK7QPointFd@Qt_5 5.2.0
+ _ZN16QConicalGradientC2Eddd@Qt_5 5.2.0
  _ZN16QConicalGradientC2Ev@Qt_5 5.0.2
  _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc@Qt_5 5.0.2
  _ZN16QDesktopServices15unsetUrlHandlerERK7QString@Qt_5 5.0.2
@@ -1915,12 +1915,12 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN16QFontEngineMulti11boundingBoxERK12QGlyphLayout@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QFontEngineMulti11boundingBoxEj@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QFontEngineMulti14ensureEngineAtEi@Qt_5_PRIVATE_API 5.5.0 1
- _ZN16QFontEngineMulti16addOutlineToPathEddRK12QGlyphLayoutP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN16QFontEngineMulti16addOutlineToPathEddRK12QGlyphLayoutP12QPainterPath6QFlagsIN9QTextItem10RenderFlagEE@Qt_5_PRIVATE_API 5.2.0 1
  _ZN16QFontEngineMulti16alphaMapForGlyphEj6QFixed@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QFontEngineMulti16alphaMapForGlyphEj6QFixedRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QFontEngineMulti16alphaMapForGlyphEj@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QFontEngineMulti16alphaMapForGlyphEjRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
- _ZN16QFontEngineMulti16getGlyphBearingsEjPdS0_@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN16QFontEngineMulti16getGlyphBearingsEjPdS0_@Qt_5_PRIVATE_API 5.2.0 1
  _ZN16QFontEngineMulti19alphaRGBMapForGlyphEj6QFixedRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
  _ZN16QFontEngineMulti21createMultiFontEngineEP11QFontEnginei@Qt_5_PRIVATE_API 5.5.0 1
  _ZN16QFontEngineMulti23setFallbackFamiliesListERK11QStringList@Qt_5_PRIVATE_API 5.5.0 1
@@ -1962,7 +1962,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN16QTextBlockFormatC1Ev@Qt_5 5.0.2
  _ZN16QTextBlockFormatC2ERK11QTextFormat@Qt_5 5.0.2
  _ZN16QTextBlockFormatC2Ev@Qt_5 5.0.2
- _ZN16QTextFrameFormat9setMarginEd@Qt_5 5.0.2
+ _ZN16QTextFrameFormat9setMarginEd@Qt_5 5.2.0
  _ZN16QTextFrameFormatC1ERK11QTextFormat@Qt_5 5.0.2
  _ZN16QTextFrameFormatC1Ev@Qt_5 5.0.2
  _ZN16QTextFrameFormatC2ERK11QTextFormat@Qt_5 5.0.2
@@ -2067,19 +2067,19 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN17QOpenGLExtensionsC1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN17QOpenGLExtensionsC2EP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN17QOpenGLExtensionsC2Ev@Qt_5_PRIVATE_API 5.0.2 1
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery11qt_metacastEPKc@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery15recordTimestampEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery16staticMetaObjectE@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery3endEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery5beginEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery6createEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQuery7destroyEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQueryC1EP7QObject@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQueryC2EP7QObject@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQueryD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQueryD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN17QOpenGLTimerQueryD2Ev@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery11qt_metacastEPKc@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery15recordTimestampEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery16staticMetaObjectE@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery3endEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery5beginEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery6createEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQuery7destroyEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQueryC1EP7QObject@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQueryC2EP7QObject@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQueryD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQueryD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN17QOpenGLTimerQueryD2Ev@Qt_5 5.1.0
  _ZN17QPagedPaintDevice10setMarginsERKNS_7MarginsE@Qt_5 5.0.2
  _ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE@Qt_5 5.0.2
  _ZN17QPagedPaintDevice11setPageSizeERK9QPageSize@Qt_5 5.3.0
@@ -2223,8 +2223,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN18QOpenGLDebugLoggerD1Ev@Qt_5 5.1.0
  _ZN18QOpenGLDebugLoggerD2Ev@Qt_5 5.1.0
  _ZN18QOpenGLPaintDevice15setPaintFlippedEb@Qt_5 5.0.2
- _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd@Qt_5 5.0.2
- _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd@Qt_5 5.0.2
+ _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd@Qt_5 5.2.0
+ _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd@Qt_5 5.2.0
  _ZN18QOpenGLPaintDevice18ensureActiveTargetEv@Qt_5 5.0.2
  _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd@Qt_5 5.2.0
  _ZN18QOpenGLPaintDevice7setSizeERK5QSize@Qt_5 5.0.2
@@ -2239,19 +2239,19 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN18QOpenGLPaintDeviceD0Ev@Qt_5 5.0.2
  _ZN18QOpenGLPaintDeviceD1Ev@Qt_5 5.0.2
  _ZN18QOpenGLPaintDeviceD2Ev@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor11qt_metacastEPKc@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor12recordSampleEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor14setSampleCountEi@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor16staticMetaObjectE@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor5resetEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor6createEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitor7destroyEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitorC1EP7QObject@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitorC2EP7QObject@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitorD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitorD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN18QOpenGLTimeMonitorD2Ev@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor11qt_metacastEPKc@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor12recordSampleEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor14setSampleCountEi@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor16staticMetaObjectE@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor5resetEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor6createEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitor7destroyEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitorC1EP7QObject@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitorC2EP7QObject@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitorD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitorD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN18QOpenGLTimeMonitorD2Ev@Qt_5 5.1.0
  _ZN18QPaintDeviceWindow10paintEventEP11QPaintEvent@Qt_5 5.4.0
  _ZN18QPaintDeviceWindow11exposeEventEP12QExposeEvent@Qt_5 5.4.0
  _ZN18QPaintDeviceWindow11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.4.0
@@ -2469,8 +2469,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QInputDeviceManagerC1EP7QObject@Qt_5_PRIVATE_API 5.5.0 1
  _ZN19QInputDeviceManagerC2EP7QObject@Qt_5_PRIVATE_API 5.5.0 1
  _ZN19QKeySequencePrivate7keyNameEiN12QKeySequence14SequenceFormatE@Qt_5 5.6.1
- _ZN19QNativeGestureEventC1EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy@Qt_5 5.2.0
- _ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy@Qt_5 5.2.0
+ _ZN19QNativeGestureEventC1EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy@Qt_5 5.2.0~beta1
+ _ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy@Qt_5 5.2.0~beta1
  _ZN19QOpenGLContextGroup11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN19QOpenGLContextGroup11qt_metacastEPKc@Qt_5 5.0.2
  _ZN19QOpenGLContextGroup16staticMetaObjectE@Qt_5 5.0.2
@@ -2480,15 +2480,15 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QOpenGLContextGroupD0Ev@Qt_5 5.0.2
  _ZN19QOpenGLContextGroupD1Ev@Qt_5 5.0.2
  _ZN19QOpenGLContextGroupD2Ev@Qt_5 5.0.2
- _ZN19QOpenGLDebugMessage23createThirdPartyMessageERK7QStringjNS_8SeverityENS_4TypeE@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessage24createApplicationMessageERK7QStringjNS_8SeverityENS_4TypeE@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageC1ERKS_@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageC1Ev@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageC2ERKS_@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageC2Ev@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageD1Ev@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageD2Ev@Qt_5 5.2.0
- _ZN19QOpenGLDebugMessageaSERKS_@Qt_5 5.2.0
+ _ZN19QOpenGLDebugMessage23createThirdPartyMessageERK7QStringjNS_8SeverityENS_4TypeE@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessage24createApplicationMessageERK7QStringjNS_8SeverityENS_4TypeE@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageC1ERKS_@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageC1Ev@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageC2ERKS_@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageC2Ev@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageD1Ev@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageD2Ev@Qt_5 5.1.0
+ _ZN19QOpenGLDebugMessageaSERKS_@Qt_5 5.1.0
  _ZN19QOpenGLTextureCache10invalidateEx@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QOpenGLTextureCache11bindTextureEP14QOpenGLContextRK6QImage6QFlagsINS_10BindOptionEE@Qt_5_PRIVATE_API 5.4.0 1
  _ZN19QOpenGLTextureCache11bindTextureEP14QOpenGLContextRK7QPixmap6QFlagsINS_10BindOptionEE@Qt_5_PRIVATE_API 5.4.0 1
@@ -2496,8 +2496,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QOpenGLTextureCache12freeResourceEP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QOpenGLTextureCache15cacheForContextEP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QOpenGLTextureCache18invalidateResourceEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZN19QOpenGLTextureCacheC1EP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
- _ZN19QOpenGLTextureCacheC2EP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN19QOpenGLTextureCacheC1EP14QOpenGLContext@Qt_5_PRIVATE_API 5.2.0~rc1 1
+ _ZN19QOpenGLTextureCacheC2EP14QOpenGLContext@Qt_5_PRIVATE_API 5.2.0~rc1 1
  _ZN19QOpenGLTextureCacheD0Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QOpenGLTextureCacheD1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QOpenGLTextureCacheD2Ev@Qt_5_PRIVATE_API 5.0.2 1
@@ -2507,12 +2507,12 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QPaintEnginePrivateD2Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN19QPainterPathStroker11setCapStyleEN2Qt11PenCapStyleE@Qt_5 5.0.2
  _ZN19QPainterPathStroker12setJoinStyleEN2Qt12PenJoinStyleE@Qt_5 5.0.2
- _ZN19QPainterPathStroker13setDashOffsetEd@Qt_5 5.0.2
- _ZN19QPainterPathStroker13setMiterLimitEd@Qt_5 5.0.2
+ _ZN19QPainterPathStroker13setDashOffsetEd@Qt_5 5.2.0
+ _ZN19QPainterPathStroker13setMiterLimitEd@Qt_5 5.2.0
  _ZN19QPainterPathStroker14setDashPatternEN2Qt8PenStyleE@Qt_5 5.0.2
- _ZN19QPainterPathStroker14setDashPatternERK7QVectorIdE@Qt_5 5.0.2
- _ZN19QPainterPathStroker17setCurveThresholdEd@Qt_5 5.0.2
- _ZN19QPainterPathStroker8setWidthEd@Qt_5 5.0.2
+ _ZN19QPainterPathStroker14setDashPatternERK7QVectorIdE@Qt_5 5.2.0
+ _ZN19QPainterPathStroker17setCurveThresholdEd@Qt_5 5.2.0
+ _ZN19QPainterPathStroker8setWidthEd@Qt_5 5.2.0
  _ZN19QPainterPathStrokerC1ERK4QPen@Qt_5 5.3.0
  _ZN19QPainterPathStrokerC1Ev@Qt_5 5.0.2
  _ZN19QPainterPathStrokerC2ERK4QPen@Qt_5 5.3.0
@@ -2534,7 +2534,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QTextDocumentLayout11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QTextDocumentLayout11qt_metacastEPKc@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QTextDocumentLayout11setViewportERK6QRectF@Qt_5_PRIVATE_API 5.0.2 1
- _ZN19QTextDocumentLayout14ensureLayoutedEd@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN19QTextDocumentLayout14ensureLayoutedEd@Qt_5_PRIVATE_API 5.2.0 1
  _ZN19QTextDocumentLayout14layoutFinishedEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QTextDocumentLayout14setCursorWidthEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QTextDocumentLayout15documentChangedEiii@Qt_5_PRIVATE_API 5.0.2 1
@@ -2568,97 +2568,97 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QToolBarChangeEventD1Ev@Qt_5 5.0.2
  _ZN19QToolBarChangeEventD2Ev@Qt_5 5.0.2
  _ZN20QAccessibleInterface12virtual_hookEiPv@Qt_5 5.0.2
- _ZN20QAccessibleInterfaceD0Ev@Qt_5 5.2.0
- _ZN20QAccessibleInterfaceD1Ev@Qt_5 5.2.0
- _ZN20QAccessibleInterfaceD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_014versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_019isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_025initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_0C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_0C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_0D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_0D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_0D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_114versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_119isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_125initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_1C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_1C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_1D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_1D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_1D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_214versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_219isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_225initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_2C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_2C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_2D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_2D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_2D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_314versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_319isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_325initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_3C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_3C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_3D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_3D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_3D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_414versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_419isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_425initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_4C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_4C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_4D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_4D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_4D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_514versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_519isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_525initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_5C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_5C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_5D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_5D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_1_5D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_014versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_019isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_025initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_0C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_0C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_0D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_0D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_0D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_114versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_119isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_125initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_1C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_1C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_1D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_1D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_2_1D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_014versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_019isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_025initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_0C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_0C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_0D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_0D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_0D2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_114versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_119isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_125initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_1C1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_1C2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_1D0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_1D1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN20QOpenGLFunctions_3_1D2Ev@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES214versionProfileEv@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES219isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES225initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES2C1Ev@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES2C2Ev@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES2D0Ev@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES2D1Ev@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZN20QOpenGLFunctions_ES2D2Ev@Qt_5 5.2.0
+ _ZN20QAccessibleInterfaceD0Ev@Qt_5 5.1.0
+ _ZN20QAccessibleInterfaceD1Ev@Qt_5 5.1.0
+ _ZN20QAccessibleInterfaceD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_014versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_019isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_025initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_0C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_0C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_0D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_0D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_0D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_114versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_119isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_125initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_1C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_1C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_1D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_1D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_1D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_214versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_219isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_225initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_2C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_2C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_2D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_2D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_2D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_314versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_319isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_325initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_3C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_3C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_3D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_3D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_3D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_414versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_419isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_425initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_4C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_4C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_4D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_4D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_4D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_514versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_519isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_525initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_5C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_5C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_5D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_5D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_1_5D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_014versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_019isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_025initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_0C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_0C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_0D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_0D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_0D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_114versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_119isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_125initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_1C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_1C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_1D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_1D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_2_1D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_014versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_019isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_025initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_0C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_0C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_0D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_0D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_0D2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_114versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_119isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_125initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_1C1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_1C2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_1D0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_1D1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN20QOpenGLFunctions_3_1D2Ev@Qt_5 5.1.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES214versionProfileEv@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES219isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES225initializeOpenGLFunctionsEv@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES2C1Ev@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES2C2Ev@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES2D0Ev@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES2D1Ev@Qt_5 5.2.0
+ (arch=armel armhf)_ZN20QOpenGLFunctions_ES2D2Ev@Qt_5 5.2.0
  _ZN20QOpenGLShaderProgram11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN20QOpenGLShaderProgram11qt_metacastEPKc@Qt_5 5.0.2
  _ZN20QOpenGLShaderProgram12removeShaderEP13QOpenGLShader@Qt_5 5.0.2
@@ -2749,7 +2749,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN20QOpenGLShaderProgram17setAttributeValueEiffff@Qt_5 5.0.2
  _ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii@Qt_5 5.0.2
  _ZN20QOpenGLShaderProgram18setAttributeBufferEijiii@Qt_5 5.0.2
- _ZN20QOpenGLShaderProgram19setPatchVertexCountEi@Qt_5 5.2.0
+ _ZN20QOpenGLShaderProgram19setPatchVertexCountEi@Qt_5 5.1.0
  _ZN20QOpenGLShaderProgram20enableAttributeArrayEPKc@Qt_5 5.0.2
  _ZN20QOpenGLShaderProgram20enableAttributeArrayEi@Qt_5 5.0.2
  _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK10QMatrix4x4i@Qt_5 5.0.2
@@ -3128,7 +3128,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN22QDashedStrokeProcessor7processERK11QVectorPathRK4QPenRK6QRectF6QFlagsIN8QPainter10RenderHintEE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QDashedStrokeProcessorC1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QDashedStrokeProcessorC2Ev@Qt_5_PRIVATE_API 5.0.2 1
- _ZN22QGuiApplicationPrivate10commitDataEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate10commitDataEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZN22QGuiApplicationPrivate10shouldQuitEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate10styleHintsE@Qt_5_PRIVATE_API 5.5.0 1
  _ZN22QGuiApplicationPrivate11displayNameE@Qt_5_PRIVATE_API 5.0.2 1
@@ -3152,7 +3152,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN22QGuiApplicationPrivate15mouseEventFlagsEPK11QMouseEvent@Qt_5_PRIVATE_API 5.3.0 1
  _ZN22QGuiApplicationPrivate15processKeyEventEPN29QWindowSystemInterfacePrivate8KeyEventE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate15showModalWindowEP7QWindow@Qt_5_PRIVATE_API 5.0.2 1
- _ZN22QGuiApplicationPrivate16applicationStateE@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate16applicationStateE@Qt_5_PRIVATE_API 5.1.0 1
  _ZN22QGuiApplicationPrivate16modifier_buttonsE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate16mouseEventSourceEPK11QMouseEvent@Qt_5_PRIVATE_API 5.3.0 1
  _ZN22QGuiApplicationPrivate16mousePressButtonE@Qt_5_PRIVATE_API 5.0.2 1
@@ -3174,18 +3174,18 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN22QGuiApplicationPrivate18processNativeEventEP7QWindowRK10QByteArrayPvPl@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate18processTabletEventEPN29QWindowSystemInterfacePrivate11TabletEventE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate18setMouseEventFlagsEP11QMouseEvent6QFlagsIN2Qt14MouseEventFlagEE@Qt_5_PRIVATE_API 5.3.0 1
- _ZN22QGuiApplicationPrivate18shouldQuitInternalERK5QListIP7QWindowE@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate18shouldQuitInternalERK5QListIP7QWindowE@Qt_5_PRIVATE_API 5.1.1 1
  _ZN22QGuiApplicationPrivate18tabletDevicePointsE@Qt_5_PRIVATE_API 5.7.0 1
  _ZN22QGuiApplicationPrivate18tryCloseAllWindowsEv@Qt_5_PRIVATE_API 5.3.0 1
  _ZN22QGuiApplicationPrivate19generic_plugin_listE@Qt_5_PRIVATE_API 5.0.2 1
- _ZN22QGuiApplicationPrivate19processGestureEventEPN29QWindowSystemInterfacePrivate12GestureEventE@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate19processGestureEventEPN29QWindowSystemInterfacePrivate12GestureEventE@Qt_5_PRIVATE_API 5.2.0~beta1 1
  _ZN22QGuiApplicationPrivate19processThemeChangedEPN29QWindowSystemInterfacePrivate16ThemeChangeEventE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate19setApplicationStateEN2Qt16ApplicationStateEb@Qt_5_PRIVATE_API 5.4.0 1
  _ZN22QGuiApplicationPrivate19setMouseEventSourceEP11QMouseEventN2Qt16MouseEventSourceE@Qt_5_PRIVATE_API 5.3.0 1
  _ZN22QGuiApplicationPrivate19updateBlockedStatusEP7QWindow@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate20_q_updateFocusObjectEP7QObject@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate20emitLastWindowClosedEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZN22QGuiApplicationPrivate20eventDispatcherReadyEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate20eventDispatcherReadyEv@Qt_5_PRIVATE_API 5.2.0~beta1 1
  _ZN22QGuiApplicationPrivate20m_inputDeviceManagerE@Qt_5_PRIVATE_API 5.5.0 1
  _ZN22QGuiApplicationPrivate20platform_integrationE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate20processFileOpenEventEPN29QWindowSystemInterfacePrivate13FileOpenEventE@Qt_5_PRIVATE_API 5.0.2 1
@@ -3214,7 +3214,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN22QGuiApplicationPrivate29reportScreenOrientationChangeEPN29QWindowSystemInterfacePrivate22ScreenOrientationEventE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate30processWindowStateChangedEventEPN29QWindowSystemInterfacePrivate23WindowStateChangedEventE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate30reportLogicalDotsPerInchChangeEPN29QWindowSystemInterfacePrivate29ScreenLogicalDotsPerInchEventE@Qt_5_PRIVATE_API 5.0.2 1
- _ZN22QGuiApplicationPrivate31processWindowScreenChangedEventEPN29QWindowSystemInterfacePrivate24WindowScreenChangedEventE@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate31processWindowScreenChangedEventEPN29QWindowSystemInterfacePrivate24WindowScreenChangedEventE@Qt_5_PRIVATE_API 5.1.0 1
  _ZN22QGuiApplicationPrivate31updateFilteredScreenOrientationEP7QScreen@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate32processTabletEnterProximityEventEPN29QWindowSystemInterfacePrivate25TabletEnterProximityEventE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate32processTabletLeaveProximityEventEPN29QWindowSystemInterfacePrivate25TabletLeaveProximityEventE@Qt_5_PRIVATE_API 5.0.2 1
@@ -3227,7 +3227,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN22QGuiApplicationPrivate7buttonsE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate8app_fontE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivate8app_iconE@Qt_5_PRIVATE_API 5.3.0 1
- _ZN22QGuiApplicationPrivate9saveStateEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN22QGuiApplicationPrivate9saveStateEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZN22QGuiApplicationPrivateC1ERiPPci@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivateC2ERiPPci@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGuiApplicationPrivateD0Ev@Qt_5_PRIVATE_API 5.0.2 1
@@ -3427,7 +3427,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN24QAccessibleTextInterfaceD1Ev@Qt_5 5.6.0~beta
  _ZN24QAccessibleTextInterfaceD2Ev@Qt_5 5.6.0~beta
  _ZN24QBlittablePlatformPixmap12setBlittableEP10QBlittable@Qt_5_PRIVATE_API 5.0.2 1
- _ZN24QBlittablePlatformPixmap19setDevicePixelRatioEd@Qt_5 5.0.2
+ _ZN24QBlittablePlatformPixmap19setDevicePixelRatioEd@Qt_5 5.2.0
  _ZN24QBlittablePlatformPixmap4fillERK6QColor@Qt_5 5.0.2
  _ZN24QBlittablePlatformPixmap6bufferEv@Qt_5 5.0.2
  _ZN24QBlittablePlatformPixmap6resizeEii@Qt_5 5.0.2
@@ -3501,20 +3501,20 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN24QOpenGLTextureGlyphCacheD0Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN24QOpenGLTextureGlyphCacheD1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN24QOpenGLTextureGlyphCacheD2Ev@Qt_5_PRIVATE_API 5.0.2 1
- _ZN24QOpenGLVertexArrayObject11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObject11qt_metacastEPKc@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObject16staticMetaObjectE@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObject4bindEv@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObject6createEv@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObject7destroyEv@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObject7releaseEv@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectC1EP7QObject@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectC1ER31QOpenGLVertexArrayObjectPrivate@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectC2EP7QObject@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectC2ER31QOpenGLVertexArrayObjectPrivate@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectD0Ev@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectD1Ev@Qt_5 5.2.0
- _ZN24QOpenGLVertexArrayObjectD2Ev@Qt_5 5.2.0
+ _ZN24QOpenGLVertexArrayObject11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObject11qt_metacastEPKc@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObject16staticMetaObjectE@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObject4bindEv@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObject6createEv@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObject7destroyEv@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObject7releaseEv@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectC1EP7QObject@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectC1ER31QOpenGLVertexArrayObjectPrivate@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectC2EP7QObject@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectC2ER31QOpenGLVertexArrayObjectPrivate@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectD0Ev@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectD1Ev@Qt_5 5.1.0
+ _ZN24QOpenGLVertexArrayObjectD2Ev@Qt_5 5.1.0
  _ZN24QPagedPaintDevicePrivateD0Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN24QPagedPaintDevicePrivateD1Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN24QPagedPaintDevicePrivateD2Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
@@ -3552,70 +3552,70 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN25QAccessibleValueInterfaceD0Ev@Qt_5 5.6.0~beta
  _ZN25QAccessibleValueInterfaceD1Ev@Qt_5 5.6.0~beta
  _ZN25QAccessibleValueInterfaceD2Ev@Qt_5 5.6.0~beta
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_Core14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_Core25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_CoreC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_CoreC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_CoreD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_CoreD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_2_CoreD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_Core14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_Core25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_CoreC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_CoreC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_CoreD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_CoreD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_3_3_CoreD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_Core14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_Core25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_CoreC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_CoreC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_CoreD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_CoreD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_0_CoreD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_Core14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_Core25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_CoreC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_CoreC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_CoreD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_CoreD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_1_CoreD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_Core14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_Core25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_CoreC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_CoreC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_CoreD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_CoreD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_2_CoreD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_Core14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_Core25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_CoreC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_CoreC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_CoreD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_CoreD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_3_CoreD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_Core14versionProfileEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_Core25initializeOpenGLFunctionsEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_CoreC1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_CoreC2Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_CoreD0Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_CoreD1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_4_CoreD2Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_Core14versionProfileEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_Core25initializeOpenGLFunctionsEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_CoreC1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_CoreC2Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_CoreD0Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_CoreD1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN25QOpenGLFunctions_4_5_CoreD2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_Core14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_Core25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_CoreC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_CoreC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_CoreD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_CoreD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_2_CoreD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_Core14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_Core25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_CoreC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_CoreC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_CoreD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_CoreD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_3_3_CoreD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_Core14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_Core25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_CoreC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_CoreC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_CoreD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_CoreD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_0_CoreD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_Core14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_Core25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_CoreC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_CoreC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_CoreD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_CoreD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_1_CoreD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_Core14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_Core25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_CoreC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_CoreC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_CoreD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_CoreD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_2_CoreD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_Core14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_Core25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_CoreC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_CoreC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_CoreD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_CoreD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_3_CoreD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_Core14versionProfileEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_Core25initializeOpenGLFunctionsEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_CoreC1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_CoreC2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_CoreD0Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_CoreD1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_4_CoreD2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_Core14versionProfileEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_Core19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_Core25initializeOpenGLFunctionsEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_CoreC1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_CoreC2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_CoreD0Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_CoreD1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN25QOpenGLFunctions_4_5_CoreD2Ev@Qt_5 5.5.0
  _ZN25QOpenGLPaintDevicePrivateC1ERK5QSize@Qt_5_PRIVATE_API 5.4.0 1
  _ZN25QOpenGLPaintDevicePrivateC2ERK5QSize@Qt_5_PRIVATE_API 5.4.0 1
  _ZN25QOpenGLPaintDevicePrivateD0Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
@@ -3739,7 +3739,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN27QAbstractTextDocumentLayout16drawInlineObjectEP8QPainterRK6QRectF17QTextInlineObjectiRK11QTextFormat@Qt_5 5.0.2
  _ZN27QAbstractTextDocumentLayout16pageCountChangedEi@Qt_5 5.0.2
  _ZN27QAbstractTextDocumentLayout16staticMetaObjectE@Qt_5 5.0.2
- _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject@Qt_5 5.2.0
+ _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject@Qt_5 5.2.0~alpha1
  _ZN27QAbstractTextDocumentLayout18resizeInlineObjectE17QTextInlineObjectiRK11QTextFormat@Qt_5 5.0.2
  _ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF@Qt_5 5.0.2
  _ZN27QAbstractTextDocumentLayout20positionInlineObjectE17QTextInlineObjectiRK11QTextFormat@Qt_5 5.0.2
@@ -3883,70 +3883,70 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN34QAbstractTextDocumentLayoutPrivateD0Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN34QAbstractTextDocumentLayoutPrivateD1Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN34QAbstractTextDocumentLayoutPrivateD2Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_Compatibility14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_CompatibilityC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_CompatibilityC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_CompatibilityD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_CompatibilityD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_2_CompatibilityD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_Compatibility14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_CompatibilityC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_CompatibilityC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_CompatibilityD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_CompatibilityD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_3_3_CompatibilityD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_Compatibility14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_CompatibilityC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_CompatibilityC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_CompatibilityD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_CompatibilityD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_0_CompatibilityD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_Compatibility14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_CompatibilityC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_CompatibilityC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_CompatibilityD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_CompatibilityD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_1_CompatibilityD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_Compatibility14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_CompatibilityC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_CompatibilityC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_CompatibilityD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_CompatibilityD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_2_CompatibilityD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_Compatibility14versionProfileEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_CompatibilityC1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_CompatibilityC2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_CompatibilityD0Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_CompatibilityD1Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_3_CompatibilityD2Ev@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_Compatibility14versionProfileEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_CompatibilityC1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_CompatibilityC2Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_CompatibilityD0Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_CompatibilityD1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_4_CompatibilityD2Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_Compatibility14versionProfileEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_CompatibilityC1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_CompatibilityC2Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_CompatibilityD0Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_CompatibilityD1Ev@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZN34QOpenGLFunctions_4_5_CompatibilityD2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_Compatibility14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_CompatibilityC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_CompatibilityC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_CompatibilityD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_CompatibilityD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_2_CompatibilityD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_Compatibility14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_CompatibilityC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_CompatibilityC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_CompatibilityD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_CompatibilityD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_3_3_CompatibilityD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_Compatibility14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_CompatibilityC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_CompatibilityC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_CompatibilityD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_CompatibilityD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_0_CompatibilityD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_Compatibility14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_CompatibilityC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_CompatibilityC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_CompatibilityD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_CompatibilityD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_1_CompatibilityD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_Compatibility14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_CompatibilityC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_CompatibilityC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_CompatibilityD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_CompatibilityD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_2_CompatibilityD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_Compatibility14versionProfileEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_CompatibilityC1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_CompatibilityC2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_CompatibilityD0Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_CompatibilityD1Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_3_CompatibilityD2Ev@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_Compatibility14versionProfileEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_CompatibilityC1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_CompatibilityC2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_CompatibilityD0Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_CompatibilityD1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_4_CompatibilityD2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_Compatibility14versionProfileEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_Compatibility19isContextCompatibleEP14QOpenGLContext@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_Compatibility25initializeOpenGLFunctionsEv@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_CompatibilityC1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_CompatibilityC2Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_CompatibilityD0Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_CompatibilityD1Ev@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZN34QOpenGLFunctions_4_5_CompatibilityD2Ev@Qt_5 5.5.0
  _ZN4QCss10StyleSheet12buildIndexesEN2Qt15CaseSensitivityE@Qt_5 5.0.2
  _ZN4QCss13StyleSelector15selectorMatchesERKNS_8SelectorENS0_7NodePtrE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN4QCss13StyleSelector17styleRulesForNodeENS0_7NodePtrE@Qt_5_PRIVATE_API 5.0.2 1
@@ -4018,22 +4018,22 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN4QPen11setCapStyleEN2Qt11PenCapStyleE@Qt_5 5.0.2
  _ZN4QPen11setCosmeticEb@Qt_5 5.0.2
  _ZN4QPen12setJoinStyleEN2Qt12PenJoinStyleE@Qt_5 5.0.2
- _ZN4QPen13setDashOffsetEd@Qt_5 5.0.2
- _ZN4QPen13setMiterLimitEd@Qt_5 5.0.2
- _ZN4QPen14setDashPatternERK7QVectorIdE@Qt_5 5.0.2
+ _ZN4QPen13setDashOffsetEd@Qt_5 5.2.0
+ _ZN4QPen13setMiterLimitEd@Qt_5 5.2.0
+ _ZN4QPen14setDashPatternERK7QVectorIdE@Qt_5 5.2.0
  _ZN4QPen6detachEv@Qt_5 5.0.2
  _ZN4QPen8setBrushERK6QBrush@Qt_5 5.0.2
  _ZN4QPen8setColorERK6QColor@Qt_5 5.0.2
  _ZN4QPen8setStyleEN2Qt8PenStyleE@Qt_5 5.0.2
  _ZN4QPen8setWidthEi@Qt_5 5.0.2
- _ZN4QPen9setWidthFEd@Qt_5 5.0.2
+ _ZN4QPen9setWidthFEd@Qt_5 5.2.0
  _ZN4QPenC1EN2Qt8PenStyleE@Qt_5 5.0.2
- _ZN4QPenC1ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE@Qt_5 5.0.2
+ _ZN4QPenC1ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE@Qt_5 5.2.0
  _ZN4QPenC1ERK6QColor@Qt_5 5.0.2
  _ZN4QPenC1ERKS_@Qt_5 5.0.2
  _ZN4QPenC1Ev@Qt_5 5.0.2
  _ZN4QPenC2EN2Qt8PenStyleE@Qt_5 5.0.2
- _ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE@Qt_5 5.0.2
+ _ZN4QPenC2ERK6QBrushdN2Qt8PenStyleENS3_11PenCapStyleENS3_12PenJoinStyleE@Qt_5 5.2.0
  _ZN4QPenC2ERK6QColor@Qt_5 5.0.2
  _ZN4QPenC2ERKS_@Qt_5 5.0.2
  _ZN4QPenC2Ev@Qt_5 5.0.2
@@ -4074,11 +4074,11 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN5QFont12setStyleNameERK7QString@Qt_5 5.0.2
  _ZN5QFont12setUnderlineEb@Qt_5 5.0.2
  _ZN5QFont13setFixedPitchEb@Qt_5 5.0.2
- _ZN5QFont13setPointSizeFEd@Qt_5 5.0.2
+ _ZN5QFont13setPointSizeFEd@Qt_5 5.2.0
  _ZN5QFont13substitutionsEv@Qt_5 5.0.2
- _ZN5QFont14setWordSpacingEd@Qt_5 5.0.2
+ _ZN5QFont14setWordSpacingEd@Qt_5 5.2.0
  _ZN5QFont15cacheStatisticsEv@Qt_5 5.0.2
- _ZN5QFont16setLetterSpacingENS_11SpacingTypeEd@Qt_5 5.0.2
+ _ZN5QFont16setLetterSpacingENS_11SpacingTypeEd@Qt_5 5.2.0
  _ZN5QFont16setStyleStrategyENS_13StyleStrategyE@Qt_5 5.0.2
  _ZN5QFont16staticMetaObjectE@Qt_5 5.0.2
  _ZN5QFont17setCapitalizationENS_14CapitalizationE@Qt_5 5.0.2
@@ -4181,24 +4181,24 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN6QColor7getCmykEPiS0_S0_S0_S0_@Qt_5 5.0.2
  _ZN6QColor7setBlueEi@Qt_5 5.0.2
  _ZN6QColor7setCmykEiiiii@Qt_5 5.0.2
- _ZN6QColor7setHslFEdddd@Qt_5 5.0.2
- _ZN6QColor7setHsvFEdddd@Qt_5 5.0.2
- _ZN6QColor7setRedFEd@Qt_5 5.0.2
- _ZN6QColor7setRgbFEdddd@Qt_5 5.0.2
+ _ZN6QColor7setHslFEdddd@Qt_5 5.2.0
+ _ZN6QColor7setHsvFEdddd@Qt_5 5.2.0
+ _ZN6QColor7setRedFEd@Qt_5 5.2.0
+ _ZN6QColor7setRgbFEdddd@Qt_5 5.2.0
  _ZN6QColor7setRgbaEj@Qt_5 5.0.2
  _ZN6QColor8fromCmykEiiiii@Qt_5 5.0.2
- _ZN6QColor8fromHslFEdddd@Qt_5 5.0.2
- _ZN6QColor8fromHsvFEdddd@Qt_5 5.0.2
- _ZN6QColor8fromRgbFEdddd@Qt_5 5.0.2
+ _ZN6QColor8fromHslFEdddd@Qt_5 5.2.0
+ _ZN6QColor8fromHsvFEdddd@Qt_5 5.2.0
+ _ZN6QColor8fromRgbFEdddd@Qt_5 5.2.0
  _ZN6QColor8fromRgbaEj@Qt_5 5.0.2
- _ZN6QColor8getCmykFEPdS0_S0_S0_S0_@Qt_5 5.0.2
+ _ZN6QColor8getCmykFEPdS0_S0_S0_S0_@Qt_5 5.2.0
  _ZN6QColor8setAlphaEi@Qt_5 5.0.2
- _ZN6QColor8setBlueFEd@Qt_5 5.0.2
- _ZN6QColor8setCmykFEddddd@Qt_5 5.0.2
+ _ZN6QColor8setBlueFEd@Qt_5 5.2.0
+ _ZN6QColor8setCmykFEddddd@Qt_5 5.2.0
  _ZN6QColor8setGreenEi@Qt_5 5.0.2
- _ZN6QColor9fromCmykFEddddd@Qt_5 5.0.2
- _ZN6QColor9setAlphaFEd@Qt_5 5.0.2
- _ZN6QColor9setGreenFEd@Qt_5 5.0.2
+ _ZN6QColor9fromCmykFEddddd@Qt_5 5.2.0
+ _ZN6QColor9setAlphaFEd@Qt_5 5.2.0
+ _ZN6QColor9setGreenFEd@Qt_5 5.2.0
  _ZN6QColor9setRgba64E7QRgba64@Qt_5 5.6.0~beta
  _ZN6QColorC1E7QRgba64@Qt_5 5.6.0~beta
  _ZN6QColorC1EN2Qt11GlobalColorE@Qt_5 5.0.2
@@ -4333,21 +4333,21 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN7QCursorD2Ev@Qt_5 5.0.2
  _ZN7QCursoraSERKS_@Qt_5 5.0.2
  _ZN7QMatrix5resetEv@Qt_5 5.0.2
- _ZN7QMatrix5scaleEdd@Qt_5 5.0.2
- _ZN7QMatrix5shearEdd@Qt_5 5.0.2
- _ZN7QMatrix6rotateEd@Qt_5 5.0.2
- _ZN7QMatrix9setMatrixEdddddd@Qt_5 5.0.2
- _ZN7QMatrix9translateEdd@Qt_5 5.0.2
+ _ZN7QMatrix5scaleEdd@Qt_5 5.2.0
+ _ZN7QMatrix5shearEdd@Qt_5 5.2.0
+ _ZN7QMatrix6rotateEd@Qt_5 5.2.0
+ _ZN7QMatrix9setMatrixEdddddd@Qt_5 5.2.0
+ _ZN7QMatrix9translateEdd@Qt_5 5.2.0
  _ZN7QMatrixC1ERKS_@Qt_5 5.0.2
- _ZN7QMatrixC1Edddddd@Qt_5 5.0.2
+ _ZN7QMatrixC1Edddddd@Qt_5 5.2.0
  _ZN7QMatrixC1Ev@Qt_5 5.0.2
  _ZN7QMatrixC2ERKS_@Qt_5 5.0.2
- _ZN7QMatrixC2Edddddd@Qt_5 5.0.2
+ _ZN7QMatrixC2Edddddd@Qt_5 5.2.0
  _ZN7QMatrixC2Ev@Qt_5 5.0.2
  _ZN7QMatrixaSERKS_@Qt_5 5.0.2
  _ZN7QMatrixmLERKS_@Qt_5 5.0.2
  _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect@Qt_5 5.0.2
- (subst)_ZN7QPixmap10grabWindowE{quintptr}iiii@Qt_5 5.6.0~beta
+ (subst)_ZN7QPixmap10grabWindowE{quintptr}iiii@Qt_5 5.0.2
  _ZN7QPixmap10trueMatrixERK10QTransformii@Qt_5 5.0.2
  _ZN7QPixmap10trueMatrixERK7QMatrixii@Qt_5 5.0.2
  _ZN7QPixmap12defaultDepthEv@Qt_5 5.0.2
@@ -4355,7 +4355,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN7QPixmap15fromImageReaderEP12QImageReader6QFlagsIN2Qt19ImageConversionFlagEE@Qt_5 5.0.2
  _ZN7QPixmap16convertFromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE@Qt_5 5.0.2
  _ZN7QPixmap16fromImageInPlaceER6QImage6QFlagsIN2Qt19ImageConversionFlagEE@Qt_5 5.3.0
- _ZN7QPixmap19setDevicePixelRatioEd@Qt_5 5.0.2
+ _ZN7QPixmap19setDevicePixelRatioEd@Qt_5 5.2.0
  _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint@Qt_5 5.0.2
  _ZN7QPixmap4fillERK6QColor@Qt_5 5.0.2
  _ZN7QPixmap4loadERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE@Qt_5 5.0.2
@@ -4412,18 +4412,18 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN7QRegionoRERKS_@Qt_5 5.0.2
  _ZN7QRegionpLERK5QRect@Qt_5 5.0.2
  _ZN7QRegionpLERKS_@Qt_5 5.0.2
- (subst)_ZN7QScreen10grabWindowE{quintptr}iiii@Qt_5 5.6.0~beta
+ (subst)_ZN7QScreen10grabWindowE{quintptr}iiii@Qt_5 5.0.2
  _ZN7QScreen11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN7QScreen11qt_metacastEPKc@Qt_5 5.0.2
  _ZN7QScreen15geometryChangedERK5QRect@Qt_5 5.0.2
  _ZN7QScreen16staticMetaObjectE@Qt_5 5.0.2
  _ZN7QScreen18orientationChangedEN2Qt17ScreenOrientationE@Qt_5 5.0.2
- _ZN7QScreen18refreshRateChangedEd@Qt_5 5.0.2
+ _ZN7QScreen18refreshRateChangedEd@Qt_5 5.2.0
  _ZN7QScreen19physicalSizeChangedERK6QSizeF@Qt_5 5.0.2
  _ZN7QScreen22virtualGeometryChangedERK5QRect@Qt_5 5.0.2
  _ZN7QScreen24availableGeometryChangedERK5QRect@Qt_5 5.4.0
  _ZN7QScreen24setOrientationUpdateMaskE6QFlagsIN2Qt17ScreenOrientationEE@Qt_5 5.0.2
- _ZN7QScreen25logicalDotsPerInchChangedEd@Qt_5 5.0.2
+ _ZN7QScreen25logicalDotsPerInchChangedEd@Qt_5 5.2.0
  _ZN7QScreen25primaryOrientationChangedEN2Qt17ScreenOrientationE@Qt_5 5.0.2
  _ZN7QScreen26physicalDotsPerInchChangedEd@Qt_5 5.2.0
  _ZN7QScreenC1EP15QPlatformScreen@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -4431,7 +4431,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN7QScreenD0Ev@Qt_5 5.0.2
  _ZN7QScreenD1Ev@Qt_5 5.0.2
  _ZN7QScreenD2Ev@Qt_5 5.0.2
- _ZN7QWindow10setOpacityEd@Qt_5 5.0.2
+ _ZN7QWindow10setOpacityEd@Qt_5 5.2.0
  _ZN7QWindow10setVisibleEb@Qt_5 5.0.2
  _ZN7QWindow10showNormalEv@Qt_5 5.0.2
  _ZN7QWindow10touchEventEP11QTouchEvent@Qt_5 5.0.2
@@ -4452,53 +4452,53 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN7QWindow11unsetCursorEv@Qt_5 5.0.2
  _ZN7QWindow12focusInEventEP11QFocusEvent@Qt_5 5.0.2
  _ZN7QWindow12widthChangedEi@Qt_5 5.0.2
- _ZN7QWindow13activeChangedEv@Qt_5 5.2.0
+ _ZN7QWindow13activeChangedEv@Qt_5 5.1.0
  _ZN7QWindow13focusOutEventEP11QFocusEvent@Qt_5 5.0.2
  _ZN7QWindow13heightChangedEi@Qt_5 5.0.2
  _ZN7QWindow13keyPressEventEP9QKeyEvent@Qt_5 5.0.2
  _ZN7QWindow13requestUpdateEv@Qt_5 5.5.0
  _ZN7QWindow13screenChangedEP7QScreen@Qt_5 5.0.2
- _ZN7QWindow13setVisibilityENS_10VisibilityE@Qt_5 5.2.0
+ _ZN7QWindow13setVisibilityENS_10VisibilityE@Qt_5 5.1.0
  _ZN7QWindow13showMaximizedEv@Qt_5 5.0.2
  _ZN7QWindow13showMinimizedEv@Qt_5 5.0.2
  _ZN7QWindow14mouseMoveEventEP11QMouseEvent@Qt_5 5.0.2
  _ZN7QWindow14opacityChangedEd@Qt_5 5.2.0
- _ZN7QWindow14setMaximumSizeERK5QSize@Qt_5 5.0.2
- _ZN7QWindow14setMinimumSizeERK5QSize@Qt_5 5.0.2
- _ZN7QWindow14setSurfaceTypeEN8QSurface11SurfaceTypeE@Qt_5 5.0.2
- _ZN7QWindow14setWindowStateEN2Qt11WindowStateE@Qt_5 5.0.2
- _ZN7QWindow14showFullScreenEv@Qt_5 5.0.2
- _ZN7QWindow14visibleChangedEb@Qt_5 5.0.2
- _ZN7QWindow15keyReleaseEventEP9QKeyEvent@Qt_5 5.0.2
- _ZN7QWindow15modalityChangedEN2Qt14WindowModalityE@Qt_5 5.0.2
- _ZN7QWindow15mousePressEventEP11QMouseEvent@Qt_5 5.0.2
- _ZN7QWindow15requestActivateEv@Qt_5 5.0.2
- _ZN7QWindow15setMaximumWidthEi@Qt_5 5.0.2
- _ZN7QWindow15setMinimumWidthEi@Qt_5 5.0.2
- _ZN7QWindow16setFramePositionERK6QPoint@Qt_5 5.0.2
- _ZN7QWindow16setMaximumHeightEi@Qt_5 5.0.2
- _ZN7QWindow16setMinimumHeightEi@Qt_5 5.0.2
- _ZN7QWindow16setSizeIncrementERK5QSize@Qt_5 5.0.2
- _ZN7QWindow16staticMetaObjectE@Qt_5 5.0.2
- _ZN7QWindow17mouseReleaseEventEP11QMouseEvent@Qt_5 5.0.2
+ _ZN7QWindow14setMaximumSizeERK5QSize@Qt_5 5.2.0
+ _ZN7QWindow14setMinimumSizeERK5QSize@Qt_5 5.2.0
+ _ZN7QWindow14setSurfaceTypeEN8QSurface11SurfaceTypeE@Qt_5 5.2.0
+ _ZN7QWindow14setWindowStateEN2Qt11WindowStateE@Qt_5 5.2.0
+ _ZN7QWindow14showFullScreenEv@Qt_5 5.2.0
+ _ZN7QWindow14visibleChangedEb@Qt_5 5.2.0
+ _ZN7QWindow15keyReleaseEventEP9QKeyEvent@Qt_5 5.2.0
+ _ZN7QWindow15modalityChangedEN2Qt14WindowModalityE@Qt_5 5.2.0
+ _ZN7QWindow15mousePressEventEP11QMouseEvent@Qt_5 5.2.0
+ _ZN7QWindow15requestActivateEv@Qt_5 5.2.0
+ _ZN7QWindow15setMaximumWidthEi@Qt_5 5.2.0
+ _ZN7QWindow15setMinimumWidthEi@Qt_5 5.2.0
+ _ZN7QWindow16setFramePositionERK6QPoint@Qt_5 5.2.0
+ _ZN7QWindow16setMaximumHeightEi@Qt_5 5.2.0
+ _ZN7QWindow16setMinimumHeightEi@Qt_5 5.2.0
+ _ZN7QWindow16setSizeIncrementERK5QSize@Qt_5 5.2.0
+ _ZN7QWindow16staticMetaObjectE@Qt_5 5.2.0
+ _ZN7QWindow17mouseReleaseEventEP11QMouseEvent@Qt_5 5.2.0
  _ZN7QWindow17visibilityChangedENS_10VisibilityE@Qt_5 5.2.0
- _ZN7QWindow18focusObjectChangedEP7QObject@Qt_5 5.0.2
- _ZN7QWindow18setTransientParentEPS_@Qt_5 5.0.2
- _ZN7QWindow18windowStateChangedEN2Qt11WindowStateE@Qt_5 5.0.2
+ _ZN7QWindow18focusObjectChangedEP7QObject@Qt_5 5.2.0
+ _ZN7QWindow18setTransientParentEPS_@Qt_5 5.2.0
+ _ZN7QWindow18windowStateChangedEN2Qt11WindowStateE@Qt_5 5.2.0
  _ZN7QWindow18windowTitleChangedERK7QString@Qt_5 5.3.0
- _ZN7QWindow19maximumWidthChangedEi@Qt_5 5.0.2
- _ZN7QWindow19minimumWidthChangedEi@Qt_5 5.0.2
- _ZN7QWindow19setMouseGrabEnabledEb@Qt_5 5.0.2
- _ZN7QWindow20maximumHeightChangedEi@Qt_5 5.0.2
- _ZN7QWindow20minimumHeightChangedEi@Qt_5 5.0.2
- _ZN7QWindow21mouseDoubleClickEventEP11QMouseEvent@Qt_5 5.0.2
- _ZN7QWindow22setKeyboardGrabEnabledEb@Qt_5 5.0.2
- _ZN7QWindow25contentOrientationChangedEN2Qt17ScreenOrientationE@Qt_5 5.0.2
- _ZN7QWindow30reportContentOrientationChangeEN2Qt17ScreenOrientationE@Qt_5 5.0.2
- _ZN7QWindow4hideEv@Qt_5 5.0.2
- _ZN7QWindow4setXEi@Qt_5 5.0.2
- _ZN7QWindow4setYEi@Qt_5 5.0.2
- _ZN7QWindow4showEv@Qt_5 5.0.2
+ _ZN7QWindow19maximumWidthChangedEi@Qt_5 5.2.0
+ _ZN7QWindow19minimumWidthChangedEi@Qt_5 5.2.0
+ _ZN7QWindow19setMouseGrabEnabledEb@Qt_5 5.2.0
+ _ZN7QWindow20maximumHeightChangedEi@Qt_5 5.2.0
+ _ZN7QWindow20minimumHeightChangedEi@Qt_5 5.2.0
+ _ZN7QWindow21mouseDoubleClickEventEP11QMouseEvent@Qt_5 5.2.0
+ _ZN7QWindow22setKeyboardGrabEnabledEb@Qt_5 5.2.0
+ _ZN7QWindow25contentOrientationChangedEN2Qt17ScreenOrientationE@Qt_5 5.2.0
+ _ZN7QWindow30reportContentOrientationChangeEN2Qt17ScreenOrientationE@Qt_5 5.2.0
+ _ZN7QWindow4hideEv@Qt_5 5.2.0
+ _ZN7QWindow4setXEi@Qt_5 5.2.0
+ _ZN7QWindow4setYEi@Qt_5 5.2.0
+ _ZN7QWindow4showEv@Qt_5 5.2.0
  _ZN7QWindow5alertEi@Qt_5 5.2.0
  _ZN7QWindow5closeEv@Qt_5 5.2.0
  _ZN7QWindow5eventEP6QEvent@Qt_5 5.2.0
@@ -4511,35 +4511,35 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN7QWindow7setFlagEN2Qt10WindowTypeEb@Qt_5 5.9.0~beta
  _ZN7QWindow7setIconERK5QIcon@Qt_5 5.2.0
  _ZN7QWindow7setMaskERK7QRegion@Qt_5 5.2.0
- _ZN7QWindow8setFlagsE6QFlagsIN2Qt10WindowTypeEE@Qt_5 5.0.2
- _ZN7QWindow8setTitleERK7QString@Qt_5 5.0.2
- _ZN7QWindow8setWidthEi@Qt_5 5.0.2
- _ZN7QWindow8xChangedEi@Qt_5 5.0.2
- _ZN7QWindow8yChangedEi@Qt_5 5.0.2
- (subst)_ZN7QWindow9fromWinIdE{quintptr}@Qt_5 5.6.0~beta
- _ZN7QWindow9hideEventEP10QHideEvent@Qt_5 5.0.2
- _ZN7QWindow9moveEventEP10QMoveEvent@Qt_5 5.0.2
- _ZN7QWindow9setCursorERK7QCursor@Qt_5 5.0.2
- _ZN7QWindow9setFormatERK14QSurfaceFormat@Qt_5 5.0.2
- _ZN7QWindow9setHeightEi@Qt_5 5.0.2
- _ZN7QWindow9setParentEPS_@Qt_5 5.0.2
- _ZN7QWindow9setScreenEP7QScreen@Qt_5 5.0.2
- _ZN7QWindow9showEventEP10QShowEvent@Qt_5 5.0.2
- _ZN7QWindowC1EP7QScreen@Qt_5 5.0.2
- _ZN7QWindowC1EPS_@Qt_5 5.0.2
- _ZN7QWindowC1ER14QWindowPrivatePS_@Qt_5_PRIVATE_API 5.0.2 1
- _ZN7QWindowC2EP7QScreen@Qt_5 5.0.2
- _ZN7QWindowC2EPS_@Qt_5 5.0.2
- _ZN7QWindowC2ER14QWindowPrivatePS_@Qt_5_PRIVATE_API 5.0.2 1
- _ZN7QWindowD0Ev@Qt_5 5.0.2
- _ZN7QWindowD1Ev@Qt_5 5.0.2
- _ZN7QWindowD2Ev@Qt_5 5.0.2
- _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_@Qt_5 5.0.2
- _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap@Qt_5 5.0.2
- _ZN8QPainter10drawPointsEPK6QPointi@Qt_5 5.0.2
- _ZN8QPainter10drawPointsEPK7QPointFi@Qt_5 5.0.2
- _ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint@Qt_5 5.0.2
- _ZN8QPainter10setOpacityEd@Qt_5 5.0.2
+ _ZN7QWindow8setFlagsE6QFlagsIN2Qt10WindowTypeEE@Qt_5 5.2.0
+ _ZN7QWindow8setTitleERK7QString@Qt_5 5.2.0
+ _ZN7QWindow8setWidthEi@Qt_5 5.2.0
+ _ZN7QWindow8xChangedEi@Qt_5 5.2.0
+ _ZN7QWindow8yChangedEi@Qt_5 5.2.0
+ (subst)_ZN7QWindow9fromWinIdE{quintptr}@Qt_5 5.2.0
+ _ZN7QWindow9hideEventEP10QHideEvent@Qt_5 5.2.0
+ _ZN7QWindow9moveEventEP10QMoveEvent@Qt_5 5.2.0
+ _ZN7QWindow9setCursorERK7QCursor@Qt_5 5.2.0
+ _ZN7QWindow9setFormatERK14QSurfaceFormat@Qt_5 5.2.0
+ _ZN7QWindow9setHeightEi@Qt_5 5.2.0
+ _ZN7QWindow9setParentEPS_@Qt_5 5.2.0
+ _ZN7QWindow9setScreenEP7QScreen@Qt_5 5.2.0
+ _ZN7QWindow9showEventEP10QShowEvent@Qt_5 5.2.0
+ _ZN7QWindowC1EP7QScreen@Qt_5 5.2.0
+ _ZN7QWindowC1EPS_@Qt_5 5.2.0
+ _ZN7QWindowC1ER14QWindowPrivatePS_@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN7QWindowC2EP7QScreen@Qt_5 5.2.0
+ _ZN7QWindowC2EPS_@Qt_5 5.2.0
+ _ZN7QWindowC2ER14QWindowPrivatePS_@Qt_5_PRIVATE_API 5.2.0 1
+ _ZN7QWindowD0Ev@Qt_5 5.2.0
+ _ZN7QWindowD1Ev@Qt_5 5.2.0
+ _ZN7QWindowD2Ev@Qt_5 5.2.0
+ _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_@Qt_5 5.2.0
+ _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap@Qt_5 5.2.0
+ _ZN8QPainter10drawPointsEPK6QPointi@Qt_5 5.2.0
+ _ZN8QPainter10drawPointsEPK7QPointFi@Qt_5 5.2.0
+ _ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint@Qt_5 5.2.0
+ _ZN8QPainter10setOpacityEd@Qt_5 5.2.0
  _ZN8QPainter10strokePathERK12QPainterPathRK4QPen@Qt_5 5.0.2
  _ZN8QPainter11drawEllipseERK5QRect@Qt_5 5.0.2
  _ZN8QPainter11drawEllipseERK6QRectF@Qt_5 5.0.2
@@ -4565,13 +4565,13 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN8QPainter13setClipRegionERK7QRegionN2Qt13ClipOperationE@Qt_5 5.0.2
  _ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint@Qt_5 5.0.2
  _ZN8QPainter13setRenderHintENS_10RenderHintEb@Qt_5 5.0.2
- _ZN8QPainter14PixmapFragment6createERK7QPointFRK6QRectFdddd@Qt_5 5.0.2
+ _ZN8QPainter14PixmapFragment6createERK7QPointFRK6QRectFdddd@Qt_5 5.2.0
  _ZN8QPainter14drawStaticTextERK7QPointFRK11QStaticText@Qt_5 5.0.2
  _ZN8QPainter14resetTransformEv@Qt_5 5.0.2
  _ZN8QPainter14setBrushOriginERK7QPointF@Qt_5 5.0.2
  _ZN8QPainter14setRenderHintsE6QFlagsINS_10RenderHintEEb@Qt_5 5.0.2
  _ZN8QPainter14setWorldMatrixERK7QMatrixb@Qt_5 5.0.2
- _ZN8QPainter15drawRoundedRectERK6QRectFddN2Qt8SizeModeE@Qt_5 5.0.2
+ _ZN8QPainter15drawRoundedRectERK6QRectFddN2Qt8SizeModeE@Qt_5 5.2.0
  _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF@Qt_5 5.0.2
  _ZN8QPainter16setMatrixEnabledEb@Qt_5 5.0.2
  _ZN8QPainter16staticMetaObjectE@Qt_5 5.0.2
@@ -4590,9 +4590,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN8QPainter3endEv@Qt_5 5.0.2
  _ZN8QPainter4saveEv@Qt_5 5.0.2
  _ZN8QPainter5beginEP12QPaintDevice@Qt_5 5.0.2
- _ZN8QPainter5scaleEdd@Qt_5 5.0.2
- _ZN8QPainter5shearEdd@Qt_5 5.0.2
- _ZN8QPainter6rotateEd@Qt_5 5.0.2
+ _ZN8QPainter5scaleEdd@Qt_5 5.2.0
+ _ZN8QPainter5shearEdd@Qt_5 5.2.0
+ _ZN8QPainter6rotateEd@Qt_5 5.2.0
  _ZN8QPainter6setPenEN2Qt8PenStyleE@Qt_5 5.0.2
  _ZN8QPainter6setPenERK4QPen@Qt_5 5.0.2
  _ZN8QPainter6setPenERK6QColor@Qt_5 5.0.2
@@ -4691,22 +4691,22 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN8QPolygonC1EiPKi@Qt_5 5.0.2
  _ZN8QPolygonC2ERK5QRectb@Qt_5 5.0.2
  _ZN8QPolygonC2EiPKi@Qt_5 5.0.2
- _ZN8QRawFont12loadFromDataERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5 5.0.2
- _ZN8QRawFont12loadFromFileERK7QStringdN5QFont17HintingPreferenceE@Qt_5 5.0.2
- _ZN8QRawFont12setPixelSizeEd@Qt_5 5.0.2
+ _ZN8QRawFont12loadFromDataERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5 5.2.0
+ _ZN8QRawFont12loadFromFileERK7QStringdN5QFont17HintingPreferenceE@Qt_5 5.2.0
+ _ZN8QRawFont12setPixelSizeEd@Qt_5 5.2.0
  _ZN8QRawFont8fromFontERK5QFontN13QFontDatabase13WritingSystemE@Qt_5 5.0.2
- _ZN8QRawFontC1ERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5 5.0.2
- _ZN8QRawFontC1ERK7QStringdN5QFont17HintingPreferenceE@Qt_5 5.0.2
+ _ZN8QRawFontC1ERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5 5.2.0
+ _ZN8QRawFontC1ERK7QStringdN5QFont17HintingPreferenceE@Qt_5 5.2.0
  _ZN8QRawFontC1ERKS_@Qt_5 5.0.2
  _ZN8QRawFontC1Ev@Qt_5 5.0.2
- _ZN8QRawFontC2ERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5 5.0.2
- _ZN8QRawFontC2ERK7QStringdN5QFont17HintingPreferenceE@Qt_5 5.0.2
+ _ZN8QRawFontC2ERK10QByteArraydN5QFont17HintingPreferenceE@Qt_5 5.2.0
+ _ZN8QRawFontC2ERK7QStringdN5QFont17HintingPreferenceE@Qt_5 5.2.0
  _ZN8QRawFontC2ERKS_@Qt_5 5.0.2
  _ZN8QRawFontC2Ev@Qt_5 5.0.2
  _ZN8QRawFontD1Ev@Qt_5 5.0.2
  _ZN8QRawFontD2Ev@Qt_5 5.0.2
  _ZN8QRawFontaSERKS_@Qt_5 5.0.2
- _ZN8QStroker10joinPointsEddRK6QLineFNS_12LineJoinModeE@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN8QStroker10joinPointsEddRK6QLineFNS_12LineJoinModeE@Qt_5_PRIVATE_API 5.2.0 1
  _ZN8QStroker14capForJoinModeENS_12LineJoinModeE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN8QStroker14joinModeForCapEN2Qt11PenCapStyleE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN8QStroker15joinForJoinModeENS_12LineJoinModeE@Qt_5_PRIVATE_API 5.0.2 1
@@ -4749,11 +4749,11 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN9QGlyphRunD1Ev@Qt_5 5.0.2
  _ZN9QGlyphRunD2Ev@Qt_5 5.0.2
  _ZN9QGlyphRunaSERKS_@Qt_5 5.0.2
- _ZN9QGradient10setColorAtEdRK6QColor@Qt_5 5.0.2
+ _ZN9QGradient10setColorAtEdRK6QColor@Qt_5 5.2.0
  _ZN9QGradient16staticMetaObjectE@Qt_5 5.0.2
  _ZN9QGradient17setCoordinateModeENS_14CoordinateModeE@Qt_5 5.0.2
  _ZN9QGradient20setInterpolationModeENS_17InterpolationModeE@Qt_5 5.0.2
- _ZN9QGradient8setStopsERK7QVectorI5QPairId6QColorEE@Qt_5 5.0.2
+ _ZN9QGradient8setStopsERK7QVectorI5QPairId6QColorEE@Qt_5 5.2.0
  _ZN9QGradientC1Ev@Qt_5 5.0.2
  _ZN9QGradientC2Ev@Qt_5 5.0.2
  _ZN9QKeyEventC1EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt@Qt_5 5.0.2
@@ -4799,10 +4799,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN9QPolygonFC2ERK6QRectF@Qt_5 5.0.2
  _ZN9QPolygonFC2ERK8QPolygon@Qt_5 5.0.2
  _ZN9QTextLine11setPositionERK7QPointF@Qt_5 5.0.2
- _ZN9QTextLine12setLineWidthEd@Qt_5 5.0.2
+ _ZN9QTextLine12setLineWidthEd@Qt_5 5.2.0
  _ZN9QTextLine13layout_helperEi@Qt_5 5.0.2
  _ZN9QTextLine13setNumColumnsEi@Qt_5 5.0.2
- _ZN9QTextLine13setNumColumnsEid@Qt_5 5.0.2
+ _ZN9QTextLine13setNumColumnsEid@Qt_5 5.2.0
  _ZN9QTextLine18setLeadingIncludedEb@Qt_5 5.0.2
  _ZN9QTextList10removeItemEi@Qt_5 5.0.2
  _ZN9QTextList11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
@@ -4950,7 +4950,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK10QTransform3mapERK7QRegion@Qt_5 5.0.2
  _ZNK10QTransform3mapERK8QPolygon@Qt_5 5.0.2
  _ZNK10QTransform3mapERK9QPolygonF@Qt_5 5.0.2
- _ZNK10QTransform3mapEddPdS0_@Qt_5 5.0.2
+ _ZNK10QTransform3mapEddPdS0_@Qt_5 5.2.0
  _ZNK10QTransform3mapEiiPiS0_@Qt_5 5.0.2
  _ZNK10QTransform4typeEv@Qt_5 5.0.2
  _ZNK10QTransform7adjointEv@Qt_5 5.0.2
@@ -4989,7 +4989,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK11QFontEngine12harfbuzzFontEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK11QFontEngine13lineThicknessEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK11QFontEngine14minLeftBearingEv@Qt_5_PRIVATE_API 5.6.0~beta 1
- _ZNK11QFontEngine14supportsScriptEN5QChar6ScriptE@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK11QFontEngine14supportsScriptEN5QChar6ScriptE@Qt_5_PRIVATE_API 5.1.0 1
  _ZNK11QFontEngine15minRightBearingEv@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZNK11QFontEngine16averageCharWidthEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK11QFontEngine16getSfntTableDataEjPhPj@Qt_5_PRIVATE_API 5.3.0 1
@@ -5064,10 +5064,10 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK11QStyleHints17startDragVelocityEv@Qt_5 5.0.2
  _ZNK11QStyleHints18fontSmoothingGammaEv@Qt_5 5.0.2
  _ZNK11QStyleHints21keyboardInputIntervalEv@Qt_5 5.0.2
- _ZNK11QStyleHints21passwordMaskCharacterEv@Qt_5 5.2.0
+ _ZNK11QStyleHints21passwordMaskCharacterEv@Qt_5 5.1.0
  _ZNK11QStyleHints21singleClickActivationEv@Qt_5 5.5.0
  _ZNK11QStyleHints22keyboardAutoRepeatRateEv@Qt_5 5.0.2
- _ZNK11QStyleHints22setFocusOnTouchReleaseEv@Qt_5 5.2.0
+ _ZNK11QStyleHints22setFocusOnTouchReleaseEv@Qt_5 5.2.0~alpha1
  _ZNK11QStyleHints24mouseDoubleClickIntervalEv@Qt_5 5.0.2
  _ZNK11QStyleHints25mousePressAndHoldIntervalEv@Qt_5 5.3.0
  _ZNK11QTextCursor10atBlockEndEv@Qt_5 5.0.2
@@ -5118,7 +5118,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK11QTextEngine17calculateTabWidthEi6QFixed@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK11QTextEngine19nextLogicalPositionEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK11QTextEngine21addRequiredBoundariesEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK11QTextEngine21shapeTextWithHarfbuzzERK11QScriptItemPKtiP11QFontEngineRK7QVectorIjEb@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK11QTextEngine21shapeTextWithHarfbuzzERK11QScriptItemPKtiP11QFontEngineRK7QVectorIjEb@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZNK11QTextEngine23previousLogicalPositionEi@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK11QTextEngine23shapeTextWithHarfbuzzNGERK11QScriptItemPKtiP11QFontEngineRK7QVectorIjEbb@Qt_5_PRIVATE_API 5.6.1 1
  _ZNK11QTextEngine4fontERK11QScriptItem@Qt_5_PRIVATE_API 5.0.2 1
@@ -5300,7 +5300,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK12QInputMethod15anchorRectangleEv@Qt_5 5.7.0
  _ZNK12QInputMethod15cursorRectangleEv@Qt_5 5.0.2
  _ZNK12QInputMethod17keyboardRectangleEv@Qt_5 5.0.2
- _ZNK12QInputMethod18inputItemRectangleEv@Qt_5 5.2.0
+ _ZNK12QInputMethod18inputItemRectangleEv@Qt_5 5.1.0
  _ZNK12QInputMethod18inputItemTransformEv@Qt_5 5.0.2
  _ZNK12QInputMethod22inputItemClipRectangleEv@Qt_5 5.7.0
  _ZNK12QInputMethod6localeEv@Qt_5 5.0.2
@@ -5329,19 +5329,19 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK12QPainterPath10simplifiedEv@Qt_5 5.0.2
  _ZNK12QPainterPath10subtractedERKS_@Qt_5 5.0.2
  _ZNK12QPainterPath10toReversedEv@Qt_5 5.0.2
- _ZNK12QPainterPath10translatedEdd@Qt_5 5.0.2
+ _ZNK12QPainterPath10translatedEdd@Qt_5 5.2.0
  _ZNK12QPainterPath11intersectedERKS_@Qt_5 5.0.2
  _ZNK12QPainterPath12boundingRectEv@Qt_5 5.0.2
  _ZNK12QPainterPath12elementCountEv@Qt_5 5.0.2
  _ZNK12QPainterPath13toFillPolygonERK10QTransform@Qt_5 5.0.2
  _ZNK12QPainterPath13toFillPolygonERK7QMatrix@Qt_5 5.0.2
- _ZNK12QPainterPath14angleAtPercentEd@Qt_5 5.0.2
- _ZNK12QPainterPath14pointAtPercentEd@Qt_5 5.0.2
- _ZNK12QPainterPath14slopeAtPercentEd@Qt_5 5.0.2
+ _ZNK12QPainterPath14angleAtPercentEd@Qt_5 5.2.0
+ _ZNK12QPainterPath14pointAtPercentEd@Qt_5 5.2.0
+ _ZNK12QPainterPath14slopeAtPercentEd@Qt_5 5.2.0
  _ZNK12QPainterPath14toFillPolygonsERK10QTransform@Qt_5 5.0.2
  _ZNK12QPainterPath14toFillPolygonsERK7QMatrix@Qt_5 5.0.2
  _ZNK12QPainterPath15currentPositionEv@Qt_5 5.0.2
- _ZNK12QPainterPath15percentAtLengthEd@Qt_5 5.0.2
+ _ZNK12QPainterPath15percentAtLengthEd@Qt_5 5.2.0
  _ZNK12QPainterPath16controlPointRectEv@Qt_5 5.0.2
  _ZNK12QPainterPath17toSubpathPolygonsERK10QTransform@Qt_5 5.0.2
  _ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix@Qt_5 5.0.2
@@ -5373,7 +5373,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK12QTabletEvent6buttonEv@Qt_5 5.4.0
  _ZNK12QTabletEvent7buttonsEv@Qt_5 5.4.0
  _ZNK12QTouchDevice12capabilitiesEv@Qt_5 5.0.2
- _ZNK12QTouchDevice18maximumTouchPointsEv@Qt_5 5.2.0
+ _ZNK12QTouchDevice18maximumTouchPointsEv@Qt_5 5.2.0~alpha1
  _ZNK12QTouchDevice4nameEv@Qt_5 5.0.2
  _ZNK12QTouchDevice4typeEv@Qt_5 5.0.2
  _ZNK13QBackingStore14staticContentsEv@Qt_5 5.0.2
@@ -5395,7 +5395,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK13QFontDatabase6weightERK7QStringS2_@Qt_5 5.0.2
  _ZNK13QFontDatabase8familiesENS_13WritingSystemE@Qt_5 5.0.2
  _ZNK13QFontDatabase9hasFamilyERK7QString@Qt_5 5.0.2
- _ZNK13QFontMetricsF10elidedTextERK7QStringN2Qt13TextElideModeEdi@Qt_5 5.0.2
+ _ZNK13QFontMetricsF10elidedTextERK7QStringN2Qt13TextElideModeEdi@Qt_5 5.2.0
  _ZNK13QFontMetricsF10inFontUcs4Ej@Qt_5 5.0.2
  _ZNK13QFontMetricsF11leftBearingE5QChar@Qt_5 5.0.2
  _ZNK13QFontMetricsF11lineSpacingEv@Qt_5 5.0.2
@@ -5533,16 +5533,16 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK13QTextFragment8containsEi@Qt_5 5.0.2
  _ZNK13QTextFragment8positionEv@Qt_5 5.0.2
  _ZNK13QTextFragment9glyphRunsEii@Qt_5 5.0.2
- _ZNK14QDistanceField13constScanLineEi@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField4bitsEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField4copyERK5QRect@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField5glyphEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField5widthEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField6heightEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField6isNullEv@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField7toImageEN6QImage6FormatE@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField8scanLineEi@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK14QDistanceField9constBitsEv@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK14QDistanceField13constScanLineEi@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField4bitsEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField4copyERK5QRect@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField5glyphEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField5widthEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField6heightEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField6isNullEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField7toImageEN6QImage6FormatE@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField8scanLineEi@Qt_5_PRIVATE_API 5.2.0~alpha1 1
+ _ZNK14QDistanceField9constBitsEv@Qt_5_PRIVATE_API 5.2.0~alpha1 1
  _ZNK14QFileOpenEvent8openFileER5QFile6QFlagsIN9QIODevice12OpenModeFlagEE@Qt_5 5.0.2
  _ZNK14QGenericPlugin10metaObjectEv@Qt_5 5.0.2
  _ZNK14QImageIOPlugin10metaObjectEv@Qt_5 5.0.2
@@ -5558,8 +5558,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK14QOpenGLContext14getProcAddressEPKc@Qt_5 5.7.0
  _ZNK14QOpenGLContext14getProcAddressERK10QByteArray@Qt_5 5.0.2
  _ZNK14QOpenGLContext16qGLContextHandleEv@Qt_5 5.0.2
- _ZNK14QOpenGLContext16textureFunctionsEv@Qt_5 5.2.0
- _ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile@Qt_5 5.2.0
+ _ZNK14QOpenGLContext16textureFunctionsEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile@Qt_5 5.1.0
  _ZNK14QOpenGLContext23functionsBackendStorageEv@Qt_5 5.7.0
  _ZNK14QOpenGLContext24defaultFramebufferObjectEv@Qt_5 5.0.2
  _ZNK14QOpenGLContext6formatEv@Qt_5 5.0.2
@@ -5568,44 +5568,44 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK14QOpenGLContext7isValidEv@Qt_5 5.0.2
  _ZNK14QOpenGLContext7surfaceEv@Qt_5 5.0.2
  _ZNK14QOpenGLContext9functionsEv@Qt_5 5.0.2
- _ZNK14QOpenGLTexture11borderColorEPf@Qt_5 5.2.0
- _ZNK14QOpenGLTexture11borderColorEPi@Qt_5 5.2.0
- _ZNK14QOpenGLTexture11borderColorEPj@Qt_5 5.2.0
- _ZNK14QOpenGLTexture11borderColorEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture11mipMaxLevelEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture11swizzleMaskENS_16SwizzleComponentE@Qt_5 5.2.0
- _ZNK14QOpenGLTexture12mipBaseLevelEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture13isTextureViewEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture13minMagFiltersEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture13mipLevelRangeEv@Qt_5 5.2.0
+ _ZNK14QOpenGLTexture11borderColorEPf@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture11borderColorEPi@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture11borderColorEPj@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture11borderColorEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture11mipMaxLevelEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture11swizzleMaskENS_16SwizzleComponentE@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture12mipBaseLevelEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture13isTextureViewEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture13minMagFiltersEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture13mipLevelRangeEv@Qt_5 5.2.0~alpha1
  _ZNK14QOpenGLTexture14comparisonModeEv@Qt_5 5.5.0
- _ZNK14QOpenGLTexture16depthStencilModeEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture16maximumMipLevelsEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture17createTextureViewENS_6TargetENS_13TextureFormatEiiii@Qt_5 5.2.0
- _ZNK14QOpenGLTexture17levelofDetailBiasEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture17maximumAnisotropyEv@Qt_5 5.2.0
+ _ZNK14QOpenGLTexture16depthStencilModeEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture16maximumMipLevelsEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture17createTextureViewENS_6TargetENS_13TextureFormatEiiii@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture17levelofDetailBiasEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture17maximumAnisotropyEv@Qt_5 5.2.0~alpha1
  _ZNK14QOpenGLTexture18comparisonFunctionEv@Qt_5 5.5.0
- _ZNK14QOpenGLTexture18isStorageAllocatedEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture18levelOfDetailRangeEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture18minificationFilterEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture19magnificationFilterEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture20maximumLevelOfDetailEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture20minimumLevelOfDetailEv@Qt_5 5.2.0
+ _ZNK14QOpenGLTexture18isStorageAllocatedEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture18levelOfDetailRangeEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture18minificationFilterEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture19magnificationFilterEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture20maximumLevelOfDetailEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture20minimumLevelOfDetailEv@Qt_5 5.2.0~alpha1
  _ZNK14QOpenGLTexture22isFixedSamplePositionsEv@Qt_5 5.4.0
- _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture5depthEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture5facesEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture5widthEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture6formatEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture6heightEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture6layersEv@Qt_5 5.2.0
+ _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture5depthEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture5facesEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture5widthEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture6formatEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture6heightEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture6layersEv@Qt_5 5.2.0~alpha1
  _ZNK14QOpenGLTexture6targetEv@Qt_5 5.4.0
- _ZNK14QOpenGLTexture7isBoundEv@Qt_5 5.2.0
+ _ZNK14QOpenGLTexture7isBoundEv@Qt_5 5.2.0~alpha1
  _ZNK14QOpenGLTexture7samplesEv@Qt_5 5.4.0
- _ZNK14QOpenGLTexture8wrapModeENS_19CoordinateDirectionE@Qt_5 5.2.0
- _ZNK14QOpenGLTexture9isCreatedEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture9mipLevelsEv@Qt_5 5.2.0
- _ZNK14QOpenGLTexture9textureIdEv@Qt_5 5.2.0
+ _ZNK14QOpenGLTexture8wrapModeENS_19CoordinateDirectionE@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture9isCreatedEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture9mipLevelsEv@Qt_5 5.2.0~alpha1
+ _ZNK14QOpenGLTexture9textureIdEv@Qt_5 5.2.0~alpha1
  _ZNK14QPaintEngineEx11createStateEP13QPainterState@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK14QPaintEngineEx22shouldDrawCachedGlyphsEP11QFontEngineRK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK14QPaintEngineEx36requiresPretransformedGlyphPositionsEP11QFontEngineRK10QTransform@Qt_5_PRIVATE_API 5.1.0 1
@@ -5640,7 +5640,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK14QSurfaceFormat7optionsEv@Qt_5 5.3.0
  _ZNK14QSurfaceFormat7profileEv@Qt_5 5.0.2
  _ZNK14QSurfaceFormat7samplesEv@Qt_5 5.0.2
- _ZNK14QSurfaceFormat7versionEv@Qt_5 5.2.0
+ _ZNK14QSurfaceFormat7versionEv@Qt_5 5.1.0
  _ZNK14QSurfaceFormat8hasAlphaEv@Qt_5 5.0.2
  _ZNK14QTextTableCell10columnSpanEv@Qt_5 5.0.2
  _ZNK14QTextTableCell12lastPositionEv@Qt_5 5.0.2
@@ -5778,7 +5778,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK16QAccessibleCache6insertEP7QObjectP20QAccessibleInterface@Qt_5_PRIVATE_API 5.3.0 1
  _ZNK16QAccessibleCache9acquireIdEv@Qt_5_PRIVATE_API 5.3.0 1
  _ZNK16QAccessibleEvent19accessibleInterfaceEv@Qt_5 5.0.2
- _ZNK16QAccessibleEvent8uniqueIdEv@Qt_5 5.2.0
+ _ZNK16QAccessibleEvent8uniqueIdEv@Qt_5 5.2.0~rc1
  _ZNK16QConicalGradient5angleEv@Qt_5 5.0.2
  _ZNK16QConicalGradient6centerEv@Qt_5 5.0.2
  _ZNK16QDoubleValidator10metaObjectEv@Qt_5 5.0.2
@@ -5858,12 +5858,12 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK17QOffscreenSurface6screenEv@Qt_5 5.1.0
  _ZNK17QOffscreenSurface7isValidEv@Qt_5 5.1.0
  _ZNK17QOpenGLExtensions18hasOpenGLExtensionENS_15OpenGLExtensionE@Qt_5_PRIVATE_API 5.0.2 1
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK17QOpenGLTimerQuery10metaObjectEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK17QOpenGLTimerQuery13waitForResultEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK17QOpenGLTimerQuery16waitForTimestampEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK17QOpenGLTimerQuery17isResultAvailableEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK17QOpenGLTimerQuery8objectIdEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK17QOpenGLTimerQuery9isCreatedEv@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZNK17QOpenGLTimerQuery10metaObjectEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK17QOpenGLTimerQuery13waitForResultEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK17QOpenGLTimerQuery16waitForTimestampEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK17QOpenGLTimerQuery17isResultAvailableEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK17QOpenGLTimerQuery8objectIdEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK17QOpenGLTimerQuery9isCreatedEv@Qt_5 5.1.0
  _ZNK17QPagedPaintDevice10pageLayoutEv@Qt_5 5.3.0
  _ZNK17QPagedPaintDevice10pageSizeMMEv@Qt_5 5.0.2
  _ZNK17QPagedPaintDevice16devicePageLayoutEv@Qt_5 5.3.0
@@ -5939,13 +5939,13 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK18QOpenGLPaintDevice4sizeEv@Qt_5 5.0.2
  _ZNK18QOpenGLPaintDevice6metricEN12QPaintDevice17PaintDeviceMetricE@Qt_5 5.0.2
  _ZNK18QOpenGLPaintDevice7contextEv@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor10metaObjectEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor11sampleCountEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor14waitForSamplesEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor17isResultAvailableEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor9isCreatedEv@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZNK18QOpenGLTimeMonitor9objectIdsEv@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor10metaObjectEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor11sampleCountEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor14waitForSamplesEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor17isResultAvailableEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor9isCreatedEv@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZNK18QOpenGLTimeMonitor9objectIdsEv@Qt_5 5.1.0
  _ZNK18QPaintDeviceWindow10metaObjectEv@Qt_5 5.4.0
  _ZNK18QPaintDeviceWindow11paintEngineEv@Qt_5 5.4.0
  _ZNK18QPaintDeviceWindow6metricEN12QPaintDevice17PaintDeviceMetricE@Qt_5 5.4.0
@@ -5954,8 +5954,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK18QRasterPaintEngine11createStateEP13QPainterState@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK18QRasterPaintEngine16clipBoundingRectEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK18QRasterPaintEngine16coordinateOffsetEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK18QRasterPaintEngine22shouldDrawCachedGlyphsEP11QFontEngineRK10QTransform@Qt_5_PRIVATE_API 5.2.0 1
- _ZNK18QRasterPaintEngine36requiresPretransformedGlyphPositionsEP11QFontEngineRK10QTransform@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK18QRasterPaintEngine22shouldDrawCachedGlyphsEP11QFontEngineRK10QTransform@Qt_5_PRIVATE_API 5.1.0 1
+ _ZNK18QRasterPaintEngine36requiresPretransformedGlyphPositionsEP11QFontEngineRK10QTransform@Qt_5_PRIVATE_API 5.1.0 1
  _ZNK18QRasterPaintEngine4sizeEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK18QRasterPaintEngine8clipTypeEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK18QStandardItemModel10headerDataEiN2Qt11OrientationEi@Qt_5 5.0.2
@@ -6002,12 +6002,12 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK19QInputDeviceManager11deviceCountENS_10DeviceTypeE@Qt_5_PRIVATE_API 5.5.0 1
  _ZNK19QOpenGLContextGroup10metaObjectEv@Qt_5 5.0.2
  _ZNK19QOpenGLContextGroup6sharesEv@Qt_5 5.0.2
- _ZNK19QOpenGLDebugMessage2idEv@Qt_5 5.2.0
- _ZNK19QOpenGLDebugMessage4typeEv@Qt_5 5.2.0
- _ZNK19QOpenGLDebugMessage6sourceEv@Qt_5 5.2.0
- _ZNK19QOpenGLDebugMessage7messageEv@Qt_5 5.2.0
- _ZNK19QOpenGLDebugMessage8severityEv@Qt_5 5.2.0
- _ZNK19QOpenGLDebugMessageeqERKS_@Qt_5 5.2.0
+ _ZNK19QOpenGLDebugMessage2idEv@Qt_5 5.1.0
+ _ZNK19QOpenGLDebugMessage4typeEv@Qt_5 5.1.0
+ _ZNK19QOpenGLDebugMessage6sourceEv@Qt_5 5.1.0
+ _ZNK19QOpenGLDebugMessage7messageEv@Qt_5 5.1.0
+ _ZNK19QOpenGLDebugMessage8severityEv@Qt_5 5.1.0
+ _ZNK19QOpenGLDebugMessageeqERKS_@Qt_5 5.1.0
  _ZNK19QPainterPathStroker10dashOffsetEv@Qt_5 5.0.2
  _ZNK19QPainterPathStroker10miterLimitEv@Qt_5 5.0.2
  _ZNK19QPainterPathStroker11dashPatternEv@Qt_5 5.0.2
@@ -6047,13 +6047,13 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK20QOpenGLShaderProgram15uniformLocationEPKc@Qt_5 5.0.2
  _ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray@Qt_5 5.0.2
  _ZNK20QOpenGLShaderProgram15uniformLocationERK7QString@Qt_5 5.0.2
- _ZNK20QOpenGLShaderProgram16patchVertexCountEv@Qt_5 5.2.0
+ _ZNK20QOpenGLShaderProgram16patchVertexCountEv@Qt_5 5.1.0
  _ZNK20QOpenGLShaderProgram17attributeLocationEPKc@Qt_5 5.0.2
  _ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray@Qt_5 5.0.2
  _ZNK20QOpenGLShaderProgram17attributeLocationERK7QString@Qt_5 5.0.2
- _ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv@Qt_5 5.2.0
- _ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv@Qt_5 5.2.0
- _ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv@Qt_5 5.2.0
+ _ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv@Qt_5 5.1.0
+ _ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv@Qt_5 5.1.0
+ _ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv@Qt_5 5.1.0
  _ZNK20QOpenGLShaderProgram3logEv@Qt_5 5.0.2
  _ZNK20QOpenGLShaderProgram7shadersEv@Qt_5 5.0.2
  _ZNK20QOpenGLShaderProgram8isLinkedEv@Qt_5 5.0.2
@@ -6189,9 +6189,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK23QWindowStateChangeEvent10isOverrideEv@Qt_5 5.0.2
  _ZNK24QAbstractOpenGLFunctions13isInitializedEv@Qt_5 5.5.0
  _ZNK24QAbstractOpenGLFunctions13owningContextEv@Qt_5 5.5.0
- _ZNK24QAccessibleTextInterface12textAtOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_@Qt_5 5.2.0
- _ZNK24QAccessibleTextInterface15textAfterOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_@Qt_5 5.2.0
- _ZNK24QAccessibleTextInterface16textBeforeOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_@Qt_5 5.2.0
+ _ZNK24QAccessibleTextInterface12textAtOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_@Qt_5 5.1.0
+ _ZNK24QAccessibleTextInterface15textAfterOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_@Qt_5 5.1.0
+ _ZNK24QAccessibleTextInterface16textBeforeOffsetEiN11QAccessible16TextBoundaryTypeEPiS2_@Qt_5 5.1.0
  _ZNK24QBlittablePlatformPixmap11paintEngineEv@Qt_5 5.0.2
  _ZNK24QBlittablePlatformPixmap15hasAlphaChannelEv@Qt_5 5.0.2
  _ZNK24QBlittablePlatformPixmap16devicePixelRatioEv@Qt_5 5.0.2
@@ -6289,7 +6289,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK4QCss11Declaration8intValueEPiPKc@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK4QCss11Declaration8uriValueEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK4QCss11Declaration9iconValueEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK4QCss11Declaration9realValueEPdPKc@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK4QCss11Declaration9realValueEPdPKc@Qt_5_PRIVATE_API 5.2.0 1
  _ZNK4QCss11Declaration9rectValueEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK4QCss11Declaration9sizeValueEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZNK4QCss13StyleSelector14nodeNameEqualsENS0_7NodePtrERK7QString@Qt_5_PRIVATE_API 5.0.2 1
@@ -6357,7 +6357,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK5QFonteqERKS_@Qt_5 5.0.2
  _ZNK5QFontltERKS_@Qt_5 5.0.2
  _ZNK5QFontneERKS_@Qt_5 5.0.2
- _ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE@Qt_5 5.2.0
+ _ZNK5QIcon10actualSizeEP7QWindowRK5QSizeNS_4ModeENS_5StateE@Qt_5 5.1.0
  _ZNK5QIcon10actualSizeERK5QSizeNS_4ModeENS_5StateE@Qt_5 5.0.2
  _ZNK5QIcon10isDetachedEv@Qt_5 5.0.2
  _ZNK5QIcon14availableSizesENS_4ModeENS_5StateE@Qt_5 5.0.2
@@ -6365,7 +6365,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK5QIcon5paintEP8QPainterRK5QRect6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE@Qt_5 5.0.2
  _ZNK5QIcon6isMaskEv@Qt_5 5.6.0~beta
  _ZNK5QIcon6isNullEv@Qt_5 5.0.2
- _ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE@Qt_5 5.2.0
+ _ZNK5QIcon6pixmapEP7QWindowRK5QSizeNS_4ModeENS_5StateE@Qt_5 5.1.0
  _ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE@Qt_5 5.0.2
  _ZNK5QIcon8cacheKeyEv@Qt_5 5.0.2
  _ZNK5QIconcv8QVariantEv@Qt_5 5.0.2
@@ -6389,7 +6389,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK6QColor4cyanEv@Qt_5 5.0.2
  _ZNK6QColor4darkEi@Qt_5 5.0.2
  _ZNK6QColor4hueFEv@Qt_5 5.0.2
- _ZNK6QColor4nameENS_10NameFormatE@Qt_5 5.2.0
+ _ZNK6QColor4nameENS_10NameFormatE@Qt_5 5.2.0~alpha1
  _ZNK6QColor4nameEv@Qt_5 5.0.2
  _ZNK6QColor4redFEv@Qt_5 5.0.2
  _ZNK6QColor4rgbaEv@Qt_5 5.0.2
@@ -6415,9 +6415,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK6QColor6toCmykEv@Qt_5 5.0.2
  _ZNK6QColor6valueFEv@Qt_5 5.0.2
  _ZNK6QColor6yellowEv@Qt_5 5.0.2
- _ZNK6QColor7getHslFEPdS0_S0_S0_@Qt_5 5.0.2
- _ZNK6QColor7getHsvFEPdS0_S0_S0_@Qt_5 5.0.2
- _ZNK6QColor7getRgbFEPdS0_S0_S0_@Qt_5 5.0.2
+ _ZNK6QColor7getHslFEPdS0_S0_S0_@Qt_5 5.2.0
+ _ZNK6QColor7getHsvFEPdS0_S0_S0_@Qt_5 5.2.0
+ _ZNK6QColor7getRgbFEPdS0_S0_S0_@Qt_5 5.2.0
  _ZNK6QColor7hslHueFEv@Qt_5 5.0.2
  _ZNK6QColor7hsvHueFEv@Qt_5 5.0.2
  _ZNK6QColor7magentaEv@Qt_5 5.0.2
@@ -6503,19 +6503,19 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK6QMovie9cacheModeEv@Qt_5 5.0.2
  _ZNK6QMovie9frameRectEv@Qt_5 5.0.2
  _ZNK6QMovie9loopCountEv@Qt_5 5.0.2
- _ZNK7QBezier10addIfCloseEPdd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier11getSubRangeEdd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier12addToPolygonEP9QPolygonFd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier12addToPolygonER11QDataBufferI7QPointFEd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier16bezierOnIntervalEdd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier17stationaryYPointsERdS0_@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK7QBezier10addIfCloseEPdd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier11getSubRangeEdd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier12addToPolygonEP9QPolygonFd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier12addToPolygonER11QDataBufferI7QPointFEd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier16bezierOnIntervalEdd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier17stationaryYPointsERdS0_@Qt_5_PRIVATE_API 5.2.0 1
  _ZNK7QBezier5mapByERK10QTransform@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier5tForYEddd@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK7QBezier5tForYEddd@Qt_5_PRIVATE_API 5.2.0 1
  _ZNK7QBezier6boundsEv@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier6lengthEd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier7shiftedEPS_idf@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier9tAtLengthEd@Qt_5_PRIVATE_API 5.0.2 1
- _ZNK7QBezier9toPolygonEd@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK7QBezier6lengthEd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier7shiftedEPS_idf@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier9tAtLengthEd@Qt_5_PRIVATE_API 5.2.0 1
+ _ZNK7QBezier9toPolygonEd@Qt_5_PRIVATE_API 5.2.0 1
  _ZNK7QBitmap11transformedERK10QTransform@Qt_5 5.0.2
  _ZNK7QBitmap11transformedERK7QMatrix@Qt_5 5.0.2
  _ZNK7QBitmapcv8QVariantEv@Qt_5 5.0.2
@@ -6534,7 +6534,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK7QMatrix3mapERK7QRegion@Qt_5 5.0.2
  _ZNK7QMatrix3mapERK8QPolygon@Qt_5 5.0.2
  _ZNK7QMatrix3mapERK9QPolygonF@Qt_5 5.0.2
- _ZNK7QMatrix3mapEddPdS0_@Qt_5 5.0.2
+ _ZNK7QMatrix3mapEddPdS0_@Qt_5 5.2.0
  _ZNK7QMatrix3mapEiiPiS0_@Qt_5 5.0.2
  _ZNK7QMatrix7mapRectERK5QRect@Qt_5 5.0.2
  _ZNK7QMatrix7mapRectERK6QRectF@Qt_5 5.0.2
@@ -6618,7 +6618,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK7QScreen16devicePixelRatioEv@Qt_5 5.0.2
  _ZNK7QScreen16transformBetweenEN2Qt17ScreenOrientationES1_RK5QRect@Qt_5 5.0.2
  _ZNK7QScreen17availableGeometryEv@Qt_5 5.0.2
- _ZNK7QScreen17nativeOrientationEv@Qt_5 5.2.0
+ _ZNK7QScreen17nativeOrientationEv@Qt_5 5.2.0~alpha1
  _ZNK7QScreen18logicalDotsPerInchEv@Qt_5 5.0.2
  _ZNK7QScreen18primaryOrientationEv@Qt_5 5.0.2
  _ZNK7QScreen19logicalDotsPerInchXEv@Qt_5 5.0.2
@@ -6637,7 +6637,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK7QScreen8geometryEv@Qt_5 5.0.2
  _ZNK7QWindow10isTopLevelEv@Qt_5 5.0.2
  _ZNK7QWindow10metaObjectEv@Qt_5 5.0.2
- _ZNK7QWindow10visibilityEv@Qt_5 5.2.0
+ _ZNK7QWindow10visibilityEv@Qt_5 5.1.0
  _ZNK7QWindow11focusObjectEv@Qt_5 5.0.2
  _ZNK7QWindow11mapToGlobalERK6QPoint@Qt_5 5.0.2
  _ZNK7QWindow11maximumSizeEv@Qt_5 5.0.2
@@ -6657,7 +6657,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK7QWindow16devicePixelRatioEv@Qt_5 5.0.2
  _ZNK7QWindow18contentOrientationEv@Qt_5 5.0.2
  _ZNK7QWindow4iconEv@Qt_5 5.0.2
- _ZNK7QWindow4maskEv@Qt_5 5.2.0
+ _ZNK7QWindow4maskEv@Qt_5 5.1.0
  _ZNK7QWindow4typeEv@Qt_5 5.0.2
  _ZNK7QWindow5flagsEv@Qt_5 5.0.2
  _ZNK7QWindow5titleEv@Qt_5 5.0.2
@@ -6669,7 +6669,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK7QWindow6parentEv@Qt_5 5.0.2
  _ZNK7QWindow6screenEv@Qt_5 5.0.2
  _ZNK7QWindow7isModalEv@Qt_5 5.0.2
- _ZNK7QWindow7opacityEv@Qt_5 5.2.0
+ _ZNK7QWindow7opacityEv@Qt_5 5.1.0
  _ZNK7QWindow8baseSizeEv@Qt_5 5.0.2
  _ZNK7QWindow8filePathEv@Qt_5 5.0.2
  _ZNK7QWindow8geometryEv@Qt_5 5.0.2
@@ -6747,7 +6747,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK8QRawFont17underlinePositionEv@Qt_5 5.0.2
  _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi@Qt_5 5.0.2
  _ZNK8QRawFont21glyphIndexesForStringERK7QString@Qt_5 5.0.2
- _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi6QFlagsINS_10LayoutFlagEE@Qt_5 5.2.0
+ _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi6QFlagsINS_10LayoutFlagEE@Qt_5 5.1.0
  _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi@Qt_5 5.0.2
  _ZNK8QRawFont23supportedWritingSystemsEv@Qt_5 5.0.2
  _ZNK8QRawFont5styleEv@Qt_5 5.0.2
@@ -6842,7 +6842,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK9QTextLine9cursorToXEPiNS_4EdgeE@Qt_5 5.0.2
  _ZNK9QTextLine9glyphRunsEii@Qt_5 5.0.2
  _ZNK9QTextLine9textStartEv@Qt_5 5.0.2
- _ZNK9QTextLine9xToCursorEdNS_14CursorPositionE@Qt_5 5.0.2
+ _ZNK9QTextLine9xToCursorEdNS_14CursorPositionE@Qt_5 5.2.0
  _ZNK9QTextList10itemNumberERK10QTextBlock@Qt_5 5.0.2
  _ZNK9QTextList10metaObjectEv@Qt_5 5.0.2
  _ZNK9QTextList4itemEi@Qt_5 5.0.2
@@ -6852,8 +6852,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK9QVector2D10toVector3DEv@Qt_5 5.0.2
  _ZNK9QVector2D10toVector4DEv@Qt_5 5.0.2
  _ZNK9QVector2D13lengthSquaredEv@Qt_5 5.0.2
- _ZNK9QVector2D14distanceToLineERKS_S1_@Qt_5 5.2.0
- _ZNK9QVector2D15distanceToPointERKS_@Qt_5 5.2.0
+ _ZNK9QVector2D14distanceToLineERKS_S1_@Qt_5 5.1.0
+ _ZNK9QVector2D15distanceToPointERKS_@Qt_5 5.1.0
  _ZNK9QVector2D6lengthEv@Qt_5 5.0.2
  _ZNK9QVector2Dcv8QVariantEv@Qt_5 5.0.2
  _ZNK9QVector3D10normalizedEv@Qt_5 5.0.2
@@ -6863,7 +6863,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK9QVector3D14distanceToLineERKS_S1_@Qt_5 5.0.2
  _ZNK9QVector3D15distanceToPlaneERKS_S1_@Qt_5 5.0.2
  _ZNK9QVector3D15distanceToPlaneERKS_S1_S1_@Qt_5 5.0.2
- _ZNK9QVector3D15distanceToPointERKS_@Qt_5 5.2.0
+ _ZNK9QVector3D15distanceToPointERKS_@Qt_5 5.1.0
  _ZNK9QVector3D6lengthEv@Qt_5 5.0.2
  _ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect@Qt_5 5.5.0
  _ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect@Qt_5 5.5.0
@@ -6876,7 +6876,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZNK9QVector4D16toVector3DAffineEv@Qt_5 5.0.2
  _ZNK9QVector4D6lengthEv@Qt_5 5.0.2
  _ZNK9QVector4Dcv8QVariantEv@Qt_5 5.0.2
- (optional=templinst|arch=armhf i386)_ZSt4swapIN8QVariant7PrivateEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS6_ESt18is_move_assignableIS6_EEE5valueEvE4typeERS6_SG_@Qt_5 5.9.1
+ (optional=templinst|arch=armel armhf hurd-i386 i386 kfreebsd-i386 m68k mips mipsel powerpc powerpcspe)_ZSt4swapIN8QVariant7PrivateEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS6_ESt18is_move_assignableIS6_EEE5valueEvE4typeERS6_SG_@Qt_5 5.9.1
  _ZTI10QBasicDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZTI10QBlittable@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI10QClipboard@Qt_5 5.0.2
@@ -6901,7 +6901,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI11QMouseEvent@Qt_5 5.0.2
  _ZTI11QPaintEvent@Qt_5 5.0.2
  _ZTI11QSharedData@Qt_5 5.0.2
- _ZTI11QSimpleDrag@Qt_5_PRIVATE_API 5.2.0 1
+ _ZTI11QSimpleDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZTI11QStrokerOps@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI11QStyleHints@Qt_5 5.0.2
  _ZTI11QTextObject@Qt_5 5.0.2
@@ -6963,8 +6963,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI17QIconEnginePlugin@Qt_5 5.0.2
  _ZTI17QInputMethodEvent@Qt_5 5.0.2
  _ZTI17QInternalMimeData@Qt_5_PRIVATE_API 5.0.2 1
- _ZTI17QOffscreenSurface@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI17QOpenGLTimerQuery@Qt_5 5.2.0
+ _ZTI17QOffscreenSurface@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI17QOpenGLTimerQuery@Qt_5 5.1.0
  _ZTI17QPagedPaintDevice@Qt_5 5.0.2
  _ZTI17QPaintEngineState@Qt_5 5.0.2
  _ZTI17QPdfEnginePrivate@Qt_5_PRIVATE_API 5.0.2 1
@@ -6972,9 +6972,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI17QPlatformMenuItem@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTI17QPlatformServices@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTI17QTextImageHandler@Qt_5_PRIVATE_API 5.0.2 1
- _ZTI18QOpenGLDebugLogger@Qt_5 5.2.0
+ _ZTI18QOpenGLDebugLogger@Qt_5 5.1.0
  _ZTI18QOpenGLPaintDevice@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI18QOpenGLTimeMonitor@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZTI18QOpenGLTimeMonitor@Qt_5 5.1.0
  _ZTI18QPaintDeviceWindow@Qt_5 5.4.0
  _ZTI18QPlatformClipboard@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTI18QRasterPaintEngine@Qt_5_PRIVATE_API 5.0.2 1
@@ -6984,7 +6984,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI18QTextureGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI19QBlitterPaintEngine@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI19QInputDeviceManager@Qt_5_PRIVATE_API 5.5.0 1
- _ZTI19QNativeGestureEvent@Qt_5 5.2.0
+ _ZTI19QNativeGestureEvent@Qt_5 5.2.0~beta1
  _ZTI19QOpenGLContextGroup@Qt_5 5.0.2
  _ZTI19QOpenGLTextureCache@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI19QPaintEnginePrivate@Qt_5_PRIVATE_API 5.0.2 1
@@ -6993,17 +6993,17 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI19QTextDocumentLayout@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI19QToolBarChangeEvent@Qt_5 5.0.2
  _ZTI20QAccessibleInterface@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_1_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_1_1@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_1_2@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_1_3@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_1_4@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_1_5@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_2_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_2_1@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_3_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI20QOpenGLFunctions_3_1@Qt_5 5.2.0
- (arch=armhf armel arm64)_ZTI20QOpenGLFunctions_ES2@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_1_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_1_1@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_1_2@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_1_3@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_1_4@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_1_5@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_2_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_2_1@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_3_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI20QOpenGLFunctions_3_1@Qt_5 5.1.0
+ (arch=armel armhf)_ZTI20QOpenGLFunctions_ES2@Qt_5 5.2.0
  _ZTI20QOpenGLShaderProgram@Qt_5 5.0.2
  _ZTI20QPictureFormatPlugin@Qt_5 5.0.2
  _ZTI20QPlatformIntegration@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -7039,24 +7039,24 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI24QAbstractOpenGLFunctions@Qt_5 5.5.0
  _ZTI24QAccessibleTextInterface@Qt_5 5.0.2
  _ZTI24QBlittablePlatformPixmap@Qt_5 5.0.2
- _ZTI24QOffscreenSurfacePrivate@Qt_5 5.2.0
+ _ZTI24QOffscreenSurfacePrivate@Qt_5 5.1.0
  _ZTI24QOpenGLCustomShaderStage@Qt_5_PRIVATE_API 5.0.2 1
  _ZTI24QOpenGLFramebufferObject@Qt_5 5.0.2
  _ZTI24QOpenGLTextureGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
- _ZTI24QOpenGLVertexArrayObject@Qt_5 5.2.0
+ _ZTI24QOpenGLVertexArrayObject@Qt_5 5.1.0
  _ZTI24QPagedPaintDevicePrivate@Qt_5_PRIVATE_API 5.3.0 1
  _ZTI24QPlatformNativeInterface@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTI25QAccessibleImageInterface@Qt_5 5.6.0~beta
  _ZTI25QAccessibleTableInterface@Qt_5 5.6.0~beta
  _ZTI25QAccessibleValueInterface@Qt_5 5.6.0~beta
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_3_2_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_3_3_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_4_0_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_4_1_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_4_2_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_4_3_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_4_4_Core@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI25QOpenGLFunctions_4_5_Core@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_3_2_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_3_3_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_4_0_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_4_1_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_4_2_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_4_3_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_4_4_Core@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTI25QOpenGLFunctions_4_5_Core@Qt_5 5.5.0
  _ZTI25QOpenGLPaintDevicePrivate@Qt_5_PRIVATE_API 5.4.0 1
  _ZTI25QPaintDeviceWindowPrivate@Qt_5_PRIVATE_API 5.4.0 1
  _ZTI25QPlatformFileDialogHelper@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -7088,14 +7088,14 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTI32QAccessibleEditableTextInterface@Qt_5 5.6.0~beta
  _ZTI32QAccessibleTableModelChangeEvent@Qt_5 5.6.0~beta
  _ZTI34QAbstractTextDocumentLayoutPrivate@Qt_5_PRIVATE_API 5.6.0~beta 1
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_3_2_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_3_3_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_4_0_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_4_1_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_4_2_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_4_3_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_4_4_Compatibility@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTI34QOpenGLFunctions_4_5_Compatibility@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_3_2_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_3_3_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_4_0_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_4_1_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_4_2_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_4_3_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_4_4_Compatibility@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTI34QOpenGLFunctions_4_5_Compatibility@Qt_5 5.5.0
  _ZTI5QDrag@Qt_5 5.0.2
  _ZTI6QImage@Qt_5 5.0.2
  _ZTI6QMovie@Qt_5 5.0.2
@@ -7139,7 +7139,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTIN29QWindowSystemInterfacePrivate8KeyEventE@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTIN29QWindowSystemInterfacePrivate9UserEventE@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTIN4QCss13StyleSelectorE@Qt_5_PRIVATE_API 5.0.2 1
- _ZTS10QBasicDrag@Qt_5_PRIVATE_API 5.2.0 1
+ _ZTS10QBasicDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZTS10QBlittable@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS10QClipboard@Qt_5 5.0.2
  _ZTS10QDropEvent@Qt_5 5.0.2
@@ -7163,7 +7163,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS11QMouseEvent@Qt_5 5.0.2
  _ZTS11QPaintEvent@Qt_5 5.0.2
  _ZTS11QSharedData@Qt_5 5.0.2
- _ZTS11QSimpleDrag@Qt_5_PRIVATE_API 5.2.0 1
+ _ZTS11QSimpleDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZTS11QStrokerOps@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS11QStyleHints@Qt_5 5.0.2
  _ZTS11QTextObject@Qt_5 5.0.2
@@ -7225,8 +7225,8 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS17QIconEnginePlugin@Qt_5 5.0.2
  _ZTS17QInputMethodEvent@Qt_5 5.0.2
  _ZTS17QInternalMimeData@Qt_5_PRIVATE_API 5.0.2 1
- _ZTS17QOffscreenSurface@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS17QOpenGLTimerQuery@Qt_5 5.2.0
+ _ZTS17QOffscreenSurface@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS17QOpenGLTimerQuery@Qt_5 5.1.0
  _ZTS17QPagedPaintDevice@Qt_5 5.0.2
  _ZTS17QPaintEngineState@Qt_5 5.0.2
  _ZTS17QPdfEnginePrivate@Qt_5_PRIVATE_API 5.0.2 1
@@ -7234,9 +7234,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS17QPlatformMenuItem@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTS17QPlatformServices@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTS17QTextImageHandler@Qt_5_PRIVATE_API 5.0.2 1
- _ZTS18QOpenGLDebugLogger@Qt_5 5.2.0
+ _ZTS18QOpenGLDebugLogger@Qt_5 5.1.0
  _ZTS18QOpenGLPaintDevice@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS18QOpenGLTimeMonitor@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZTS18QOpenGLTimeMonitor@Qt_5 5.1.0
  _ZTS18QPaintDeviceWindow@Qt_5 5.4.0
  _ZTS18QPlatformClipboard@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTS18QRasterPaintEngine@Qt_5_PRIVATE_API 5.0.2 1
@@ -7246,7 +7246,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS18QTextureGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS19QBlitterPaintEngine@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS19QInputDeviceManager@Qt_5_PRIVATE_API 5.5.0 1
- _ZTS19QNativeGestureEvent@Qt_5 5.2.0
+ _ZTS19QNativeGestureEvent@Qt_5 5.2.0~beta1
  _ZTS19QOpenGLContextGroup@Qt_5 5.0.2
  _ZTS19QOpenGLTextureCache@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS19QPaintEnginePrivate@Qt_5_PRIVATE_API 5.0.2 1
@@ -7255,17 +7255,17 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS19QTextDocumentLayout@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS19QToolBarChangeEvent@Qt_5 5.0.2
  _ZTS20QAccessibleInterface@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_1_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_1_1@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_1_2@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_1_3@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_1_4@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_1_5@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_2_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_2_1@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_3_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS20QOpenGLFunctions_3_1@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZTS20QOpenGLFunctions_ES2@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_1_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_1_1@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_1_2@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_1_3@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_1_4@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_1_5@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_2_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_2_1@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_3_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS20QOpenGLFunctions_3_1@Qt_5 5.1.0
+ (arch=armel armhf)_ZTS20QOpenGLFunctions_ES2@Qt_5 5.2.0
  _ZTS20QOpenGLShaderProgram@Qt_5 5.0.2
  _ZTS20QPictureFormatPlugin@Qt_5 5.0.2
  _ZTS20QPlatformIntegration@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -7301,24 +7301,24 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS24QAbstractOpenGLFunctions@Qt_5 5.5.0
  _ZTS24QAccessibleTextInterface@Qt_5 5.0.2
  _ZTS24QBlittablePlatformPixmap@Qt_5 5.0.2
- _ZTS24QOffscreenSurfacePrivate@Qt_5 5.2.0
+ _ZTS24QOffscreenSurfacePrivate@Qt_5 5.1.0
  _ZTS24QOpenGLCustomShaderStage@Qt_5_PRIVATE_API 5.0.2 1
  _ZTS24QOpenGLFramebufferObject@Qt_5 5.0.2
  _ZTS24QOpenGLTextureGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
- _ZTS24QOpenGLVertexArrayObject@Qt_5 5.2.0
+ _ZTS24QOpenGLVertexArrayObject@Qt_5 5.1.0
  _ZTS24QPagedPaintDevicePrivate@Qt_5_PRIVATE_API 5.3.0 1
  _ZTS24QPlatformNativeInterface@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTS25QAccessibleImageInterface@Qt_5 5.6.0~beta
  _ZTS25QAccessibleTableInterface@Qt_5 5.6.0~beta
  _ZTS25QAccessibleValueInterface@Qt_5 5.6.0~beta
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_3_2_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_3_3_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_4_0_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_4_1_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_4_2_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_4_3_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_4_4_Core@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS25QOpenGLFunctions_4_5_Core@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_3_2_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_3_3_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_4_0_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_4_1_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_4_2_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_4_3_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_4_4_Core@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTS25QOpenGLFunctions_4_5_Core@Qt_5 5.5.0
  _ZTS25QOpenGLPaintDevicePrivate@Qt_5_PRIVATE_API 5.4.0 1
  _ZTS25QPaintDeviceWindowPrivate@Qt_5_PRIVATE_API 5.4.0 1
  _ZTS25QPlatformFileDialogHelper@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -7350,14 +7350,14 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTS32QAccessibleEditableTextInterface@Qt_5 5.6.0~beta
  _ZTS32QAccessibleTableModelChangeEvent@Qt_5 5.6.0~beta
  _ZTS34QAbstractTextDocumentLayoutPrivate@Qt_5_PRIVATE_API 5.6.0~beta 1
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_3_2_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_3_3_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_4_0_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_4_1_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_4_2_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_4_3_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_4_4_Compatibility@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTS34QOpenGLFunctions_4_5_Compatibility@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_3_2_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_3_3_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_4_0_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_4_1_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_4_2_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_4_3_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_4_4_Compatibility@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTS34QOpenGLFunctions_4_5_Compatibility@Qt_5 5.5.0
  _ZTS5QDrag@Qt_5 5.0.2
  _ZTS6QImage@Qt_5 5.0.2
  _ZTS6QMovie@Qt_5 5.0.2
@@ -7401,7 +7401,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTSN29QWindowSystemInterfacePrivate8KeyEventE@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTSN29QWindowSystemInterfacePrivate9UserEventE@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTSN4QCss13StyleSelectorE@Qt_5_PRIVATE_API 5.0.2 1
- _ZTV10QBasicDrag@Qt_5_PRIVATE_API 5.2.0 1
+ _ZTV10QBasicDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZTV10QBlittable@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV10QClipboard@Qt_5 5.0.2
  _ZTV10QDropEvent@Qt_5 5.0.2
@@ -7424,7 +7424,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTV11QInputEvent@Qt_5 5.0.2
  _ZTV11QMouseEvent@Qt_5 5.0.2
  _ZTV11QPaintEvent@Qt_5 5.0.2
- _ZTV11QSimpleDrag@Qt_5_PRIVATE_API 5.2.0 1
+ _ZTV11QSimpleDrag@Qt_5_PRIVATE_API 5.1.0 1
  _ZTV11QStrokerOps@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV11QStyleHints@Qt_5 5.0.2
  _ZTV11QTextObject@Qt_5 5.0.2
@@ -7486,17 +7486,17 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTV17QIconEnginePlugin@Qt_5 5.0.2
  _ZTV17QInputMethodEvent@Qt_5 5.0.2
  _ZTV17QInternalMimeData@Qt_5_PRIVATE_API 5.0.2 1
- _ZTV17QOffscreenSurface@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV17QOpenGLTimerQuery@Qt_5 5.2.0
+ _ZTV17QOffscreenSurface@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV17QOpenGLTimerQuery@Qt_5 5.1.0
  _ZTV17QPagedPaintDevice@Qt_5 5.0.2
  _ZTV17QPdfEnginePrivate@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV17QPixmapIconEngine@Qt_5_PRIVATE_API 5.5.0 1
  _ZTV17QPlatformMenuItem@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTV17QPlatformServices@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTV17QTextImageHandler@Qt_5_PRIVATE_API 5.0.2 1
- _ZTV18QOpenGLDebugLogger@Qt_5 5.2.0
+ _ZTV18QOpenGLDebugLogger@Qt_5 5.1.0
  _ZTV18QOpenGLPaintDevice@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV18QOpenGLTimeMonitor@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZTV18QOpenGLTimeMonitor@Qt_5 5.1.0
  _ZTV18QPaintDeviceWindow@Qt_5 5.4.0
  _ZTV18QPlatformClipboard@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTV18QRasterPaintEngine@Qt_5_PRIVATE_API 5.0.2 1
@@ -7506,7 +7506,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTV18QTextureGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV19QBlitterPaintEngine@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV19QInputDeviceManager@Qt_5_PRIVATE_API 5.5.0 1
- _ZTV19QNativeGestureEvent@Qt_5 5.2.0
+ _ZTV19QNativeGestureEvent@Qt_5 5.2.0~beta1
  _ZTV19QOpenGLContextGroup@Qt_5 5.0.2
  _ZTV19QOpenGLTextureCache@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV19QPaintEnginePrivate@Qt_5_PRIVATE_API 5.0.2 1
@@ -7515,17 +7515,17 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTV19QTextDocumentLayout@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV19QToolBarChangeEvent@Qt_5 5.0.2
  _ZTV20QAccessibleInterface@Qt_5 5.0.2
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_1_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_1_1@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_1_2@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_1_3@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_1_4@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_1_5@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_2_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_2_1@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_3_0@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV20QOpenGLFunctions_3_1@Qt_5 5.2.0
- (arch=armhf arm64 armel)_ZTV20QOpenGLFunctions_ES2@Qt_5 5.2.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_1_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_1_1@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_1_2@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_1_3@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_1_4@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_1_5@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_2_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_2_1@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_3_0@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV20QOpenGLFunctions_3_1@Qt_5 5.1.0
+ (arch=armel armhf)_ZTV20QOpenGLFunctions_ES2@Qt_5 5.2.0
  _ZTV20QOpenGLShaderProgram@Qt_5 5.0.2
  _ZTV20QPictureFormatPlugin@Qt_5 5.0.2
  _ZTV20QPlatformIntegration@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -7561,24 +7561,24 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTV24QAbstractOpenGLFunctions@Qt_5 5.5.0
  _ZTV24QAccessibleTextInterface@Qt_5 5.0.2
  _ZTV24QBlittablePlatformPixmap@Qt_5 5.0.2
- _ZTV24QOffscreenSurfacePrivate@Qt_5 5.2.0
+ _ZTV24QOffscreenSurfacePrivate@Qt_5 5.1.0
  _ZTV24QOpenGLCustomShaderStage@Qt_5_PRIVATE_API 5.0.2 1
  _ZTV24QOpenGLFramebufferObject@Qt_5 5.0.2
  _ZTV24QOpenGLTextureGlyphCache@Qt_5_PRIVATE_API 5.0.2 1
- _ZTV24QOpenGLVertexArrayObject@Qt_5 5.2.0
+ _ZTV24QOpenGLVertexArrayObject@Qt_5 5.1.0
  _ZTV24QPagedPaintDevicePrivate@Qt_5_PRIVATE_API 5.3.0 1
  _ZTV24QPlatformNativeInterface@Qt_5_PRIVATE_API 5.9.0~beta 1
  _ZTV25QAccessibleImageInterface@Qt_5 5.6.0~beta
  _ZTV25QAccessibleTableInterface@Qt_5 5.6.0~beta
  _ZTV25QAccessibleValueInterface@Qt_5 5.6.0~beta
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_3_2_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_3_3_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_4_0_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_4_1_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_4_2_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_4_3_Core@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_4_4_Core@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV25QOpenGLFunctions_4_5_Core@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_3_2_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_3_3_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_4_0_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_4_1_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_4_2_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_4_3_Core@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_4_4_Core@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTV25QOpenGLFunctions_4_5_Core@Qt_5 5.5.0
  _ZTV25QOpenGLPaintDevicePrivate@Qt_5_PRIVATE_API 5.4.0 1
  _ZTV25QPaintDeviceWindowPrivate@Qt_5_PRIVATE_API 5.4.0 1
  _ZTV25QPlatformFileDialogHelper@Qt_5_PRIVATE_API 5.9.0~beta 1
@@ -7610,14 +7610,14 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTV32QAccessibleEditableTextInterface@Qt_5 5.6.0~beta
  _ZTV32QAccessibleTableModelChangeEvent@Qt_5 5.6.0~beta
  _ZTV34QAbstractTextDocumentLayoutPrivate@Qt_5_PRIVATE_API 5.6.0~beta 1
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_3_2_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_3_3_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_4_0_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_4_1_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_4_2_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_4_3_Compatibility@Qt_5 5.2.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_4_4_Compatibility@Qt_5 5.5.0
- (optional|arch=amd64 i386 ppc64el s390x)_ZTV34QOpenGLFunctions_4_5_Compatibility@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_3_2_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_3_3_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_4_0_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_4_1_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_4_2_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_4_3_Compatibility@Qt_5 5.1.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_4_4_Compatibility@Qt_5 5.5.0
+ (arch=!armel !armhf)_ZTV34QOpenGLFunctions_4_5_Compatibility@Qt_5 5.5.0
  _ZTV5QDrag@Qt_5 5.0.2
  _ZTV6QImage@Qt_5 5.0.2
  _ZTV6QMovie@Qt_5 5.0.2
@@ -7667,9 +7667,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZeqRK9QPageSizeS1_@Qt_5 5.3.0
  _ZeqRKN11QAccessible5StateES2_@Qt_5 5.0.2
  _ZeqRKN22QGuiApplicationPrivate20ActiveTouchPointsKeyES2_@Qt_5_PRIVATE_API 5.0.2 1
- _Zls6QDebugN19QOpenGLDebugMessage4TypeE@Qt_5 5.2.0
- _Zls6QDebugN19QOpenGLDebugMessage6SourceE@Qt_5 5.2.0
- _Zls6QDebugN19QOpenGLDebugMessage8SeverityE@Qt_5 5.2.0
+ _Zls6QDebugN19QOpenGLDebugMessage4TypeE@Qt_5 5.1.0
+ _Zls6QDebugN19QOpenGLDebugMessage6SourceE@Qt_5 5.1.0
+ _Zls6QDebugN19QOpenGLDebugMessage8SeverityE@Qt_5 5.1.0
  _Zls6QDebugPK12QTouchDevice@Qt_5 5.5.0
  _Zls6QDebugPK20QAccessibleInterface@Qt_5 5.0.2
  _Zls6QDebugPK6QEvent@Qt_5 5.0.2
@@ -7759,16 +7759,16 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZrsR11QDataStreamR9QVector2D@Qt_5 5.0.2
  _ZrsR11QDataStreamR9QVector3D@Qt_5 5.0.2
  _ZrsR11QDataStreamR9QVector4D@Qt_5 5.0.2
- (c++)"non-virtual thunk to QBasicDrag::eventFilter(QObject*, QEvent*)@Qt_5_PRIVATE_API" 5.2.0 1
- (c++)"non-virtual thunk to QBasicDrag::~QBasicDrag()@Qt_5_PRIVATE_API" 5.2.0 1
- (c++)"non-virtual thunk to QOffscreenSurface::format() const@Qt_5" 5.2.0
- (c++)"non-virtual thunk to QOffscreenSurface::size() const@Qt_5" 5.2.0
- (c++)"non-virtual thunk to QOffscreenSurface::surfaceHandle() const@Qt_5" 5.2.0
- (c++)"non-virtual thunk to QOffscreenSurface::surfaceType() const@Qt_5" 5.2.0
- (c++)"non-virtual thunk to QOffscreenSurface::~QOffscreenSurface()@Qt_5" 5.2.0
+ (c++)"non-virtual thunk to QBasicDrag::eventFilter(QObject*, QEvent*)@Qt_5_PRIVATE_API" 5.1.0 1
+ (c++)"non-virtual thunk to QBasicDrag::~QBasicDrag()@Qt_5_PRIVATE_API" 5.1.0 1
+ (c++)"non-virtual thunk to QOffscreenSurface::format() const@Qt_5" 5.1.0
+ (c++)"non-virtual thunk to QOffscreenSurface::size() const@Qt_5" 5.1.0
+ (c++)"non-virtual thunk to QOffscreenSurface::surfaceHandle() const@Qt_5" 5.1.0
+ (c++)"non-virtual thunk to QOffscreenSurface::surfaceType() const@Qt_5" 5.1.0
+ (c++)"non-virtual thunk to QOffscreenSurface::~QOffscreenSurface()@Qt_5" 5.1.0
  (c++)"non-virtual thunk to QOpenGLWindow::metric(QPaintDevice::PaintDeviceMetric) const@Qt_5" 5.4.0
  (c++)"non-virtual thunk to QOpenGLWindow::redirected(QPoint*) const@Qt_5" 5.4.0
- (optional=gccinternal|c++)"non-virtual thunk to QOpenGLWindow::~QOpenGLWindow()@Qt_5" 5.4.0
+ (c++)"non-virtual thunk to QOpenGLWindow::~QOpenGLWindow()@Qt_5" 5.5.0
  (c++)"non-virtual thunk to QPaintDeviceWindow::metric(QPaintDevice::PaintDeviceMetric) const@Qt_5" 5.4.0
  (c++)"non-virtual thunk to QPaintDeviceWindow::paintEngine() const@Qt_5" 5.4.0
  (c++)"non-virtual thunk to QPdfWriter::metric(QPaintDevice::PaintDeviceMetric) const@Qt_5" 5.0.2
