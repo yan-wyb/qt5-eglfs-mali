@@ -131,7 +131,7 @@ override_dh_auto_configure:
 override_dh_auto_test:
 ifeq ($(DEB_HOST_ARCH),$(filter $(DEB_HOST_ARCH),$(testrun_architectures)))
 ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
-		xvfb-run -a -s "-screen 0 640x480x24" make check QT_PLUGIN_PATH=$(CURDIR)/plugins LD_LIBRARY_PATH=$(CURDIR)/lib PATH=$(CURDIR)/bin:$(PATH) -k
+	xvfb-run -a -s "-screen 0 640x480x24" make check QT_PLUGIN_PATH=$(CURDIR)/plugins LD_LIBRARY_PATH=$(CURDIR)/lib PATH=$(CURDIR)/bin:$(PATH) -k
 endif
 endif
 
@@ -161,7 +161,7 @@ override_dh_auto_clean:
 	;
 
 	# Leftover dirs
-        # Ubuntu diff: tests enablement related
+	# Ubuntu diff: tests enablement related
 	find -depth -type d \( -false \
 	  -o -name debug-shared \
 	  -o -name debug-static \
@@ -177,7 +177,7 @@ override_dh_auto_clean:
         | xargs rm -rf
 
 	# Leftover files and all symlinks
-        # Ubuntu diff: tests enablement related
+	# Ubuntu diff: tests enablement related
 	find \( -false \
 	  -o -name lib\*.a \
 	  -o -name Makefile.Debug \
@@ -203,7 +203,7 @@ override_dh_auto_clean:
 	-print0 | xargs -0 rm -rf
 
 	# Any remaining executables
-        # Ubuntu diff: tests enablement related
+	# Ubuntu diff: tests enablement related
 	find $(CURDIR) -type f -perm /u+x,g+x,o+x -exec file -i '{}' \; \
 	| grep -e application/x-executable \
 	| cut -d ':' -f 1 | grep -v tests/auto | xargs rm -f
