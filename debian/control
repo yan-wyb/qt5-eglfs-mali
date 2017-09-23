@@ -149,7 +149,7 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: libqt5sql5-sqlite | libqt5sql5-mysql | libqt5sql5-odbc | libqt5sql5-psql
+Recommends: libqt5sql5-sqlite | libqt5sql5-mysql | libqt5sql5-odbc | libqt5sql5-psql | libqt5sql5-tds | libqt5sql5-ibase [kfreebsd-any linux-any]
 Description: Qt 5 SQL module
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
@@ -323,6 +323,7 @@ Depends: libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf],
          ${misc:Depends}
 Recommends: libqt5opengl5-dev (= ${binary:Version})
 Suggests: default-libmysqlclient-dev,
+          firebird-dev,
           libegl1-mesa-dev,
           libgl1-mesa-dev,
           libpq-dev,
