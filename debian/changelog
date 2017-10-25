@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.9.1+dfsg-10ubuntu2) bionic; urgency=medium
+
+  * No-change rebuild for libicu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 25 Oct 2017 15:46:14 +0000
+
 qtbase-opensource-src (5.9.1+dfsg-10ubuntu1) artful; urgency=medium
 
   * Merge with Debian unstable, remaining changes:
