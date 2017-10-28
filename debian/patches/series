@@ -9,6 +9,3 @@ link_fbclient.diff
 gnukfreebsd_cloexec.diff
 armv4.diff
 nonlinux_utime.diff
-
-# Ubuntu specific.
-#enable-tests.patch

@@ -64,7 +64,6 @@ Build-Depends: debhelper (>= 10.3),
                pkg-kde-tools (>= 0.15.17~),
                publicsuffix,
                unixodbc-dev,
-               xvfb,
                zlib1g-dev
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.8.0+dfsg~) <!nodoc>,
                      qttools5-dev-tools (>= 5.9.2-2~) <!nodoc>

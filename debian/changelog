@@ -1,10 +1,14 @@
 qtbase-opensource-src (5.9.2+dfsg-4ubuntu1) UNRELEASED; urgency=medium
 
+  [ Simon Quigley ]
   * Merge from Debian Sid. Remaining changes:
     - Depend on libssl1.0.0 instead of libssl1.0.2.
-    - Enable tests for amd64, armhf, and i386.
     - Add arm64 to the architectures that GLES is enabled on.
     - Make qt5-default Multi-Arch: same.
+
+  [ Dmitry Shachnev ]
+  * The tests are not run currently anyway, so drop the tests-related
+    delta with Debian.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 28 Oct 2017 12:06:41 -0500
 

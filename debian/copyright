@@ -12,10 +12,6 @@ Files-Excluded: tests/auto/corelib/tools/qbytearray/rfc3252.txt
 # Removed non-free files:
 # * RFCs (see QTBUG-30544 and QTBUG-30545)
 # * htmlinfo example which contains non-free websites snapshots
-#
-# Three of the removed non-free files are replaced by public domain text 
-# content from https://en.wikisource.org/wiki/The_Kalevala/Rune_I to keep 
-# some of tests working. See debian/patches/enable-tests.patch.
 
 # Manual rules for The Qt Company copyrights
 
