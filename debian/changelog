@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.2+dfsg-4ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.2+dfsg-4ubuntu1) bionic; urgency=medium
 
   [ Simon Quigley ]
   * Merge from Debian Sid. Remaining changes:
@@ -10,7 +10,7 @@ qtbase-opensource-src (5.9.2+dfsg-4ubuntu1) UNRELEASED; urgency=medium
   * The tests are not run currently anyway, so drop the tests-related
     delta with Debian.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 28 Oct 2017 12:06:41 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 31 Oct 2017 08:45:58 -0500
 
 qtbase-opensource-src (5.9.2+dfsg-4) unstable; urgency=medium
 
