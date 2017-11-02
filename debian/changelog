@@ -1,3 +1,26 @@
+qtbase-opensource-src (5.9.2+dfsg-4ubuntu5) bionic; urgency=medium
+
+  * Revert tools location to non-multiarch.
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Thu, 02 Nov 2017 14:12:29 +0300
+
+qtbase-opensource-src (5.9.2+dfsg-4ubuntu4) bionic; urgency=medium
+
+  * Really install the tools in the multiarch location too.
+    (there is the same configuration option to find and install
+     tools, so we also need this hack)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 01 Nov 2017 11:44:27 +0100
+
+qtbase-opensource-src (5.9.2+dfsg-4ubuntu3) bionic; urgency=medium
+
+  * Use /usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin to find the old tools,
+    because we didn't have a fully built 5.9.2 yet in Ubuntu, so lets
+    force the old location (this change will be reverted once the current one
+    publishes)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 01 Nov 2017 10:19:07 +0100
+
 qtbase-opensource-src (5.9.2+dfsg-4ubuntu2) bionic; urgency=medium
 
   * Temporarily lower the build dep on qttools so that we aren't depwait on
