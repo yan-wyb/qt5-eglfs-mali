@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.9.2+dfsg-4ubuntu6) bionic; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 07 Nov 2017 09:01:19 +0000
+
 qtbase-opensource-src (5.9.2+dfsg-4ubuntu5) bionic; urgency=medium
 
   * Revert tools location to non-multiarch.
