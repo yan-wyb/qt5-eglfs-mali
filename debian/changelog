@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.3+dfsg-0ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.3+dfsg-0ubuntu1) bionic; urgency=medium
 
   [ Dmitry Shachnev ]
   * Ship /usr/lib/${DEB_HOST_MULTIARCH}/qt.conf in qt5-qmake, which can be
@@ -18,7 +18,7 @@ qtbase-opensource-src (5.9.3+dfsg-0ubuntu1) UNRELEASED; urgency=medium
     - postgresql_10.diff
     - qglxconvenience_nullptr.diff
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 07 Nov 2017 13:57:18 +0300
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 30 Nov 2017 16:51:16 -0600
 
 qtbase-opensource-src (5.9.2+dfsg-4ubuntu6) bionic; urgency=medium
 
