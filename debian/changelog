@@ -14,6 +14,9 @@ qtbase-opensource-src (5.9.3+dfsg-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Simon Quigley ]
   * New upstream release.
+  * Refresh patches, and delete reverse-applicable ones:
+    - postgresql_10.diff
+    - qglxconvenience_nullptr.diff
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 07 Nov 2017 13:57:18 +0300
 
