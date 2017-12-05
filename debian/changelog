@@ -7,6 +7,17 @@ qtbase-opensource-src (5.9.3+dfsg-0ubuntu1) bionic; urgency=medium
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 30 Nov 2017 16:51:16 -0600
 
+qtbase-opensource-src (5.9.2+dfsg-6) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Make libqt5opengl5-dev provide libqt5opengl5-desktop-dev and not
+    libqt5opengl5. Thanks Adrian Bunk for noticing.
+
+  [ Dmitry Shachnev ]
+  * Fix the name of installed qt.conf file (it should not be qmake.conf).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 04 Dec 2017 09:31:27 -0300
+
 qtbase-opensource-src (5.9.2+dfsg-5) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
