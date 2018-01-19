@@ -67,7 +67,7 @@ Build-Depends: debhelper (>= 10.3),
                zlib1g-dev
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.2+dfsg~) <!nodoc>,
                      qttools5-dev-tools (>= 5.9.2-2~) <!nodoc>
-Standards-Version: 4.1.1
+Standards-Version: 4.1.3
 Homepage: http://qt-project.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtbase.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtbase.git
@@ -366,7 +366,7 @@ Depends: libqt5opengl5 (= ${binary:Version}),
          ${misc:Depends}
 Breaks: qtbase5-dev (<< 5.4.0+dfsg-6~)
 Replaces: qtbase5-dev (<< 5.4.0+dfsg-6~)
-Provides: libqt5opengl5-desktop-dev (= ${binary:Version}) [!armel !armhf]
+Provides: libqt5opengl5-desktop-dev (= ${binary:Version}) [!armel !armhf !arm64]
 Description: Qt 5 OpenGL library development files
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
@@ -428,7 +428,7 @@ Description: Qt 5 qmake Makefile generator tool
 
 Package: qtbase5-examples
 Architecture: any
-Multi-Arch: foreign
+Multi-Arch: same
 Section: x11
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Qt 5 base examples
@@ -443,7 +443,6 @@ Multi-Arch: same
 Section: libdevel
 Depends: qtbase5-dev, qtchooser (>= 55-gc9562a1-1~), ${misc:Depends}
 Conflicts: qt4-default
-Provides: qt-default
 Suggests: qt5-qmake, qtbase5-dev-tools
 Description: Qt 5 development defaults package
  Qt is a cross-platform C++ application framework. Qt's primary feature
