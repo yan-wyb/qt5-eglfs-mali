@@ -3,6 +3,8 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu1) UNRELEASED; urgency=medium
   * New upstream release.
   * Refresh patches, and delete reverse-applicable ones:
     - qdnslookup_crash.diff
+  * Bump the virtual ABI package to 5.9.4 to make sure the proper
+    packages are rebuilt.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 28 Jan 2018 13:36:30 -0600
 
