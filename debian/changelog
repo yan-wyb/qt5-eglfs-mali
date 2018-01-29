@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.4+dfsg-0ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
 
   * New upstream release.
   * Refresh patches, and delete reverse-applicable ones:
@@ -6,7 +6,7 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu1) UNRELEASED; urgency=medium
   * Bump the virtual ABI package to 5.9.4 to make sure the proper
     packages are rebuilt.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 28 Jan 2018 13:36:30 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 28 Jan 2018 18:41:51 -0600
 
 qtbase-opensource-src (5.9.3+dfsg-0ubuntu2) bionic; urgency=medium
 
