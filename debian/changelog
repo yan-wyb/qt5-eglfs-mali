@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.9.3+dfsg-0ubuntu3) bionic; urgency=medium
+
+  * Drop build dependency on libpcre2-dev (universe), configure
+    without -system-pcre.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 08 Feb 2018 11:22:27 +0100
+
 qtbase-opensource-src (5.9.3+dfsg-0ubuntu2) bionic; urgency=medium
 
   * Merge from Debian unstable, remaining changes:
