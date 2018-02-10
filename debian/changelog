@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.9.3+dfsg-0ubuntu4) bionic; urgency=medium
+
+  * Build with openssl1.1 using patch from fedora.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Sat, 10 Feb 2018 21:06:55 +0000
+
 qtbase-opensource-src (5.9.3+dfsg-0ubuntu3) bionic; urgency=medium
 
   * Drop build dependency on libpcre2-dev (universe), configure
