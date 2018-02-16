@@ -4,6 +4,30 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu2) bionic; urgency=medium
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Feb 2018 21:45:59 -0600
 
+qtbase-opensource-src (5.9.2+dfsg-10) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Fix processing multiple headers with the same name in HTTP/2 (closes:
+    #886395).
+  * Update symbols files from hurd-i386 build logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 09 Feb 2018 16:40:07 +0300
+
+qtbase-opensource-src (5.9.2+dfsg-9) unstable; urgency=medium
+
+  * Check the existance of /etc/xdg/QtProject before trying to remove it
+    (Closes: #889504).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 03 Feb 2018 22:12:49 -0300
+
+qtbase-opensource-src (5.9.2+dfsg-8) unstable; urgency=medium
+
+  * qmake-cross-wrapper: Add special handling of -makefile and -project flags.
+  * Remove empty /etc/xdg/QtProject directory on upgrades (closes: #887806).
+  * Update symbols files from ia64 and the current amd64 build log.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 03 Feb 2018 19:55:47 +0300
+
 qtbase-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
 
   * New upstream release.
