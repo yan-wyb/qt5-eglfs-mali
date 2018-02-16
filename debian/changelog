@@ -1,3 +1,13 @@
+qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
+
+  * Correctly update the symbols files for the ABI bump.
+  * Merge from Debian Sid, remaining changes:
+    - New upstream release (5.9.4), drop upstream patches.
+    - Depend on libssl1.0.0 instead of libssl1.0.2.
+    - Add arm64 to the architectures that GLES is enabled on.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Feb 2018 22:07:05 -0600
+
 qtbase-opensource-src (5.9.4+dfsg-0ubuntu2) bionic; urgency=medium
 
   * Update the copyright file.
