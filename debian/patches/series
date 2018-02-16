@@ -1,6 +1,5 @@
 # Backported from upstream.
 dead_key_symbols.diff
-http2_headers.diff
 
 # Debian specific.
 gnukfreebsd.diff
