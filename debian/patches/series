@@ -1,5 +1,7 @@
 # Backported from upstream.
 dead_key_symbols.diff
+QSimpleDrag-Fix-mouse-release-coords.patch
+Fix-scrolling-on-libinput.patch
 
 # Debian specific.
 gnukfreebsd.diff
