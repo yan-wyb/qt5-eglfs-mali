@@ -2,7 +2,9 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
 
   * Merge from Debian Sid, remaining changes:
     - New upstream release (5.9.4), drop upstream patches.
-    - Depend on libssl1.0.0 instead of libssl1.0.2.
+    - Build with bundled pcre2 library.
+    - Build depend on libssl-dev instead of libssl1.0-dev.
+    - Depend on libssl1.1 instead of libssl1.0.2.
     - Add arm64 to the architectures that GLES is enabled on.
   * Correctly update the symbols files for the ABI bump.
   * Backport upstream patches to fix several libinput issues. Thanks to Ikey
@@ -49,6 +51,19 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu1) bionic; urgency=medium
     packages are rebuilt.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 28 Jan 2018 18:41:51 -0600
+
+qtbase-opensource-src (5.9.3+dfsg-0ubuntu4) bionic; urgency=medium
+
+  * Build with openssl1.1 using patch from fedora.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Sat, 10 Feb 2018 21:06:55 +0000
+
+qtbase-opensource-src (5.9.3+dfsg-0ubuntu3) bionic; urgency=medium
+
+  * Drop build dependency on libpcre2-dev (universe), configure
+    without -system-pcre.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 08 Feb 2018 11:22:27 +0100
 
 qtbase-opensource-src (5.9.3+dfsg-0ubuntu2) bionic; urgency=medium
 
