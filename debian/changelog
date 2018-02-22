@@ -1,5 +1,6 @@
 qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
 
+  [ Simon Quigley ]
   * Merge from Debian Sid, remaining changes:
     - New upstream release (5.9.4), drop upstream patches.
     - Build with bundled pcre2 library.
@@ -9,6 +10,9 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
   * Correctly update the symbols files for the ABI bump.
   * Backport upstream patches to fix several libinput issues. Thanks to Ikey
     Doherty from Solus for the tip.
+
+  [ Dmitry Shachnev ]
+  * Add upstream patch to fix rendering issues with Mesa 18.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Feb 2018 22:07:05 -0600
 

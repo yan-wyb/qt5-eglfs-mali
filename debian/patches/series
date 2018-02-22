@@ -3,6 +3,7 @@ dead_key_symbols.diff
 QSimpleDrag-Fix-mouse-release-coords.patch
 Fix-scrolling-on-libinput.patch
 qt5-qtbase-5.9.1-openssl11.patch
+mesa_18.diff
 
 # Debian specific.
 gnukfreebsd.diff
