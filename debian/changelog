@@ -13,6 +13,8 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Add upstream patch to fix rendering issues with Mesa 18.
+  * Add upstream patch to add NewMenu D-Bus signal for dbustray.
+    Thanks to Marco Trevisan.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Feb 2018 22:07:05 -0600
 
