@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) bionic; urgency=medium
 
   [ Simon Quigley ]
   * Merge from Debian Sid, remaining changes:
@@ -16,7 +16,7 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu3) UNRELEASED; urgency=medium
   * Add upstream patch to add NewMenu D-Bus signal for dbustray.
     Thanks to Marco Trevisan.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Feb 2018 22:07:05 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 24 Feb 2018 22:58:18 -0600
 
 qtbase-opensource-src (5.9.4+dfsg-0ubuntu2) bionic; urgency=medium
 
