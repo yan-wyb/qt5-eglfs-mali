@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) bionic; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
     - New upstream release (5.9.4), drop upstream patches and update symbols
@@ -9,7 +9,7 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) UNRELEASED; urgency=medium
     - Backport some libinput and mesa 18 patches from upstream.
   * Update symbols from build logs.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Mar 2018 21:15:07 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Mar 2018 23:37:26 -0500
 
 qtbase-opensource-src (5.9.2+dfsg-12) unstable; urgency=medium
 
