@@ -5,6 +5,7 @@ Fix-scrolling-on-libinput.patch
 qt5-qtbase-5.9.1-openssl11.patch
 mesa_18.diff
 dbustray_newmenu_signal.diff
+extend_mariadb_define_check.diff
 
 # Debian specific.
 gnukfreebsd.diff
@@ -14,3 +15,6 @@ link_fbclient.diff
 gnukfreebsd_cloexec.diff
 armv4.diff
 nonlinux_utime.diff
+
+# Not yet forwarded.
+hidpi_scale_at_192.diff
