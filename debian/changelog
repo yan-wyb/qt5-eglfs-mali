@@ -7,6 +7,7 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) UNRELEASED; urgency=medium
       patch enabling OpenSSL 1.1 support.
     - Add arm64 to the architectures that GLES is enabled on.
     - Backport some libinput and mesa 18 patches from upstream.
+  * Update symbols from build logs.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Mar 2018 21:15:07 -0500
 
