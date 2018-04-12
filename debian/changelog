@@ -2,6 +2,7 @@ qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Bump independent build dependencies.
+  * Bump the virtual ABI package from qtbase-abi-5-9-4 to qtbase-abi-5-9-5.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 12 Apr 2018 16:23:13 -0500
 
