@@ -1,6 +1,7 @@
 qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Bump independent build dependencies.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 12 Apr 2018 16:23:13 -0500
 
