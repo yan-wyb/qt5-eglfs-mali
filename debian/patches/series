@@ -6,7 +6,6 @@ qt5-qtbase-5.9.1-openssl11.patch
 mesa_18.diff
 dbustray_newmenu_signal.diff
 extend_mariadb_define_check.diff
-support_legacy_x11_keymaps.patch
 
 # Debian specific.
 gnukfreebsd.diff
