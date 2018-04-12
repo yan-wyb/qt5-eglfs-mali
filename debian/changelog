@@ -3,6 +3,7 @@ qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) UNRELEASED; urgency=medium
   [ Simon Quigley ]
   * New upstream release.
     - Refresh patches.
+    - Update symbols from build logs.
   * Bump independent build dependencies.
   * Bump the virtual ABI package from qtbase-abi-5-9-4 to qtbase-abi-5-9-5.
   * Fix loading OpenGL library when libGL.so is missing (LP: #1761708).

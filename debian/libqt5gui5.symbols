@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.9.4 amd64
+# SymbolsHelper-Confirmed: 5.9.5 amd64
 libQt5Gui.so.5 libqt5gui5 #MINVER#
 | libqt5gui5 #MINVER#, qtbase-abi-5-9-5
 * Build-Depends-Package: qtbase5-dev
@@ -90,6 +90,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  (optional=gccinternal|arch=amd64 kfreebsd-amd64 x32)_Z32qt_convert_rgb888_to_rgb32_ssse3PjPKhi@Qt_5 5.0.2
  _Z33hb_qt_font_get_use_design_metricsP9hb_font_t@Qt_5 5.2.0
  _Z33hb_qt_font_set_use_design_metricsP9hb_font_tj@Qt_5 5.2.0
+ _Z34qt_sort_families_by_writing_systemN5QChar6ScriptERK11QStringList@Qt_5 5.9.5
  _Z35qtInitializeVertexArrayObjectHelperP30QOpenGLVertexArrayObjectHelperP14QOpenGLContext@Qt_5 5.4.0
  _Z37qAccessibleLocalizedActionDescriptionRK7QString@Qt_5 5.4.0
  _Z5qHash23QPointingDeviceUniqueIdj@Qt_5 5.8.0
