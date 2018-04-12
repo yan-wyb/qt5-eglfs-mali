@@ -1,11 +1,9 @@
 # Backported from upstream.
 dead_key_symbols.diff
-QSimpleDrag-Fix-mouse-release-coords.patch
-Fix-scrolling-on-libinput.patch
 qt5-qtbase-5.9.1-openssl11.patch
-mesa_18.diff
 dbustray_newmenu_signal.diff
 extend_mariadb_define_check.diff
+fix-loading-OpenGL-when-symlink-missing.patch
 
 # Debian specific.
 gnukfreebsd.diff
