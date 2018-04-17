@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) bionic; urgency=medium
 
   [ Simon Quigley ]
   * New upstream release.
@@ -13,7 +13,7 @@ qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Update list of Qt WebKit build-dependencies in debian/README.source.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 12 Apr 2018 16:23:13 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 12 Apr 2018 18:24:40 -0500
 
 qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) bionic; urgency=medium
 
