@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.9.5+dfsg-0ubuntu2.2) UNRELEASED; urgency=medium
+
+  * Backport two upstream patches to support legacy X11 keymaps
+    (LP: #1831505).
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Sat, 08 Jun 2019 10:32:11 +0300
+
 qtbase-opensource-src (5.9.5+dfsg-0ubuntu2.1) bionic-security; urgency=medium
 
   * SECURITY UPDATE: double-free or corruption via illegal XML document
