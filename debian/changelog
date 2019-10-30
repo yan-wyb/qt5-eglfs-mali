@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.9.5+dfsg-0ubuntu2.4) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.5+dfsg-0ubuntu2.4) bionic; urgency=medium
 
   * Fix default paper size in the print dialog (LP: #1846821).
 
