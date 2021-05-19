@@ -1,8 +1,13 @@
 #! /usr/bin/dh-exec
 [kfreebsd-any linux-any] usr/lib/*/libQt5EglFSDeviceIntegration.prl
 [kfreebsd-any linux-any] usr/lib/*/libQt5EglFSDeviceIntegration.so
-[kfreebsd-any linux-any] usr/lib/*/libQt5EglFsKmsSupport.prl
-[kfreebsd-any linux-any] usr/lib/*/libQt5EglFsKmsSupport.so
+[!arm64] usr/lib/*/libQt5EglFsKmsSupport.prl
+[!arm64] usr/lib/*/libQt5EglFsKmsSupport.so
+[!armel !armhf !arm64] usr/lib/*/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake
+[!arm64] usr/lib/*/qt5/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri
+[!arm64] usr/lib/*/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake
+[!arm64] usr/lib/*/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake
+[!arm64] usr/lib/*/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake
 usr/include/*/qt5/QtConcurrent/QtConcurrent
 usr/include/*/qt5/QtConcurrent/QtConcurrentDepends
 usr/include/*/qt5/QtConcurrent/QtConcurrentFilter
